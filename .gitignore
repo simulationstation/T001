@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.egg-info/
+
+data/cache/
+logs/
+sed/
+catalogs/galaxy_exclusions.csv
+catalogs/galaxy_exclusions.csv

@@ -1,0 +1,51 @@
+{
+  "S_min_LOO": 9.32794483840222,
+  "astrometric_residual": 0.21579991820024813,
+  "baseline_days": 1904.6113411999977,
+  "blend_risk": 0.7692387690662931,
+  "candidate_id": "MESSIER_077_hst_15151_04_wfc3_uvis_f555w_idm104_hst_17502_01_wfc3_uvis_f555w_ifab01_0129",
+  "created_utc": "20260310_064300UTC",
+  "cross_reduction_agreement": 0.7222471286259595,
+  "crowding_index": 8.0,
+  "dec_deg": -0.013289956116985947,
+  "depth_margin_post": 6.76044368542793,
+  "fade_fraction": 0.5654550642592209,
+  "fade_sigma": 15.156289375211585,
+  "figure_path": "/home/primary/SUPERNOVA/candidate_packets/MESSIER_077_hst_15151_04_wfc3_uvis_f555w_idm104_hst_17502_01_wfc3_uvis_f555w_ifab01_0129/MESSIER_077_hst_15151_04_wfc3_uvis_f555w_idm104_hst_17502_01_wfc3_uvis_f555w_ifab01_0129_cutout.png",
+  "flux_ratio": 0.4345449357407792,
+  "galaxy_name": "MESSIER 077",
+  "host_bg_penalty": 0.009511835322673367,
+  "post_filter": "F555W",
+  "post_mjd": 60569.74561033,
+  "post_obs_id": "hst_17502_01_wfc3_uvis_f555w_ifab01",
+  "pre_filter": "F555W",
+  "pre_mjd": 58665.13426913,
+  "pre_obs_id": "hst_15151_04_wfc3_uvis_f555w_idm104",
+  "priority_score": 2.3718439413411776,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "hst_15151_04_wfc3_uvis_f555w_idm104",
+    "obs_id_2": "hst_17502_01_wfc3_uvis_f555w_ifab01",
+    "obsid_1": 26676050,
+    "obsid_2": 229880268,
+    "product_filename_1": "hst_15151_04_wfc3_uvis_f555w_idm104_drc.fits",
+    "product_filename_2": "hst_17502_01_wfc3_uvis_f555w_ifab01_drc.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_15151_04_wfc3_uvis_f555w_idm104/hst_15151_04_wfc3_uvis_f555w_idm104_drc.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_17502_01_wfc3_uvis_f555w_ifab01/hst_17502_01_wfc3_uvis_f555w_ifab01_drc.fits",
+    "product_priority_1": 181.0,
+    "product_priority_2": 181.0,
+    "product_uri_1": "mast:HST/product/hst_15151_04_wfc3_uvis_f555w_idm104_drc.fits",
+    "product_uri_2": "mast:HST/product/hst_17502_01_wfc3_uvis_f555w_ifab01_drc.fits"
+  },
+  "ra_deg": 40.6696133957578,
+  "reason_codes": [
+    "ROBUST_FADE_SIG",
+    "POST_DEPTH_OK"
+  ],
+  "status": "REVIEW",
+  "warning_flags": [
+    "CROWDED",
+    "BLEND_RISK"
+  ]
+}

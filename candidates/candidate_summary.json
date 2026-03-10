@@ -1,0 +1,14 @@
+{
+  "compatibilities": [
+    "exact"
+  ],
+  "created_utc": "20260310_064355UTC",
+  "include_cross_collection": false,
+  "n_candidates_total": 1,
+  "n_pairs_failed": 2,
+  "n_pairs_scanned": 9,
+  "n_pairs_selected": 11,
+  "n_pass": 0,
+  "n_review": 1,
+  "n_sources_measured": 4329
+}

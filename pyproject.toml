@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "supernova-mission"
+version = "0.1.0"
+description = "Pipeline scaffolding for nearby-galaxy failed supernova searches."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "astropy>=7.2.0",
+  "astropy-healpix>=1.1.3",
+  "astroquery>=0.4.11",
+  "matplotlib>=3.10.8",
+  "numpy>=2.4.3",
+  "pandas>=3.0.1",
+  "photutils>=2.3.0",
+  "pyarrow>=23.0.1",
+  "pyyaml>=6.0.3",
+  "regions>=0.11",
+  "reproject>=0.19.0",
+  "requests>=2.32.5",
+  "rich>=14.3.3",
+  "scipy>=1.17.1",
+  "shapely>=2.1.2",
+  "tqdm>=4.67.3",
+]
+
+[project.scripts]
+supernova-mission = "supernova_pipeline.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

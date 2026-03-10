@@ -1,0 +1,36 @@
+{
+  "archive_top_n": 15,
+  "collections": {
+    "HLSP": 79,
+    "HST": 764,
+    "JWST": 209
+  },
+  "created_utc": "20260310_062856UTC",
+  "min_baseline_days": 30.0,
+  "n_epoch_pairs": 34233,
+  "n_galaxies_queried": 15,
+  "n_observations": 1052,
+  "radius_deg": 0.05,
+  "top_pair_galaxies": [
+    "MESSIER 077",
+    "NGC 1097",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077",
+    "MESSIER 077"
+  ]
+}

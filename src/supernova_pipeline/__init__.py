@@ -1,0 +1,2 @@
+"""SUPERNOVA pipeline package."""
+
