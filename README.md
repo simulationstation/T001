@@ -4,7 +4,7 @@ Archival failed-supernova / disappearing-star search workspace built around Ryan
 
 ## What this repo contains
 
-- The proposal and science framing in `JWST_Failed_SNe_Cycle_5.pdf`, `super_plan.md`, and `super_report.md`
+- The science framing in the local, gitignored JWST proposal PDF plus `super_plan.md` and `super_report.md`
 - A runnable Python package in `src/supernova_pipeline/`
 - Derived catalog, archive, candidate, and follow-up products from the current live run
 - Visual review artifacts for every currently surviving candidate
