@@ -1,10 +1,13 @@
 {
-  "created_utc": "20260310_075405UTC",
+  "created_utc": "20260310_083949UTC",
   "index_path": "/home/primary/SUPERNOVA/sed/followup_index.csv",
-  "max_candidates": 0,
-  "max_workers": 2,
-  "n_candidates_requested": 2,
+  "n_candidates_completed": 3,
   "statuses": [
     "PASS"
+  ],
+  "candidate_ids": [
+    "MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0003",
+    "NGC_5861_hst_15145_74_wfc3_ir_f160w_idgg74_hst_16250_14_wfc3_ir_f160w_iebs14_0023",
+    "NGC_5861_hst_15145_78_wfc3_ir_f160w_idgg78_hst_16250_14_wfc3_ir_f160w_iebs14_0025"
   ]
 }

@@ -11,14 +11,61 @@ Archival failed-supernova / disappearing-star search workspace built around Ryan
 
 ## Current status
 
-The search is past planning and past the original small pilot. The archive build and pixel-level discovery stages have both been expanded, and the all-epoch follow-up / SED stage is currently running under `sed/`.
+The search is past planning and past the original small pilot. The archive build and pixel-level discovery stages have both been expanded, and the first targeted all-epoch follow-up / SED runs are now written under `sed/`.
 
 - Nearby-galaxy master catalog: `12,419` search-eligible systems
 - Expanded archive run: `130` galaxies queried, `3,930` observations, `120,995` matched epoch pairs
 - Current candidate ledger: `18` surviving objects, `3` `PASS`, `15` `REVIEW`
 - Per-candidate packets live in `candidate_packets/`; gallery assets live in `figures/candidates/`
+- Completed follow-up products now exist for all `3` current `PASS` objects in `sed/`
 
 The strongest current `PASS` objects are two long-baseline `HST/WFC3-IR F160W` candidates in `NGC 5861` and one very long-baseline `HST/ACS F555W` candidate in `MESSIER 101`.
+
+## Prime `PASS` objects
+
+These are the current top surviving objects from the cleaned ledger. Each one is shown with the same visual treatment as the earlier single-object example: animated blink, overview panel, and packet cutout. Where follow-up has finished, the light curve and SED fit are also included.
+
+### `NGC 5861` `PASS` object A
+
+Candidate: `NGC_5861_hst_15145_74_wfc3_ir_f160w_idgg74_hst_16250_14_wfc3_ir_f160w_iebs14_0023`. Filter pair: `F160W -> F160W`. Baseline: `1494.5` days. Fade: `97.49%`. Significance: `111.45 sigma`. Priority: `91.48`.
+
+![NGC 5861 PASS A blink](figures/candidates/NGC_5861_hst_15145_74_wfc3_ir_f160w_idgg74_hst_16250_14_wfc3_ir_f160w_iebs14_0023_blink.gif)
+
+![NGC 5861 PASS A overview](figures/candidates/NGC_5861_hst_15145_74_wfc3_ir_f160w_idgg74_hst_16250_14_wfc3_ir_f160w_iebs14_0023_overview.png)
+
+![NGC 5861 PASS A packet](figures/candidates/NGC_5861_hst_15145_74_wfc3_ir_f160w_idgg74_hst_16250_14_wfc3_ir_f160w_iebs14_0023_packet.png)
+
+![NGC 5861 PASS A light curve](sed/NGC_5861_hst_15145_74_wfc3_ir_f160w_idgg74_hst_16250_14_wfc3_ir_f160w_iebs14_0023/lightcurve.png)
+
+![NGC 5861 PASS A SED fit](sed/NGC_5861_hst_15145_74_wfc3_ir_f160w_idgg74_hst_16250_14_wfc3_ir_f160w_iebs14_0023/sed_fit.png)
+
+### `NGC 5861` `PASS` object B
+
+Candidate: `NGC_5861_hst_15145_78_wfc3_ir_f160w_idgg78_hst_16250_14_wfc3_ir_f160w_iebs14_0025`. Filter pair: `F160W -> F160W`. Baseline: `1456.6` days. Fade: `97.06%`. Significance: `82.81 sigma`. Priority: `71.27`.
+
+![NGC 5861 PASS B blink](figures/candidates/NGC_5861_hst_15145_78_wfc3_ir_f160w_idgg78_hst_16250_14_wfc3_ir_f160w_iebs14_0025_blink.gif)
+
+![NGC 5861 PASS B overview](figures/candidates/NGC_5861_hst_15145_78_wfc3_ir_f160w_idgg78_hst_16250_14_wfc3_ir_f160w_iebs14_0025_overview.png)
+
+![NGC 5861 PASS B packet](figures/candidates/NGC_5861_hst_15145_78_wfc3_ir_f160w_idgg78_hst_16250_14_wfc3_ir_f160w_iebs14_0025_packet.png)
+
+![NGC 5861 PASS B light curve](sed/NGC_5861_hst_15145_78_wfc3_ir_f160w_idgg78_hst_16250_14_wfc3_ir_f160w_iebs14_0025/lightcurve.png)
+
+![NGC 5861 PASS B SED fit](sed/NGC_5861_hst_15145_78_wfc3_ir_f160w_idgg78_hst_16250_14_wfc3_ir_f160w_iebs14_0025/sed_fit.png)
+
+### `MESSIER 101` `PASS` object
+
+Candidate: `MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0003`. Filter pair: `F555W -> F555W`. Baseline: `5328.0` days. Fade: `99.99%`. Significance: `12.62 sigma`. Priority: `21.59`.
+
+![MESSIER 101 PASS blink](figures/candidates/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0003_blink.gif)
+
+![MESSIER 101 PASS overview](figures/candidates/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0003_overview.png)
+
+![MESSIER 101 PASS packet](figures/candidates/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0003_packet.png)
+
+![MESSIER 101 PASS light curve](sed/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0003/lightcurve.png)
+
+![MESSIER 101 PASS SED fit](sed/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0003/sed_fit.png)
 
 ## Candidate gallery
 
