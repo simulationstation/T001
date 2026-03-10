@@ -1,0 +1,4 @@
+galaxy_name,n_images,n_sources,ranking_path
+NGC 5861,3,86,/home/primary/SUPERNOVA/extensions/deep_reference/NGC_5861/fade_ranking.csv
+MESSIER 101,2,300,/home/primary/SUPERNOVA/extensions/deep_reference/MESSIER_101/fade_ranking.csv
+MESSIER 077,2,300,/home/primary/SUPERNOVA/extensions/deep_reference/MESSIER_077/fade_ranking.csv

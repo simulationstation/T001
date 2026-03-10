@@ -9,6 +9,7 @@ from rich.table import Table
 from .archive_matrix import build_archive_products
 from .candidate_followup import run_candidate_followup
 from .candidate_ledger import build_detection_queue
+from .extensions import run_extensions
 from .galaxy_catalog import GalaxyBuildConfig, build_galaxy_master
 from .pixel_search import run_pixel_search
 from .utils import ensure_dir
@@ -24,6 +25,7 @@ def bootstrap_dirs(root_dir: Path) -> None:
         "archive",
         "candidates",
         "candidate_packets",
+        "extensions",
         "figures",
         "notes",
         "sed",
@@ -83,6 +85,15 @@ def command_run_followup(args: argparse.Namespace) -> dict[str, Path]:
         statuses=statuses,
         max_candidates=args.max_candidates,
         max_workers=args.max_workers,
+    )
+
+
+def command_run_extensions(args: argparse.Namespace) -> dict[str, Path]:
+    return run_extensions(
+        root_dir=args.root_dir,
+        candidate_ledger_path=args.candidate_ledger_path,
+        observation_matrix_path=args.observation_matrix_path,
+        galaxy_master_path=args.galaxy_master_path,
     )
 
 
@@ -174,6 +185,12 @@ def build_parser() -> argparse.ArgumentParser:
     followup.add_argument("--max-workers", type=int, default=1)
     followup.set_defaults(func=command_run_followup)
 
+    extensions = sub.add_parser("run-extensions", help="Run the extended novel search methods on the current dataset.")
+    extensions.add_argument("--candidate-ledger-path", type=Path, default=root_dir / "candidates" / "candidate_ledger.parquet")
+    extensions.add_argument("--observation-matrix-path", type=Path, default=root_dir / "archive" / "observation_matrix.parquet")
+    extensions.add_argument("--galaxy-master-path", type=Path, default=root_dir / "catalogs" / "galaxy_master.parquet")
+    extensions.set_defaults(func=command_run_extensions)
+
     run_pilot = sub.add_parser("run-pilot", help="Run the enacted pilot workflow end to end.")
     run_pilot.add_argument("--top-n", type=int, default=130)
     run_pilot.add_argument("--archive-top-n", type=int, default=25)
@@ -192,7 +209,7 @@ def build_parser() -> argparse.ArgumentParser:
     run_pilot.add_argument("--pixel-same-collection-only", action="store_true")
     run_pilot.set_defaults(func=command_run_pilot)
 
-    for subparser in [bootstrap, build_galaxies, build_archive, init_candidates, pixel_search, followup, run_pilot]:
+    for subparser in [bootstrap, build_galaxies, build_archive, init_candidates, pixel_search, followup, extensions, run_pilot]:
         subparser.add_argument("--root-dir", type=Path, default=root_dir)
 
     return parser

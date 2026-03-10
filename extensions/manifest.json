@@ -1,0 +1,11 @@
+{
+  "anomaly_scores": "/home/primary/SUPERNOVA/extensions/anomaly/anomaly_scores.csv",
+  "combined_ranking": "/home/primary/SUPERNOVA/extensions/combined/candidate_extension_ranking.csv",
+  "deep_reference_summary": "/home/primary/SUPERNOVA/extensions/deep_reference/summary.csv",
+  "extended_plan": "/home/primary/SUPERNOVA/extended_plan.md",
+  "injection_summary": "/home/primary/SUPERNOVA/extensions/injection_recovery/recovery_summary.csv",
+  "mid_ir_crossmatch": "/home/primary/SUPERNOVA/extensions/mid_ir/mid_ir_crossmatch.csv",
+  "neighborhood_scores": "/home/primary/SUPERNOVA/extensions/neighborhood/neighborhood_scores.csv",
+  "population_prior_scores": "/home/primary/SUPERNOVA/extensions/population_prior/population_prior_scores.csv",
+  "scene_metrics": "/home/primary/SUPERNOVA/extensions/scene_model/scene_model_metrics.csv"
+}
