@@ -1,0 +1,52 @@
+{
+  "S_min_LOO": 1.2677677099325948,
+  "astrometric_residual": 0.1667358910311457,
+  "baseline_days": 104.54148456999974,
+  "blend_risk": 0.6297998664607081,
+  "candidate_id": "NGC_5728_hst_15640_21_wfc3_ir_f160w_idxb21_hst_15640_2b_wfc3_ir_f160w_idxb2b_0137",
+  "created_utc": "20260310_072728UTC",
+  "cross_reduction_agreement": 0.2496497766571315,
+  "crowding_index": 10.0,
+  "dec_deg": -17.22810492623929,
+  "depth_margin_post": 1.2383536750842838,
+  "edge_distance_px": 6.082762530298219,
+  "fade_fraction": 0.43780585589094867,
+  "fade_sigma": 5.383186499327959,
+  "figure_path": "/home/primary/SUPERNOVA/candidate_packets/NGC_5728_hst_15640_21_wfc3_ir_f160w_idxb21_hst_15640_2b_wfc3_ir_f160w_idxb2b_0137/NGC_5728_hst_15640_21_wfc3_ir_f160w_idxb21_hst_15640_2b_wfc3_ir_f160w_idxb2b_0137_cutout.png",
+  "flux_ratio": -0.1169395574020532,
+  "galaxy_name": "NGC 5728",
+  "host_bg_penalty": 0.03169928139437827,
+  "post_filter": "F160W",
+  "post_mjd": 58713.17633676,
+  "post_obs_id": "hst_15640_2b_wfc3_ir_f160w_idxb2b",
+  "pre_filter": "F160W",
+  "pre_mjd": 58608.63485219,
+  "pre_obs_id": "hst_15640_21_wfc3_ir_f160w_idxb21",
+  "priority_score": 0.03409809854959634,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "hst_15640_21_wfc3_ir_f160w_idxb21",
+    "obs_id_2": "hst_15640_2b_wfc3_ir_f160w_idxb2b",
+    "obsid_1": 26687124,
+    "obsid_2": 26695399,
+    "product_filename_1": "hst_15640_21_wfc3_ir_f160w_idxb21_drz.fits",
+    "product_filename_2": "hst_15640_2b_wfc3_ir_f160w_idxb2b_drz.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_15640_21_wfc3_ir_f160w_idxb21/hst_15640_21_wfc3_ir_f160w_idxb21_drz.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_15640_2b_wfc3_ir_f160w_idxb2b/hst_15640_2b_wfc3_ir_f160w_idxb2b_drz.fits",
+    "product_priority_1": 181.0,
+    "product_priority_2": 181.0,
+    "product_uri_1": "mast:HST/product/hst_15640_21_wfc3_ir_f160w_idxb21_drz.fits",
+    "product_uri_2": "mast:HST/product/hst_15640_2b_wfc3_ir_f160w_idxb2b_drz.fits"
+  },
+  "ra_deg": 220.6064512154987,
+  "reason_codes": [
+    "POST_LT_5PCT"
+  ],
+  "status": "REVIEW",
+  "warning_flags": [
+    "CROWDED",
+    "BLEND_RISK",
+    "EDGE_NEAR_MASK"
+  ]
+}

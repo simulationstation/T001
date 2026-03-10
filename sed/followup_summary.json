@@ -1,0 +1,10 @@
+{
+  "created_utc": "20260310_075405UTC",
+  "index_path": "/home/primary/SUPERNOVA/sed/followup_index.csv",
+  "max_candidates": 0,
+  "max_workers": 2,
+  "n_candidates_requested": 2,
+  "statuses": [
+    "PASS"
+  ]
+}

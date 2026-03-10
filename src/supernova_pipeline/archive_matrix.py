@@ -210,13 +210,20 @@ def build_archive_products(
     max_workers: int = 4,
 ) -> dict[str, Path]:
     archive_dir = ensure_dir(root_dir / "archive")
-    galaxies = pd.read_parquet(galaxy_master_path).head(archive_top_n).copy()
+    galaxy_master = pd.read_parquet(galaxy_master_path)
+    galaxies = galaxy_master.head(archive_top_n).copy() if archive_top_n > 0 else galaxy_master.copy()
 
     frames: list[pd.DataFrame] = []
+    failures: list[dict[str, Any]] = []
     with cf.ThreadPoolExecutor(max_workers=max_workers) as pool:
         futures = {pool.submit(query_galaxy_observations, row, radius_deg=radius_deg): row["galaxy_name"] for _, row in galaxies.iterrows()}
         for future in cf.as_completed(futures):
-            df = future.result()
+            galaxy_name = str(futures[future])
+            try:
+                df = future.result()
+            except Exception as exc:
+                failures.append({"galaxy_name": galaxy_name, "error": str(exc)})
+                continue
             if not df.empty:
                 frames.append(df)
 
@@ -227,10 +234,12 @@ def build_archive_products(
 
     observation_matrix_path = archive_dir / "observation_matrix.parquet"
     epoch_pairs_path = archive_dir / "epoch_pairs.parquet"
+    failures_path = archive_dir / "archive_failures.csv"
     summary_path = archive_dir / "archive_summary.json"
 
     observations.to_parquet(observation_matrix_path, index=False)
     epoch_pairs.to_parquet(epoch_pairs_path, index=False)
+    pd.DataFrame(failures).to_csv(failures_path, index=False)
     write_json(
         summary_path,
         {
@@ -239,6 +248,7 @@ def build_archive_products(
             "radius_deg": float(radius_deg),
             "min_baseline_days": float(min_baseline_days),
             "n_galaxies_queried": int(len(galaxies)),
+            "n_galaxy_query_failures": int(len(failures)),
             "n_observations": int(len(observations)),
             "n_epoch_pairs": int(len(epoch_pairs)),
             "collections": observations["obs_collection"].value_counts().to_dict() if not observations.empty else {},
@@ -249,5 +259,6 @@ def build_archive_products(
     return {
         "observation_matrix": observation_matrix_path,
         "epoch_pairs": epoch_pairs_path,
+        "failures": failures_path,
         "summary": summary_path,
     }

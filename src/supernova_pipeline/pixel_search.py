@@ -1,12 +1,16 @@
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
 import math
 import re
+import threading
+import warnings
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote
+from uuid import uuid4
 
 import astropy.units as u
 import matplotlib.pyplot as plt
@@ -18,11 +22,12 @@ from astropy.io import fits
 from astropy.nddata import Cutout2D
 from astropy.stats import sigma_clipped_stats
 from astropy.wcs import WCS
+from astropy.wcs import FITSFixedWarning
 from astropy.wcs.utils import proj_plane_pixel_scales
 from photutils.aperture import ApertureStats, CircularAnnulus, CircularAperture
 from photutils.detection import DAOStarFinder
 from reproject import reproject_interp
-from scipy.ndimage import gaussian_filter
+from scipy.ndimage import distance_transform_edt, gaussian_filter
 from scipy.spatial import cKDTree
 
 from .candidate_ledger import CANDIDATE_COLUMNS
@@ -31,6 +36,9 @@ from .utils import ensure_dir, json_list, utc_stamp, write_json
 
 MAST_INVOKE_URL = "https://mast.stsci.edu/api/v0/invoke"
 MAST_DOWNLOAD_URL = "https://mast.stsci.edu/api/v0.1/Download/file"
+_FIGURE_LOCK = threading.Lock()
+
+warnings.filterwarnings("ignore", category=FITSFixedWarning)
 
 
 @dataclass(slots=True)
@@ -131,12 +139,17 @@ def _download_product(product: pd.Series, *, root_dir: Path, obs_collection: str
         return destination
 
     uri = str(product["dataURI"])
+    tmp_destination = destination.with_name(f".{destination.name}.{uuid4().hex}.part")
     resp = requests.get(f"{MAST_DOWNLOAD_URL}?uri={quote(uri, safe=':/')}", stream=True, timeout=(30, 300))
     resp.raise_for_status()
-    with destination.open("wb") as handle:
+    with tmp_destination.open("wb") as handle:
         for chunk in resp.iter_content(chunk_size=1024 * 1024):
             if chunk:
                 handle.write(chunk)
+    if destination.exists() and destination.stat().st_size > 0:
+        tmp_destination.unlink(missing_ok=True)
+        return destination
+    tmp_destination.replace(destination)
     return destination
 
 
@@ -358,6 +371,8 @@ def _pair_stability_metrics(source_catalog: pd.DataFrame) -> tuple[float, float,
         & np.isfinite(source_catalog["flux_pre"])
         & (source_catalog["flux_pre"] > 0)
     ].copy()
+    if "edge_distance_px" in usable.columns:
+        usable = usable[usable["edge_distance_px"].fillna(0.0) >= 6.0].copy()
     if usable.empty:
         return float("nan"), float("nan"), False
     stable_fraction = float(((usable["flux_ratio"] >= 0.8) & (usable["flux_ratio"] <= 1.2)).mean())
@@ -385,20 +400,21 @@ def _save_candidate_figure(
     *,
     title: str,
 ) -> Path:
-    fig, axes = plt.subplots(1, 3, figsize=(10.5, 3.8), constrained_layout=True)
-    for ax, image, label in zip(axes, [pre_cutout, post_cutout, diff_cutout], ["Pre", "Post", "Pre - Post"], strict=True):
-        lo, hi = _stretch_limits(image)
-        ax.imshow(image, origin="lower", cmap="gray", vmin=lo, vmax=hi)
-        ax.set_title(label)
-        ax.set_xticks([])
-        ax.set_yticks([])
-        cy = image.shape[0] / 2.0
-        cx = image.shape[1] / 2.0
-        ax.plot(cx, cy, marker="+", color="tab:red", ms=10, mew=1.5)
-    fig.suptitle(title, fontsize=10)
     output = packet_dir / f"{candidate_id}_cutout.png"
-    fig.savefig(output, dpi=180)
-    plt.close(fig)
+    with _FIGURE_LOCK:
+        fig, axes = plt.subplots(1, 3, figsize=(10.5, 3.8), constrained_layout=True)
+        for ax, image, label in zip(axes, [pre_cutout, post_cutout, diff_cutout], ["Pre", "Post", "Pre - Post"], strict=True):
+            lo, hi = _stretch_limits(image)
+            ax.imshow(image, origin="lower", cmap="gray", vmin=lo, vmax=hi)
+            ax.set_title(label)
+            ax.set_xticks([])
+            ax.set_yticks([])
+            cy = image.shape[0] / 2.0
+            cx = image.shape[1] / 2.0
+            ax.plot(cx, cy, marker="+", color="tab:red", ms=10, mew=1.5)
+        fig.suptitle(title, fontsize=10)
+        fig.savefig(output, dpi=180)
+        plt.close(fig)
     return output
 
 
@@ -459,14 +475,17 @@ def _status_for_candidate(
     depth_margin_post: float,
     blend_risk: float,
     host_bg_penalty: float,
+    edge_distance_px: float,
 ) -> str | None:
     if (
         math.isfinite(flux_ratio)
         and flux_ratio <= 0.05
+        and flux_ratio > -0.10
         and s_min_loo >= 5.0
         and depth_margin_post >= 2.0
         and blend_risk < 0.6
         and host_bg_penalty < 0.35
+        and edge_distance_px >= 10.0
     ):
         return "PASS"
     if (
@@ -474,6 +493,7 @@ def _status_for_candidate(
         and flux_ratio <= 0.50
         and s_raw >= 5.0
         and depth_margin_post >= 1.0
+        and edge_distance_px >= 6.0
     ):
         return "REVIEW"
     return None
@@ -529,8 +549,22 @@ def _scan_pair(pair: pd.Series, obs_meta: dict[str, dict[str, Any]], *, root_dir
 
     galaxy_ra = float(meta_1["galaxy_ra"])
     galaxy_dec = float(meta_1["galaxy_dec"])
-    image_1 = _cutout_if_needed(image_1, ra_deg=galaxy_ra, dec_deg=galaxy_dec)
-    image_2 = _cutout_if_needed(image_2, ra_deg=galaxy_ra, dec_deg=galaxy_dec)
+    search_radius_deg = max(float(meta_1.get("search_radius_deg", 0.0) or 0.0), float(meta_2.get("search_radius_deg", 0.0) or 0.0))
+    cutout_arcsec = max(240.0, 2.2 * search_radius_deg * 3600.0)
+    image_1 = _cutout_if_needed(
+        image_1,
+        ra_deg=galaxy_ra,
+        dec_deg=galaxy_dec,
+        size_arcsec=cutout_arcsec,
+        max_pixels=6000,
+    )
+    image_2 = _cutout_if_needed(
+        image_2,
+        ra_deg=galaxy_ra,
+        dec_deg=galaxy_dec,
+        size_arcsec=cutout_arcsec,
+        max_pixels=6000,
+    )
 
     post_reproj, footprint = reproject_interp((image_2.data, image_2.wcs), image_1.wcs, shape_out=image_1.data.shape)
     overlap_mask = _finite_mask(image_1.data) & _finite_mask(post_reproj) & (footprint > 0)
@@ -546,6 +580,7 @@ def _scan_pair(pair: pd.Series, obs_meta: dict[str, dict[str, Any]], *, root_dir
     post_bg, post_std = _background_stats(post_crop, valid_crop)
     pre_sub = pre_crop - pre_bg
     post_sub = post_crop - post_bg
+    edge_distance_map = distance_transform_edt(valid_crop)
 
     seed_sources = _detect_sources(pre_sub, valid_crop, pixel_scale_arcsec=image_1.pixel_scale_arcsec, max_sources=1500)
     if seed_sources.empty:
@@ -614,6 +649,9 @@ def _scan_pair(pair: pd.Series, obs_meta: dict[str, dict[str, Any]], *, root_dir
     source_catalog["depth_margin_post"] = depth_margin_post
     source_catalog["host_bg_penalty"] = host_bg_penalty
     source_catalog["agreement"] = agreement
+    xi = np.clip(np.round(source_catalog["x"]).astype(int), 0, edge_distance_map.shape[1] - 1)
+    yi = np.clip(np.round(source_catalog["y"]).astype(int), 0, edge_distance_map.shape[0] - 1)
+    source_catalog["edge_distance_px"] = edge_distance_map[yi, xi]
     source_catalog["pair_id"] = str(pair["pair_id"])
 
     stable_fraction, extreme_fade_fraction, pair_is_stable = _pair_stability_metrics(source_catalog)
@@ -629,6 +667,7 @@ def _scan_pair(pair: pd.Series, obs_meta: dict[str, dict[str, Any]], *, root_dir
             depth_margin_post=float(source["depth_margin_post"]),
             blend_risk=float(source["blend_risk"]),
             host_bg_penalty=float(source["host_bg_penalty"]),
+            edge_distance_px=float(source["edge_distance_px"]),
         )
         if status is None:
             continue
@@ -643,6 +682,7 @@ def _scan_pair(pair: pd.Series, obs_meta: dict[str, dict[str, Any]], *, root_dir
         blend_val = float(source["blend_risk"])
         host_bg_val = float(source["host_bg_penalty"])
         depth_val = float(source["depth_margin_post"])
+        edge_distance_val = float(source["edge_distance_px"])
         priority = _priority_score(
             s_min_loo=s_min_loo,
             fade_fraction=fade_fraction,
@@ -667,6 +707,8 @@ def _scan_pair(pair: pd.Series, obs_meta: dict[str, dict[str, Any]], *, root_dir
             warning_flags.append("BLEND_RISK")
         if host_bg_val >= 0.35:
             warning_flags.append("HOST_BACKGROUND")
+        if edge_distance_val < 10.0:
+            warning_flags.append("EDGE_NEAR_MASK")
         if math.isfinite(astrom_resid) and astrom_resid >= 1.5:
             warning_flags.append("ASTROMETRY_RESIDUAL")
         if n_scale_sources < 15:
@@ -693,6 +735,7 @@ def _scan_pair(pair: pd.Series, obs_meta: dict[str, dict[str, Any]], *, root_dir
                 "crowding_index": crowding_val,
                 "blend_risk": blend_val,
                 "host_bg_penalty": host_bg_val,
+                "edge_distance_px": edge_distance_val,
                 "depth_margin_post": depth_val,
                 "astrometric_residual": astrom_resid,
                 "cross_reduction_agreement": agreement_val,
@@ -744,6 +787,7 @@ def _scan_pair(pair: pd.Series, obs_meta: dict[str, dict[str, Any]], *, root_dir
                         "product_info": product_info,
                         "scale_factor_post_to_pre": float(scale_factor),
                         "n_scale_sources": int(n_scale_sources),
+                        "edge_distance_px": edge_distance_val,
                     },
                     sort_keys=True,
                 ),
@@ -823,6 +867,7 @@ def run_pixel_search(
     per_galaxy: int = 2,
     compatibilities: tuple[str, ...] = ("exact", "very_similar"),
     include_cross_collection: bool = True,
+    max_workers: int = 1,
 ) -> dict[str, Path]:
     archive_dir = ensure_dir(root_dir / "archive")
     candidate_dir = ensure_dir(root_dir / "candidates")
@@ -846,33 +891,54 @@ def run_pixel_search(
     candidates: list[dict[str, Any]] = []
     source_frames: list[pd.DataFrame] = []
 
-    for _, pair in selected.iterrows():
-        try:
-            pair_summary, pair_candidates, source_catalog = _scan_pair(pair, obs_meta, root_dir=root_dir)
-            pair_summary["status"] = "SCANNED"
-            pair_summary["error"] = None
-            pair_rows.append(pair_summary)
-            candidates.extend(pair_candidates)
-            source_frames.append(source_catalog)
-        except Exception as exc:
-            pair_rows.append(
-                {
-                    "pair_id": str(pair["pair_id"]),
-                    "galaxy_name": str(pair["galaxy_name"]),
-                    "obs_id_1": str(pair["obs_id_1"]),
-                    "obs_id_2": str(pair["obs_id_2"]),
-                    "filter_1": str(pair["filter_1"]),
-                    "filter_2": str(pair["filter_2"]),
-                    "compatibility": str(pair["compatibility"]),
-                    "baseline_days": float(pair["baseline_days"]),
-                    "pair_score": float(pair["pair_score"]),
-                    "status": "FAILED",
-                    "error": str(exc),
-                    "n_candidates": 0,
-                    "n_pass": 0,
-                    "n_review": 0,
-                }
-            )
+    def _failed_row(pair_row: pd.Series, exc: Exception) -> dict[str, Any]:
+        return {
+            "pair_id": str(pair_row["pair_id"]),
+            "galaxy_name": str(pair_row["galaxy_name"]),
+            "obs_id_1": str(pair_row["obs_id_1"]),
+            "obs_id_2": str(pair_row["obs_id_2"]),
+            "filter_1": str(pair_row["filter_1"]),
+            "filter_2": str(pair_row["filter_2"]),
+            "compatibility": str(pair_row["compatibility"]),
+            "baseline_days": float(pair_row["baseline_days"]),
+            "pair_score": float(pair_row["pair_score"]),
+            "status": "FAILED",
+            "error": str(exc),
+            "n_candidates": 0,
+            "n_pass": 0,
+            "n_review": 0,
+        }
+
+    workers = max(int(max_workers), 1)
+    if workers == 1:
+        iterator = selected.iterrows()
+        for _, pair in iterator:
+            try:
+                pair_summary, pair_candidates, source_catalog = _scan_pair(pair, obs_meta, root_dir=root_dir)
+                pair_summary["status"] = "SCANNED"
+                pair_summary["error"] = None
+                pair_rows.append(pair_summary)
+                candidates.extend(pair_candidates)
+                source_frames.append(source_catalog)
+            except Exception as exc:
+                pair_rows.append(_failed_row(pair, exc))
+    else:
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            futures = {
+                pool.submit(_scan_pair, pair.copy(), obs_meta, root_dir=root_dir): pair.copy()
+                for _, pair in selected.iterrows()
+            }
+            for future in as_completed(futures):
+                pair = futures[future]
+                try:
+                    pair_summary, pair_candidates, source_catalog = future.result()
+                    pair_summary["status"] = "SCANNED"
+                    pair_summary["error"] = None
+                    pair_rows.append(pair_summary)
+                    candidates.extend(pair_candidates)
+                    source_frames.append(source_catalog)
+                except Exception as exc:
+                    pair_rows.append(_failed_row(pair, exc))
 
     pair_summary_df = pd.DataFrame(pair_rows).sort_values(["status", "n_candidates"], ascending=[True, False])
     pair_summary_path = candidate_dir / "pixel_pair_summary.parquet"
@@ -912,6 +978,7 @@ def run_pixel_search(
         "n_review": int((ledger["status"] == "REVIEW").sum()) if not ledger.empty else 0,
         "compatibilities": list(compatibilities),
         "include_cross_collection": bool(include_cross_collection),
+        "max_workers": int(workers),
     }
     summary_path = candidate_dir / "candidate_summary.json"
     write_json(summary_path, summary)

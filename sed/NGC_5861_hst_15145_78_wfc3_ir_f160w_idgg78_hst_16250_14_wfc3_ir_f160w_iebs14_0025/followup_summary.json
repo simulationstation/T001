@@ -1,0 +1,41 @@
+{
+  "candidate_id": "NGC_5861_hst_15145_78_wfc3_ir_f160w_idgg78_hst_16250_14_wfc3_ir_f160w_iebs14_0025",
+  "created_utc": "20260310_075405UTC",
+  "fade_window_mjd": [
+    58181.56912263,
+    59638.19392855
+  ],
+  "fits": {
+    "post": {
+      "chi2": 2493.238239621581,
+      "dof": 6,
+      "fit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "fit_ok": true,
+      "internal_av_mag": 6.0,
+      "mw_av_mag": 0.2870599925518036,
+      "n_points": 9,
+      "scale": 1e-35,
+      "temperature_k": 1584.893192461114
+    },
+    "pre": {
+      "chi2": 83920988.09997208,
+      "dof": 1,
+      "fit_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+      "fit_ok": true,
+      "internal_av_mag": 6.0,
+      "mw_av_mag": 0.2870599925518036,
+      "n_points": 4,
+      "scale": 1e-35,
+      "temperature_k": 1584.893192461114
+    }
+  },
+  "galaxy_name": "NGC 5861",
+  "lightcurve_path": "/home/primary/SUPERNOVA/sed/NGC_5861_hst_15145_78_wfc3_ir_f160w_idgg78_hst_16250_14_wfc3_ir_f160w_iebs14_0025/lightcurve.png",
+  "mw_av_mag": 0.2870599925518036,
+  "n_measurements": 60,
+  "n_observations_considered": 67,
+  "n_stage_points": 13,
+  "photometry_path": "/home/primary/SUPERNOVA/sed/NGC_5861_hst_15145_78_wfc3_ir_f160w_idgg78_hst_16250_14_wfc3_ir_f160w_iebs14_0025/all_photometry.parquet",
+  "sed_plot_path": "/home/primary/SUPERNOVA/sed/NGC_5861_hst_15145_78_wfc3_ir_f160w_idgg78_hst_16250_14_wfc3_ir_f160w_iebs14_0025/sed_fit.png",
+  "stage_sed_path": "/home/primary/SUPERNOVA/sed/NGC_5861_hst_15145_78_wfc3_ir_f160w_idgg78_hst_16250_14_wfc3_ir_f160w_iebs14_0025/stage_sed.csv"
+}

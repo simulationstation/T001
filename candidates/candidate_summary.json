@@ -1,14 +1,16 @@
 {
   "compatibilities": [
-    "exact"
+    "exact",
+    "very_similar"
   ],
-  "created_utc": "20260310_064355UTC",
+  "created_utc": "20260310_072733UTC",
   "include_cross_collection": false,
-  "n_candidates_total": 1,
-  "n_pairs_failed": 2,
-  "n_pairs_scanned": 9,
-  "n_pairs_selected": 11,
-  "n_pass": 0,
-  "n_review": 1,
-  "n_sources_measured": 4329
+  "max_workers": 3,
+  "n_candidates_total": 18,
+  "n_pairs_failed": 18,
+  "n_pairs_scanned": 42,
+  "n_pairs_selected": 60,
+  "n_pass": 3,
+  "n_review": 15,
+  "n_sources_measured": 29543
 }
