@@ -3,6 +3,8 @@
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "1.573",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 1,
@@ -14,8 +16,10 @@
       "filters": "F814W, F555W, F438W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0002_blink.gif",
+      "highest_value": true,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": true,
       "math_rows": [
         [
           "Branch rank",
@@ -154,11 +158,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0002 MESSIER 066 F814W, F555W, F438W WFC3/UVIS Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 2,
@@ -170,8 +177,10 @@
       "filters": "F335M, F300M, F200W, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0006_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -309,11 +318,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0006 MESSIER 061 F335M, F300M, F200W, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "HIGH",
       "branch_rank": 3,
@@ -325,8 +337,10 @@
       "filters": "F300M, F360M, F200W, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0009_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -465,11 +479,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f300m::jw02107-o044_t020_nircam_clear-f300m",
+      "search_text": "MESSIER_061_branch_0009 MESSIER 061 F300M, F360M, F200W, F335M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 4,
@@ -481,8 +498,10 @@
       "filters": "F335M, F200W, F360M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0025_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -619,11 +638,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0025 MESSIER 061 F335M, F200W, F360M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 5,
@@ -635,8 +657,10 @@
       "filters": "F200W, F335M, F300M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0016_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -774,11 +798,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0016 MESSIER 061 F200W, F335M, F300M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 6,
@@ -790,8 +817,10 @@
       "filters": "F360M, F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0062_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -928,11 +957,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0062 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "HIGH",
       "branch_rank": 7,
@@ -944,8 +976,10 @@
       "filters": "F360M, F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0033_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -1083,11 +1117,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0033 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 8,
@@ -1099,8 +1136,10 @@
       "filters": "F200W, F300M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0061_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -1237,11 +1276,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0061 MESSIER 061 F200W, F300M, F335M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 9,
@@ -1253,8 +1295,10 @@
       "filters": "F360M, F335M, F300M, F200W",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0012_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -1391,11 +1435,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0012 MESSIER 061 F360M, F335M, F300M, F200W NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 10,
@@ -1407,8 +1454,10 @@
       "filters": "F200W, F335M, F300M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0022_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -1546,11 +1595,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f300m::jw02107-o044_t020_nircam_clear-f300m",
+      "search_text": "MESSIER_061_branch_0022 MESSIER 061 F200W, F335M, F300M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 11,
@@ -1562,8 +1614,10 @@
       "filters": "F200W, F335M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0039_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -1700,11 +1754,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0039 MESSIER 061 F200W, F335M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 12,
@@ -1716,8 +1773,10 @@
       "filters": "F360M, F335M, F200W, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0019_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -1855,11 +1914,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0019 MESSIER 061 F360M, F335M, F200W, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 13,
@@ -1871,8 +1933,10 @@
       "filters": "F300M, F360M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0079_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -2010,11 +2074,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0079 MESSIER 061 F300M, F360M, F335M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 14,
@@ -2026,8 +2093,10 @@
       "filters": "F200W, F335M, F300M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0011_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -2164,11 +2233,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0011 MESSIER 061 F200W, F335M, F300M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 15,
@@ -2180,8 +2252,10 @@
       "filters": "F360M, F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0065_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -2318,11 +2392,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0065 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "HIGH",
       "branch_rank": 16,
@@ -2334,8 +2411,10 @@
       "filters": "F335M, F200W, F360M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0005_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -2474,11 +2553,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0005 MESSIER 061 F335M, F200W, F360M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 17,
@@ -2490,8 +2572,10 @@
       "filters": "F200W, F335M, F300M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0010_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -2629,11 +2713,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0010 MESSIER 061 F200W, F335M, F300M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 18,
@@ -2645,8 +2732,10 @@
       "filters": "F200W, F335M, F300M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0004_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -2784,11 +2873,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0004 MESSIER 061 F200W, F335M, F300M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 19,
@@ -2800,8 +2892,10 @@
       "filters": "F200W, F335M, F360M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0014_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -2939,11 +3033,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0014 MESSIER 061 F200W, F335M, F360M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 20,
@@ -2955,8 +3052,10 @@
       "filters": "F360M, F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0060_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -3093,11 +3192,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0060 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "HIGH",
       "branch_rank": 21,
@@ -3109,8 +3211,10 @@
       "filters": "F200W, F360M, F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0026_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -3248,11 +3352,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0026 MESSIER 061 F200W, F360M, F335M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "HIGH",
       "branch_rank": 22,
@@ -3264,8 +3371,10 @@
       "filters": "F360M, F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0077_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -3403,11 +3512,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0077 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "HIGH",
       "branch_rank": 23,
@@ -3419,8 +3531,10 @@
       "filters": "F335M, F360M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0052_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -3557,11 +3671,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0052 MESSIER 061 F335M, F360M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "HIGH",
       "branch_rank": 24,
@@ -3573,8 +3690,10 @@
       "filters": "F300M, F200W, F335M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0008_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -3711,11 +3830,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f300m::jw02107-o044_t020_nircam_clear-f300m",
+      "search_text": "MESSIER_061_branch_0008 MESSIER 061 F300M, F200W, F335M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 25,
@@ -3727,8 +3849,10 @@
       "filters": "F200W, F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0053_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -3866,11 +3990,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0053 MESSIER 061 F200W, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MIR_FADE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 26,
@@ -3882,8 +4009,10 @@
       "filters": "F335M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0111_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -4020,11 +4149,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0111 MESSIER 061 F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "106.999",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 27,
@@ -4036,8 +4168,10 @@
       "filters": "F555W, F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0004_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -4175,11 +4309,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
+      "search_text": "MESSIER_066_branch_0004 MESSIER 066 F555W, F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 28,
@@ -4191,8 +4328,10 @@
       "filters": "F200W, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0108_blink.gif",
+      "highest_value": true,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -4329,11 +4468,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0108 MESSIER 061 F200W, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 29,
@@ -4345,8 +4487,10 @@
       "filters": "F335M, F360M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0070_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -4484,11 +4628,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0070 MESSIER 061 F335M, F360M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 30,
@@ -4500,8 +4647,10 @@
       "filters": "F360M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0135_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -4639,11 +4788,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0135 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "HIGH",
       "branch_rank": 31,
@@ -4655,8 +4807,10 @@
       "filters": "F335M, F360M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0055_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -4793,11 +4947,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0055 MESSIER 061 F335M, F360M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 32,
@@ -4809,8 +4966,10 @@
       "filters": "F335M, F360M, F200W, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0002_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -4947,6 +5106,7 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0002 MESSIER 061 F335M, F360M, F200W, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN EDGE_NEAR_MASK",
       "warning_flags": [
         "EDGE_NEAR_MASK"
       ]
@@ -4954,6 +5114,8 @@
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 33,
@@ -4965,8 +5127,10 @@
       "filters": "F335M, F200W, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0042_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -5103,11 +5267,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0042 MESSIER 061 F335M, F200W, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 34,
@@ -5119,8 +5286,10 @@
       "filters": "F770W, F1000W",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0115_blink.gif",
+      "highest_value": false,
       "instruments": "MIRI/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -5258,11 +5427,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o013_t013_miri_f770w::jw03295-o007_t004_miri_f770w",
+      "search_text": "MESSIER_061_branch_0115 MESSIER 061 F770W, F1000W MIRI/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MIR_FADE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 35,
@@ -5274,8 +5446,10 @@
       "filters": "F360M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0139_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -5413,11 +5587,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0139 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 36,
@@ -5429,8 +5606,10 @@
       "filters": "F200W, F360M, F300M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0021_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -5568,6 +5747,7 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0021 MESSIER 061 F200W, F360M, F300M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT EDGE_NEAR_MASK",
       "warning_flags": [
         "EDGE_NEAR_MASK"
       ]
@@ -5575,6 +5755,8 @@
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 37,
@@ -5586,8 +5768,10 @@
       "filters": "F335M, F360M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0064_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -5725,11 +5909,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0064 MESSIER 061 F335M, F360M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MIR_FADE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 38,
@@ -5741,8 +5928,10 @@
       "filters": "F200W, F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0046_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -5879,11 +6068,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0046 MESSIER 061 F200W, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "HIGH",
       "branch_rank": 39,
@@ -5895,8 +6087,10 @@
       "filters": "F360M, F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0078_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -6033,11 +6227,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0078 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 40,
@@ -6049,8 +6246,10 @@
       "filters": "F335M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0104_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -6188,11 +6387,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0104 MESSIER 061 F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 41,
@@ -6204,8 +6406,10 @@
       "filters": "F200W, F300M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0040_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -6342,11 +6546,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0040 MESSIER 061 F200W, F300M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 42,
@@ -6358,8 +6565,10 @@
       "filters": "F200W, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0100_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -6497,11 +6706,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0100 MESSIER 061 F200W, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 43,
@@ -6513,8 +6725,10 @@
       "filters": "F360M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0107_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -6652,11 +6866,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0107 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 44,
@@ -6668,8 +6885,10 @@
       "filters": "F200W, F360M, F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0001_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -6806,11 +7025,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0001 MESSIER 061 F200W, F360M, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "13.139",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 45,
@@ -6822,8 +7044,10 @@
       "filters": "F438W, F814W, F555W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0001_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -6962,6 +7186,7 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
+      "search_text": "MESSIER_066_branch_0001 MESSIER 066 F438W, F814W, F555W WFC3/UVIS Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT BLEND_RISK SN2009HD",
       "warning_flags": [
         "BLEND_RISK"
       ]
@@ -6969,6 +7194,8 @@
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 46,
@@ -6980,8 +7207,10 @@
       "filters": "F335M, F200W, F360M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0030_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -7119,11 +7348,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0030 MESSIER 061 F335M, F200W, F360M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN REBRIGHTENING_OR_RETURN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 47,
@@ -7135,8 +7367,10 @@
       "filters": "F360M, F300M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0075_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -7273,11 +7507,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f300m::jw02107-o044_t020_nircam_clear-f300m",
+      "search_text": "MESSIER_061_branch_0075 MESSIER 061 F360M, F300M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 48,
@@ -7289,8 +7526,10 @@
       "filters": "F200W, F300M, F360M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0024_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -7428,6 +7667,7 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0024 MESSIER 061 F200W, F300M, F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT EDGE_NEAR_MASK",
       "warning_flags": [
         "EDGE_NEAR_MASK"
       ]
@@ -7435,6 +7675,8 @@
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 49,
@@ -7446,8 +7688,10 @@
       "filters": "F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0141_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -7585,11 +7829,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0141 MESSIER 061 F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "HIGH",
       "branch_rank": 50,
@@ -7601,8 +7848,10 @@
       "filters": "F360M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0089_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -7739,11 +7988,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0089 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 51,
@@ -7755,8 +8007,10 @@
       "filters": "F360M, F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0041_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -7893,11 +8147,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0041 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 53,
@@ -7909,8 +8166,10 @@
       "filters": "F770W, F1000W",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0096_blink.gif",
+      "highest_value": false,
       "instruments": "MIRI/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -8048,11 +8307,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o013_t013_miri_f770w::jw03295-o007_t004_miri_f770w",
+      "search_text": "MESSIER_061_branch_0096 MESSIER 061 F770W, F1000W MIRI/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MIR_FADE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "HIGH",
       "branch_rank": 54,
@@ -8064,8 +8326,10 @@
       "filters": "F360M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0086_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -8202,11 +8466,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0086 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 56,
@@ -8218,8 +8485,10 @@
       "filters": "F360M, F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0057_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -8357,11 +8626,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0057 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN REBRIGHTENING_OR_RETURN",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "HIGH",
       "branch_rank": 57,
@@ -8373,8 +8645,10 @@
       "filters": "F200W, F300M, F335M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0023_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -8511,6 +8785,7 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0023 MESSIER 061 F200W, F300M, F335M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PERSISTENT_FADE_SUPPORT EDGE_NEAR_MASK",
       "warning_flags": [
         "EDGE_NEAR_MASK"
       ]
@@ -8518,6 +8793,8 @@
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 58,
@@ -8529,8 +8806,10 @@
       "filters": "F200W, F360M, F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0015_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -8667,6 +8946,7 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0015 MESSIER 061 F200W, F360M, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN EDGE_NEAR_MASK",
       "warning_flags": [
         "EDGE_NEAR_MASK"
       ]
@@ -8674,6 +8954,8 @@
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 59,
@@ -8685,8 +8967,10 @@
       "filters": "F200W, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0098_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -8823,11 +9107,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0098 MESSIER 061 F200W, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 60,
@@ -8839,8 +9126,10 @@
       "filters": "F200W, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0092_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -8977,11 +9266,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0092 MESSIER 061 F200W, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 61,
@@ -8993,8 +9285,10 @@
       "filters": "F360M, F300M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0066_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -9131,11 +9425,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0066 MESSIER 061 F360M, F300M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 63,
@@ -9147,8 +9444,10 @@
       "filters": "F360M, F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0044_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -9285,11 +9584,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0044 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 64,
@@ -9301,8 +9603,10 @@
       "filters": "F335M, F360M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0045_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -9439,6 +9743,7 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0045 MESSIER 061 F335M, F360M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN BLEND_RISK",
       "warning_flags": [
         "BLEND_RISK"
       ]
@@ -9446,6 +9751,8 @@
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 66,
@@ -9457,8 +9764,10 @@
       "filters": "F200W, F300M, F335M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0013_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -9596,11 +9905,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0013 MESSIER 061 F200W, F300M, F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN REBRIGHTENING_OR_RETURN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 67,
@@ -9612,8 +9924,10 @@
       "filters": "F335M, F360M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0032_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -9750,11 +10064,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0032 MESSIER 061 F335M, F360M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 68,
@@ -9766,8 +10083,10 @@
       "filters": "F360M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0146_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -9904,11 +10223,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0146 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 69,
@@ -9920,8 +10242,10 @@
       "filters": "F200W, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0106_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -10058,11 +10382,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0106 MESSIER 061 F200W, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 70,
@@ -10074,8 +10401,10 @@
       "filters": "F335M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0152_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -10213,11 +10542,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0152 MESSIER 061 F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 71,
@@ -10229,8 +10561,10 @@
       "filters": "F200W, F300M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0051_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -10367,11 +10701,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0051 MESSIER 061 F200W, F300M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 72,
@@ -10383,8 +10720,10 @@
       "filters": "F200W, F360M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0050_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -10521,11 +10860,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0050 MESSIER 061 F200W, F360M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 73,
@@ -10537,8 +10879,10 @@
       "filters": "F300M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0143_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -10675,11 +11019,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f300m::jw02107-o044_t020_nircam_clear-f300m",
+      "search_text": "MESSIER_061_branch_0143 MESSIER 061 F300M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 74,
@@ -10691,8 +11038,10 @@
       "filters": "F335M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0113_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -10829,11 +11178,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0113 MESSIER 061 F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 75,
@@ -10845,8 +11197,10 @@
       "filters": "F200W, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0159_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -10983,11 +11337,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f300m::jw02107-o044_t020_nircam_clear-f300m",
+      "search_text": "MESSIER_061_branch_0159 MESSIER 061 F200W, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 84,
@@ -10999,8 +11356,10 @@
       "filters": "F115W",
       "galaxy_name": "NGC 1365",
       "gif_rel": "assets/gifs/NGC_1365_branch_0001_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -11136,11 +11495,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "NGC 1365::jw01995-o006_t006_nircam_clear-f115w::jw05398-c1024_t000_nircam_clear-f115w",
+      "search_text": "NGC_1365_branch_0001 NGC 1365 F115W NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 86,
@@ -11152,8 +11514,10 @@
       "filters": "F200W, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0102_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -11290,11 +11654,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w",
+      "search_text": "MESSIER_061_branch_0102 MESSIER 061 F200W, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 97,
@@ -11306,8 +11673,10 @@
       "filters": "F360M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0157_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -11444,11 +11813,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0157 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 101,
@@ -11460,8 +11832,10 @@
       "filters": "F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0145_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -11598,11 +11972,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f300m::jw02107-o044_t020_nircam_clear-f300m",
+      "search_text": "MESSIER_061_branch_0145 MESSIER 061 F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 109,
@@ -11614,8 +11991,10 @@
       "filters": "F360M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0114_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -11752,11 +12131,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0114 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 111,
@@ -11768,8 +12150,10 @@
       "filters": "F335M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0112_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -11906,11 +12290,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0112 MESSIER 061 F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 128,
@@ -11922,8 +12309,10 @@
       "filters": "F360M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0126_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -12060,11 +12449,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0126 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 132,
@@ -12076,8 +12468,10 @@
       "filters": "F360M, F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0054_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -12214,11 +12608,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0054 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 137,
@@ -12230,8 +12627,10 @@
       "filters": "F335M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0150_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -12369,11 +12768,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0150 MESSIER 061 F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN REBRIGHTENING_OR_RETURN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 139,
@@ -12385,8 +12787,10 @@
       "filters": "F360M, F335M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0105_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -12523,11 +12927,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0105 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 144,
@@ -12539,8 +12946,10 @@
       "filters": "F300M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0162_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -12677,11 +13086,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f300m::jw02107-o044_t020_nircam_clear-f300m",
+      "search_text": "MESSIER_061_branch_0162 MESSIER 061 F300M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 156,
@@ -12693,8 +13105,10 @@
       "filters": "F335M, F360M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0165_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -12831,11 +13245,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m",
+      "search_text": "MESSIER_061_branch_0165 MESSIER 061 F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 265,
@@ -12847,8 +13264,10 @@
       "filters": "F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0128_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -12985,11 +13404,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0128 MESSIER 061 F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "2.558",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 266,
@@ -13001,8 +13423,10 @@
       "filters": "F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0013_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.",
+      "matched_to_blind": true,
       "math_rows": [
         [
           "Branch rank",
@@ -13138,11 +13562,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 066::hst_12968_01_wfc3_uvis_f814w_ic0h01::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0013 MESSIER 066 F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "64.153",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 267,
@@ -13154,8 +13581,10 @@
       "filters": "F555W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0035_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -13292,11 +13721,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
+      "search_text": "MESSIER_066_branch_0035 MESSIER 066 F555W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "81.702",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 268,
@@ -13308,8 +13740,10 @@
       "filters": "F555W, F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0008_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -13448,11 +13882,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
+      "search_text": "MESSIER_066_branch_0008 MESSIER 066 F555W, F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": "SN2016COK",
+      "blind_match_sep_arcsec": "28.631",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 324,
@@ -13464,8 +13901,10 @@
       "filters": "F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0016_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -13602,11 +14041,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0016 MESSIER 066 F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2016COK",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 328,
@@ -13618,8 +14060,10 @@
       "filters": "F335M, F300M",
       "galaxy_name": "MESSIER 061",
       "gif_rel": "assets/gifs/MESSIER_061_branch_0147_blink.gif",
+      "highest_value": false,
       "instruments": "NIRCAM/IMAGE",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -13756,11 +14200,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m",
+      "search_text": "MESSIER_061_branch_0147 MESSIER 061 F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "90.511",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 608,
@@ -13772,8 +14219,10 @@
       "filters": "F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0182_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -13911,11 +14360,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0182 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2016COK",
+      "blind_match_sep_arcsec": "45.019",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 617,
@@ -13927,8 +14379,10 @@
       "filters": "F555W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0278_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -14066,11 +14520,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
+      "search_text": "MESSIER_066_branch_0278 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2016COK",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "65.480",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 652,
@@ -14082,8 +14539,10 @@
       "filters": "F555W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0265_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -14220,11 +14679,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
+      "search_text": "MESSIER_066_branch_0265 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "100.698",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 660,
@@ -14236,8 +14698,10 @@
       "filters": "F555W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0231_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -14375,11 +14839,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
+      "search_text": "MESSIER_066_branch_0231 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "82.540",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 710,
@@ -14391,8 +14858,10 @@
       "filters": "F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0189_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -14528,11 +14997,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0189 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "48.132",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 771,
@@ -14544,8 +15016,10 @@
       "filters": "F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0283_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -14681,11 +15155,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0283 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "40.564",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 780,
@@ -14697,8 +15174,10 @@
       "filters": "F555W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0171_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -14834,11 +15313,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
+      "search_text": "MESSIER_066_branch_0171 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "24.150",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 808,
@@ -14850,8 +15332,10 @@
       "filters": "F555W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0191_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -14987,11 +15471,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
+      "search_text": "MESSIER_066_branch_0191 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "63.006",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 809,
@@ -15003,8 +15490,10 @@
       "filters": "F555W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0242_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -15140,11 +15629,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
+      "search_text": "MESSIER_066_branch_0242 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "60.299",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 837,
@@ -15156,8 +15648,10 @@
       "filters": "F555W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0193_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -15293,11 +15787,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
+      "search_text": "MESSIER_066_branch_0193 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "117.600",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 842,
@@ -15309,8 +15806,10 @@
       "filters": "F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0064_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -15446,11 +15945,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0064 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2016COK",
+      "blind_match_sep_arcsec": "83.355",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 846,
@@ -15462,8 +15964,10 @@
       "filters": "F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0228_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -15599,11 +16103,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0228 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2016COK",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2016COK",
+      "blind_match_sep_arcsec": "87.423",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 850,
@@ -15615,8 +16122,10 @@
       "filters": "F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0178_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -15752,11 +16261,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0178 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2016COK",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "81.728",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 871,
@@ -15768,8 +16280,10 @@
       "filters": "F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0117_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -15905,11 +16419,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0117 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "65.990",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 875,
@@ -15921,8 +16438,10 @@
       "filters": "F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0098_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -16058,11 +16577,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0098 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "113.382",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 878,
@@ -16074,8 +16596,10 @@
       "filters": "F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0170_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -16211,11 +16735,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0170 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "103.613",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 882,
@@ -16227,8 +16754,10 @@
       "filters": "F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0033_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -16364,11 +16893,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0033 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2016COK",
+      "blind_match_sep_arcsec": "23.029",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 886,
@@ -16380,8 +16912,10 @@
       "filters": "F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0190_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -16517,11 +17051,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0190 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2016COK",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "78.428",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 898,
@@ -16533,8 +17070,10 @@
       "filters": "F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0284_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -16670,11 +17209,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0284 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
+      "blind_match_name": "SN2016COK",
+      "blind_match_sep_arcsec": "28.432",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 900,
@@ -16686,8 +17228,10 @@
       "filters": "F814W",
       "galaxy_name": "MESSIER 066",
       "gif_rel": "assets/gifs/MESSIER_066_branch_0223_blink.gif",
+      "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.",
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -16823,6 +17367,7 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
+      "search_text": "MESSIER_066_branch_0223 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN EDGE_NEAR_MASK SN2016COK",
       "warning_flags": [
         "EDGE_NEAR_MASK"
       ]
@@ -16831,13 +17376,16 @@
   "summary": {
     "benchmark_median_sep_arcsec": 0.6826919198678586,
     "benchmark_recovery_fraction": 0.75,
+    "blind_match_radius_arcsec": 3.0,
     "class_counts": {
       "DUST_SURVIVOR_LIKE": 21,
       "INTERMEDIATE_BRANCH_LIKE": 58,
       "STRONG_EXPORT_FAILURE_LIKE": 30,
       "SYSTEMATIC_LIKE": 0
     },
-    "created_utc": "20260311_054737UTC",
+    "created_utc": "20260311_060227UTC",
+    "highest_value_count": 24,
+    "matched_to_blind_count": 2,
     "n_candidates": 109,
     "n_clusters": 109,
     "source_branch_dir": "/home/primary/SUPERNOVA/outputs/live_difference_strict_20260311_0421/branch_aware_v4"

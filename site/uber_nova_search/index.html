@@ -123,6 +123,32 @@ h1 {
   font-size: 0.8rem;
   margin-bottom: 12px;
 }
+.mini-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -2px 0 12px;
+}
+.mini-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  border: 1px solid var(--line);
+  background: #f4efe5;
+  color: #5c4a3b;
+}
+.mini-badge-blind {
+  background: #f3e3c0;
+  border-color: #d8b76a;
+  color: #6e4b00;
+}
+.mini-badge-high {
+  background: #f0dccf;
+  border-color: #cb8967;
+  color: #7a3318;
+}
 .hero img {
   width: 100%;
   border-radius: 16px;
@@ -185,12 +211,57 @@ code {
   font-family: var(--mono);
   font-size: 0.88rem;
 }
+.toolbar {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(220px, 1fr) auto;
+  align-items: center;
+  margin-top: 18px;
+}
+.toolbar input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.9);
+  color: var(--ink);
+  font: inherit;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.8);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 0.83rem;
+}
+.filter-buttons button.active {
+  background: #ead4c2;
+  border-color: #c17b57;
+  color: #6d2d13;
+}
+.filter-summary {
+  margin-top: 12px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.88rem;
+}
 footer {
   margin-top: 42px;
   color: var(--muted);
   font-size: 0.98rem;
 }
 @media (max-width: 960px) {
+  .toolbar {
+    grid-template-columns: 1fr;
+  }
   .card-top,
   .panel-row {
     grid-template-columns: 1fr;
@@ -231,8 +302,18 @@ footer {
           <h3>Interpretive posture</h3>
           <p>These are not publication claims. They are strict detector survivors ranked by export-failure coherence under the current assumption-conditioned framework.</p>
           <p>The standing guardrail is still the blind known-supernova benchmark, which passed at <code>0.75</code>.</p>
+          <p class="small">The page-level “Matched to blind” filter uses a looser <code>3.0"</code> same-galaxy association radius for operator triage. The benchmark pass/fail itself remains the stricter <code>1.5"</code> recovery test.</p>
         </div>
       </div>
+      <div class="toolbar">
+        <input id="candidate-search" type="search" placeholder="Search cluster id, galaxy, filter, interpretation, reason code">
+        <div class="filter-buttons">
+          <button class="active" data-filter="all" type="button">All</button>
+          <button data-filter="matched-blind" type="button">Matched to blind (2)</button>
+          <button data-filter="highest-value" type="button">Highest Value (24)</button>
+        </div>
+      </div>
+      <div class="filter-summary" id="filter-summary">Showing all 109 displayed candidates.</div>
       <div class="toc"><a href="#strong_export_failure_like">Strong export-failure-like (30)</a><a href="#intermediate_branch_like">Intermediate branch-like (58)</a><a href="#dust_survivor_like">Dust-survivor-like (21)</a></div>
     </section>
     
@@ -241,10 +322,11 @@ footer {
   <p class="section-note">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Current count: 30.</p>
   <div class="section-grid">
     
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_066_branch_0002 MESSIER 066 F814W, F555W, F438W WFC3/UVIS Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="true" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-blind">Matched to blind</div><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_066_branch_0002">MESSIER_066_branch_0002</h3>
       <p class="subhead">MESSIER 066 | rank 1 | confidence LOW</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -266,6 +348,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-10-29 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.07041</code>, <code>Dec 12.97975</code></li>
+        <li>Blind match: <code>SN2009HD</code> at <code>1.573</code> arcsec</li>
       </ul>
     </div>
     <div>
@@ -323,10 +406,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0006 MESSIER 061 F335M, F300M, F200W, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0006">MESSIER_061_branch_0006</h3>
       <p class="subhead">MESSIER 061 | rank 2 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -348,6 +432,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47692</code>, <code>Dec 4.47059</code></li>
+        
       </ul>
     </div>
     <div>
@@ -405,10 +490,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0009 MESSIER 061 F300M, F360M, F200W, F335M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0009">MESSIER_061_branch_0009</h3>
       <p class="subhead">MESSIER 061 | rank 3 | confidence HIGH</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -430,6 +516,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47533</code>, <code>Dec 4.46889</code></li>
+        
       </ul>
     </div>
     <div>
@@ -487,10 +574,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0025 MESSIER 061 F335M, F200W, F360M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0025">MESSIER_061_branch_0025</h3>
       <p class="subhead">MESSIER 061 | rank 4 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -512,6 +600,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47442</code>, <code>Dec 4.46694</code></li>
+        
       </ul>
     </div>
     <div>
@@ -569,10 +658,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0016 MESSIER 061 F200W, F335M, F300M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0016">MESSIER_061_branch_0016</h3>
       <p class="subhead">MESSIER 061 | rank 5 | confidence LOW</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -594,6 +684,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47515</code>, <code>Dec 4.46958</code></li>
+        
       </ul>
     </div>
     <div>
@@ -651,10 +742,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0062 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0062">MESSIER_061_branch_0062</h3>
       <p class="subhead">MESSIER 061 | rank 6 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.</p>
@@ -676,6 +768,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48135</code>, <code>Dec 4.48769</code></li>
+        
       </ul>
     </div>
     <div>
@@ -733,10 +826,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0033 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0033">MESSIER_061_branch_0033</h3>
       <p class="subhead">MESSIER 061 | rank 7 | confidence HIGH</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.</p>
@@ -758,6 +852,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47095</code>, <code>Dec 4.46187</code></li>
+        
       </ul>
     </div>
     <div>
@@ -815,10 +910,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0061 MESSIER 061 F200W, F300M, F335M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0061">MESSIER_061_branch_0061</h3>
       <p class="subhead">MESSIER 061 | rank 8 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.</p>
@@ -840,6 +936,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47629</code>, <code>Dec 4.47066</code></li>
+        
       </ul>
     </div>
     <div>
@@ -897,10 +994,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0012 MESSIER 061 F360M, F335M, F300M, F200W NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0012">MESSIER_061_branch_0012</h3>
       <p class="subhead">MESSIER 061 | rank 9 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -922,6 +1020,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48530</code>, <code>Dec 4.48980</code></li>
+        
       </ul>
     </div>
     <div>
@@ -979,10 +1078,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0022 MESSIER 061 F200W, F335M, F300M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0022">MESSIER_061_branch_0022</h3>
       <p class="subhead">MESSIER 061 | rank 10 | confidence LOW</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -1004,6 +1104,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47461</code>, <code>Dec 4.46590</code></li>
+        
       </ul>
     </div>
     <div>
@@ -1061,10 +1162,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0039 MESSIER 061 F200W, F335M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0039">MESSIER_061_branch_0039</h3>
       <p class="subhead">MESSIER 061 | rank 11 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.</p>
@@ -1086,6 +1188,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47515</code>, <code>Dec 4.46679</code></li>
+        
       </ul>
     </div>
     <div>
@@ -1143,10 +1246,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0019 MESSIER 061 F360M, F335M, F200W, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0019">MESSIER_061_branch_0019</h3>
       <p class="subhead">MESSIER 061 | rank 12 | confidence LOW</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -1168,6 +1272,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47325</code>, <code>Dec 4.46391</code></li>
+        
       </ul>
     </div>
     <div>
@@ -1225,10 +1330,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0079 MESSIER 061 F300M, F360M, F335M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0079">MESSIER_061_branch_0079</h3>
       <p class="subhead">MESSIER 061 | rank 13 | confidence LOW</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.</p>
@@ -1250,6 +1356,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47601</code>, <code>Dec 4.47204</code></li>
+        
       </ul>
     </div>
     <div>
@@ -1307,10 +1414,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0011 MESSIER 061 F200W, F335M, F300M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0011">MESSIER_061_branch_0011</h3>
       <p class="subhead">MESSIER 061 | rank 14 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -1332,6 +1440,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48304</code>, <code>Dec 4.48202</code></li>
+        
       </ul>
     </div>
     <div>
@@ -1389,10 +1498,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0065 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0065">MESSIER_061_branch_0065</h3>
       <p class="subhead">MESSIER 061 | rank 15 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.</p>
@@ -1414,6 +1524,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47365</code>, <code>Dec 4.46620</code></li>
+        
       </ul>
     </div>
     <div>
@@ -1471,10 +1582,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0005 MESSIER 061 F335M, F200W, F360M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0005">MESSIER_061_branch_0005</h3>
       <p class="subhead">MESSIER 061 | rank 16 | confidence HIGH</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -1496,6 +1608,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48231</code>, <code>Dec 4.48680</code></li>
+        
       </ul>
     </div>
     <div>
@@ -1553,10 +1666,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0010 MESSIER 061 F200W, F335M, F300M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0010">MESSIER_061_branch_0010</h3>
       <p class="subhead">MESSIER 061 | rank 17 | confidence LOW</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -1578,6 +1692,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48194</code>, <code>Dec 4.48149</code></li>
+        
       </ul>
     </div>
     <div>
@@ -1635,10 +1750,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0004 MESSIER 061 F200W, F335M, F300M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0004">MESSIER_061_branch_0004</h3>
       <p class="subhead">MESSIER 061 | rank 18 | confidence LOW</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -1660,6 +1776,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48541</code>, <code>Dec 4.48782</code></li>
+        
       </ul>
     </div>
     <div>
@@ -1717,10 +1834,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0014 MESSIER 061 F200W, F335M, F360M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0014">MESSIER_061_branch_0014</h3>
       <p class="subhead">MESSIER 061 | rank 19 | confidence LOW</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -1742,6 +1860,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47407</code>, <code>Dec 4.46466</code></li>
+        
       </ul>
     </div>
     <div>
@@ -1799,10 +1918,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0026 MESSIER 061 F200W, F360M, F335M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0026">MESSIER_061_branch_0026</h3>
       <p class="subhead">MESSIER 061 | rank 21 | confidence HIGH</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -1824,6 +1944,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48282</code>, <code>Dec 4.49030</code></li>
+        
       </ul>
     </div>
     <div>
@@ -1881,10 +2002,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0077 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0077">MESSIER_061_branch_0077</h3>
       <p class="subhead">MESSIER 061 | rank 22 | confidence HIGH</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.</p>
@@ -1906,6 +2028,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47196</code>, <code>Dec 4.46539</code></li>
+        
       </ul>
     </div>
     <div>
@@ -1963,10 +2086,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0052 MESSIER 061 F335M, F360M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0052">MESSIER_061_branch_0052</h3>
       <p class="subhead">MESSIER 061 | rank 23 | confidence HIGH</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.</p>
@@ -1988,6 +2112,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48157</code>, <code>Dec 4.48382</code></li>
+        
       </ul>
     </div>
     <div>
@@ -2045,10 +2170,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0008 MESSIER 061 F300M, F200W, F335M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0008">MESSIER_061_branch_0008</h3>
       <p class="subhead">MESSIER 061 | rank 24 | confidence HIGH</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -2070,6 +2196,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48338</code>, <code>Dec 4.48919</code></li>
+        
       </ul>
     </div>
     <div>
@@ -2127,10 +2254,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0055 MESSIER 061 F335M, F360M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0055">MESSIER_061_branch_0055</h3>
       <p class="subhead">MESSIER 061 | rank 31 | confidence HIGH</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.</p>
@@ -2152,6 +2280,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48110</code>, <code>Dec 4.48333</code></li>
+        
       </ul>
     </div>
     <div>
@@ -2209,10 +2338,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0078 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0078">MESSIER_061_branch_0078</h3>
       <p class="subhead">MESSIER 061 | rank 39 | confidence HIGH</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.</p>
@@ -2234,6 +2364,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48374</code>, <code>Dec 4.48450</code></li>
+        
       </ul>
     </div>
     <div>
@@ -2291,10 +2422,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_066_branch_0001 MESSIER 066 F438W, F814W, F555W WFC3/UVIS Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT BLEND_RISK SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0001">MESSIER_066_branch_0001</h3>
       <p class="subhead">MESSIER 066 | rank 45 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -2316,6 +2448,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-10-29 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.07241</code>, <code>Dec 12.98282</code></li>
+        
       </ul>
     </div>
     <div>
@@ -2373,10 +2506,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0089 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0089">MESSIER_061_branch_0089</h3>
       <p class="subhead">MESSIER 061 | rank 50 | confidence HIGH</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.</p>
@@ -2398,6 +2532,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48292</code>, <code>Dec 4.48663</code></li>
+        
       </ul>
     </div>
     <div>
@@ -2455,10 +2590,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0086 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0086">MESSIER_061_branch_0086</h3>
       <p class="subhead">MESSIER 061 | rank 54 | confidence HIGH</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.</p>
@@ -2480,6 +2616,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48233</code>, <code>Dec 4.48433</code></li>
+        
       </ul>
     </div>
     <div>
@@ -2537,10 +2674,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_061_branch_0023 MESSIER 061 F200W, F300M, F335M, F360M NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PERSISTENT_FADE_SUPPORT EDGE_NEAR_MASK" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0023">MESSIER_061_branch_0023</h3>
       <p class="subhead">MESSIER 061 | rank 57 | confidence HIGH</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -2562,6 +2700,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48016</code>, <code>Dec 4.47514</code></li>
+        
       </ul>
     </div>
     <div>
@@ -2619,10 +2758,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="NGC_1365_branch_0001 NGC 1365 F115W NIRCAM/IMAGE Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
+      <div class="mini-badges"></div>
       <h3 id="NGC_1365_branch_0001">NGC_1365_branch_0001</h3>
       <p class="subhead">NGC 1365 | rank 84 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.</p>
@@ -2644,6 +2784,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-08-29 to 2024-12-08</code></li>
         <li>Sky position: <code>RA 53.42740</code>, <code>Dec -36.17073</code></li>
+        
       </ul>
     </div>
     <div>
@@ -2709,10 +2850,11 @@ footer {
   <p class="section-note">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. Current count: 58.</p>
   <div class="section-grid">
     
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0060 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0060">MESSIER_061_branch_0060</h3>
       <p class="subhead">MESSIER 061 | rank 20 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -2734,6 +2876,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47952</code>, <code>Dec 4.47679</code></li>
+        
       </ul>
     </div>
     <div>
@@ -2791,10 +2934,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0053 MESSIER 061 F200W, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MIR_FADE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0053">MESSIER_061_branch_0053</h3>
       <p class="subhead">MESSIER 061 | rank 25 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -2816,6 +2960,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47822</code>, <code>Dec 4.47744</code></li>
+        
       </ul>
     </div>
     <div>
@@ -2873,10 +3018,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0111 MESSIER 061 F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0111">MESSIER_061_branch_0111</h3>
       <p class="subhead">MESSIER 061 | rank 26 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -2898,6 +3044,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47713</code>, <code>Dec 4.47091</code></li>
+        
       </ul>
     </div>
     <div>
@@ -2955,10 +3102,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_066_branch_0004 MESSIER 066 F555W, F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0004">MESSIER_066_branch_0004</h3>
       <p class="subhead">MESSIER 066 | rank 27 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -2980,6 +3128,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.05080</code>, <code>Dec 13.00198</code></li>
+        
       </ul>
     </div>
     <div>
@@ -3037,10 +3186,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0108 MESSIER 061 F200W, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_061_branch_0108">MESSIER_061_branch_0108</h3>
       <p class="subhead">MESSIER 061 | rank 28 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -3062,6 +3212,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47672</code>, <code>Dec 4.46972</code></li>
+        
       </ul>
     </div>
     <div>
@@ -3119,10 +3270,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0070 MESSIER 061 F335M, F360M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0070">MESSIER_061_branch_0070</h3>
       <p class="subhead">MESSIER 061 | rank 29 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -3144,6 +3296,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47249</code>, <code>Dec 4.46459</code></li>
+        
       </ul>
     </div>
     <div>
@@ -3201,10 +3354,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0135 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0135">MESSIER_061_branch_0135</h3>
       <p class="subhead">MESSIER 061 | rank 30 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -3226,6 +3380,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47640</code>, <code>Dec 4.47033</code></li>
+        
       </ul>
     </div>
     <div>
@@ -3283,10 +3438,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0002 MESSIER 061 F335M, F360M, F200W, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN EDGE_NEAR_MASK" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0002">MESSIER_061_branch_0002</h3>
       <p class="subhead">MESSIER 061 | rank 32 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.</p>
@@ -3308,6 +3464,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47627</code>, <code>Dec 4.46608</code></li>
+        
       </ul>
     </div>
     <div>
@@ -3365,10 +3522,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0042 MESSIER 061 F335M, F200W, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0042">MESSIER_061_branch_0042</h3>
       <p class="subhead">MESSIER 061 | rank 33 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -3390,6 +3548,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48016</code>, <code>Dec 4.47799</code></li>
+        
       </ul>
     </div>
     <div>
@@ -3447,10 +3606,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0115 MESSIER 061 F770W, F1000W MIRI/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MIR_FADE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0115">MESSIER_061_branch_0115</h3>
       <p class="subhead">MESSIER 061 | rank 34 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -3472,6 +3632,7 @@ footer {
         <li>Instruments: <code>MIRI/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-05-15</code></li>
         <li>Sky position: <code>RA 185.47764</code>, <code>Dec 4.47700</code></li>
+        
       </ul>
     </div>
     <div>
@@ -3529,10 +3690,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0139 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0139">MESSIER_061_branch_0139</h3>
       <p class="subhead">MESSIER 061 | rank 35 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -3554,6 +3716,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47624</code>, <code>Dec 4.47017</code></li>
+        
       </ul>
     </div>
     <div>
@@ -3611,10 +3774,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0021 MESSIER 061 F200W, F360M, F300M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT EDGE_NEAR_MASK" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0021">MESSIER_061_branch_0021</h3>
       <p class="subhead">MESSIER 061 | rank 36 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.</p>
@@ -3636,6 +3800,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48607</code>, <code>Dec 4.48902</code></li>
+        
       </ul>
     </div>
     <div>
@@ -3693,10 +3858,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0064 MESSIER 061 F335M, F360M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MIR_FADE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0064">MESSIER_061_branch_0064</h3>
       <p class="subhead">MESSIER 061 | rank 37 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -3718,6 +3884,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47851</code>, <code>Dec 4.47746</code></li>
+        
       </ul>
     </div>
     <div>
@@ -3775,10 +3942,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0046 MESSIER 061 F200W, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0046">MESSIER_061_branch_0046</h3>
       <p class="subhead">MESSIER 061 | rank 38 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -3800,6 +3968,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48043</code>, <code>Dec 4.47917</code></li>
+        
       </ul>
     </div>
     <div>
@@ -3857,10 +4026,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0104 MESSIER 061 F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0104">MESSIER_061_branch_0104</h3>
       <p class="subhead">MESSIER 061 | rank 40 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -3882,6 +4052,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48169</code>, <code>Dec 4.47911</code></li>
+        
       </ul>
     </div>
     <div>
@@ -3939,10 +4110,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0040 MESSIER 061 F200W, F300M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0040">MESSIER_061_branch_0040</h3>
       <p class="subhead">MESSIER 061 | rank 41 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -3964,6 +4136,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48104</code>, <code>Dec 4.47781</code></li>
+        
       </ul>
     </div>
     <div>
@@ -4021,10 +4194,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0100 MESSIER 061 F200W, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0100">MESSIER_061_branch_0100</h3>
       <p class="subhead">MESSIER 061 | rank 42 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -4046,6 +4220,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47634</code>, <code>Dec 4.47127</code></li>
+        
       </ul>
     </div>
     <div>
@@ -4103,10 +4278,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0107 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0107">MESSIER_061_branch_0107</h3>
       <p class="subhead">MESSIER 061 | rank 43 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -4128,6 +4304,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47399</code>, <code>Dec 4.46494</code></li>
+        
       </ul>
     </div>
     <div>
@@ -4185,10 +4362,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0001 MESSIER 061 F200W, F360M, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0001">MESSIER_061_branch_0001</h3>
       <p class="subhead">MESSIER 061 | rank 44 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.</p>
@@ -4210,6 +4388,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47659</code>, <code>Dec 4.46722</code></li>
+        
       </ul>
     </div>
     <div>
@@ -4267,10 +4446,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0030 MESSIER 061 F335M, F200W, F360M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN REBRIGHTENING_OR_RETURN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0030">MESSIER_061_branch_0030</h3>
       <p class="subhead">MESSIER 061 | rank 46 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -4292,6 +4472,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47558</code>, <code>Dec 4.47294</code></li>
+        
       </ul>
     </div>
     <div>
@@ -4349,10 +4530,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0075 MESSIER 061 F360M, F300M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0075">MESSIER_061_branch_0075</h3>
       <p class="subhead">MESSIER 061 | rank 47 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -4374,6 +4556,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48181</code>, <code>Dec 4.48233</code></li>
+        
       </ul>
     </div>
     <div>
@@ -4431,10 +4614,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0024 MESSIER 061 F200W, F300M, F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT EDGE_NEAR_MASK" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0024">MESSIER_061_branch_0024</h3>
       <p class="subhead">MESSIER 061 | rank 48 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.</p>
@@ -4456,6 +4640,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47487</code>, <code>Dec 4.46278</code></li>
+        
       </ul>
     </div>
     <div>
@@ -4513,10 +4698,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0141 MESSIER 061 F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0141">MESSIER_061_branch_0141</h3>
       <p class="subhead">MESSIER 061 | rank 49 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -4538,6 +4724,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48143</code>, <code>Dec 4.48005</code></li>
+        
       </ul>
     </div>
     <div>
@@ -4595,10 +4782,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0041 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0041">MESSIER_061_branch_0041</h3>
       <p class="subhead">MESSIER 061 | rank 51 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -4620,6 +4808,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47356</code>, <code>Dec 4.46516</code></li>
+        
       </ul>
     </div>
     <div>
@@ -4677,10 +4866,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0096 MESSIER 061 F770W, F1000W MIRI/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MIR_FADE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0096">MESSIER_061_branch_0096</h3>
       <p class="subhead">MESSIER 061 | rank 53 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.</p>
@@ -4702,6 +4892,7 @@ footer {
         <li>Instruments: <code>MIRI/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-05-15</code></li>
         <li>Sky position: <code>RA 185.45234</code>, <code>Dec 4.49677</code></li>
+        
       </ul>
     </div>
     <div>
@@ -4759,10 +4950,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0057 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN REBRIGHTENING_OR_RETURN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0057">MESSIER_061_branch_0057</h3>
       <p class="subhead">MESSIER 061 | rank 56 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -4784,6 +4976,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47782</code>, <code>Dec 4.47673</code></li>
+        
       </ul>
     </div>
     <div>
@@ -4841,10 +5034,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0015 MESSIER 061 F200W, F360M, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN EDGE_NEAR_MASK" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0015">MESSIER_061_branch_0015</h3>
       <p class="subhead">MESSIER 061 | rank 58 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.</p>
@@ -4866,6 +5060,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48547</code>, <code>Dec 4.48750</code></li>
+        
       </ul>
     </div>
     <div>
@@ -4923,10 +5118,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0098 MESSIER 061 F200W, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0098">MESSIER_061_branch_0098</h3>
       <p class="subhead">MESSIER 061 | rank 59 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -4948,6 +5144,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48211</code>, <code>Dec 4.48354</code></li>
+        
       </ul>
     </div>
     <div>
@@ -5005,10 +5202,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0092 MESSIER 061 F200W, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0092">MESSIER_061_branch_0092</h3>
       <p class="subhead">MESSIER 061 | rank 60 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -5030,6 +5228,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48422</code>, <code>Dec 4.48705</code></li>
+        
       </ul>
     </div>
     <div>
@@ -5087,10 +5286,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0066 MESSIER 061 F360M, F300M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0066">MESSIER_061_branch_0066</h3>
       <p class="subhead">MESSIER 061 | rank 61 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -5112,6 +5312,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48243</code>, <code>Dec 4.48293</code></li>
+        
       </ul>
     </div>
     <div>
@@ -5169,10 +5370,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0044 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0044">MESSIER_061_branch_0044</h3>
       <p class="subhead">MESSIER 061 | rank 63 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -5194,6 +5396,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48251</code>, <code>Dec 4.48070</code></li>
+        
       </ul>
     </div>
     <div>
@@ -5251,10 +5454,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0045 MESSIER 061 F335M, F360M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN BLEND_RISK" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0045">MESSIER_061_branch_0045</h3>
       <p class="subhead">MESSIER 061 | rank 64 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.</p>
@@ -5276,6 +5480,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48400</code>, <code>Dec 4.48915</code></li>
+        
       </ul>
     </div>
     <div>
@@ -5333,10 +5538,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0013 MESSIER 061 F200W, F300M, F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN REBRIGHTENING_OR_RETURN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0013">MESSIER_061_branch_0013</h3>
       <p class="subhead">MESSIER 061 | rank 66 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -5358,6 +5564,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47548</code>, <code>Dec 4.47123</code></li>
+        
       </ul>
     </div>
     <div>
@@ -5415,10 +5622,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0032 MESSIER 061 F335M, F360M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0032">MESSIER_061_branch_0032</h3>
       <p class="subhead">MESSIER 061 | rank 67 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -5440,6 +5648,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47375</code>, <code>Dec 4.46057</code></li>
+        
       </ul>
     </div>
     <div>
@@ -5497,10 +5706,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0146 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0146">MESSIER_061_branch_0146</h3>
       <p class="subhead">MESSIER 061 | rank 68 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -5522,6 +5732,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47511</code>, <code>Dec 4.46397</code></li>
+        
       </ul>
     </div>
     <div>
@@ -5579,10 +5790,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0106 MESSIER 061 F200W, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0106">MESSIER_061_branch_0106</h3>
       <p class="subhead">MESSIER 061 | rank 69 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -5604,6 +5816,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47369</code>, <code>Dec 4.46830</code></li>
+        
       </ul>
     </div>
     <div>
@@ -5661,10 +5874,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0152 MESSIER 061 F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0152">MESSIER_061_branch_0152</h3>
       <p class="subhead">MESSIER 061 | rank 70 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -5686,6 +5900,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47779</code>, <code>Dec 4.47429</code></li>
+        
       </ul>
     </div>
     <div>
@@ -5743,10 +5958,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0051 MESSIER 061 F200W, F300M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0051">MESSIER_061_branch_0051</h3>
       <p class="subhead">MESSIER 061 | rank 71 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -5768,6 +5984,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47926</code>, <code>Dec 4.47512</code></li>
+        
       </ul>
     </div>
     <div>
@@ -5825,10 +6042,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0050 MESSIER 061 F200W, F360M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0050">MESSIER_061_branch_0050</h3>
       <p class="subhead">MESSIER 061 | rank 72 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -5850,6 +6068,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48083</code>, <code>Dec 4.47992</code></li>
+        
       </ul>
     </div>
     <div>
@@ -5907,10 +6126,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0143 MESSIER 061 F300M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0143">MESSIER_061_branch_0143</h3>
       <p class="subhead">MESSIER 061 | rank 73 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -5932,6 +6152,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47830</code>, <code>Dec 4.48004</code></li>
+        
       </ul>
     </div>
     <div>
@@ -5989,10 +6210,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0113 MESSIER 061 F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0113">MESSIER_061_branch_0113</h3>
       <p class="subhead">MESSIER 061 | rank 74 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -6014,6 +6236,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48488</code>, <code>Dec 4.48847</code></li>
+        
       </ul>
     </div>
     <div>
@@ -6071,10 +6294,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0159 MESSIER 061 F200W, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0159">MESSIER_061_branch_0159</h3>
       <p class="subhead">MESSIER 061 | rank 75 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -6096,6 +6320,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47603</code>, <code>Dec 4.46632</code></li>
+        
       </ul>
     </div>
     <div>
@@ -6153,10 +6378,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0102 MESSIER 061 F200W, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0102">MESSIER_061_branch_0102</h3>
       <p class="subhead">MESSIER 061 | rank 86 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -6178,6 +6404,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47416</code>, <code>Dec 4.46751</code></li>
+        
       </ul>
     </div>
     <div>
@@ -6235,10 +6462,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0157 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0157">MESSIER_061_branch_0157</h3>
       <p class="subhead">MESSIER 061 | rank 97 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -6260,6 +6488,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48381</code>, <code>Dec 4.48530</code></li>
+        
       </ul>
     </div>
     <div>
@@ -6317,10 +6546,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0145 MESSIER 061 F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0145">MESSIER_061_branch_0145</h3>
       <p class="subhead">MESSIER 061 | rank 101 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -6342,6 +6572,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48161</code>, <code>Dec 4.48134</code></li>
+        
       </ul>
     </div>
     <div>
@@ -6399,10 +6630,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0114 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0114">MESSIER_061_branch_0114</h3>
       <p class="subhead">MESSIER 061 | rank 109 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -6424,6 +6656,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47280</code>, <code>Dec 4.46640</code></li>
+        
       </ul>
     </div>
     <div>
@@ -6481,10 +6714,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0112 MESSIER 061 F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0112">MESSIER_061_branch_0112</h3>
       <p class="subhead">MESSIER 061 | rank 111 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -6506,6 +6740,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47895</code>, <code>Dec 4.47643</code></li>
+        
       </ul>
     </div>
     <div>
@@ -6563,10 +6798,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0126 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0126">MESSIER_061_branch_0126</h3>
       <p class="subhead">MESSIER 061 | rank 128 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -6588,6 +6824,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47345</code>, <code>Dec 4.46270</code></li>
+        
       </ul>
     </div>
     <div>
@@ -6645,10 +6882,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0054 MESSIER 061 F360M, F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0054">MESSIER_061_branch_0054</h3>
       <p class="subhead">MESSIER 061 | rank 132 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -6670,6 +6908,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47713</code>, <code>Dec 4.46931</code></li>
+        
       </ul>
     </div>
     <div>
@@ -6727,10 +6966,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0150 MESSIER 061 F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN REBRIGHTENING_OR_RETURN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0150">MESSIER_061_branch_0150</h3>
       <p class="subhead">MESSIER 061 | rank 137 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -6752,6 +6992,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47843</code>, <code>Dec 4.47732</code></li>
+        
       </ul>
     </div>
     <div>
@@ -6809,10 +7050,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0105 MESSIER 061 F360M, F335M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0105">MESSIER_061_branch_0105</h3>
       <p class="subhead">MESSIER 061 | rank 139 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -6834,6 +7076,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47284</code>, <code>Dec 4.46462</code></li>
+        
       </ul>
     </div>
     <div>
@@ -6891,10 +7134,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0162 MESSIER 061 F300M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0162">MESSIER_061_branch_0162</h3>
       <p class="subhead">MESSIER 061 | rank 144 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -6916,6 +7160,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47399</code>, <code>Dec 4.46885</code></li>
+        
       </ul>
     </div>
     <div>
@@ -6973,10 +7218,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0165 MESSIER 061 F335M, F360M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0165">MESSIER_061_branch_0165</h3>
       <p class="subhead">MESSIER 061 | rank 156 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -6998,6 +7244,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47180</code>, <code>Dec 4.46548</code></li>
+        
       </ul>
     </div>
     <div>
@@ -7055,10 +7302,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0128 MESSIER 061 F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0128">MESSIER_061_branch_0128</h3>
       <p class="subhead">MESSIER 061 | rank 265 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -7080,6 +7328,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.47454</code>, <code>Dec 4.46947</code></li>
+        
       </ul>
     </div>
     <div>
@@ -7137,10 +7386,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_066_branch_0013 MESSIER 066 F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN SN2009HD" data-matched-blind="true" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-blind">Matched to blind</div></div>
       <h3 id="MESSIER_066_branch_0013">MESSIER_066_branch_0013</h3>
       <p class="subhead">MESSIER 066 | rank 266 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.</p>
@@ -7162,6 +7412,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-10-30 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.07114</code>, <code>Dec 12.97890</code></li>
+        <li>Blind match: <code>SN2009HD</code> at <code>2.558</code> arcsec</li>
       </ul>
     </div>
     <div>
@@ -7219,10 +7470,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_066_branch_0035 MESSIER 066 F555W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0035">MESSIER_066_branch_0035</h3>
       <p class="subhead">MESSIER 066 | rank 267 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -7244,6 +7496,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.05874</code>, <code>Dec 12.99293</code></li>
+        
       </ul>
     </div>
     <div>
@@ -7301,10 +7554,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_066_branch_0016 MESSIER 066 F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2016COK" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0016">MESSIER_066_branch_0016</h3>
       <p class="subhead">MESSIER 066 | rank 324 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.</p>
@@ -7326,6 +7580,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.07575</code>, <code>Dec 12.98960</code></li>
+        
       </ul>
     </div>
     <div>
@@ -7383,10 +7638,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_061_branch_0147 MESSIER 061 F335M, F300M NIRCAM/IMAGE Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_061_branch_0147">MESSIER_061_branch_0147</h3>
       <p class="subhead">MESSIER 061 | rank 328 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade.</p>
@@ -7408,6 +7664,7 @@ footer {
         <li>Instruments: <code>NIRCAM/IMAGE</code></li>
         <li>Date window: <code>2023-01-31 to 2024-02-06</code></li>
         <li>Sky position: <code>RA 185.48142</code>, <code>Dec 4.48923</code></li>
+        
       </ul>
     </div>
     <div>
@@ -7473,10 +7730,11 @@ footer {
   <p class="section-note">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. Current count: 21.</p>
   <div class="section-grid">
     
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0008 MESSIER 066 F555W, F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0008">MESSIER_066_branch_0008</h3>
       <p class="subhead">MESSIER 066 | rank 268 | confidence LOW</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -7498,6 +7756,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.05813</code>, <code>Dec 12.99857</code></li>
+        
       </ul>
     </div>
     <div>
@@ -7555,10 +7814,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0182 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0182">MESSIER_066_branch_0182</h3>
       <p class="subhead">MESSIER 066 | rank 608 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -7580,6 +7840,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.04708</code>, <code>Dec 12.98944</code></li>
+        
       </ul>
     </div>
     <div>
@@ -7637,10 +7898,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0278 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2016COK" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0278">MESSIER_066_branch_0278</h3>
       <p class="subhead">MESSIER 066 | rank 617 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -7662,6 +7924,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.07379</code>, <code>Dec 12.99373</code></li>
+        
       </ul>
     </div>
     <div>
@@ -7719,10 +7982,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0265 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0265">MESSIER_066_branch_0265</h3>
       <p class="subhead">MESSIER 066 | rank 652 | confidence LOW</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -7744,6 +8008,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.05602</code>, <code>Dec 12.99065</code></li>
+        
       </ul>
     </div>
     <div>
@@ -7801,10 +8066,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0231 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0231">MESSIER_066_branch_0231</h3>
       <p class="subhead">MESSIER 066 | rank 660 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -7826,6 +8092,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.06085</code>, <code>Dec 13.00577</code></li>
+        
       </ul>
     </div>
     <div>
@@ -7883,10 +8150,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0189 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0189">MESSIER_066_branch_0189</h3>
       <p class="subhead">MESSIER 066 | rank 710 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -7908,6 +8176,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.04844</code>, <code>Dec 12.98669</code></li>
+        
       </ul>
     </div>
     <div>
@@ -7965,10 +8234,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0283 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0283">MESSIER_066_branch_0283</h3>
       <p class="subhead">MESSIER 066 | rank 771 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -7990,6 +8260,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.06999</code>, <code>Dec 12.99287</code></li>
+        
       </ul>
     </div>
     <div>
@@ -8047,10 +8318,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0171 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0171">MESSIER_066_branch_0171</h3>
       <p class="subhead">MESSIER 066 | rank 780 | confidence LOW</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -8072,6 +8344,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.06282</code>, <code>Dec 12.98769</code></li>
+        
       </ul>
     </div>
     <div>
@@ -8129,10 +8402,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0191 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0191">MESSIER_066_branch_0191</h3>
       <p class="subhead">MESSIER 066 | rank 808 | confidence LOW</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -8154,6 +8428,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.07203</code>, <code>Dec 12.98613</code></li>
+        
       </ul>
     </div>
     <div>
@@ -8211,10 +8486,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0242 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0242">MESSIER_066_branch_0242</h3>
       <p class="subhead">MESSIER 066 | rank 809 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -8236,6 +8512,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.05672</code>, <code>Dec 12.99040</code></li>
+        
       </ul>
     </div>
     <div>
@@ -8293,10 +8570,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0193 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0193">MESSIER_066_branch_0193</h3>
       <p class="subhead">MESSIER 066 | rank 837 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -8318,6 +8596,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.05759</code>, <code>Dec 12.99026</code></li>
+        
       </ul>
     </div>
     <div>
@@ -8375,10 +8654,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0064 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0064">MESSIER_066_branch_0064</h3>
       <p class="subhead">MESSIER 066 | rank 842 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -8400,6 +8680,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.04697</code>, <code>Dec 13.00251</code></li>
+        
       </ul>
     </div>
     <div>
@@ -8457,10 +8738,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0228 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2016COK" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0228">MESSIER_066_branch_0228</h3>
       <p class="subhead">MESSIER 066 | rank 846 | confidence LOW</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -8482,6 +8764,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.06940</code>, <code>Dec 13.00349</code></li>
+        
       </ul>
     </div>
     <div>
@@ -8539,10 +8822,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0178 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2016COK" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0178">MESSIER_066_branch_0178</h3>
       <p class="subhead">MESSIER 066 | rank 850 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -8564,6 +8848,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.06875</code>, <code>Dec 13.00445</code></li>
+        
       </ul>
     </div>
     <div>
@@ -8621,10 +8906,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0117 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0117">MESSIER_066_branch_0117</h3>
       <p class="subhead">MESSIER 066 | rank 871 | confidence LOW</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -8646,6 +8932,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.05894</code>, <code>Dec 12.99907</code></li>
+        
       </ul>
     </div>
     <div>
@@ -8703,10 +8990,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0098 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0098">MESSIER_066_branch_0098</h3>
       <p class="subhead">MESSIER 066 | rank 875 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -8728,6 +9016,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.06724</code>, <code>Dec 12.99753</code></li>
+        
       </ul>
     </div>
     <div>
@@ -8785,10 +9074,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0170 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0170">MESSIER_066_branch_0170</h3>
       <p class="subhead">MESSIER 066 | rank 878 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -8810,6 +9100,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.04756</code>, <code>Dec 13.00142</code></li>
+        
       </ul>
     </div>
     <div>
@@ -8867,10 +9158,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0033 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0033">MESSIER_066_branch_0033</h3>
       <p class="subhead">MESSIER 066 | rank 882 | confidence LOW</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -8892,6 +9184,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.05792</code>, <code>Dec 13.00543</code></li>
+        
       </ul>
     </div>
     <div>
@@ -8949,10 +9242,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0190 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2016COK" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0190">MESSIER_066_branch_0190</h3>
       <p class="subhead">MESSIER 066 | rank 886 | confidence MEDIUM</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -8974,6 +9268,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.07647</code>, <code>Dec 12.98821</code></li>
+        
       </ul>
     </div>
     <div>
@@ -9031,10 +9326,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0284 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0284">MESSIER_066_branch_0284</h3>
       <p class="subhead">MESSIER 066 | rank 898 | confidence LOW</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -9056,6 +9352,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.04894</code>, <code>Dec 12.98414</code></li>
+        
       </ul>
     </div>
     <div>
@@ -9113,10 +9410,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0223 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN EDGE_NEAR_MASK SN2016COK" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0223">MESSIER_066_branch_0223</h3>
       <p class="subhead">MESSIER 066 | rank 900 | confidence LOW</p>
       <p class="interpretation">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation.</p>
@@ -9138,6 +9436,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-11-28 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.07720</code>, <code>Dec 12.99012</code></li>
+        
       </ul>
     </div>
     <div>
@@ -9199,9 +9498,56 @@ footer {
 </section>
 
     <footer>
-      Built 20260311_054737UTC from <code>/home/primary/SUPERNOVA/outputs/live_difference_strict_20260311_0421/branch_aware_v4</code>.
+      Built 20260311_060227UTC from <code>/home/primary/SUPERNOVA/outputs/live_difference_strict_20260311_0421/branch_aware_v4</code>.
       Page source is tracked in the SUPERNOVA repo and deployed separately under <code>/uber_nova_search</code>.
     </footer>
   </div>
+  <script>
+  (() => {
+    const cards = Array.from(document.querySelectorAll('.candidate-card'));
+    const searchInput = document.getElementById('candidate-search');
+    const buttons = Array.from(document.querySelectorAll('.filter-buttons button'));
+    const summary = document.getElementById('filter-summary');
+    let mode = 'all';
+
+    function visibleCount() {
+      return cards.filter((card) => card.style.display !== 'none').length;
+    }
+
+    function updateSections() {
+      document.querySelectorAll('.section').forEach((section) => {
+        const localCards = Array.from(section.querySelectorAll('.candidate-card'));
+        const shown = localCards.some((card) => card.style.display !== 'none');
+        section.style.display = shown ? '' : 'none';
+      });
+    }
+
+    function apply() {
+      const term = (searchInput.value || '').trim().toLowerCase();
+      cards.forEach((card) => {
+        const hay = (card.dataset.search || '').toLowerCase();
+        const matchesSearch = !term || hay.includes(term);
+        const matchesFilter =
+          mode === 'all' ||
+          (mode === 'matched-blind' && card.dataset.matchedBlind === 'true') ||
+          (mode === 'highest-value' && card.dataset.highestValue === 'true');
+        card.style.display = matchesSearch && matchesFilter ? '' : 'none';
+      });
+      updateSections();
+      summary.textContent = 'Showing ' + visibleCount() + ' candidates with filter "' + mode + '"' + (term ? ' and search "' + term + '"' : '') + '.';
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        buttons.forEach((item) => item.classList.remove('active'));
+        button.classList.add('active');
+        mode = button.dataset.filter;
+        apply();
+      });
+    });
+    searchInput.addEventListener('input', apply);
+    apply();
+  })();
+  </script>
 </body>
 </html>

@@ -8,6 +8,8 @@ from typing import Any
 
 import pandas as pd
 from astropy.time import Time
+from astropy.coordinates import SkyCoord
+import astropy.units as u
 from PIL import Image
 
 from .utils import ensure_dir, env_like, git_like, json_list, utc_stamp, write_json, write_progress, write_text
@@ -40,6 +42,8 @@ CLASS_COLORS = {
     "DUST_SURVIVOR_LIKE": "#5f7ea3",
     "SYSTEMATIC_LIKE": "#7c536f",
 }
+
+BLIND_MATCH_RADIUS_ARCSEC = 3.0
 
 
 def _as_list(value: Any) -> list[str]:
@@ -213,6 +217,57 @@ def _candidate_interpretation(cluster: pd.Series) -> str:
     return base
 
 
+def _highest_value(cluster: pd.Series) -> bool:
+    branch_class = str(cluster.get("branch_class", ""))
+    rank_score = float(cluster.get("branch_rank_score", 0.0) or 0.0)
+    export = float(cluster.get("export_failure_score", 0.0) or 0.0)
+    support_pairs = int(cluster.get("n_support_pairs", 0) or 0)
+    systematic = float(cluster.get("systematic_risk", 0.0) or 0.0)
+    late_return = float(cluster.get("forced_late_return_fraction", 0.0) or 0.0)
+    confidence = str(cluster.get("branch_confidence", "")).upper()
+    if branch_class == "STRONG_EXPORT_FAILURE_LIKE":
+        return rank_score >= 0.82 and export >= 0.73 and support_pairs >= 3 and systematic <= 0.16 and late_return <= 0.1
+    if branch_class == "INTERMEDIATE_BRANCH_LIKE":
+        return confidence in {"MEDIUM", "HIGH"} and rank_score >= 0.80 and export >= 0.68 and support_pairs >= 2 and systematic <= 0.16
+    return False
+
+
+def _load_blind_truth(benchmark_dir: Path) -> pd.DataFrame:
+    candidates = [
+        benchmark_dir / "hidden_truth" / "truth.csv",
+        benchmark_dir / "benchmark_pairs.csv",
+    ]
+    for path in candidates:
+        if not path.exists():
+            continue
+        frame = pd.read_csv(path)
+        required = {"galaxy_name", "truth_ra_deg", "truth_dec_deg"}
+        if required.issubset(frame.columns):
+            cols = [col for col in ["galaxy_name", "sn_name", "truth_ra_deg", "truth_dec_deg"] if col in frame.columns]
+            truth = frame[cols].drop_duplicates().reset_index(drop=True)
+            return truth
+    return pd.DataFrame(columns=["galaxy_name", "sn_name", "truth_ra_deg", "truth_dec_deg"])
+
+
+def _blind_match(cluster: pd.Series, truth_df: pd.DataFrame) -> dict[str, Any]:
+    if truth_df.empty:
+        return {"matched_to_blind": False, "blind_match_sep_arcsec": None, "blind_match_name": None}
+    subset = truth_df[truth_df["galaxy_name"].astype(str).eq(str(cluster["galaxy_name"]))].copy()
+    if subset.empty:
+        return {"matched_to_blind": False, "blind_match_sep_arcsec": None, "blind_match_name": None}
+    cluster_coord = SkyCoord(float(cluster["ra_deg"]) * u.deg, float(cluster["dec_deg"]) * u.deg)
+    truth_coords = SkyCoord(subset["truth_ra_deg"].to_numpy(dtype=float) * u.deg, subset["truth_dec_deg"].to_numpy(dtype=float) * u.deg)
+    seps = cluster_coord.separation(truth_coords).arcsec
+    idx = int(seps.argmin())
+    sep = float(seps[idx])
+    row = subset.iloc[idx]
+    return {
+        "matched_to_blind": bool(sep <= BLIND_MATCH_RADIUS_ARCSEC),
+        "blind_match_sep_arcsec": sep,
+        "blind_match_name": str(row.get("sn_name", "")) or None,
+    }
+
+
 def _top_math_rows(cluster: pd.Series) -> list[tuple[str, str]]:
     return [
         ("Branch rank", f"{int(cluster['branch_rank'])} / {int(cluster['n_clusters_total'])}"),
@@ -263,11 +318,21 @@ def _card_html(candidate: dict[str, Any]) -> str:
     reasons = "".join(f"<li><code>{html.escape(reason)}</code></li>" for reason in candidate["reason_codes"])
     warnings = "".join(f"<li><code>{html.escape(flag)}</code></li>" for flag in candidate["warning_flags"])
     warnings_block = warnings or "<li>None</li>"
+    blind_badge = ""
+    if candidate["matched_to_blind"]:
+        blind_badge = '<div class="mini-badge mini-badge-blind">Matched to blind</div>'
+    highest_badge = ""
+    if candidate["highest_value"]:
+        highest_badge = '<div class="mini-badge mini-badge-high">Highest Value</div>'
+    blind_context = ""
+    if candidate["matched_to_blind"]:
+        blind_context = f"<li>Blind match: <code>{html.escape(candidate['blind_match_name'] or 'known target')}</code> at <code>{html.escape(candidate['blind_match_sep_arcsec'])}</code> arcsec</li>"
     return f"""
-<article class="candidate-card" data-class="{html.escape(candidate['branch_class'])}">
+<article class="candidate-card" data-class="{html.escape(candidate['branch_class'])}" data-search="{html.escape(candidate['search_text'])}" data-matched-blind="{str(candidate['matched_to_blind']).lower()}" data-highest-value="{str(candidate['highest_value']).lower()}">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:{html.escape(candidate['badge_color'])}">{html.escape(candidate['badge'])}</div>
+      <div class="mini-badges">{blind_badge}{highest_badge}</div>
       <h3 id="{html.escape(candidate['cluster_id'])}">{html.escape(candidate['cluster_id'])}</h3>
       <p class="subhead">{html.escape(candidate['galaxy_name'])} | rank {candidate['branch_rank']} | confidence {html.escape(candidate['branch_confidence'])}</p>
       <p class="interpretation">{html.escape(candidate['interpretation'])}</p>
@@ -289,6 +354,7 @@ def _card_html(candidate: dict[str, Any]) -> str:
         <li>Instruments: <code>{html.escape(candidate['instruments'])}</code></li>
         <li>Date window: <code>{html.escape(candidate['date_window'])}</code></li>
         <li>Sky position: <code>RA {html.escape(candidate['ra_deg'])}</code>, <code>Dec {html.escape(candidate['dec_deg'])}</code></li>
+        {blind_context}
       </ul>
     </div>
     <div>
@@ -438,6 +504,32 @@ h1 {
   font-size: 0.8rem;
   margin-bottom: 12px;
 }
+.mini-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -2px 0 12px;
+}
+.mini-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  border: 1px solid var(--line);
+  background: #f4efe5;
+  color: #5c4a3b;
+}
+.mini-badge-blind {
+  background: #f3e3c0;
+  border-color: #d8b76a;
+  color: #6e4b00;
+}
+.mini-badge-high {
+  background: #f0dccf;
+  border-color: #cb8967;
+  color: #7a3318;
+}
 .hero img {
   width: 100%;
   border-radius: 16px;
@@ -500,12 +592,57 @@ code {
   font-family: var(--mono);
   font-size: 0.88rem;
 }
+.toolbar {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(220px, 1fr) auto;
+  align-items: center;
+  margin-top: 18px;
+}
+.toolbar input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.9);
+  color: var(--ink);
+  font: inherit;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.filter-buttons button {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.8);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 0.83rem;
+}
+.filter-buttons button.active {
+  background: #ead4c2;
+  border-color: #c17b57;
+  color: #6d2d13;
+}
+.filter-summary {
+  margin-top: 12px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.88rem;
+}
 footer {
   margin-top: 42px;
   color: var(--muted);
   font-size: 0.98rem;
 }
 @media (max-width: 960px) {
+  .toolbar {
+    grid-template-columns: 1fr;
+  }
   .card-top,
   .panel-row {
     grid-template-columns: 1fr;
@@ -580,8 +717,18 @@ def _build_html(*, candidates: list[dict[str, Any]], summary: dict[str, Any]) ->
           <h3>Interpretive posture</h3>
           <p>These are not publication claims. They are strict detector survivors ranked by export-failure coherence under the current assumption-conditioned framework.</p>
           <p>The standing guardrail is still the blind known-supernova benchmark, which passed at <code>{summary['benchmark_recovery_fraction']:.2f}</code>.</p>
+          <p class="small">The page-level “Matched to blind” filter uses a looser <code>{summary['blind_match_radius_arcsec']:.1f}"</code> same-galaxy association radius for operator triage. The benchmark pass/fail itself remains the stricter <code>1.5"</code> recovery test.</p>
         </div>
       </div>
+      <div class="toolbar">
+        <input id="candidate-search" type="search" placeholder="Search cluster id, galaxy, filter, interpretation, reason code">
+        <div class="filter-buttons">
+          <button class="active" data-filter="all" type="button">All</button>
+          <button data-filter="matched-blind" type="button">Matched to blind ({summary['matched_to_blind_count']})</button>
+          <button data-filter="highest-value" type="button">Highest Value ({summary['highest_value_count']})</button>
+        </div>
+      </div>
+      <div class="filter-summary" id="filter-summary">Showing all {summary['n_candidates']} displayed candidates.</div>
       <div class="toc">{toc}</div>
     </section>
     {''.join(sections)}
@@ -590,6 +737,53 @@ def _build_html(*, candidates: list[dict[str, Any]], summary: dict[str, Any]) ->
       Page source is tracked in the SUPERNOVA repo and deployed separately under <code>/uber_nova_search</code>.
     </footer>
   </div>
+  <script>
+  (() => {{
+    const cards = Array.from(document.querySelectorAll('.candidate-card'));
+    const searchInput = document.getElementById('candidate-search');
+    const buttons = Array.from(document.querySelectorAll('.filter-buttons button'));
+    const summary = document.getElementById('filter-summary');
+    let mode = 'all';
+
+    function visibleCount() {{
+      return cards.filter((card) => card.style.display !== 'none').length;
+    }}
+
+    function updateSections() {{
+      document.querySelectorAll('.section').forEach((section) => {{
+        const localCards = Array.from(section.querySelectorAll('.candidate-card'));
+        const shown = localCards.some((card) => card.style.display !== 'none');
+        section.style.display = shown ? '' : 'none';
+      }});
+    }}
+
+    function apply() {{
+      const term = (searchInput.value || '').trim().toLowerCase();
+      cards.forEach((card) => {{
+        const hay = (card.dataset.search || '').toLowerCase();
+        const matchesSearch = !term || hay.includes(term);
+        const matchesFilter =
+          mode === 'all' ||
+          (mode === 'matched-blind' && card.dataset.matchedBlind === 'true') ||
+          (mode === 'highest-value' && card.dataset.highestValue === 'true');
+        card.style.display = matchesSearch && matchesFilter ? '' : 'none';
+      }});
+      updateSections();
+      summary.textContent = 'Showing ' + visibleCount() + ' candidates with filter "' + mode + '"' + (term ? ' and search "' + term + '"' : '') + '.';
+    }}
+
+    buttons.forEach((button) => {{
+      button.addEventListener('click', () => {{
+        buttons.forEach((item) => item.classList.remove('active'));
+        button.classList.add('active');
+        mode = button.dataset.filter;
+        apply();
+      }});
+    }});
+    searchInput.addEventListener('input', apply);
+    apply();
+  }})();
+  </script>
 </body>
 </html>
 """
@@ -599,6 +793,7 @@ def run_uber_nova_site(
     *,
     root_dir: Path,
     branch_output_dir: Path,
+    benchmark_dir: Path | None = None,
     output_dir: Path | None = None,
     include_classes: tuple[str, ...] = tuple(CLASS_ORDER),
 ) -> dict[str, Path]:
@@ -609,7 +804,16 @@ def run_uber_nova_site(
     ensure_dir(out_dir / "assets" / "panels")
     ensure_dir(out_dir / "assets" / "data")
 
-    write_json(out_dir / "config.json", {"branch_output_dir": str(branch_output_dir), "include_classes": list(include_classes)})
+    benchmark_dir = (benchmark_dir or (root_dir / "outputs" / "benchmark_validation_rawresid_20260311_0416")).resolve()
+
+    write_json(
+        out_dir / "config.json",
+        {
+            "branch_output_dir": str(branch_output_dir),
+            "benchmark_dir": str(benchmark_dir),
+            "include_classes": list(include_classes),
+        },
+    )
     write_json(out_dir / "env.json", env_like())
     write_json(out_dir / "git_like.json", git_like(root_dir))
     write_progress(out_dir / "progress.json", "build", "running", {"output_dir": str(out_dir)})
@@ -617,6 +821,7 @@ def run_uber_nova_site(
     cluster_df = pd.read_parquet(branch_output_dir / "branch_cluster_scores.parquet")
     detection_df = pd.read_parquet(branch_output_dir / "branch_detection_scores.parquet")
     branch_summary = json.loads((branch_output_dir / "branch_summary.json").read_text(encoding="utf-8"))
+    truth_df = _load_blind_truth(benchmark_dir)
 
     cluster_df = cluster_df[cluster_df["branch_class"].astype(str).isin(include_classes)].copy()
     cluster_df = cluster_df.sort_values(["branch_rank", "branch_rank_score"], ascending=[True, False]).reset_index(drop=True)
@@ -628,6 +833,7 @@ def run_uber_nova_site(
         members = detection_df[detection_df["cluster_id"].astype(str).eq(cluster_id)].copy()
         if members.empty:
             continue
+        blind_match = _blind_match(cluster, truth_df)
         rep = _representative_detection(members)
         cutout_path = Path(str(rep["cutout_path"]))
         if not cutout_path.exists():
@@ -665,10 +871,27 @@ def run_uber_nova_site(
             "reason_codes": reason_codes,
             "warning_flags": warning_codes,
             "interpretation": _candidate_interpretation(cluster),
+            "matched_to_blind": bool(blind_match["matched_to_blind"]),
+            "blind_match_sep_arcsec": _fmt_float(blind_match["blind_match_sep_arcsec"], 3) if blind_match["blind_match_sep_arcsec"] is not None else "n/a",
+            "blind_match_name": blind_match["blind_match_name"],
+            "highest_value": _highest_value(cluster),
         }
         cluster_with_total = cluster.copy()
         cluster_with_total["n_clusters_total"] = len(cluster_df)
         candidate["math_rows"] = _top_math_rows(cluster_with_total)
+        search_bits = [
+            candidate["cluster_id"],
+            candidate["galaxy_name"],
+            candidate["filters"],
+            candidate["instruments"],
+            candidate["interpretation"],
+            candidate["branch_class"],
+        ]
+        search_bits.extend(reason_codes)
+        search_bits.extend(warning_codes)
+        if candidate["blind_match_name"]:
+            search_bits.append(candidate["blind_match_name"])
+        candidate["search_text"] = " ".join(str(part) for part in search_bits if part)
         candidates.append(candidate)
 
     class_counts = {label: int((cluster_df["branch_class"] == label).sum()) for label in include_classes}
@@ -680,6 +903,9 @@ def run_uber_nova_site(
         "class_counts": class_counts,
         "benchmark_recovery_fraction": float(branch_summary.get("benchmark_recovery_fraction", 0.0) or 0.0),
         "benchmark_median_sep_arcsec": float(branch_summary.get("benchmark_median_recovered_sep_arcsec", float("nan")) or float("nan")),
+        "blind_match_radius_arcsec": BLIND_MATCH_RADIUS_ARCSEC,
+        "matched_to_blind_count": int(sum(1 for item in candidates if item["matched_to_blind"])),
+        "highest_value_count": int(sum(1 for item in candidates if item["highest_value"])),
     }
     payload = {"summary": summary, "candidates": candidates}
     write_json(out_dir / "assets" / "data" / "candidates.json", payload)

@@ -1,5 +1,5 @@
 {
   "branch": "uber_search",
-  "head": "64a75a02a7bd8ab6a2d3d1a2ed21a2a331727a41",
-  "status_porcelain": "M README.md\n M pyproject.toml\n M src/supernova_pipeline/cli.py\n?? outputs/live_difference_strict_20260311_0421/branch_aware/\n?? outputs/live_difference_strict_20260311_0421/branch_aware_v2/\n?? outputs/live_difference_strict_20260311_0421/branch_aware_v3/\n?? outputs/live_difference_strict_20260311_0421/branch_aware_v4/\n?? predictaroni/\n?? site/\n?? src/supernova_pipeline/branch_scoring.py\n?? src/supernova_pipeline/uber_nova_site.py\n?? tests/"
+  "head": "01c6ab4008dd57ede198a04ea345ad3b013e6129",
+  "status_porcelain": "M site/uber_nova_search/assets/data/candidates.json\n M site/uber_nova_search/config.json\n M site/uber_nova_search/env.json\n M site/uber_nova_search/git_like.json\n M site/uber_nova_search/index.html\n M site/uber_nova_search/progress.json\n M site/uber_nova_search/summary.json\n M src/supernova_pipeline/cli.py\n M src/supernova_pipeline/uber_nova_site.py\n M tests/test_uber_nova_site.py"
 }

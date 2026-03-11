@@ -86,6 +86,10 @@ The repo now also contains a deployable hidden review page for the current stric
 - Intended deploy target: `/uber_nova_search` under `/var/www/quasardipolephenomenon/`
 
 This board is not meant to be linked from the homepage. It is a Ryan-facing review surface that shows the current non-unresolved branch-aware candidates with slow registered blink GIFs, triptych panels, filter context, and score decomposition.
+It now includes client-side filters for:
+
+- `Matched to blind`: same-galaxy association to a benchmark truth position within the page's operator radius
+- `Highest Value`: the top-quality branch-aware survivors under stricter support-depth and systematic-risk cuts
 
 ## Prime `PASS` objects
 

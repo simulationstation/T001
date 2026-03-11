@@ -1,4 +1,5 @@
 {
+  "benchmark_dir": "/home/primary/SUPERNOVA/outputs/benchmark_validation_rawresid_20260311_0416",
   "branch_output_dir": "/home/primary/SUPERNOVA/outputs/live_difference_strict_20260311_0421/branch_aware_v4",
   "include_classes": [
     "STRONG_EXPORT_FAILURE_LIKE",

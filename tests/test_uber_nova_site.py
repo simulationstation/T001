@@ -4,9 +4,10 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import pandas as pd
 from PIL import Image
 
-from supernova_pipeline.uber_nova_site import _build_gif_and_panel
+from supernova_pipeline.uber_nova_site import _blind_match, _build_gif_and_panel, _highest_value
 
 
 class UberNovaSiteTests(unittest.TestCase):
@@ -35,6 +36,33 @@ class UberNovaSiteTests(unittest.TestCase):
             self.assertTrue(gif_path.exists())
             self.assertTrue(panel_path.exists())
             self.assertTrue(diff_path.exists())
+
+    def test_blind_match_uses_radius_threshold(self) -> None:
+        truth = pd.DataFrame(
+            [
+                {"galaxy_name": "MESSIER 061", "sn_name": "SN-A", "truth_ra_deg": 10.0, "truth_dec_deg": 20.0},
+            ]
+        )
+        cluster = pd.Series({"galaxy_name": "MESSIER 061", "ra_deg": 10.0, "dec_deg": 20.0})
+        payload = _blind_match(cluster, truth)
+        self.assertTrue(payload["matched_to_blind"])
+        self.assertEqual(payload["blind_match_name"], "SN-A")
+
+    def test_highest_value_requires_real_support(self) -> None:
+        cluster = pd.Series(
+            {
+                "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
+                "branch_rank_score": 0.91,
+                "export_failure_score": 0.81,
+                "n_support_pairs": 4,
+                "systematic_risk": 0.08,
+                "forced_late_return_fraction": 0.0,
+                "branch_confidence": "MEDIUM",
+            }
+        )
+        self.assertTrue(_highest_value(cluster))
+        cluster["n_support_pairs"] = 1
+        self.assertFalse(_highest_value(cluster))
 
 
 if __name__ == "__main__":

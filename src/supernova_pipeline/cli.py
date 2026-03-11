@@ -177,6 +177,7 @@ def command_build_uber_nova_page(args: argparse.Namespace) -> dict[str, Path]:
     return run_uber_nova_site(
         root_dir=args.root_dir,
         branch_output_dir=args.branch_output_dir,
+        benchmark_dir=args.benchmark_dir,
         output_dir=args.output_dir,
     )
 
@@ -325,6 +326,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     uber_nova_page = sub.add_parser("build-uber-nova-page", help="Build the hidden branch-aware web payload for the uber_nova_search page.")
     uber_nova_page.add_argument("--branch-output-dir", type=Path, default=root_dir / "outputs" / "live_difference_strict_20260311_0421" / "branch_aware_v4")
+    uber_nova_page.add_argument("--benchmark-dir", type=Path, default=root_dir / "outputs" / "benchmark_validation_rawresid_20260311_0416")
     uber_nova_page.add_argument("--output-dir", type=Path, default=root_dir / "site" / "uber_nova_search")
     uber_nova_page.set_defaults(func=command_build_uber_nova_page)
 
