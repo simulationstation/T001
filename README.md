@@ -6,24 +6,62 @@ Archival failed-supernova / disappearing-star search workspace built around Ryan
 
 - The science framing in the local, gitignored JWST proposal PDF plus `super_plan.md` and `super_report.md`
 - A runnable Python package in `src/supernova_pipeline/`
-- Derived catalog, archive, candidate, and follow-up products from the current live run
+- Derived catalog, archive, candidate, follow-up, and strict benchmark products from the current live run
 - Visual review artifacts for every currently surviving candidate
 
 ## Current status
 
-The search is past planning and past the original small pilot. The archive build and pixel-level discovery stages have both been expanded, and the first targeted all-epoch follow-up / SED runs are now written under `sed/`.
+The project is past the original archive-mining pilot and into the stricter detector-validation phase Ryan actually cares about.
 
 - Nearby-galaxy master catalog: `12,419` search-eligible systems
 - Expanded archive run: `130` galaxies queried, `3,930` observations, `120,995` matched epoch pairs
-- Current candidate ledger: `18` surviving objects, `3` `PASS`, `15` `REVIEW`
+- Historical candidate ledger from the earlier live search: `18` surviving objects, `3` `PASS`, `15` `REVIEW`
 - Per-candidate packets live in `candidate_packets/`; gallery assets live in `figures/candidates/`
 - Completed follow-up products now exist for all `3` current `PASS` objects in `sed/`
+- Strict blinded benchmark after detector fixes: `12/12` truth-centered benchmark pairs scanned, `6/12` known supernova truth groups recovered, recovery fraction `0.50`, median localization error `0.90 arcsec`
 
-The strongest current `PASS` objects are two long-baseline `HST/WFC3-IR F160W` candidates in `NGC 5861` and one very long-baseline `HST/ACS F555W` candidate in `MESSIER 101`.
+The main state change is that the detector is no longer just producing interesting candidates. It now completes a blinded known-supernova recovery test with nonzero recall. That said, the fully corrected strict live science rerun has not yet been completed, so the candidate gallery below should still be treated as provisional rather than final.
+
+## Ryan acceptance tests
+
+Ryan's feedback narrowed the real acceptance criteria. The project is only scientifically mature if it can do these things:
+
+1. detect on difference images rather than relying on source catalogs alone
+2. register images empirically from stars instead of trusting nominal WCS alignment
+3. do forced photometry at the same residual location across all epochs, including non-detections
+4. carry explicit provenance for chip gaps, masks, low-S/N, and no-coverage cases
+5. recover known targeted supernovae in a blinded benchmark before trusting disappearing-star claims
+
+## Progress against those tests
+
+- `Difference-first detection`: implemented in the stricter `difference_upgrade` path rather than only the older pre-seeded candidate workflow.
+- `Empirical registration`: partially improved, but this is still the main weak point. The detector is much better than the original WCS-only version, but image registration remains the first thing to harden further.
+- `Forced photometry on residual locations`: now part of the stricter benchmark / residual-measurement path.
+- `Coverage and provenance tracking`: pair preflight, overlap checks, restricted-rights skips, and structured checkpoint outputs now exist.
+- `Blind recovery test`: passed in the narrow sense of being operational and nontrivial. The corrected benchmark in `outputs/benchmark_validation_rawresid_20260311_015046/` recovers `6` of `12` truth groups.
+
+## What the results currently mean
+
+- The old candidate set is still useful as a discovery ledger and follow-up target list.
+- The closure layer currently classifies `3` objects as `EXPORT_FAILURE_LIKE`, `1` as `DUST_SURVIVOR_LIKE`, `1` as `SYSTEMATIC_LIKE`, and `13` as `VARIABLE_OR_UNRESOLVED`.
+- The benchmark result is the strongest evidence that the upgraded detector is becoming scientifically meaningful rather than only visually compelling.
+- The project is not yet at a point where the gallery below should be treated as publication-grade failed-supernova claims.
+
+## What must be done next
+
+1. Finish the corrected strict live rerun with the upgraded detector, not just the benchmark.
+2. Improve empirical star-based registration to reduce subtraction dipoles and residual astrometric artifacts.
+3. Re-score the historical `PASS` / `REVIEW` objects under the strict detector rather than carrying them forward unchallenged.
+4. Use known targeted supernova recovery as the standing regression test for every future detector change.
+5. Only after the strict live rerun passes sanity checks should any object be elevated from "interesting candidate" to "serious failed-supernova lead".
+
+## Current interpretation of the best objects
+
+The strongest historical `PASS` objects are two long-baseline `HST/WFC3-IR F160W` candidates in `NGC 5861` and one very long-baseline `HST/ACS F555W` candidate in `MESSIER 101`. Based on direct expert feedback, `NGC 5861` likely contains at least one real supernova-like transient, while `MESSIER 101` remains highly suspect for artifact / subtraction issues until it survives the strict rerun.
 
 ## Prime `PASS` objects
 
-These are the current top surviving objects from the cleaned ledger. Each one is shown with the same visual treatment as the earlier single-object example: animated blink, overview panel, and packet cutout. Where follow-up has finished, the light curve and SED fit are also included.
+These are the top surviving objects from the earlier cleaned ledger. They are kept here because they remain the main follow-up targets, but they should now be read as provisional historical candidates pending the strict live rerun described above. Each one is shown with the same visual treatment as the earlier single-object example: animated blink, overview panel, and packet cutout. Where follow-up has finished, the light curve and SED fit are also included.
 
 ### `NGC 5861` `PASS` object A
 
