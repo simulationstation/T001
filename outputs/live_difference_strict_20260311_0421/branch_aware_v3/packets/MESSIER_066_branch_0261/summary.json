@@ -1,0 +1,20 @@
+{
+  "branch_class": "DUST_SURVIVOR_LIKE",
+  "branch_confidence": "LOW",
+  "branch_rank": 761,
+  "branch_rank_score": 0.26552416327533956,
+  "cluster_id": "MESSIER_066_branch_0261",
+  "dec_deg": 13.001007426599797,
+  "dust_survivor_score": 0.505,
+  "export_failure_score": 0.5025925507550478,
+  "galaxy_name": "MESSIER 066",
+  "partial_branch_score": 0.3487240770942449,
+  "ra_deg": 170.06759837267714,
+  "reason_codes": [
+    "BENCHMARK_GUARDRAIL_OK",
+    "LONG_BASELINE_SUPPORT",
+    "PERSISTENT_FADE_SUPPORT"
+  ],
+  "systematic_risk": 0.13042909373920555,
+  "unresolved_variability_score": 0.45642793003732934
+}

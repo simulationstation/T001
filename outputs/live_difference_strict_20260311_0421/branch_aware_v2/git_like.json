@@ -1,0 +1,5 @@
+{
+  "branch": "uber_search",
+  "head": "64a75a02a7bd8ab6a2d3d1a2ed21a2a331727a41",
+  "status_porcelain": "M src/supernova_pipeline/cli.py\n?? outputs/live_difference_strict_20260311_0421/branch_aware/\n?? outputs/live_difference_strict_20260311_0421/branch_aware_v2/\n?? predictaroni/\n?? src/supernova_pipeline/branch_scoring.py\n?? tests/"
+}

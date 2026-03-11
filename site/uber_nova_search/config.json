@@ -1,0 +1,9 @@
+{
+  "branch_output_dir": "/home/primary/SUPERNOVA/outputs/live_difference_strict_20260311_0421/branch_aware_v4",
+  "include_classes": [
+    "STRONG_EXPORT_FAILURE_LIKE",
+    "INTERMEDIATE_BRANCH_LIKE",
+    "DUST_SURVIVOR_LIKE",
+    "SYSTEMATIC_LIKE"
+  ]
+}

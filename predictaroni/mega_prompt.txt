@@ -1,0 +1,83 @@
+You are operating inside the SUPERNOVA repository, which is a strict archival failed-supernova / disappearing-star search workspace built around HST/JWST repeat imaging.
+
+Mission:
+Do not treat this repository as a generic transient finder. The operative mission is to detect on registered difference images first, then rank surviving residuals by how coherently they fit an export-failure / branch-selection collapse picture under severe anti-artifact controls.
+
+Current architecture you must respect:
+- Nearby-galaxy search universe and archive inventory already exist.
+- The strict detector path lives in `src/supernova_pipeline/difference_upgrade.py`.
+- The historical closure/adjudication layer lives in `src/supernova_pipeline/observational_closure.py`.
+- The live strict rerun outputs are under `outputs/live_difference_strict_20260311_0421/`.
+- The blind benchmark outputs are under `outputs/benchmark_validation_rawresid_20260311_0416/`.
+- The current branch-aware strict outputs are under `outputs/live_difference_strict_20260311_0421/branch_aware_v4/`.
+- The benchmark currently recovers `9/12` truth groups.
+- The strict live rerun completed `49` scanned pairs, `1201` fade detections, `65` PASS, and `1136` REVIEW.
+- The current strict branch-aware class balance is `30` strong export-like, `58` intermediate branch-like, `21` dust-like, and `792` unresolved.
+
+Working scientific posture:
+- The analysis is assumption-conditioned, not assumption-free.
+- Treat failed-supernova phenomenology as an export-failure / branch-selection problem.
+- Expect a soft branch surface rather than a single hard explosion/failure threshold.
+- Preserve intermediate cases: partial suppression, fallback-heavy outcomes, weak or ambiguous transients, near-silent disappearances.
+- Do not relax detector rigor because of this framing.
+
+Non-negotiable detector discipline:
+1. Detect on difference images, not source catalogs alone.
+2. Register images empirically from stars, not nominal WCS alone.
+3. Perform forced photometry at the same sky location across epochs, including low-S/N and non-detection cases.
+4. Carry explicit provenance for overlap, chip-gap, mask, edge, and no-coverage outcomes.
+5. Keep the blinded known-supernova benchmark as the standing regression test.
+6. Do not escalate a candidate scientifically if benchmark recovery regresses or provenance becomes less explicit.
+
+How to think about survivors:
+- A large fade by itself is not the target.
+- The target is a residual that survives registration sanity checks, subtraction sanity checks, provenance checks, and same-location forced-photometry checks.
+- Rank candidates by export-failure coherence, not only by amplitude.
+- Penalize dipoles, centroid migration, low anchor counts, unstable local fields, obvious wavelength-dependent dust patterns, and late rebrightening.
+
+Required score vocabulary:
+- detector_confidence
+- registration_confidence
+- subtraction_cleanliness
+- coverage_completeness
+- forced_photometry_coherence
+- fade_persistence
+- rebrightening_penalty
+- artifact_penalty
+- dust_survivor_score
+- export_failure_score
+- systematic_risk
+- unresolved_variability_score
+
+Interpretation classes to preserve:
+- STRONG_EXPORT_FAILURE_LIKE
+- INTERMEDIATE_BRANCH_LIKE
+- DUST_SURVIVOR_LIKE
+- SYSTEMATIC_LIKE
+- VARIABLE_OR_UNRESOLVED
+
+When extending code:
+- Prefer additive, inspectable columns and explicit score terms over opaque model outputs.
+- Extend existing CLI and output patterns instead of inventing disconnected side paths.
+- Write machine-readable parquet/csv/json outputs plus a human-readable markdown report.
+- Keep score components traceable to actual measurements already produced by the repo.
+- If a desired feature cannot be computed cleanly from current artifacts, document the missing prerequisite instead of inventing precision.
+
+When changing ranking logic:
+- Benchmark recovery is the external brake. Do not tune ranking in a way that weakens or hides benchmark failures.
+- Provenance ambiguity must lower confidence, not merely appear in a note.
+- Intermediate branch-like candidates are allowed, but they must still survive anti-artifact controls.
+- The correct order is detector realism first, candidate interpretation second, publication claims last.
+
+What future work should usually do:
+1. Run the strict detector or reuse an existing strict output tree.
+2. Run branch-aware scoring against that strict tree.
+3. Compare new rankings against the blind benchmark context and pair-level provenance.
+4. Follow only the top surviving branch-ranked objects with deeper forced photometry, SED work, or external vetting.
+5. Update README and reports only after the detector and branch-aware outputs agree.
+
+What not to do:
+- Do not recast ordinary fades as “export failures” just because they are interesting.
+- Do not trust catalog disappearances without residual-image support.
+- Do not treat dust/systematic competitors as optional caveats.
+- Do not use the assumptions as permission to weaken registration, subtraction, or benchmark rigor.

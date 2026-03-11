@@ -1,0 +1,21 @@
+{
+  "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
+  "branch_confidence": "MEDIUM",
+  "branch_rank": 45,
+  "branch_rank_score": 0.9008898956841301,
+  "cluster_id": "NGC_1365_branch_0029",
+  "dec_deg": -36.16692712545051,
+  "dust_survivor_score": 0.0,
+  "export_failure_score": 0.7006406857184287,
+  "galaxy_name": "NGC 1365",
+  "partial_branch_score": 0.8537101438167682,
+  "ra_deg": 53.42939071375794,
+  "reason_codes": [
+    "BENCHMARK_GUARDRAIL_OK",
+    "FORCED_COHERENCE_STRONG",
+    "LONG_BASELINE_SUPPORT",
+    "PARTIAL_SUPPRESSION_PATTERN"
+  ],
+  "systematic_risk": 0.12789629918430634,
+  "unresolved_variability_score": 0.22913785090068595
+}

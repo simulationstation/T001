@@ -1,0 +1,42 @@
+# MESSIER_066_branch_0005
+
+- Branch class: `INTERMEDIATE_BRANCH_LIKE`
+- Confidence: `LOW`
+- Branch rank score: `0.569`
+- Export-failure score: `0.620`
+- Intermediate-branch score: `0.685`
+- Dust-survivor score: `0.578`
+- Systematic risk: `0.206`
+- Unresolved/variability score: `0.298`
+
+## Score Decomposition
+- Detector confidence: `0.685`
+- Registration confidence: `0.935`
+- Subtraction cleanliness: `0.878`
+- Coverage completeness: `0.650`
+- Forced photometry coherence: `0.664`
+- Fade persistence: `0.633`
+- Rebrightening penalty: `0.200`
+- Artifact penalty: `0.271`
+
+## Raw Support
+- Members: `2` total, `0` PASS, `2` REVIEW
+- Support pairs: `2`
+- Support filters: `2`
+- Detection baseline span days: `2173.8`
+- Forced measured pairs: `3` / `6`
+- Forced severe fraction: `0.000`
+- Forced partial fraction: `0.667`
+- Forced return fraction: `0.333`
+- Optical fade support: `0.750`
+- NIR fade support: `0.000`
+- MIR fade support: `0.000`
+
+## Reason Codes
+- `BENCHMARK_GUARDRAIL_OK`
+- `DUST_COMPETITOR_PRESENT`
+- `FORCED_COHERENCE_STRONG`
+- `LONG_BASELINE_SUPPORT`
+- `MULTI_PAIR_LOCALIZATION`
+- `PARTIAL_SUPPRESSION_PATTERN`
+- `PERSISTENT_FADE_SUPPORT`

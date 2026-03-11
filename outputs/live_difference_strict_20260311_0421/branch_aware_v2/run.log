@@ -1,0 +1,33 @@
+[2026-03-11T05:17:00.820155Z] run start mode=branch_scoring strict_output_dir=outputs/live_difference_strict_20260311_0421
+[2026-03-11T05:17:04.402519Z] clustered detections n_detections=1201 n_clusters=901
+[2026-03-11T05:17:04.414712Z] forced pair start pair_id=MESSIER 101::jw02452-o002_t002_nircam_clear-f200w::jw05398-c1144_t000_nircam_clear-f200w index=1/49 galaxy=MESSIER 101 clusters=129
+[2026-03-11T05:18:20.945387Z] forced pair start pair_id=NGC 4388::jw02064-o009_t005_miri_f1800w-sub256::jw05627-o021_t027_miri_f1800w index=2/49 galaxy=NGC 4388 clusters=18
+[2026-03-11T05:18:21.434634Z] forced pair start pair_id=NGC 4388::jw02064-o009_t005_miri_f1500w-sub256::jw05627-o021_t027_miri_f1500w index=3/49 galaxy=NGC 4388 clusters=18
+[2026-03-11T05:18:21.724501Z] forced pair start pair_id=NGC 4388::jw02064-o009_t005_miri_f560w-sub256::jw05627-o021_t027_miri_f560w index=4/49 galaxy=NGC 4388 clusters=18
+[2026-03-11T05:18:21.974643Z] forced pair start pair_id=MESSIER 066::jw02107-o029_t011_nircam_clear-f335m::jw04793-o011_t011_nircam_clear-f335m index=5/49 galaxy=MESSIER 066 clusters=287
+[2026-03-11T05:18:32.304731Z] forced pair start pair_id=MESSIER 101::jw01995-o001_t001_nircam_clear-f115w::jw05398-c1144_t000_nircam_clear-f115w index=6/49 galaxy=MESSIER 101 clusters=129
+[2026-03-11T05:19:32.768939Z] forced pair start pair_id=MESSIER 101::jw01995-o001_t001_nircam_clear-f444w::jw05398-c1144_t000_nircam_clear-f444w index=7/49 galaxy=MESSIER 101 clusters=129
+[2026-03-11T05:19:46.895945Z] forced pair start pair_id=MESSIER 101::jw03921-o040_t042_miri_f2100w::jw07881-o001_t002_miri_f2100w index=8/49 galaxy=MESSIER 101 clusters=129
+[2026-03-11T05:19:48.253186Z] forced pair start pair_id=MESSIER 101::jw03921-o040_t042_miri_f1500w::jw07881-o001_t002_miri_f1500w index=9/49 galaxy=MESSIER 101 clusters=129
+[2026-03-11T05:19:49.637274Z] forced pair start pair_id=MESSIER 101::jw03921-o040_t042_miri_f770w::jw07881-o001_t002_miri_f770w index=10/49 galaxy=MESSIER 101 clusters=129
+[2026-03-11T05:19:51.194640Z] forced pair start pair_id=MESSIER 101::jw03921-o040_t042_miri_f1000w::jw07881-o001_t002_miri_f1000w index=11/49 galaxy=MESSIER 101 clusters=129
+[2026-03-11T05:19:52.586439Z] forced pair start pair_id=NGC 4388::jw02064-o009_t005_miri_f560w-sub256::jw05627-o022_t007_miri_f560w-sub128 index=14/49 galaxy=NGC 4388 clusters=18
+[2026-03-11T05:19:52.743707Z] forced pair start pair_id=NGC 4388::jw02064-o009_t005_miri_f1500w-sub256::jw05627-o022_t007_miri_f1500w-sub128 index=15/49 galaxy=NGC 4388 clusters=18
+[2026-03-11T05:19:52.916148Z] forced pair start pair_id=NGC 4388::jw02064-o009_t005_miri_f1800w-sub256::jw05627-o022_t007_miri_f1800w-sub128 index=16/49 galaxy=NGC 4388 clusters=18
+[2026-03-11T05:19:53.086159Z] forced pair start pair_id=MESSIER 061::jw02107-o013_t013_miri_f2100w::jw03295-o007_t004_miri_f2100w index=17/49 galaxy=MESSIER 061 clusters=404
+[2026-03-11T05:19:56.381975Z] forced pair start pair_id=MESSIER 061::jw02107-o013_t013_miri_f1000w::jw03295-o007_t004_miri_f1000w index=18/49 galaxy=MESSIER 061 clusters=404
+[2026-03-11T05:19:59.562225Z] forced pair start pair_id=MESSIER 061::jw02107-o013_t013_miri_f1130w::jw03295-o007_t004_miri_f1130w index=19/49 galaxy=MESSIER 061 clusters=404
+[2026-03-11T05:20:02.656155Z] forced pair start pair_id=MESSIER 061::jw02107-o013_t013_miri_f770w::jw03295-o007_t004_miri_f770w index=20/49 galaxy=MESSIER 061 clusters=404
+[2026-03-11T05:20:05.766032Z] forced pair start pair_id=NGC 1365::jw01995-o006_t006_nircam_clear-f115w::jw05398-c1024_t000_nircam_clear-f115w index=21/49 galaxy=NGC 1365 clusters=63
+[2026-03-11T05:20:41.797709Z] forced pair start pair_id=NGC 4388::jw06659-o001_t001_miri_f770w::jw05627-o021_t027_miri_f770w index=23/49 galaxy=NGC 4388 clusters=18
+[2026-03-11T05:20:42.971277Z] forced pair start pair_id=NGC 4388::jw06659-o001_t001_miri_f560w::jw05627-o021_t027_miri_f560w index=24/49 galaxy=NGC 4388 clusters=18
+[2026-03-11T05:20:43.922854Z] forced pair start pair_id=MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w index=25/49 galaxy=MESSIER 061 clusters=404
+[2026-03-11T05:21:01.460389Z] forced pair start pair_id=MESSIER 061::jw02107-o031_t013_nircam_clear-f300m::jw02107-o044_t020_nircam_clear-f300m index=26/49 galaxy=MESSIER 061 clusters=404
+[2026-03-11T05:21:05.718309Z] forced pair start pair_id=MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m index=27/49 galaxy=MESSIER 061 clusters=404
+[2026-03-11T05:21:09.718587Z] forced pair start pair_id=MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m index=28/49 galaxy=MESSIER 061 clusters=404
+[2026-03-11T05:21:13.715259Z] forced pair start pair_id=MESSIER 066::hst_12968_01_wfc3_uvis_f438w_ic0h01::hst_15654_22_wfc3_uvis_f438w_idxr22 index=44/49 galaxy=MESSIER 066 clusters=287
+[2026-03-11T05:21:15.989801Z] forced pair start pair_id=MESSIER 066::hst_12968_01_wfc3_uvis_f814w_ic0h01::hst_15654_22_wfc3_uvis_f814w_idxr22 index=45/49 galaxy=MESSIER 066 clusters=287
+[2026-03-11T05:21:18.367827Z] forced pair start pair_id=MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22 index=46/49 galaxy=MESSIER 066 clusters=287
+[2026-03-11T05:21:47.236843Z] forced pair start pair_id=MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22 index=47/49 galaxy=MESSIER 066 clusters=287
+[2026-03-11T05:22:16.008396Z] forced pair start pair_id=MESSIER 066::hst_13364_12_wfc3_uvis_f555w_icdm12::hst_15654_22_wfc3_uvis_f555w_idxr22 index=49/49 galaxy=MESSIER 066 clusters=287
+[2026-03-11T05:22:51.959344Z] run completed n_clusters=901

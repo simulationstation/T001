@@ -1,0 +1,221 @@
+{
+  "benchmark_guardrail_pass": true,
+  "benchmark_median_recovered_sep_arcsec": 0.6826919198678586,
+  "benchmark_recovery_fraction": 0.75,
+  "class_counts": {
+    "DUST_SURVIVOR_LIKE": 32,
+    "INTERMEDIATE_BRANCH_LIKE": 305,
+    "STRONG_EXPORT_FAILURE_LIKE": 233,
+    "SYSTEMATIC_LIKE": 3,
+    "VARIABLE_OR_UNRESOLVED": 328
+  },
+  "created_utc": "20260311_052736UTC",
+  "n_clusters": 901,
+  "n_detections": 1201,
+  "top_dust": [
+    {
+      "branch_rank_score": 0.5853100560113562,
+      "cluster_id": "MESSIER_066_branch_0008",
+      "dust_survivor_score": 0.6900000000000001,
+      "galaxy_name": "MESSIER 066"
+    },
+    {
+      "branch_rank_score": 0.5004932298940066,
+      "cluster_id": "MESSIER_066_branch_0011",
+      "dust_survivor_score": 0.5775000000000001,
+      "galaxy_name": "MESSIER 066"
+    },
+    {
+      "branch_rank_score": 0.3816346882974004,
+      "cluster_id": "MESSIER_066_branch_0021",
+      "dust_survivor_score": 0.545,
+      "galaxy_name": "MESSIER 066"
+    },
+    {
+      "branch_rank_score": 0.3405500374511082,
+      "cluster_id": "MESSIER_066_branch_0182",
+      "dust_survivor_score": 0.6900000000000001,
+      "galaxy_name": "MESSIER 066"
+    },
+    {
+      "branch_rank_score": 0.3341221375668326,
+      "cluster_id": "MESSIER_066_branch_0278",
+      "dust_survivor_score": 0.6900000000000001,
+      "galaxy_name": "MESSIER 066"
+    },
+    {
+      "branch_rank_score": 0.31757411032542043,
+      "cluster_id": "MESSIER_066_branch_0265",
+      "dust_survivor_score": 0.6900000000000001,
+      "galaxy_name": "MESSIER 066"
+    },
+    {
+      "branch_rank_score": 0.31374806213236933,
+      "cluster_id": "MESSIER_066_branch_0231",
+      "dust_survivor_score": 0.6900000000000001,
+      "galaxy_name": "MESSIER 066"
+    },
+    {
+      "branch_rank_score": 0.2971271000822079,
+      "cluster_id": "MESSIER_066_branch_0255",
+      "dust_survivor_score": 0.505,
+      "galaxy_name": "MESSIER 066"
+    },
+    {
+      "branch_rank_score": 0.29029317089666984,
+      "cluster_id": "MESSIER_066_branch_0212",
+      "dust_survivor_score": 0.505,
+      "galaxy_name": "MESSIER 066"
+    },
+    {
+      "branch_rank_score": 0.28990581303778623,
+      "cluster_id": "MESSIER_066_branch_0156",
+      "dust_survivor_score": 0.5775000000000001,
+      "galaxy_name": "MESSIER 066"
+    }
+  ],
+  "top_intermediate": [
+    {
+      "branch_rank_score": 0.8422609849150814,
+      "cluster_id": "MESSIER_061_branch_0060",
+      "galaxy_name": "MESSIER 061",
+      "partial_branch_score": 0.7334942268618585
+    },
+    {
+      "branch_rank_score": 0.8310255376014567,
+      "cluster_id": "MESSIER_061_branch_0053",
+      "galaxy_name": "MESSIER 061",
+      "partial_branch_score": 0.651398961476142
+    },
+    {
+      "branch_rank_score": 0.8262734720124933,
+      "cluster_id": "MESSIER_061_branch_0111",
+      "galaxy_name": "MESSIER 061",
+      "partial_branch_score": 0.8359145097758174
+    },
+    {
+      "branch_rank_score": 0.823891800905388,
+      "cluster_id": "MESSIER_066_branch_0004",
+      "galaxy_name": "MESSIER 066",
+      "partial_branch_score": 0.7250819607889898
+    },
+    {
+      "branch_rank_score": 0.8187901487532464,
+      "cluster_id": "MESSIER_061_branch_0108",
+      "galaxy_name": "MESSIER 061",
+      "partial_branch_score": 0.8315649065694511
+    },
+    {
+      "branch_rank_score": 0.8158688699511277,
+      "cluster_id": "MESSIER_061_branch_0070",
+      "galaxy_name": "MESSIER 061",
+      "partial_branch_score": 0.7314544005788444
+    },
+    {
+      "branch_rank_score": 0.8134072094158914,
+      "cluster_id": "MESSIER_061_branch_0135",
+      "galaxy_name": "MESSIER 061",
+      "partial_branch_score": 0.7367650399393727
+    },
+    {
+      "branch_rank_score": 0.8091513811252611,
+      "cluster_id": "MESSIER_061_branch_0002",
+      "galaxy_name": "MESSIER 061",
+      "partial_branch_score": 0.8224439361041099
+    },
+    {
+      "branch_rank_score": 0.8081844011692066,
+      "cluster_id": "MESSIER_061_branch_0042",
+      "galaxy_name": "MESSIER 061",
+      "partial_branch_score": 0.7271820024997434
+    },
+    {
+      "branch_rank_score": 0.8073365603859461,
+      "cluster_id": "MESSIER_061_branch_0115",
+      "galaxy_name": "MESSIER 061",
+      "partial_branch_score": 0.6471905845740868
+    }
+  ],
+  "top_strong_export": [
+    {
+      "branch_rank_score": 1.0,
+      "cluster_id": "MESSIER_066_branch_0002",
+      "export_failure_score": 0.8337424738159447,
+      "galaxy_name": "MESSIER 066"
+    },
+    {
+      "branch_rank_score": 0.913992054903891,
+      "cluster_id": "MESSIER_061_branch_0006",
+      "export_failure_score": 0.7919443390928769,
+      "galaxy_name": "MESSIER 061"
+    },
+    {
+      "branch_rank_score": 0.9001261274223905,
+      "cluster_id": "MESSIER_061_branch_0009",
+      "export_failure_score": 0.8058229527721521,
+      "galaxy_name": "MESSIER 061"
+    },
+    {
+      "branch_rank_score": 0.8977950016437717,
+      "cluster_id": "MESSIER_061_branch_0025",
+      "export_failure_score": 0.7473793134888306,
+      "galaxy_name": "MESSIER 061"
+    },
+    {
+      "branch_rank_score": 0.8954953336953129,
+      "cluster_id": "MESSIER_061_branch_0016",
+      "export_failure_score": 0.7696094628555141,
+      "galaxy_name": "MESSIER 061"
+    },
+    {
+      "branch_rank_score": 0.8932327526981592,
+      "cluster_id": "MESSIER_061_branch_0062",
+      "export_failure_score": 0.7408798712455711,
+      "galaxy_name": "MESSIER 061"
+    },
+    {
+      "branch_rank_score": 0.8894836975614044,
+      "cluster_id": "MESSIER_061_branch_0033",
+      "export_failure_score": 0.801764060753464,
+      "galaxy_name": "MESSIER 061"
+    },
+    {
+      "branch_rank_score": 0.88831865698021,
+      "cluster_id": "MESSIER_061_branch_0061",
+      "export_failure_score": 0.7385499864013577,
+      "galaxy_name": "MESSIER 061"
+    },
+    {
+      "branch_rank_score": 0.8823452499890074,
+      "cluster_id": "MESSIER_061_branch_0012",
+      "export_failure_score": 0.7382258258539247,
+      "galaxy_name": "MESSIER 061"
+    },
+    {
+      "branch_rank_score": 0.8823041783105949,
+      "cluster_id": "MESSIER_061_branch_0022",
+      "export_failure_score": 0.758350826268755,
+      "galaxy_name": "MESSIER 061"
+    }
+  ],
+  "top_systematic": [
+    {
+      "branch_rank_score": 0.1903742099603052,
+      "cluster_id": "NGC_4388_branch_0015",
+      "galaxy_name": "NGC 4388",
+      "systematic_risk": 0.41092868356965784
+    },
+    {
+      "branch_rank_score": 0.18851525929673493,
+      "cluster_id": "NGC_4388_branch_0016",
+      "galaxy_name": "NGC 4388",
+      "systematic_risk": 0.5351458479952667
+    },
+    {
+      "branch_rank_score": 0.1713652536104051,
+      "cluster_id": "NGC_4388_branch_0014",
+      "galaxy_name": "NGC 4388",
+      "systematic_risk": 0.5571627199283932
+    }
+  ]
+}

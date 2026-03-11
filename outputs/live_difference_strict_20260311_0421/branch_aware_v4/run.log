@@ -1,0 +1,3 @@
+[2026-03-11T05:28:03.747111Z] run start mode=branch_scoring strict_output_dir=outputs/live_difference_strict_20260311_0421
+[2026-03-11T05:28:03.934503Z] reused precomputed branch inputs source_dir=outputs/live_difference_strict_20260311_0421/branch_aware_v2 n_clusters=901 forced_rows=6064
+[2026-03-11T05:28:09.502175Z] run completed n_clusters=901

@@ -1,0 +1,6 @@
+[2026-03-11T05:25:38.357647Z] run start mode=branch_scoring strict_output_dir=outputs/live_difference_strict_20260311_0421
+[2026-03-11T05:25:41.810456Z] clustered detections n_detections=1201 n_clusters=901
+[2026-03-11T05:25:41.822601Z] forced pair start pair_id=MESSIER 101::jw02452-o002_t002_nircam_clear-f200w::jw05398-c1144_t000_nircam_clear-f200w index=1/49 galaxy=MESSIER 101 clusters=129
+[2026-03-11T05:27:30.305516Z] run start mode=branch_scoring strict_output_dir=outputs/live_difference_strict_20260311_0421
+[2026-03-11T05:27:30.496187Z] reused precomputed branch inputs source_dir=outputs/live_difference_strict_20260311_0421/branch_aware_v2 n_clusters=901 forced_rows=6064
+[2026-03-11T05:27:36.135803Z] run completed n_clusters=901

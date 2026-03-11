@@ -1,0 +1,11 @@
+{
+  "n_clusters": 901,
+  "n_dust": 21,
+  "n_intermediate": 58,
+  "n_strong_export": 30,
+  "n_systematic": 0,
+  "n_unresolved": 792,
+  "stage": "stage02_score_clusters",
+  "status": "completed",
+  "timestamp_utc": "2026-03-11T05:28:09.501918Z"
+}

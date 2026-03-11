@@ -7,6 +7,7 @@ Archival failed-supernova / disappearing-star search workspace built around Ryan
 - The science framing in the local, gitignored JWST proposal PDF plus `super_plan.md` and `super_report.md`
 - A runnable Python package in `src/supernova_pipeline/`
 - Derived catalog, archive, candidate, follow-up, and strict benchmark products from the current live run
+- Branch-aware export-failure ranking outputs plus operator docs in `predictaroni/`
 - Visual review artifacts for every currently surviving candidate
 
 ## Current status
@@ -18,9 +19,11 @@ The project is past the original archive-mining pilot and into the stricter dete
 - Historical candidate ledger from the earlier live search: `18` surviving objects, `3` `PASS`, `15` `REVIEW`
 - Per-candidate packets live in `candidate_packets/`; gallery assets live in `figures/candidates/`
 - Completed follow-up products now exist for all `3` current `PASS` objects in `sed/`
-- Strict blinded benchmark after detector fixes: `12/12` truth-centered benchmark pairs scanned, `6/12` known supernova truth groups recovered, recovery fraction `0.50`, median localization error `0.90 arcsec`
+- Strict blinded benchmark after detector fixes: `12/12` truth-centered benchmark pairs scanned, `9/12` known supernova truth groups recovered, recovery fraction `0.75`, median localization error `0.68 arcsec`
+- Strict live rerun complete in `outputs/live_difference_strict_20260311_0421/`: `60` pairs completed, `49` scanned, `11` failed, `1201` fade detections, `65` raw `PASS`, `1136` raw `REVIEW`
+- Branch-aware rescoring complete in `outputs/live_difference_strict_20260311_0421/branch_aware_v4/`: `901` same-location clusters, `30` `STRONG_EXPORT_FAILURE_LIKE`, `58` `INTERMEDIATE_BRANCH_LIKE`, `21` `DUST_SURVIVOR_LIKE`, `792` `VARIABLE_OR_UNRESOLVED`
 
-The main state change is that the detector is no longer just producing interesting candidates. It now completes a blinded known-supernova recovery test with nonzero recall. That said, the fully corrected strict live science rerun has not yet been completed, so the candidate gallery below should still be treated as provisional rather than final.
+The main state change is that the detector is no longer just producing interesting candidates. It now passes a nontrivial blinded supernova recovery test, completes a strict live rerun, and supports a second-stage branch-aware interpretation layer built on same-location forced measurements. The gallery below is still historical/provisional, but the repo now has a stricter authoritative ranking path than it did before.
 
 ## Ryan acceptance tests
 
@@ -36,28 +39,53 @@ Ryan's feedback narrowed the real acceptance criteria. The project is only scien
 
 - `Difference-first detection`: implemented in the stricter `difference_upgrade` path rather than only the older pre-seeded candidate workflow.
 - `Empirical registration`: partially improved, but this is still the main weak point. The detector is much better than the original WCS-only version, but image registration remains the first thing to harden further.
-- `Forced photometry on residual locations`: now part of the stricter benchmark / residual-measurement path.
+- `Forced photometry on residual locations`: now part of the stricter benchmark / residual-measurement path and the branch-aware rescoring stage.
 - `Coverage and provenance tracking`: pair preflight, overlap checks, restricted-rights skips, and structured checkpoint outputs now exist.
-- `Blind recovery test`: passed in the narrow sense of being operational and nontrivial. The corrected benchmark in `outputs/benchmark_validation_rawresid_20260311_015046/` recovers `6` of `12` truth groups.
+- `Blind recovery test`: passed in the useful sense of being operational and nontrivial. The corrected benchmark in `outputs/benchmark_validation_rawresid_20260311_0416/` recovers `9` of `12` truth groups.
 
 ## What the results currently mean
 
 - The old candidate set is still useful as a discovery ledger and follow-up target list.
 - The closure layer currently classifies `3` objects as `EXPORT_FAILURE_LIKE`, `1` as `DUST_SURVIVOR_LIKE`, `1` as `SYSTEMATIC_LIKE`, and `13` as `VARIABLE_OR_UNRESOLVED`.
-- The benchmark result is the strongest evidence that the upgraded detector is becoming scientifically meaningful rather than only visually compelling.
-- The project is not yet at a point where the gallery below should be treated as publication-grade failed-supernova claims.
+- The strict branch-aware layer is now the preferred interpretation path for the current live rerun, not the old gallery-first ledger.
+- The current branch-aware result is intentionally selective: `30` strong export-like clusters, `58` intermediate branch-like clusters, `21` dust-like competitors, and the rest unresolved rather than overclaimed.
+- The project is still not at a point where the gallery below should be treated as publication-grade failed-supernova claims.
 
 ## What must be done next
 
-1. Finish the corrected strict live rerun with the upgraded detector, not just the benchmark.
+1. Treat `outputs/live_difference_strict_20260311_0421/branch_aware_v4/` as the current strict ranking baseline, not the old gallery-first ledger.
 2. Improve empirical star-based registration to reduce subtraction dipoles and residual astrometric artifacts.
-3. Re-score the historical `PASS` / `REVIEW` objects under the strict detector rather than carrying them forward unchallenged.
-4. Use known targeted supernova recovery as the standing regression test for every future detector change.
-5. Only after the strict live rerun passes sanity checks should any object be elevated from "interesting candidate" to "serious failed-supernova lead".
+3. Compare the historical `PASS` / `REVIEW` objects against the branch-aware strict clusters instead of carrying them forward unchallenged.
+4. Use known targeted supernova recovery as the standing regression test for every future detector or ranking change.
+5. Do deeper all-epoch follow-up only on the top branch-ranked strict clusters, especially the strongest `MESSIER 061` and `MESSIER 066` sites.
 
 ## Current interpretation of the best objects
 
 The strongest historical `PASS` objects are two long-baseline `HST/WFC3-IR F160W` candidates in `NGC 5861` and one very long-baseline `HST/ACS F555W` candidate in `MESSIER 101`. Based on direct expert feedback, `NGC 5861` likely contains at least one real supernova-like transient, while `MESSIER 101` remains highly suspect for artifact / subtraction issues until it survives the strict rerun.
+
+## Branch-Aware Strict Outputs
+
+The new strict interpretation outputs live in `outputs/live_difference_strict_20260311_0421/branch_aware_v4/`.
+
+Most useful artifacts:
+- `branch_cluster_scores.parquet`
+- `branch_detection_scores.parquet`
+- `forced_measurements.parquet`
+- `branch_summary.json`
+- `branch_report.md`
+- `packets/`
+
+These are the outputs to use if you want the repository's current best attempt at ranking survivors by export-failure coherence under detector controls rather than by raw fade amplitude alone.
+
+## Hidden web board
+
+The repo now also contains a deployable hidden review page for the current strict branch-aware candidates:
+
+- Source payload: `site/uber_nova_search/`
+- Build command: `supernova-mission build-uber-nova-page --branch-output-dir outputs/live_difference_strict_20260311_0421/branch_aware_v4 --output-dir site/uber_nova_search`
+- Intended deploy target: `/uber_nova_search` under `/var/www/quasardipolephenomenon/`
+
+This board is not meant to be linked from the homepage. It is a Ryan-facing review surface that shows the current non-unresolved branch-aware candidates with slow registered blink GIFs, triptych panels, filter context, and score decomposition.
 
 ## Prime `PASS` objects
 
@@ -360,6 +388,12 @@ For the current expanded discovery stage:
   --galaxy-master-path catalogs/galaxy_master.parquet \
   --statuses PASS \
   --max-workers 4
+
+PYTHONPATH=src .venv/bin/python -m supernova_pipeline.cli run-branch-scoring \
+  --strict-output-dir outputs/live_difference_strict_20260311_0421 \
+  --benchmark-dir outputs/benchmark_validation_rawresid_20260311_0416 \
+  --precomputed-dir outputs/live_difference_strict_20260311_0421/branch_aware_v2 \
+  --output-dir outputs/live_difference_strict_20260311_0421/branch_aware_v4
 ```
 
 ## Key outputs
@@ -375,6 +409,8 @@ For the current expanded discovery stage:
 - `candidate_packets/`
 - `figures/candidates/`
 - `sed/`
+- `outputs/live_difference_strict_20260311_0421/branch_aware_v4/`
+- `predictaroni/`
 
 ## Notes
 

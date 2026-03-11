@@ -1,0 +1,14 @@
+{
+  "benchmark_median_sep_arcsec": 0.6826919198678586,
+  "benchmark_recovery_fraction": 0.75,
+  "class_counts": {
+    "DUST_SURVIVOR_LIKE": 21,
+    "INTERMEDIATE_BRANCH_LIKE": 58,
+    "STRONG_EXPORT_FAILURE_LIKE": 30,
+    "SYSTEMATIC_LIKE": 0
+  },
+  "created_utc": "20260311_054737UTC",
+  "n_candidates": 109,
+  "n_clusters": 109,
+  "source_branch_dir": "/home/primary/SUPERNOVA/outputs/live_difference_strict_20260311_0421/branch_aware_v4"
+}

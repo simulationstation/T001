@@ -1,0 +1,7 @@
+{
+  "benchmark_dir": "outputs/benchmark_validation_rawresid_20260311_0416",
+  "cluster_radius_arcsec": 0.25,
+  "created_utc": "20260311_051054UTC",
+  "mode": "branch_scoring",
+  "strict_output_dir": "outputs/live_difference_strict_20260311_0421"
+}

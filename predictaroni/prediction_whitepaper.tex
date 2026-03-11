@@ -1,0 +1,164 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+
+\title{Assumption-Conditioned Branch-Aware Search Framing\\for Failed-Supernova and Disappearing-Star Analysis}
+\author{SUPERNOVA Repository Working Note}
+\date{March 11, 2026}
+
+\begin{document}
+\emergencystretch=2em
+\maketitle
+
+\begin{abstract}
+This white paper records an assumption-conditioned scientific posture for the SUPERNOVA repository. The operative assumptions are that a definite universal information/decoherence boundary exists, that its geometric interpretation is correct, that prior quantum test results are predictive rather than merely analogical, and that collapse phenomenology is better represented by a soft branch surface than by a hard binary threshold. Under that posture, failed-supernova and disappearing-star analysis should be treated as an export-failure / branch-selection problem, not merely as a search for stars that became faint. The practical consequence is not relaxed rigor. On the contrary, the detector must remain difference-image first, empirically registered, provenance-rich, and benchmarked against blinded known-supernova recovery before any candidate interpretation is trusted. The branch-aware ranking layer described here is therefore designed to sit on top of strict detector controls and to rank survivors by export-failure coherence, dust-survivor competition, systematic risk, and intermediate branch-like behavior.
+\end{abstract}
+
+\section{Scope and Assumption-Conditioned Posture}
+
+This document does not claim that the underlying assumptions have been proven inside the repository. It defines how the search should be structured if those assumptions are taken as the current working model.
+
+The specific working posture is:
+\begin{itemize}[leftmargin=1.5em]
+\item collapse outcomes may populate a soft, branch-selective surface rather than a single hard explosion/failure divide;
+\item organized outward transport can degrade earlier than bulk leakage;
+\item optical luminosity alone is therefore not a sufficient proxy for collapse significance;
+\item a meaningful intermediate population should exist, including underluminous events, fallback-heavy or partial failures, and near-silent disappearance candidates;
+\item dust and systematic competitors must still be discriminated explicitly.
+\end{itemize}
+
+\section{Detector-First Scientific Discipline}
+
+The repository is already committed to a stricter observational standard than a simple archival fade search. Ryan's acceptance criteria have narrowed the problem to the following detector requirements:
+\begin{enumerate}[leftmargin=1.5em]
+\item detect on difference images rather than source catalogs alone;
+\item register images empirically from stars rather than trusting nominal WCS alignment;
+\item perform forced photometry at the same location across epochs, including non-detections and low-S/N cases;
+\item carry explicit provenance for overlap, chip-gap, mask, and no-coverage outcomes;
+\item recover known targeted supernovae in a blinded benchmark before trusting disappearing-star claims.
+\end{enumerate}
+
+Within the repository, those conditions are implemented primarily in the stricter \texttt{difference\_upgrade} path and its benchmark products. The current validated benchmark state is operationally significant: all 12 truth-centered benchmark pairs were scanned and 9 of 12 known-supernova truth groups were recovered, corresponding to a recovery fraction of 0.75 with sub-arcsecond median localization.
+
+\section{Universal-Boundary / Soft-Onset Framing}
+
+Under the working assumptions, the correct search mentality is not ``find large fades and hope some are failed supernovae.'' The correct mentality is:
+\begin{quote}
+Build a strict detector, then rank survivors by how coherently they fit a soft-onset export-failure branch model under severe anti-artifact controls.
+\end{quote}
+
+That framing changes the interpretation target in several ways.
+
+\subsection*{From amplitude to coherence}
+A large optical fade remains important, but it is no longer the sole target statistic. A candidate becomes more interesting when the same sky position shows repeated fade-consistent residual behavior, low-return behavior, and acceptable subtraction quality across multiple pairs.
+
+\subsection*{From binary failure to graded behavior}
+The ranking logic should preserve intermediate cases rather than collapsing everything into classical explosion versus complete disappearance. Partial suppression, weak-return behavior, and heterogeneous multi-band outcomes may be more natural than sharp binary states under a soft branch surface.
+
+\subsection*{From claim inflation to competitor accounting}
+The search must remain ruthless about competing explanations. Dust-survivor-like behavior and systematic-like behavior are not afterthoughts. They are active competitor classes that must be scored and allowed to win.
+
+\section{Predicted Supernova / Disappearing-Star Signatures}
+
+Conditioned on the working framework, the repository should preferentially search for the following signatures:
+\begin{itemize}[leftmargin=1.5em]
+\item long-baseline disappearance or near-disappearance at a coherent sky location;
+\item same-position forced photometry that shows sustained loss or weak-return behavior across scanned pairs;
+\item multi-pair support that survives registration and subtraction sanity checks;
+\item evidence of intermediate suppression rather than only total disappearance;
+\item behavior that is difficult to explain as ordinary variability, dust-only obscuration, or subtraction artifact.
+\end{itemize}
+
+Conversely, the pipeline should strongly penalize:
+\begin{itemize}[leftmargin=1.5em]
+\item dipoles and centroid migration;
+\item high registration residuals or weak anchor support;
+\item chip-gap, edge, or masked-pixel ambiguity;
+\item unstable local fields;
+\item obvious wavelength patterns more consistent with dusty survival than export failure.
+\end{itemize}
+
+\section{Why the Pipeline Should Search for Graded Export-Failure Coherence}
+
+The soft-onset framework predicts that a significant astrophysical population may occupy the space between ordinary luminous core-collapse supernovae and total silent disappearances. That prediction has direct computational consequences.
+
+If the repository ranks candidates only by pairwise fade amplitude, it preferentially selects extremes and risks discarding the physically interesting intermediate regime. A branch-aware layer is therefore warranted, provided that it remains downstream of a strict detector and benchmark gate.
+
+The branch-aware layer should be cluster-based rather than pair-based whenever possible. A single pairwise residual is often insufficient to distinguish a true disappearance-like site from an artifact. Same-location clustering and forced measurements across scanned pairs provide a more appropriate unit for export-failure interpretation.
+
+\section{Practical Consequences for Candidate Ranking}
+
+The repository should therefore score candidate sites with explicit, auditable factors. The important factors are:
+\begin{center}
+\begin{tabular}{p{0.32\linewidth} p{0.60\linewidth}}
+\toprule
+Factor & Intended meaning \\
+\midrule
+\texttt{detector\_confidence} & strength of the underlying strict residual detections \\
+\texttt{registration\_confidence} & confidence that alignment quality is adequate \\
+\texttt{subtraction\_cleanliness} & whether the residual behavior looks clean rather than field-wide or dipole-like \\
+\texttt{coverage\_completeness} & how much usable pair-level evidence exists at the candidate site \\
+\texttt{forced\_photometry\_coherence} & same-position residual consistency across scanned pairs \\
+\texttt{fade\_persistence} & whether suppression remains present over long baselines \\
+\texttt{rebrightening\_penalty} & evidence for return or ordinary variability \\
+\texttt{artifact\_penalty} & consolidated anti-artifact burden \\
+\texttt{dust\_survivor\_score} & strength of dusty-survivor competition \\
+\texttt{export\_failure\_score} & top-level export-failure interpretation score \\
+\texttt{systematic\_risk} & top-level systematic competitor score \\
+\texttt{unresolved\_variability\_score} & fallback score when evidence remains insufficient or ambiguous \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The top-level ranking should favor candidates that maintain high detector, registration, subtraction, coverage, and forced-coherence support while remaining low in dust and systematic competitor scores.
+
+\section{Current Repository Context}
+
+The current repository state provides a practical test bed for this framework:
+\begin{itemize}[leftmargin=1.5em]
+\item nearby-galaxy search universe already built;
+\item expanded archive products already built;
+\item historical candidate ledger still available for comparison;
+\item strict live rerun completed with 49 scanned pairs, 1201 fade detections, 65 PASS detections, and 1136 REVIEW detections;
+\item blinded benchmark improved to a 9/12 truth-group recovery result.
+\item the current strict branch-aware output tree (\texttt{outputs/live\_difference\_strict\_20260311\_0421/branch\_aware\_v4/}) reduces the rerun to 901 same-location clusters, of which 30 are currently classified as \texttt{STRONG\_EXPORT\_FAILURE\_LIKE}, 58 as \texttt{INTERMEDIATE\_BRANCH\_LIKE}, 21 as \texttt{DUST\_SURVIVOR\_LIKE}, and 792 as \texttt{VARIABLE\_OR\_UNRESOLVED}.
+\end{itemize}
+
+That is sufficient to justify a branch-aware interpretation layer as an operational upgrade, but not sufficient to justify relaxed claims. The detector remains the gatekeeper.
+
+\section{Falsification and Failure Modes}
+
+This framework should be considered weakened or operationally blocked if one or more of the following occur:
+\begin{itemize}[leftmargin=1.5em]
+\item benchmark recovery regresses materially under ranking-related changes;
+\item top-ranked candidates are systematically associated with poor registration or strong artifact flags;
+\item same-position forced measurements fail to support persistence at the supposedly interesting sites;
+\item dust-survivor competitors dominate the best-ranked cases once wavelength coverage is considered;
+\item the intermediate branch-like class fills with obvious systematics rather than clean partial-suppression candidates.
+\end{itemize}
+
+These are not merely caveats. They are practical failure conditions for the branch-aware approach.
+
+\section{Immediate Next Tests in the Repository}
+
+The near-term repository work implied by this white paper is concrete:
+\begin{enumerate}[leftmargin=1.5em]
+\item keep the strict live rerun and strict blind benchmark as the authoritative detector baseline;
+\item run branch-aware clustering and same-location forced scoring on strict outputs;
+\item compare the new strict branch-ranked sites against historical gallery candidates;
+\item automate benchmark regression as a standing gate on detector and ranking changes;
+\item deepen follow-up on the top branch-ranked sites only after artifact and dust competitors remain subdominant.
+\end{enumerate}
+
+\section{Conclusion}
+
+Conditioned on the working assumptions, the repository should search for graded export-failure coherence rather than only for stars that became faint. The correct implementation is not a looser detector. It is a stricter detector coupled to a more discriminating interpretation layer. The present repository architecture is already close enough to this standard that the upgrade is practical: the benchmark is real, the strict detector is real, and the remaining task is to rank survivors in a way that preserves intermediate branch structure while maintaining a ruthless anti-artifact posture.
+
+\end{document}

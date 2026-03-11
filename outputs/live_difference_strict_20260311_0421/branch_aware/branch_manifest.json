@@ -1,0 +1,11 @@
+{
+  "branch_cluster_scores": "outputs/live_difference_strict_20260311_0421/branch_aware/branch_cluster_scores.parquet",
+  "branch_detection_scores": "outputs/live_difference_strict_20260311_0421/branch_aware/branch_detection_scores.parquet",
+  "branch_report": "outputs/live_difference_strict_20260311_0421/branch_aware/branch_report.md",
+  "branch_summary": "outputs/live_difference_strict_20260311_0421/branch_aware/branch_summary.json",
+  "cluster_index": "outputs/live_difference_strict_20260311_0421/branch_aware/cluster_index.parquet",
+  "cluster_members": "outputs/live_difference_strict_20260311_0421/branch_aware/cluster_members.parquet",
+  "forced_measurements": "outputs/live_difference_strict_20260311_0421/branch_aware/forced_measurements.parquet",
+  "packets_dir": "outputs/live_difference_strict_20260311_0421/branch_aware/packets",
+  "predictaroni_dir": "/home/primary/SUPERNOVA/predictaroni"
+}

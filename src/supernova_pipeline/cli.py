@@ -7,6 +7,7 @@ from rich.console import Console
 from rich.table import Table
 
 from .archive_matrix import build_archive_products
+from .branch_scoring import run_branch_scoring
 from .candidate_followup import run_candidate_followup
 from .candidate_ledger import build_detection_queue
 from .difference_upgrade import run_difference_followup, run_difference_upgrade, run_supernova_benchmark
@@ -16,6 +17,7 @@ from .observational_closure import run_observational_closure
 from .pixel_search import run_pixel_search
 from .quantum_precheck import run_quantum_precheck
 from .quantum_submit import submit_quantum_pilots
+from .uber_nova_site import run_uber_nova_site
 from .utils import ensure_dir
 
 
@@ -35,7 +37,9 @@ def bootstrap_dirs(root_dir: Path) -> None:
         "figures",
         "notes",
         "outputs",
+        "predictaroni",
         "sed",
+        "site",
         "logs",
         "src",
     ]:
@@ -150,12 +154,31 @@ def command_run_supernova_benchmark(args: argparse.Namespace) -> dict[str, Path]
     )
 
 
+def command_run_branch_scoring(args: argparse.Namespace) -> dict[str, Path]:
+    return run_branch_scoring(
+        root_dir=args.root_dir,
+        strict_output_dir=args.strict_output_dir,
+        output_dir=args.output_dir,
+        benchmark_dir=args.benchmark_dir,
+        cluster_radius_arcsec=args.cluster_radius_arcsec,
+        precomputed_dir=args.precomputed_dir,
+    )
+
+
 def command_run_quantum_precheck(args: argparse.Namespace) -> dict[str, Path]:
     return run_quantum_precheck(root_dir=args.root_dir, output_dir=args.output_dir)
 
 
 def command_submit_quantum_pilots(args: argparse.Namespace) -> dict[str, Path]:
     return submit_quantum_pilots(root_dir=args.root_dir, output_dir=args.output_dir)
+
+
+def command_build_uber_nova_page(args: argparse.Namespace) -> dict[str, Path]:
+    return run_uber_nova_site(
+        root_dir=args.root_dir,
+        branch_output_dir=args.branch_output_dir,
+        output_dir=args.output_dir,
+    )
 
 
 def command_run_pilot(args: argparse.Namespace) -> None:
@@ -284,6 +307,14 @@ def build_parser() -> argparse.ArgumentParser:
     benchmark.add_argument("--resume", action="store_true")
     benchmark.set_defaults(func=command_run_supernova_benchmark)
 
+    branch_scoring = sub.add_parser("run-branch-scoring", help="Cluster strict detections, force-measure them across scanned pairs, and rank export-failure coherence.")
+    branch_scoring.add_argument("--strict-output-dir", type=Path, default=root_dir / "outputs" / "live_difference_strict_20260311_0421")
+    branch_scoring.add_argument("--benchmark-dir", type=Path, default=root_dir / "outputs" / "benchmark_validation_rawresid_20260311_0416")
+    branch_scoring.add_argument("--output-dir", type=Path, default=None)
+    branch_scoring.add_argument("--cluster-radius-arcsec", type=float, default=0.25)
+    branch_scoring.add_argument("--precomputed-dir", type=Path, default=None)
+    branch_scoring.set_defaults(func=command_run_branch_scoring)
+
     quantum_precheck = sub.add_parser("run-quantum-precheck", help="Design and locally preflight the pilot Braket quantum tests without submitting tasks.")
     quantum_precheck.add_argument("--output-dir", type=Path, default=None)
     quantum_precheck.set_defaults(func=command_run_quantum_precheck)
@@ -291,6 +322,11 @@ def build_parser() -> argparse.ArgumentParser:
     quantum_submit = sub.add_parser("submit-quantum-pilots", help="Submit the prechecked pilot quantum tests to live Braket hardware.")
     quantum_submit.add_argument("--output-dir", type=Path, default=None)
     quantum_submit.set_defaults(func=command_submit_quantum_pilots)
+
+    uber_nova_page = sub.add_parser("build-uber-nova-page", help="Build the hidden branch-aware web payload for the uber_nova_search page.")
+    uber_nova_page.add_argument("--branch-output-dir", type=Path, default=root_dir / "outputs" / "live_difference_strict_20260311_0421" / "branch_aware_v4")
+    uber_nova_page.add_argument("--output-dir", type=Path, default=root_dir / "site" / "uber_nova_search")
+    uber_nova_page.set_defaults(func=command_build_uber_nova_page)
 
     run_pilot = sub.add_parser("run-pilot", help="Run the enacted pilot workflow end to end.")
     run_pilot.add_argument("--top-n", type=int, default=130)
@@ -310,7 +346,7 @@ def build_parser() -> argparse.ArgumentParser:
     run_pilot.add_argument("--pixel-same-collection-only", action="store_true")
     run_pilot.set_defaults(func=command_run_pilot)
 
-    for subparser in [bootstrap, build_galaxies, build_archive, init_candidates, pixel_search, followup, extensions, closure, difference_upgrade, difference_followup, benchmark, quantum_precheck, quantum_submit, run_pilot]:
+    for subparser in [bootstrap, build_galaxies, build_archive, init_candidates, pixel_search, followup, extensions, closure, difference_upgrade, difference_followup, benchmark, branch_scoring, quantum_precheck, quantum_submit, uber_nova_page, run_pilot]:
         subparser.add_argument("--root-dir", type=Path, default=root_dir)
 
     return parser
