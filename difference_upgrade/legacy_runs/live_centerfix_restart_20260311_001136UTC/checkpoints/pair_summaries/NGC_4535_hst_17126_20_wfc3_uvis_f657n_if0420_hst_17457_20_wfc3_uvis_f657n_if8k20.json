@@ -1,0 +1,15 @@
+{
+  "baseline_days": 356.01927275000344,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "F657N",
+  "filter_2": "F657N",
+  "galaxy_name": "NGC 4535",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_17126_20_wfc3_uvis_f657n_if0420",
+  "obs_id_2": "hst_17457_20_wfc3_uvis_f657n_if8k20",
+  "pair_id": "NGC 4535::hst_17126_20_wfc3_uvis_f657n_if0420::hst_17457_20_wfc3_uvis_f657n_if8k20",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

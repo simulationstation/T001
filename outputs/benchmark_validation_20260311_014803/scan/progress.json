@@ -1,0 +1,16 @@
+{
+  "active_baseline_days": 1300.5726607499964,
+  "active_filter_1": "F555W",
+  "active_filter_2": "F555W",
+  "active_galaxy_name": "MESSIER 101",
+  "active_pair_id": "MESSIER 101::hst_skycell-p2381x08y12_wfc3_uvis_f555w_all::hst_13737_02_wfc3_uvis_f555w_icoy02",
+  "active_pair_index": 6,
+  "n_detection_measurements": 4968,
+  "n_detections": 108,
+  "n_pairs_completed": 5,
+  "n_pairs_remaining": 7,
+  "n_pairs_selected": 12,
+  "stage": "stage02_scan_pairs",
+  "status": "running",
+  "timestamp_utc": "2026-03-11T01:50:32.796697Z"
+}

@@ -1,0 +1,15 @@
+{
+  "baseline_days": 5327.955672479999,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "F555W",
+  "filter_2": "F555W",
+  "galaxy_name": "MESSIER 101",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_9490_02_acs_wfc_f555w_j8d602",
+  "obs_id_2": "hst_14678_01_acs_wfc_f555w_jd6v01",
+  "pair_id": "MESSIER 101::hst_9490_02_acs_wfc_f555w_j8d602::hst_14678_01_acs_wfc_f555w_jd6v01",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

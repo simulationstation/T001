@@ -1,0 +1,210 @@
+[
+  {
+    "scale": 0.85,
+    "detuning_peak": 1000000.0,
+    "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/3cd2cd45-3a5d-44a0-827b-a7aff64fb58d",
+    "status": "COMPLETED",
+    "endedAt": "2026-03-11T00:57:08.483000+00:00",
+    "success_count": 100,
+    "success_fraction": 1.0,
+    "site_means": [
+      0.64,
+      0.92,
+      0.87,
+      0.58
+    ],
+    "pre_site_means": [
+      1.0,
+      1.0,
+      0.99,
+      0.98
+    ],
+    "inner_mean": 0.64,
+    "center_mean": 0.895,
+    "edge_mean": 0.58,
+    "edge_loss_fraction": 0.42000000000000004,
+    "total_excitation_mean": 3.01
+  },
+  {
+    "scale": 0.85,
+    "detuning_peak": 2000000.0,
+    "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/3a23edd5-ade0-4001-94cf-da382625249e",
+    "status": "COMPLETED",
+    "endedAt": "2026-03-11T00:58:00.407000+00:00",
+    "success_count": 100,
+    "success_fraction": 1.0,
+    "site_means": [
+      0.53,
+      0.89,
+      0.83,
+      0.49
+    ],
+    "pre_site_means": [
+      1.0,
+      1.0,
+      0.99,
+      0.98
+    ],
+    "inner_mean": 0.53,
+    "center_mean": 0.86,
+    "edge_mean": 0.49,
+    "edge_loss_fraction": 0.51,
+    "total_excitation_mean": 2.74
+  },
+  {
+    "scale": 0.85,
+    "detuning_peak": 3000000.0,
+    "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/5090c723-f479-4f6a-b7f2-c73ef0381cfd",
+    "status": "COMPLETED",
+    "endedAt": "2026-03-11T00:58:54.265000+00:00",
+    "success_count": 100,
+    "success_fraction": 1.0,
+    "site_means": [
+      0.56,
+      0.8,
+      0.79,
+      0.55
+    ],
+    "pre_site_means": [
+      1.0,
+      1.0,
+      1.0,
+      0.98
+    ],
+    "inner_mean": 0.56,
+    "center_mean": 0.795,
+    "edge_mean": 0.55,
+    "edge_loss_fraction": 0.44999999999999996,
+    "total_excitation_mean": 2.7
+  },
+  {
+    "scale": 0.85,
+    "detuning_peak": 4000000.0,
+    "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/99cec75b-669f-4d46-a3d7-49048c232115",
+    "status": "COMPLETED",
+    "endedAt": "2026-03-11T00:59:46.298000+00:00",
+    "success_count": 100,
+    "success_fraction": 1.0,
+    "site_means": [
+      0.49,
+      0.81,
+      0.73,
+      0.53
+    ],
+    "pre_site_means": [
+      0.98,
+      1.0,
+      0.99,
+      0.98
+    ],
+    "inner_mean": 0.49,
+    "center_mean": 0.77,
+    "edge_mean": 0.53,
+    "edge_loss_fraction": 0.47,
+    "total_excitation_mean": 2.56
+  },
+  {
+    "scale": 1.0,
+    "detuning_peak": 1000000.0,
+    "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/d726746e-5ecf-445c-a9fd-d2b50e4570fe",
+    "status": "COMPLETED",
+    "endedAt": "2026-03-11T01:00:41.486000+00:00",
+    "success_count": 100,
+    "success_fraction": 1.0,
+    "site_means": [
+      0.58,
+      0.83,
+      0.83,
+      0.56
+    ],
+    "pre_site_means": [
+      0.99,
+      0.99,
+      0.99,
+      1.0
+    ],
+    "inner_mean": 0.58,
+    "center_mean": 0.83,
+    "edge_mean": 0.56,
+    "edge_loss_fraction": 0.43999999999999995,
+    "total_excitation_mean": 2.8
+  },
+  {
+    "scale": 1.0,
+    "detuning_peak": 2000000.0,
+    "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/25d92cda-307e-4cd6-b8f0-6cd5a21044ea",
+    "status": "COMPLETED",
+    "endedAt": "2026-03-11T01:01:34.594000+00:00",
+    "success_count": 100,
+    "success_fraction": 1.0,
+    "site_means": [
+      0.41,
+      0.84,
+      0.8,
+      0.37
+    ],
+    "pre_site_means": [
+      1.0,
+      1.0,
+      1.0,
+      0.97
+    ],
+    "inner_mean": 0.41,
+    "center_mean": 0.82,
+    "edge_mean": 0.37,
+    "edge_loss_fraction": 0.63,
+    "total_excitation_mean": 2.42
+  },
+  {
+    "scale": 1.0,
+    "detuning_peak": 3000000.0,
+    "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/b2a694e6-1432-4eef-91be-9835cbca80b6",
+    "status": "COMPLETED",
+    "endedAt": "2026-03-11T01:02:26.760000+00:00",
+    "success_count": 100,
+    "success_fraction": 1.0,
+    "site_means": [
+      0.41,
+      0.79,
+      0.55,
+      0.54
+    ],
+    "pre_site_means": [
+      0.99,
+      0.99,
+      1.0,
+      0.99
+    ],
+    "inner_mean": 0.41,
+    "center_mean": 0.67,
+    "edge_mean": 0.54,
+    "edge_loss_fraction": 0.45999999999999996,
+    "total_excitation_mean": 2.29
+  },
+  {
+    "scale": 1.0,
+    "detuning_peak": 4000000.0,
+    "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/cdb85ece-4493-45bd-97b2-71320771795a",
+    "status": "COMPLETED",
+    "endedAt": "2026-03-11T01:03:19.765000+00:00",
+    "success_count": 100,
+    "success_fraction": 1.0,
+    "site_means": [
+      0.53,
+      0.64,
+      0.68,
+      0.41
+    ],
+    "pre_site_means": [
+      1.0,
+      0.97,
+      0.99,
+      0.95
+    ],
+    "inner_mean": 0.53,
+    "center_mean": 0.66,
+    "edge_mean": 0.41,
+    "edge_loss_fraction": 0.5900000000000001,
+    "total_excitation_mean": 2.26
+  }
+]

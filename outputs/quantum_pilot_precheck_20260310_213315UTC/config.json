@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-03-10T21:33:15.812800Z",
+  "credential_discovery": {
+    "search_paths": [
+      "/home/primary/SUPERNOVA/.env",
+      "/home/primary/Hubble-Systematics-Review-Chain/.env"
+    ],
+    "source": "/home/primary/Hubble-Systematics-Review-Chain/.env"
+  },
+  "pricing_source_url": "https://aws.amazon.com/braket/pricing/",
+  "run_label": "quantum_pilot_precheck_20260310_213315UTC",
+  "tests": [
+    "core_shell_collapse_ladder",
+    "quantum_neutrinosphere_analog",
+    "shock_revival_threshold_simulator",
+    "shell_only_visibility_test",
+    "cross_platform_universality_test",
+    "collapse_rate_atlas_microgrid"
+  ]
+}

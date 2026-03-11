@@ -1,0 +1,15 @@
+{
+  "baseline_days": 4895.247665162031,
+  "compatibility": "exact",
+  "error": "not enough values to unpack (expected 3, got 2)",
+  "filter_1": "F555W",
+  "filter_2": "F555W",
+  "galaxy_name": "MESSIER 066",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "jb4u01010",
+  "obs_id_2": "jey347020",
+  "pair_id": "MESSIER 066::jb4u01010::jey347020",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

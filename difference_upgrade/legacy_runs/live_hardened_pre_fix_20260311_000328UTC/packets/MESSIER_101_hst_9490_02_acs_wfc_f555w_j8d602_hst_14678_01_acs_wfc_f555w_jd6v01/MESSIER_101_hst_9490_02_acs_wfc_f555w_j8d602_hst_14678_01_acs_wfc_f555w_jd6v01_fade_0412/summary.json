@@ -1,0 +1,40 @@
+{
+  "candidate_id": "MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_fade_0412",
+  "dec_deg": 54.34446213739686,
+  "diff_sigma": 15.225259579767515,
+  "diff_sigma_min": 10.409401862651187,
+  "event_sign": "fade",
+  "figure_path": "difference_upgrade/live/packets/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_fade_0412/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_fade_0412_cutout.png",
+  "galaxy_name": "MESSIER 101",
+  "pair_id": "MESSIER 101::hst_9490_02_acs_wfc_f555w_j8d602::hst_14678_01_acs_wfc_f555w_jd6v01",
+  "post_flux": 0.10672562326582691,
+  "post_to_pre_ratio": 0.06691415386905623,
+  "pre_flux": 1.5949633537125405,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "hst_9490_02_acs_wfc_f555w_j8d602",
+    "obs_id_2": "hst_14678_01_acs_wfc_f555w_jd6v01",
+    "obsid_1": 26321563,
+    "obsid_2": 26481492,
+    "product_filename_1": "hst_9490_02_acs_wfc_f555w_j8d602_drc.fits",
+    "product_filename_2": "hst_14678_01_acs_wfc_f555w_jd6v01_drc.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_9490_02_acs_wfc_f555w_j8d602/hst_9490_02_acs_wfc_f555w_j8d602_drc.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_14678_01_acs_wfc_f555w_jd6v01/hst_14678_01_acs_wfc_f555w_jd6v01_drc.fits",
+    "product_priority_1": 181.0,
+    "product_priority_2": 181.0,
+    "product_uri_1": "mast:HST/product/hst_9490_02_acs_wfc_f555w_j8d602_drc.fits",
+    "product_uri_2": "mast:HST/product/hst_14678_01_acs_wfc_f555w_jd6v01_drc.fits"
+  },
+  "ra_deg": 210.76981139125058,
+  "reason_codes": [
+    "ROBUST_DIFF_SIG",
+    "REGISTRATION_OK"
+  ],
+  "registration_dx_px": 0.04989046794617025,
+  "registration_dy_px": -0.9533516044621138,
+  "registration_n_matches": 249,
+  "registration_residual_px": 0.2913816322848004,
+  "status": "REVIEW",
+  "warning_flags": []
+}

@@ -1,0 +1,123 @@
+[2026-03-11T04:08:01.405843Z] run start mode=difference_upgrade resume=False sign_mode=fade
+[2026-03-11T04:08:04.256580Z] queue prepared candidate_pairs=271 selected_pairs=60 preflight_rejected=78
+[2026-03-11T04:08:04.304061Z] pair start pair_id=MESSIER 101::jw02452-o002_t002_nircam_clear-f200w::jw05398-c1144_t000_nircam_clear-f200w index=1/60 galaxy=MESSIER 101 filter=F200W->F200W baseline_days=851.30
+[2026-03-11T04:09:44.926838Z] pair complete pair_id=MESSIER 101::jw02452-o002_t002_nircam_clear-f200w::jw05398-c1144_t000_nircam_clear-f200w status=SCANNED residuals=560 survivors=97 reg_resid_px=0.10520263294672516
+[2026-03-11T04:09:44.983878Z] pair start pair_id=NGC 1365::jw02107-o021_t003_nircam_clear-f200w::jw05398-c1024_t000_nircam_clear-f200w index=2/60 galaxy=NGC 1365 filter=F200W->F200W baseline_days=848.08
+[2026-03-11T04:09:47.881552Z] pair failed pair_id=NGC 1365::jw02107-o021_t003_nircam_clear-f200w::jw05398-c1024_t000_nircam_clear-f200w error=Insufficient overlap after WCS reprojection.
+[2026-03-11T04:09:47.950673Z] pair start pair_id=NGC 4388::jw02064-o009_t005_miri_f1800w-sub256::jw05627-o021_t027_miri_f1800w index=3/60 galaxy=NGC 4388 filter=F1800W->F1800W baseline_days=723.49
+[2026-03-11T04:09:49.139736Z] pair complete pair_id=NGC 4388::jw02064-o009_t005_miri_f1800w-sub256::jw05627-o021_t027_miri_f1800w status=SCANNED residuals=55 survivors=8 reg_resid_px=0.8610729637613355
+[2026-03-11T04:09:49.209385Z] pair start pair_id=NGC 4388::jw02064-o009_t005_miri_f1500w-sub256::jw05627-o021_t027_miri_f1500w index=4/60 galaxy=NGC 4388 filter=F1500W->F1500W baseline_days=723.48
+[2026-03-11T04:09:50.610708Z] pair complete pair_id=NGC 4388::jw02064-o009_t005_miri_f1500w-sub256::jw05627-o021_t027_miri_f1500w status=SCANNED residuals=73 survivors=10 reg_resid_px=0.37058552297153324
+[2026-03-11T04:09:50.928288Z] pair start pair_id=NGC 4388::jw02064-o009_t005_miri_f560w-sub256::jw05627-o021_t027_miri_f560w index=5/60 galaxy=NGC 4388 filter=F560W->F560W baseline_days=723.46
+[2026-03-11T04:09:51.392330Z] pair complete pair_id=NGC 4388::jw02064-o009_t005_miri_f560w-sub256::jw05627-o021_t027_miri_f560w status=SCANNED residuals=104 survivors=0 reg_resid_px=0.8890870871149124
+[2026-03-11T04:09:51.463342Z] pair start pair_id=MESSIER 066::jw02107-o029_t011_nircam_clear-f335m::jw04793-o011_t011_nircam_clear-f335m index=6/60 galaxy=MESSIER 066 filter=F335M->F335M baseline_days=708.08
+[2026-03-11T04:10:24.337736Z] pair complete pair_id=MESSIER 066::jw02107-o029_t011_nircam_clear-f335m::jw04793-o011_t011_nircam_clear-f335m status=SCANNED residuals=532 survivors=180 reg_resid_px=0.12267200350079889
+[2026-03-11T04:10:24.423524Z] pair start pair_id=MESSIER 101::jw01995-o001_t001_nircam_clear-f115w::jw05398-c1144_t000_nircam_clear-f115w index=7/60 galaxy=MESSIER 101 filter=F115W->F115W baseline_days=702.75
+[2026-03-11T04:11:32.850995Z] pair complete pair_id=MESSIER 101::jw01995-o001_t001_nircam_clear-f115w::jw05398-c1144_t000_nircam_clear-f115w status=SCANNED residuals=177 survivors=5 reg_resid_px=0.15034797355713295
+[2026-03-11T04:11:32.937166Z] pair start pair_id=MESSIER 101::jw01995-o001_t001_nircam_clear-f444w::jw05398-c1144_t000_nircam_clear-f444w index=8/60 galaxy=MESSIER 101 filter=F444W->F444W baseline_days=702.75
+[2026-03-11T04:11:48.531509Z] pair complete pair_id=MESSIER 101::jw01995-o001_t001_nircam_clear-f444w::jw05398-c1144_t000_nircam_clear-f444w status=SCANNED residuals=10 survivors=0 reg_resid_px=0.11921222211978055
+[2026-03-11T04:11:48.617396Z] pair start pair_id=MESSIER 101::jw03921-o040_t042_miri_f2100w::jw07881-o001_t002_miri_f2100w index=9/60 galaxy=MESSIER 101 filter=F2100W->F2100W baseline_days=690.90
+[2026-03-11T04:11:50.299648Z] pair complete pair_id=MESSIER 101::jw03921-o040_t042_miri_f2100w::jw07881-o001_t002_miri_f2100w status=SCANNED residuals=58 survivors=0 reg_resid_px=0.10900950552707635
+[2026-03-11T04:11:50.384221Z] pair start pair_id=MESSIER 101::jw03921-o040_t042_miri_f1500w::jw07881-o001_t002_miri_f1500w index=10/60 galaxy=MESSIER 101 filter=F1500W->F1500W baseline_days=690.89
+[2026-03-11T04:11:52.339238Z] pair complete pair_id=MESSIER 101::jw03921-o040_t042_miri_f1500w::jw07881-o001_t002_miri_f1500w status=SCANNED residuals=173 survivors=0 reg_resid_px=0.10525511283462825
+[2026-03-11T04:11:52.424074Z] pair start pair_id=MESSIER 101::jw03921-o040_t042_miri_f770w::jw07881-o001_t002_miri_f770w index=11/60 galaxy=MESSIER 101 filter=F770W->F770W baseline_days=690.88
+[2026-03-11T04:11:58.173199Z] pair complete pair_id=MESSIER 101::jw03921-o040_t042_miri_f770w::jw07881-o001_t002_miri_f770w status=SCANNED residuals=498 survivors=27 reg_resid_px=0.14825122888067455
+[2026-03-11T04:11:58.260928Z] pair start pair_id=MESSIER 101::jw03921-o040_t042_miri_f1000w::jw07881-o001_t002_miri_f1000w index=12/60 galaxy=MESSIER 101 filter=F1000W->F1000W baseline_days=690.88
+[2026-03-11T04:12:00.425700Z] pair complete pair_id=MESSIER 101::jw03921-o040_t042_miri_f1000w::jw07881-o001_t002_miri_f1000w status=SCANNED residuals=262 survivors=0 reg_resid_px=0.11447848427927144
+[2026-03-11T04:12:00.512349Z] pair start pair_id=NGC 3521::jw03707-o045_t026_miri_f770w::jw09258-o010_t002_miri_f770w index=13/60 galaxy=NGC 3521 filter=F770W->F770W baseline_days=607.17
+[2026-03-11T04:12:05.150504Z] pair complete pair_id=NGC 3521::jw03707-o045_t026_miri_f770w::jw09258-o010_t002_miri_f770w status=SCANNED residuals=44 survivors=0 reg_resid_px=0.44433569179533927
+[2026-03-11T04:12:05.214571Z] pair start pair_id=MESSIER 101::jw03429-o003_t001_miri_f2100w::jw07881-o001_t002_miri_f2100w index=14/60 galaxy=MESSIER 101 filter=F2100W->F2100W baseline_days=602.88
+[2026-03-11T04:12:05.843864Z] pair failed pair_id=MESSIER 101::jw03429-o003_t001_miri_f2100w::jw07881-o001_t002_miri_f2100w error=Insufficient overlap after WCS reprojection.
+[2026-03-11T04:12:05.908483Z] pair start pair_id=NGC 3521::jw03707-o045_t026_miri_f770w::jw09258-o006_t002_miri_f770w index=15/60 galaxy=NGC 3521 filter=F770W->F770W baseline_days=586.57
+[2026-03-11T04:12:10.340475Z] pair complete pair_id=NGC 3521::jw03707-o045_t026_miri_f770w::jw09258-o006_t002_miri_f770w status=SCANNED residuals=176 survivors=0 reg_resid_px=0.4987035752554001
+[2026-03-11T04:12:10.404193Z] pair start pair_id=NGC 4388::jw02064-o009_t005_miri_f560w-sub256::jw05627-o022_t007_miri_f560w-sub128 index=16/60 galaxy=NGC 4388 filter=F560W->F560W baseline_days=562.22
+[2026-03-11T04:12:10.602860Z] pair complete pair_id=NGC 4388::jw02064-o009_t005_miri_f560w-sub256::jw05627-o022_t007_miri_f560w-sub128 status=SCANNED residuals=2 survivors=0 reg_resid_px=nan
+[2026-03-11T04:12:10.666832Z] pair start pair_id=NGC 4388::jw02064-o009_t005_miri_f1500w-sub256::jw05627-o022_t007_miri_f1500w-sub128 index=17/60 galaxy=NGC 4388 filter=F1500W->F1500W baseline_days=562.22
+[2026-03-11T04:12:10.894970Z] pair complete pair_id=NGC 4388::jw02064-o009_t005_miri_f1500w-sub256::jw05627-o022_t007_miri_f1500w-sub128 status=SCANNED residuals=9 survivors=0 reg_resid_px=0.407361063551108
+[2026-03-11T04:12:10.959736Z] pair start pair_id=NGC 4388::jw02064-o009_t005_miri_f1800w-sub256::jw05627-o022_t007_miri_f1800w-sub128 index=18/60 galaxy=NGC 4388 filter=F1800W->F1800W baseline_days=562.21
+[2026-03-11T04:12:11.185490Z] pair complete pair_id=NGC 4388::jw02064-o009_t005_miri_f1800w-sub256::jw05627-o022_t007_miri_f1800w-sub128 status=SCANNED residuals=11 survivors=0 reg_resid_px=0.4396868922575745
+[2026-03-11T04:12:11.275913Z] pair start pair_id=MESSIER 061::jw02107-o013_t013_miri_f2100w::jw03295-o007_t004_miri_f2100w index=19/60 galaxy=MESSIER 061 filter=F2100W->F2100W baseline_days=470.02
+[2026-03-11T04:12:14.972948Z] pair complete pair_id=MESSIER 061::jw02107-o013_t013_miri_f2100w::jw03295-o007_t004_miri_f2100w status=SCANNED residuals=10 survivors=0 reg_resid_px=0.36845761979898983
+[2026-03-11T04:12:15.060094Z] pair start pair_id=MESSIER 061::jw02107-o013_t013_miri_f1000w::jw03295-o007_t004_miri_f1000w index=20/60 galaxy=MESSIER 061 filter=F1000W->F1000W baseline_days=470.00
+[2026-03-11T04:12:20.731990Z] pair complete pair_id=MESSIER 061::jw02107-o013_t013_miri_f1000w::jw03295-o007_t004_miri_f1000w status=SCANNED residuals=201 survivors=15 reg_resid_px=0.32514875348627187
+[2026-03-11T04:12:20.821653Z] pair start pair_id=MESSIER 061::jw02107-o013_t013_miri_f1130w::jw03295-o007_t004_miri_f1130w index=21/60 galaxy=MESSIER 061 filter=F1130W->F1130W baseline_days=470.00
+[2026-03-11T04:12:25.612304Z] pair complete pair_id=MESSIER 061::jw02107-o013_t013_miri_f1130w::jw03295-o007_t004_miri_f1130w status=SCANNED residuals=223 survivors=9 reg_resid_px=0.3197326286004821
+[2026-03-11T04:12:25.702383Z] pair start pair_id=MESSIER 061::jw02107-o013_t013_miri_f770w::jw03295-o007_t004_miri_f770w index=22/60 galaxy=MESSIER 061 filter=F770W->F770W baseline_days=470.00
+[2026-03-11T04:12:32.085002Z] pair complete pair_id=MESSIER 061::jw02107-o013_t013_miri_f770w::jw03295-o007_t004_miri_f770w status=SCANNED residuals=535 survivors=11 reg_resid_px=0.19823642794011292
+[2026-03-11T04:12:32.177352Z] pair start pair_id=NGC 1365::jw01995-o006_t006_nircam_clear-f115w::jw05398-c1024_t000_nircam_clear-f115w index=23/60 galaxy=NGC 1365 filter=F115W->F115W baseline_days=467.48
+[2026-03-11T04:13:21.400316Z] pair complete pair_id=NGC 1365::jw01995-o006_t006_nircam_clear-f115w::jw05398-c1024_t000_nircam_clear-f115w status=SCANNED residuals=676 survivors=63 reg_resid_px=0.09648647283960143
+[2026-03-11T04:13:21.473475Z] pair start pair_id=NGC 3521::jw03707-o045_t026_miri_f770w::jw09233-o004_t002_miri_f770w index=24/60 galaxy=NGC 3521 filter=F770W->F770W baseline_days=397.25
+[2026-03-11T04:13:26.357051Z] pair complete pair_id=NGC 3521::jw03707-o045_t026_miri_f770w::jw09233-o004_t002_miri_f770w status=SCANNED residuals=104 survivors=0 reg_resid_px=0.6795337568377697
+[2026-03-11T04:13:26.453257Z] pair start pair_id=NGC 4388::jw06659-o001_t001_miri_f770w::jw05627-o021_t027_miri_f770w index=25/60 galaxy=NGC 4388 filter=F770W->F770W baseline_days=379.05
+[2026-03-11T04:13:27.851120Z] pair complete pair_id=NGC 4388::jw06659-o001_t001_miri_f770w::jw05627-o021_t027_miri_f770w status=SCANNED residuals=83 survivors=0 reg_resid_px=0.3241344181748815
+[2026-03-11T04:13:27.923667Z] pair start pair_id=NGC 4388::jw06659-o001_t001_miri_f560w::jw05627-o021_t027_miri_f560w index=26/60 galaxy=NGC 4388 filter=F560W->F560W baseline_days=379.03
+[2026-03-11T04:13:29.953830Z] pair complete pair_id=NGC 4388::jw06659-o001_t001_miri_f560w::jw05627-o021_t027_miri_f560w status=SCANNED residuals=333 survivors=0 reg_resid_px=0.4342577522281879
+[2026-03-11T04:13:30.050200Z] pair start pair_id=MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w index=27/60 galaxy=MESSIER 061 filter=F200W->F200W baseline_days=370.96
+[2026-03-11T04:14:13.109407Z] pair complete pair_id=MESSIER 061::jw02107-o031_t013_nircam_clear-f200w::jw02107-o044_t020_nircam_clear-f200w status=SCANNED residuals=576 survivors=201 reg_resid_px=0.234136642607183
+[2026-03-11T04:14:13.223311Z] pair start pair_id=MESSIER 061::jw02107-o031_t013_nircam_clear-f300m::jw02107-o044_t020_nircam_clear-f300m index=28/60 galaxy=MESSIER 061 filter=F300M->F300M baseline_days=370.96
+[2026-03-11T04:14:30.964037Z] pair complete pair_id=MESSIER 061::jw02107-o031_t013_nircam_clear-f300m::jw02107-o044_t020_nircam_clear-f300m status=SCANNED residuals=525 survivors=115 reg_resid_px=0.16924285693655416
+[2026-03-11T04:14:31.086065Z] pair start pair_id=MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m index=29/60 galaxy=MESSIER 061 filter=F335M->F335M baseline_days=370.96
+[2026-03-11T04:14:53.413739Z] pair complete pair_id=MESSIER 061::jw02107-o031_t013_nircam_clear-f335m::jw02107-o044_t020_nircam_clear-f335m status=SCANNED residuals=521 survivors=158 reg_resid_px=0.19564124561384397
+[2026-03-11T04:14:53.549748Z] pair start pair_id=MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m index=30/60 galaxy=MESSIER 061 filter=F360M->F360M baseline_days=370.96
+[2026-03-11T04:15:18.073465Z] pair complete pair_id=MESSIER 061::jw02107-o031_t013_nircam_clear-f360m::jw02107-o044_t020_nircam_clear-f360m status=SCANNED residuals=530 survivors=177 reg_resid_px=0.09934189507652899
+[2026-03-11T04:15:18.230105Z] pair start pair_id=NGC 1097::hst_9788_03_acs_wfc_f814w_j8mx03::hst_15654_58_acs_wfc_f814w_jdxr58 index=31/60 galaxy=NGC 1097 filter=F814W->F814W baseline_days=5914.97
+[2026-03-11T04:15:39.648232Z] pair failed pair_id=NGC 1097::hst_9788_03_acs_wfc_f814w_j8mx03::hst_15654_58_acs_wfc_f814w_jdxr58 error=Insufficient overlap after WCS reprojection.
+[2026-03-11T04:15:39.804346Z] pair start pair_id=MESSIER 100::hst_11646_01_wfc3_uvis_f555w_ib2q01::hst_16500_01_wfc3_uvis_f555w_iejn01 index=32/60 galaxy=MESSIER 100 filter=F555W->F555W baseline_days=4212.61
+[2026-03-11T04:16:10.323905Z] pair complete pair_id=MESSIER 100::hst_11646_01_wfc3_uvis_f555w_ib2q01::hst_16500_01_wfc3_uvis_f555w_iejn01 status=SCANNED residuals=483 survivors=0 reg_resid_px=nan
+[2026-03-11T04:16:10.477330Z] pair start pair_id=NGC 1097::hst_13413_01_wfc3_uvis_f657n_icc501::hst_17457_04_wfc3_uvis_f657n_if8k04 index=33/60 galaxy=NGC 1097 filter=F657N->F657N baseline_days=4199.11
+[2026-03-11T04:16:57.795748Z] pair complete pair_id=NGC 1097::hst_13413_01_wfc3_uvis_f657n_icc501::hst_17457_04_wfc3_uvis_f657n_if8k04 status=SCANNED residuals=640 survivors=0 reg_resid_px=0.13079173273084244
+[2026-03-11T04:16:57.948660Z] pair start pair_id=NGC 4414::hst_12888_01_wfc3_uvis_f555w_ibzv01::hst_17413_31_wfc3_uvis_f555w_if8731 index=34/60 galaxy=NGC 4414 filter=F555W->F555W baseline_days=3963.15
+[2026-03-11T04:17:00.058785Z] pair complete pair_id=NGC 4414::hst_12888_01_wfc3_uvis_f555w_ibzv01::hst_17413_31_wfc3_uvis_f555w_if8731 status=SCANNED residuals=33 survivors=0 reg_resid_px=nan
+[2026-03-11T04:17:00.187730Z] pair start pair_id=MESSIER 100::hst_11646_01_wfc3_uvis_f555w_ib2q01::hst_16075_01_wfc3_uvis_f555w_ie9801 index=35/60 galaxy=MESSIER 100 filter=F555W->F555W baseline_days=3843.63
+[2026-03-11T04:17:36.438133Z] pair complete pair_id=MESSIER 100::hst_11646_01_wfc3_uvis_f555w_ib2q01::hst_16075_01_wfc3_uvis_f555w_ie9801 status=SCANNED residuals=591 survivors=0 reg_resid_px=0.12172962883195701
+[2026-03-11T04:17:36.566097Z] pair start pair_id=NGC 4414::hst_12888_01_wfc3_uvis_f555w_ibzv01::hst_17413_30_wfc3_uvis_f555w_if8730 index=36/60 galaxy=NGC 4414 filter=F555W->F555W baseline_days=3828.32
+[2026-03-11T04:17:38.600139Z] pair complete pair_id=NGC 4414::hst_12888_01_wfc3_uvis_f555w_ibzv01::hst_17413_30_wfc3_uvis_f555w_if8730 status=SCANNED residuals=33 survivors=0 reg_resid_px=nan
+[2026-03-11T04:17:38.728765Z] pair start pair_id=NGC 4414::hst_12888_01_wfc3_uvis_f555w_ibzv01::hst_17191_03_wfc3_uvis_f555w_iex603 index=37/60 galaxy=NGC 4414 filter=F555W->F555W baseline_days=3655.85
+[2026-03-11T04:17:42.091558Z] pair complete pair_id=NGC 4414::hst_12888_01_wfc3_uvis_f555w_ibzv01::hst_17191_03_wfc3_uvis_f555w_iex603 status=SCANNED residuals=106 survivors=0 reg_resid_px=1.5948359181529868
+[2026-03-11T04:17:42.246127Z] pair start pair_id=MESSIER 099::hst_12118_04_wfc3_uvis_f814w_ibfx04::hst_15654_24_wfc3_uvis_f814w_idxr24 index=38/60 galaxy=MESSIER 099 filter=F814W->F814W baseline_days=3558.09
+[2026-03-11T04:18:11.109796Z] pair complete pair_id=MESSIER 099::hst_12118_04_wfc3_uvis_f814w_ibfx04::hst_15654_24_wfc3_uvis_f814w_idxr24 status=SCANNED residuals=502 survivors=0 reg_resid_px=0.33899200532944224
+[2026-03-11T04:18:11.264459Z] pair start pair_id=NGC 4536::hst_11570_24_wfc3_uvis_f555w_ib1f24::hst_15654_29_wfc3_uvis_f555w_idxr29 index=39/60 galaxy=NGC 4536 filter=F555W->F555W baseline_days=3534.41
+[2026-03-11T04:18:40.896328Z] pair complete pair_id=NGC 4536::hst_11570_24_wfc3_uvis_f555w_ib1f24::hst_15654_29_wfc3_uvis_f555w_idxr29 status=SCANNED residuals=543 survivors=0 reg_resid_px=0.13872705733208068
+[2026-03-11T04:18:41.051477Z] pair start pair_id=NGC 1448::hst_12880_16_wfc3_ir_f160w_ic1316::hst_17000_06_wfc3_ir_f160w_iev206 index=40/60 galaxy=NGC 1448 filter=F160W->F160W baseline_days=3428.93
+[2026-03-11T04:18:43.635114Z] pair complete pair_id=NGC 1448::hst_12880_16_wfc3_ir_f160w_ic1316::hst_17000_06_wfc3_ir_f160w_iev206 status=SCANNED residuals=363 survivors=0 reg_resid_px=nan
+[2026-03-11T04:18:43.765809Z] pair start pair_id=NGC 1448::hst_12880_20_wfc3_ir_f160w_ic1320::hst_17000_06_wfc3_ir_f160w_iev206 index=41/60 galaxy=NGC 1448 filter=F160W->F160W baseline_days=3402.41
+[2026-03-11T04:18:45.778065Z] pair complete pair_id=NGC 1448::hst_12880_20_wfc3_ir_f160w_ic1320::hst_17000_06_wfc3_ir_f160w_iev206 status=SCANNED residuals=383 survivors=0 reg_resid_px=0.905916544310075
+[2026-03-11T04:18:45.941575Z] pair start pair_id=NGC 4039::hst_11577_91_acs_wfc_f814w_jb5u91::hst_15645_19_acs_wfc_f814w_jdxk19 index=42/60 galaxy=NGC 4039 filter=F814W->F814W baseline_days=3385.51
+[2026-03-11T04:19:03.731054Z] pair failed pair_id=NGC 4039::hst_11577_91_acs_wfc_f814w_jb5u91::hst_15645_19_acs_wfc_f814w_jdxk19 error=Insufficient overlap after WCS reprojection.
+[2026-03-11T04:19:03.863146Z] pair start pair_id=NGC 1448::hst_12880_23_wfc3_ir_f160w_ic1323::hst_17000_06_wfc3_ir_f160w_iev206 index=43/60 galaxy=NGC 1448 filter=F160W->F160W baseline_days=3383.29
+[2026-03-11T04:19:06.007226Z] pair complete pair_id=NGC 1448::hst_12880_23_wfc3_ir_f160w_ic1323::hst_17000_06_wfc3_ir_f160w_iev206 status=SCANNED residuals=394 survivors=0 reg_resid_px=nan
+[2026-03-11T04:19:06.138105Z] pair start pair_id=NGC 4039::hst_11577_20_acs_wfc_f814w_jb5u20::hst_15645_19_acs_wfc_f814w_jdxk19 index=44/60 galaxy=NGC 4039 filter=F814W->F814W baseline_days=3382.83
+[2026-03-11T04:19:25.389470Z] pair failed pair_id=NGC 4039::hst_11577_20_acs_wfc_f814w_jb5u20::hst_15645_19_acs_wfc_f814w_jdxk19 error=Insufficient overlap after WCS reprojection.
+[2026-03-11T04:19:25.524287Z] pair start pair_id=NGC 4039::hst_11577_12_acs_wfc_f814w_jb5u12::hst_15645_19_acs_wfc_f814w_jdxk19 index=45/60 galaxy=NGC 4039 filter=F814W->F814W baseline_days=3376.50
+[2026-03-11T04:19:43.016525Z] pair failed pair_id=NGC 4039::hst_11577_12_acs_wfc_f814w_jb5u12::hst_15645_19_acs_wfc_f814w_jdxk19 error=Insufficient overlap after WCS reprojection.
+[2026-03-11T04:19:43.175340Z] pair start pair_id=IC 2163::hst_13029_10_wfc3_uvis_f814w_ibyb10::hst_16239_28_wfc3_uvis_f814w_ieec28 index=46/60 galaxy=IC 2163 filter=F814W->F814W baseline_days=3224.53
+[2026-03-11T04:19:57.229226Z] pair failed pair_id=IC 2163::hst_13029_10_wfc3_uvis_f814w_ibyb10::hst_16239_28_wfc3_uvis_f814w_ieec28 error=Insufficient overlap after WCS reprojection.
+[2026-03-11T04:19:57.336234Z] pair start pair_id=NGC 2207::hst_13029_10_wfc3_uvis_f814w_ibyb10::hst_16239_28_wfc3_uvis_f814w_ieec28 index=47/60 galaxy=NGC 2207 filter=F814W->F814W baseline_days=3224.53
+[2026-03-11T04:20:10.456603Z] pair failed pair_id=NGC 2207::hst_13029_10_wfc3_uvis_f814w_ibyb10::hst_16239_28_wfc3_uvis_f814w_ieec28 error=Insufficient overlap after WCS reprojection.
+[2026-03-11T04:20:10.618090Z] pair start pair_id=NGC 7479::hst_11575_53_acs_wfc_f814w_jb4u53::hst_15645_09_acs_wfc_f814w_jdxk09 index=48/60 galaxy=NGC 7479 filter=F814W->F814W baseline_days=3115.38
+[2026-03-11T04:20:43.812502Z] pair complete pair_id=NGC 7479::hst_11575_53_acs_wfc_f814w_jb4u53::hst_15645_09_acs_wfc_f814w_jdxk09 status=SCANNED residuals=544 survivors=0 reg_resid_px=0.4129982343192373
+[2026-03-11T04:20:44.179790Z] pair start pair_id=NGC 3147::hst_15145_32_wfc3_uvis_f555w_idgg32::hst_17846_03_wfc3_uvis_f555w_ifgg03 index=49/60 galaxy=NGC 3147 filter=F555W->F555W baseline_days=2744.86
+[2026-03-11T04:21:24.921558Z] pair complete pair_id=NGC 3147::hst_15145_32_wfc3_uvis_f555w_idgg32::hst_17846_03_wfc3_uvis_f555w_ifgg03 status=SCANNED residuals=581 survivors=0 reg_resid_px=nan
+[2026-03-11T04:21:25.078950Z] pair start pair_id=NGC 7331::hst_14668_04_wfc3_uvis_f555w_id9604::hst_17506_25_wfc3_uvis_f555w_if8c25 index=50/60 galaxy=NGC 7331 filter=F555W->F555W baseline_days=2643.35
+[2026-03-11T04:22:05.007822Z] pair complete pair_id=NGC 7331::hst_14668_04_wfc3_uvis_f555w_id9604::hst_17506_25_wfc3_uvis_f555w_if8c25 status=SCANNED residuals=574 survivors=0 reg_resid_px=nan
+[2026-03-11T04:22:05.138400Z] pair start pair_id=NGC 3147::hst_15145_3a_wfc3_uvis_f555w_idgg3a::hst_17846_03_wfc3_uvis_f555w_ifgg03 index=51/60 galaxy=NGC 3147 filter=F555W->F555W baseline_days=2607.67
+[2026-03-11T04:22:45.062555Z] pair complete pair_id=NGC 3147::hst_15145_3a_wfc3_uvis_f555w_idgg3a::hst_17846_03_wfc3_uvis_f555w_ifgg03 status=SCANNED residuals=574 survivors=0 reg_resid_px=nan
+[2026-03-11T04:22:45.215926Z] pair start pair_id=IC 2163::hst_13787_05_wfc3_uvis_f555w_ickj05::hst_skycell-p0818x12y14_wfc3_uvis_f555w_all index=52/60 galaxy=IC 2163 filter=F555W->F555W baseline_days=2333.80
+[2026-03-11T04:22:54.993431Z] pair failed pair_id=IC 2163::hst_13787_05_wfc3_uvis_f555w_ickj05::hst_skycell-p0818x12y14_wfc3_uvis_f555w_all error=Insufficient overlap after WCS reprojection.
+[2026-03-11T04:22:55.124733Z] pair start pair_id=NGC 2207::hst_13787_05_wfc3_uvis_f555w_ickj05::hst_16239_28_wfc3_uvis_f555w_ieec28 index=53/60 galaxy=NGC 2207 filter=F555W->F555W baseline_days=2333.80
+[2026-03-11T04:23:04.376863Z] pair failed pair_id=NGC 2207::hst_13787_05_wfc3_uvis_f555w_ickj05::hst_16239_28_wfc3_uvis_f555w_ieec28 error=Insufficient overlap after WCS reprojection.
+[2026-03-11T04:23:04.509850Z] pair start pair_id=NGC 2207::hst_13787_05_wfc3_uvis_f814w_ickj05::hst_16239_28_wfc3_uvis_f814w_ieec28 index=54/60 galaxy=NGC 2207 filter=F814W->F814W baseline_days=2333.71
+[2026-03-11T04:23:13.574652Z] pair failed pair_id=NGC 2207::hst_13787_05_wfc3_uvis_f814w_ickj05::hst_16239_28_wfc3_uvis_f814w_ieec28 error=Insufficient overlap after WCS reprojection.
+[2026-03-11T04:23:13.938990Z] pair start pair_id=MESSIER 066::hst_12968_01_wfc3_uvis_f438w_ic0h01::hst_15654_22_wfc3_uvis_f438w_idxr22 index=55/60 galaxy=MESSIER 066 filter=F438W->F438W baseline_days=2203.68
+[2026-03-11T04:23:18.131240Z] pair complete pair_id=MESSIER 066::hst_12968_01_wfc3_uvis_f438w_ic0h01::hst_15654_22_wfc3_uvis_f438w_idxr22 status=SCANNED residuals=494 survivors=2 reg_resid_px=0.16880871869207995
+[2026-03-11T04:23:18.287317Z] pair start pair_id=MESSIER 066::hst_12968_01_wfc3_uvis_f814w_ic0h01::hst_15654_22_wfc3_uvis_f814w_idxr22 index=56/60 galaxy=MESSIER 066 filter=F814W->F814W baseline_days=2203.60
+[2026-03-11T04:23:23.142558Z] pair complete pair_id=MESSIER 066::hst_12968_01_wfc3_uvis_f814w_ic0h01::hst_15654_22_wfc3_uvis_f814w_idxr22 status=SCANNED residuals=501 survivors=10 reg_resid_px=0.19978646974872846
+[2026-03-11T04:23:23.297802Z] pair start pair_id=MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22 index=57/60 galaxy=MESSIER 066 filter=F555W->F555W baseline_days=2173.78
+[2026-03-11T04:24:04.387016Z] pair complete pair_id=MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22 status=SCANNED residuals=603 survivors=51 reg_resid_px=0.13740214208677143
+[2026-03-11T04:24:04.524061Z] pair start pair_id=MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22 index=58/60 galaxy=MESSIER 066 filter=F814W->F814W baseline_days=2173.70
+[2026-03-11T04:24:46.634658Z] pair complete pair_id=MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22 status=SCANNED residuals=590 survivors=62 reg_resid_px=0.13596759080022405
+[2026-03-11T04:24:46.803966Z] pair start pair_id=6dF J0245599-073443::hst_11575_02_acs_wfc_f814w_jb4u02::hst_14226_01_acs_wfc_f814w_jcuc01 index=59/60 galaxy=6dF J0245599-073443 filter=F814W->F814W baseline_days=2139.90
+[2026-03-11T04:25:07.324347Z] pair complete pair_id=6dF J0245599-073443::hst_11575_02_acs_wfc_f814w_jb4u02::hst_14226_01_acs_wfc_f814w_jcuc01 status=SCANNED residuals=522 survivors=0 reg_resid_px=0.12636699056671807
+[2026-03-11T04:25:07.467728Z] pair start pair_id=MESSIER 066::hst_13364_12_wfc3_uvis_f555w_icdm12::hst_15654_22_wfc3_uvis_f555w_idxr22 index=60/60 galaxy=MESSIER 066 filter=F555W->F555W baseline_days=2101.99
+[2026-03-11T04:25:43.790521Z] pair complete pair_id=MESSIER 066::hst_13364_12_wfc3_uvis_f555w_icdm12::hst_15654_22_wfc3_uvis_f555w_idxr22 status=SCANNED residuals=544 survivors=0 reg_resid_px=0.5512279229516222
+[2026-03-11T04:25:44.693116Z] run completed scanned=49 failed=11 detections=1201

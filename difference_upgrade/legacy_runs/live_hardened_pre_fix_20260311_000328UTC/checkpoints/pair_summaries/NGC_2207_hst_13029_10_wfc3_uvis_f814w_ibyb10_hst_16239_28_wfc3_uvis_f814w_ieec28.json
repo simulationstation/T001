@@ -1,0 +1,15 @@
+{
+  "baseline_days": 3224.5326096499994,
+  "compatibility": "exact",
+  "error": "Insufficient overlap after WCS reprojection.",
+  "filter_1": "F814W",
+  "filter_2": "F814W",
+  "galaxy_name": "NGC 2207",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_13029_10_wfc3_uvis_f814w_ibyb10",
+  "obs_id_2": "hst_16239_28_wfc3_uvis_f814w_ieec28",
+  "pair_id": "NGC 2207::hst_13029_10_wfc3_uvis_f814w_ibyb10::hst_16239_28_wfc3_uvis_f814w_ieec28",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

@@ -1,0 +1,41 @@
+{
+  "candidate_id": "MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_fade_0069",
+  "dec_deg": 54.36609177994583,
+  "diff_sigma": 47.5219681234896,
+  "diff_sigma_min": 25.866073130720526,
+  "event_sign": "fade",
+  "figure_path": "difference_upgrade/live/packets/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_fade_0069/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_fade_0069_cutout.png",
+  "galaxy_name": "MESSIER 101",
+  "pair_id": "MESSIER 101::hst_9490_02_acs_wfc_f555w_j8d602::hst_14678_01_acs_wfc_f555w_jd6v01",
+  "post_flux": -0.23046627158552435,
+  "post_to_pre_ratio": -0.050483676601726604,
+  "pre_flux": 4.565164169870348,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "hst_9490_02_acs_wfc_f555w_j8d602",
+    "obs_id_2": "hst_14678_01_acs_wfc_f555w_jd6v01",
+    "obsid_1": 26321563,
+    "obsid_2": 26481492,
+    "product_filename_1": "hst_9490_02_acs_wfc_f555w_j8d602_drc.fits",
+    "product_filename_2": "hst_14678_01_acs_wfc_f555w_jd6v01_drc.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_9490_02_acs_wfc_f555w_j8d602/hst_9490_02_acs_wfc_f555w_j8d602_drc.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_14678_01_acs_wfc_f555w_jd6v01/hst_14678_01_acs_wfc_f555w_jd6v01_drc.fits",
+    "product_priority_1": 181.0,
+    "product_priority_2": 181.0,
+    "product_uri_1": "mast:HST/product/hst_9490_02_acs_wfc_f555w_j8d602_drc.fits",
+    "product_uri_2": "mast:HST/product/hst_14678_01_acs_wfc_f555w_jd6v01_drc.fits"
+  },
+  "ra_deg": 210.78566883079336,
+  "reason_codes": [
+    "POST_LT_5PCT",
+    "ROBUST_DIFF_SIG",
+    "REGISTRATION_OK"
+  ],
+  "registration_dx_px": 0.04989046794617025,
+  "registration_dy_px": -0.9533516044621138,
+  "registration_n_matches": 249,
+  "registration_residual_px": 0.2913816322848004,
+  "status": "PASS",
+  "warning_flags": []
+}

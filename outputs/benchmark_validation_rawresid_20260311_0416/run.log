@@ -1,0 +1,3 @@
+[2026-03-11T03:59:05.585067Z] run start mode=supernova_benchmark resume=False
+[2026-03-11T03:59:19.248132Z] benchmark prepared truth_groups=12 benchmark_pairs=12
+[2026-03-11T04:07:18.131621Z] benchmark completed recovered=9 fraction=0.750

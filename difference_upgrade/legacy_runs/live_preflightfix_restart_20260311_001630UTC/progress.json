@@ -1,0 +1,16 @@
+{
+  "active_baseline_days": 1063.0341490700011,
+  "active_filter_1": "F814W",
+  "active_filter_2": "F814W",
+  "active_galaxy_name": "NGC 4388",
+  "active_pair_id": "NGC 4388::hst_skycell-p1636x18y05_acs_wfc_f814w_all::hst_10438_04_acs_wfc_f814w_j96l04",
+  "active_pair_index": 46,
+  "n_detection_measurements": 0,
+  "n_detections": 0,
+  "n_pairs_completed": 45,
+  "n_pairs_remaining": 15,
+  "n_pairs_selected": 60,
+  "stage": "stage02_scan_pairs",
+  "status": "running",
+  "timestamp_utc": "2026-03-11T00:14:35.250074Z"
+}

@@ -1,0 +1,15 @@
+{
+  "baseline_days": 2113.8191248495423,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "F555W",
+  "filter_2": "F555W",
+  "galaxy_name": "NGC 1448",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "ic1313020",
+  "obs_id_2": "idi143020",
+  "pair_id": "NGC 1448::ic1313020::idi143020",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

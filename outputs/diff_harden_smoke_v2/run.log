@@ -1,0 +1,6 @@
+[2026-03-10T23:33:39.706899Z] run start mode=difference_upgrade resume=False sign_mode=fade
+[2026-03-10T23:33:39.783251Z] pair start pair_id=MESSIER 083::hst_9299_08_acs_wfc_f475w-pol0v_j8e808::hst_17747_25_acs_wfc_f475w_jfgf25 index=1/2 galaxy=MESSIER 083 filter=F475W->F475W baseline_days=8564.85
+[2026-03-10T23:33:40.099133Z] pair failed pair_id=MESSIER 083::hst_9299_08_acs_wfc_f475w-pol0v_j8e808::hst_17747_25_acs_wfc_f475w_jfgf25 error='obs_id'
+[2026-03-10T23:33:40.107201Z] pair start pair_id=MESSIER 083::hst_9774_0h_acs_wfc_f814w_j8ph0h::hst_17747_26_acs_wfc_f814w_jfgf26 index=2/2 galaxy=MESSIER 083 filter=F814W->F814W baseline_days=7850.82
+[2026-03-10T23:33:40.369081Z] pair failed pair_id=MESSIER 083::hst_9774_0h_acs_wfc_f814w_j8ph0h::hst_17747_26_acs_wfc_f814w_jfgf26 error='obs_id'
+[2026-03-10T23:33:40.393418Z] run completed scanned=0 failed=2 detections=0

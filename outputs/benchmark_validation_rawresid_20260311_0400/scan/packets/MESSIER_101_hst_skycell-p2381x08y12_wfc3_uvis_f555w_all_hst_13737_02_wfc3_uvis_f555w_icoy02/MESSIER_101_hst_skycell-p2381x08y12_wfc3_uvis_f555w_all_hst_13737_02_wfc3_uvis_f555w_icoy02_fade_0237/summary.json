@@ -1,0 +1,40 @@
+{
+  "candidate_id": "MESSIER_101_hst_skycell-p2381x08y12_wfc3_uvis_f555w_all_hst_13737_02_wfc3_uvis_f555w_icoy02_fade_0237",
+  "dec_deg": 54.27203987321134,
+  "diff_sigma": 33.24803096624155,
+  "diff_sigma_min": 21.11418179252584,
+  "event_sign": "fade",
+  "figure_path": "/home/primary/SUPERNOVA/outputs/benchmark_validation_rawresid_20260311_0400/scan/packets/MESSIER_101_hst_skycell-p2381x08y12_wfc3_uvis_f555w_all_hst_13737_02_wfc3_uvis_f555w_icoy02/MESSIER_101_hst_skycell-p2381x08y12_wfc3_uvis_f555w_all_hst_13737_02_wfc3_uvis_f555w_icoy02_fade_0237/MESSIER_101_hst_skycell-p2381x08y12_wfc3_uvis_f555w_all_hst_13737_02_wfc3_uvis_f555w_icoy02_fade_0237_cutout.png",
+  "galaxy_name": "MESSIER 101",
+  "pair_id": "MESSIER 101::hst_skycell-p2381x08y12_wfc3_uvis_f555w_all::hst_13737_02_wfc3_uvis_f555w_icoy02",
+  "post_flux": 0.7853454604372189,
+  "post_to_pre_ratio": 0.44169287731671797,
+  "pre_flux": 1.7780351478796503,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "hst_skycell-p2381x08y12_wfc3_uvis_f555w_all",
+    "obs_id_2": "hst_13737_02_wfc3_uvis_f555w_icoy02",
+    "obsid_1": 83202992,
+    "obsid_2": 26625188,
+    "product_filename_1": "hst_skycell-p2381x08y12_wfc3_uvis_f555w_all_drc.fits",
+    "product_filename_2": "hst_13737_02_wfc3_uvis_f555w_icoy02_drc.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_skycell-p2381x08y12_wfc3_uvis_f555w_all/hst_skycell-p2381x08y12_wfc3_uvis_f555w_all_drc.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_13737_02_wfc3_uvis_f555w_icoy02/hst_13737_02_wfc3_uvis_f555w_icoy02_drc.fits",
+    "product_priority_1": 156.0,
+    "product_priority_2": 156.0,
+    "product_uri_1": "cached://HST/hst_skycell-p2381x08y12_wfc3_uvis_f555w_all/hst_skycell-p2381x08y12_wfc3_uvis_f555w_all_drc.fits",
+    "product_uri_2": "cached://HST/hst_13737_02_wfc3_uvis_f555w_icoy02/hst_13737_02_wfc3_uvis_f555w_icoy02_drc.fits"
+  },
+  "ra_deg": 210.78826393476675,
+  "reason_codes": [
+    "ROBUST_DIFF_SIG",
+    "REGISTRATION_OK"
+  ],
+  "registration_dx_px": 0.05012595277366927,
+  "registration_dy_px": -0.3327606062071027,
+  "registration_n_matches": 263,
+  "registration_residual_px": 0.2615854524704899,
+  "status": "REVIEW",
+  "warning_flags": []
+}

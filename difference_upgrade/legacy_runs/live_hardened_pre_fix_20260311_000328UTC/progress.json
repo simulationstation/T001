@@ -1,0 +1,16 @@
+{
+  "active_baseline_days": 2333.795166759999,
+  "active_filter_1": "F555W",
+  "active_filter_2": "F555W",
+  "active_galaxy_name": "NGC 2207",
+  "active_pair_id": "NGC 2207::hst_13787_05_wfc3_uvis_f555w_ickj05::hst_16239_28_wfc3_uvis_f555w_ieec28",
+  "active_pair_index": 31,
+  "n_detection_measurements": 6350,
+  "n_detections": 90,
+  "n_pairs_completed": 30,
+  "n_pairs_remaining": 30,
+  "n_pairs_selected": 60,
+  "stage": "stage02_scan_pairs",
+  "status": "running",
+  "timestamp_utc": "2026-03-11T00:02:57.324869Z"
+}

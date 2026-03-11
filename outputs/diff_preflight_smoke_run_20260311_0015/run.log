@@ -1,0 +1,14 @@
+[2026-03-11T00:15:41.198043Z] run start mode=difference_upgrade resume=False sign_mode=fade
+[2026-03-11T00:15:41.352382Z] pair skipped pair_id=MESSIER 083::hst_9299_08_acs_wfc_f475w-pol0v_j8e808::hst_17747_25_acs_wfc_f475w_jfgf25 reason=RESTRICTED_DATA_RIGHTS:hst_17747_25_acs_wfc_f475w_jfgf25:EXCLUSIVE_ACCESS
+[2026-03-11T00:15:41.372399Z] pair skipped pair_id=MESSIER 083::hst_9774_0h_acs_wfc_f814w_j8ph0h::hst_17747_26_acs_wfc_f814w_jfgf26 reason=RESTRICTED_DATA_RIGHTS:hst_17747_26_acs_wfc_f814w_jfgf26:EXCLUSIVE_ACCESS
+[2026-03-11T00:15:41.393492Z] pair skipped pair_id=NGC 1309::hst_10497_03_acs_wfc_f555w_j9cb03::hst_17907_03_acs_wfc_f555w_jfjg03 reason=RESTRICTED_DATA_RIGHTS:hst_17907_03_acs_wfc_f555w_jfjg03:EXCLUSIVE_ACCESS
+[2026-03-11T00:15:41.415001Z] pair skipped pair_id=NGC 1309::hst_10497_03_acs_wfc_f555w_j9cb03::hst_17907_04_acs_wfc_f555w_jfjg04 reason=RESTRICTED_DATA_RIGHTS:hst_17907_04_acs_wfc_f555w_jfjg04:EXCLUSIVE_ACCESS
+[2026-03-11T00:15:42.913556Z] pair skipped pair_id=NGC 1097::hst_9788_03_acs_wfc_f814w_j8mx03::hst_15654_58_acs_wfc_f814w_jdxr58 reason=TARGET_CENTER_OUTSIDE_FOOTPRINT
+[2026-03-11T00:15:42.931075Z] pair skipped pair_id=NGC 4388::hst_12185_07_wfc3_uvis_f438w_ibig07::hst_17777_01_wfc3_uvis_f438w_ifd601 reason=RESTRICTED_DATA_RIGHTS:hst_17777_01_wfc3_uvis_f438w_ifd601:EXCLUSIVE_ACCESS
+[2026-03-11T00:15:44.867649Z] pair skipped pair_id=MESSIER 101::hst_9490_02_acs_wfc_f555w_j8d602::hst_14678_01_acs_wfc_f555w_jd6v01 reason=TARGET_CENTER_OUTSIDE_FOOTPRINT
+[2026-03-11T00:15:45.887211Z] pair skipped pair_id=MESSIER 101::hst_9490_a1_acs_wfc_f555w_j8d6a1::hst_14678_01_acs_wfc_f555w_jd6v01 reason=TARGET_CENTER_OUTSIDE_FOOTPRINT
+[2026-03-11T00:15:49.034933Z] pair skipped pair_id=NGC 7172::hst_skycell-p0708x19y03_acs_wfc_f814w_all::hst_15444_dx_acs_wfc_f814w_jdrwdx reason=TARGET_CENTER_OUTSIDE_FOOTPRINT
+[2026-03-11T00:15:50.382240Z] pair skipped pair_id=MESSIER 074::hst_9733_01_acs_wfc_f606w_j8nv01::hst_13804_01_acs_wfc_f606w_jcmx01 reason=TARGET_CENTER_OUTSIDE_FOOTPRINT
+[2026-03-11T00:15:51.838209Z] pair skipped pair_id=MESSIER 074::hst_13364_20_wfc3_uvis_f336w_icdm20::hst_17932_09_wfc3_uvis_f336w_ifkj09 reason=TARGET_CENTER_OUTSIDE_FOOTPRINT
+[2026-03-11T00:15:53.385633Z] pair skipped pair_id=MESSIER 100::hst_11646_01_wfc3_uvis_f555w_ib2q01::hst_16500_01_wfc3_uvis_f555w_iejn01 reason=TARGET_CENTER_OUTSIDE_FOOTPRINT
+[2026-03-11T00:15:53.463623Z] run completed scanned=0 failed=0 detections=0

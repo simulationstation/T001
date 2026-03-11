@@ -1,0 +1,16 @@
+{
+  "compatibilities": [
+    "exact",
+    "very_similar"
+  ],
+  "created_utc": "2026-03-10T23:33:39.696637Z",
+  "epoch_pairs_path": "/home/primary/SUPERNOVA/archive/epoch_pairs.parquet",
+  "include_cross_collection": true,
+  "max_pairs": 60,
+  "mode": "difference_upgrade",
+  "observation_matrix_path": "/home/primary/SUPERNOVA/archive/observation_matrix.parquet",
+  "pair_subset_path": "outputs/diff_harden_smoke_subset.parquet",
+  "per_galaxy": 2,
+  "resume": false,
+  "sign_mode": "fade"
+}

@@ -1,0 +1,16 @@
+{
+  "active_baseline_days": 7344.493275726476,
+  "active_filter_1": "F625W",
+  "active_filter_2": "F625W",
+  "active_galaxy_name": "IC 2163",
+  "active_pair_id": "IC 2163::j8z437020::hst_skycell-p0818x12y14_wfc3_uvis_f625w_all",
+  "active_pair_index": 28,
+  "n_detection_measurements": 12962,
+  "n_detections": 0,
+  "n_pairs_completed": 27,
+  "n_pairs_remaining": 36,
+  "n_pairs_selected": 63,
+  "stage": "stage02_scan_pairs",
+  "status": "running",
+  "timestamp_utc": "2026-03-10T23:59:52.184523Z"
+}

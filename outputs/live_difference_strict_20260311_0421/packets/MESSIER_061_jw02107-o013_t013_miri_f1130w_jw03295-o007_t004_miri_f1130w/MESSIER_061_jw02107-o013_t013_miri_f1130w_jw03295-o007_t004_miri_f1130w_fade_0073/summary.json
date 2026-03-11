@@ -1,0 +1,40 @@
+{
+  "candidate_id": "MESSIER_061_jw02107-o013_t013_miri_f1130w_jw03295-o007_t004_miri_f1130w_fade_0073",
+  "dec_deg": 4.461704676913862,
+  "diff_sigma": 10.19299160609319,
+  "diff_sigma_min": 10.19299160609319,
+  "event_sign": "fade",
+  "figure_path": "/home/primary/SUPERNOVA/outputs/live_difference_strict_20260311_0421/packets/MESSIER_061_jw02107-o013_t013_miri_f1130w_jw03295-o007_t004_miri_f1130w/MESSIER_061_jw02107-o013_t013_miri_f1130w_jw03295-o007_t004_miri_f1130w_fade_0073/MESSIER_061_jw02107-o013_t013_miri_f1130w_jw03295-o007_t004_miri_f1130w_fade_0073_cutout.png",
+  "galaxy_name": "MESSIER 061",
+  "pair_id": "MESSIER 061::jw02107-o013_t013_miri_f1130w::jw03295-o007_t004_miri_f1130w",
+  "post_flux": 25.378084218577854,
+  "post_to_pre_ratio": 0.47979650088181264,
+  "pre_flux": 52.893433303360396,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "jw02107-o013_t013_miri_f1130w",
+    "obs_id_2": "jw03295-o007_t004_miri_f1130w",
+    "obsid_1": 112977712,
+    "obsid_2": 214658689,
+    "product_filename_1": "jw02107-o013_t013_miri_f1130w_i2d.fits",
+    "product_filename_2": "jw03295-o007_t004_miri_f1130w_i2d.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/JWST/jw02107-o013_t013_miri_f1130w/jw02107-o013_t013_miri_f1130w_i2d.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/JWST/jw03295-o007_t004_miri_f1130w/jw03295-o007_t004_miri_f1130w_i2d.fits",
+    "product_priority_1": 156.0,
+    "product_priority_2": 156.0,
+    "product_uri_1": "cached://JWST/jw02107-o013_t013_miri_f1130w/jw02107-o013_t013_miri_f1130w_i2d.fits",
+    "product_uri_2": "cached://JWST/jw03295-o007_t004_miri_f1130w/jw03295-o007_t004_miri_f1130w_i2d.fits"
+  },
+  "ra_deg": 185.46348096933076,
+  "reason_codes": [
+    "ROBUST_DIFF_SIG",
+    "REGISTRATION_OK"
+  ],
+  "registration_dx_px": -1.0388145260170631,
+  "registration_dy_px": -2.9551967915983823,
+  "registration_n_matches": 39,
+  "registration_residual_px": 0.3197326286004821,
+  "status": "REVIEW",
+  "warning_flags": []
+}

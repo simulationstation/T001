@@ -1,0 +1,2 @@
+pair_id,galaxy_name,obs_id_1,obs_id_2,filter_1,filter_2,compatibility,baseline_days,pair_score,status,error,n_residual_detections,n_survivors
+MESSIER 074::jw02107-c1019_t018_miri_f2100w::jw07978-o001_t002_miri_f2100w,MESSIER 074,jw02107-c1019_t018_miri_f2100w,jw07978-o001_t002_miri_f2100w,F2100W,F2100W,exact,1263.8205785550963,1.4000000000000001,FAILED,No suitable calibrated FITS product found for one or both observations.,0,0

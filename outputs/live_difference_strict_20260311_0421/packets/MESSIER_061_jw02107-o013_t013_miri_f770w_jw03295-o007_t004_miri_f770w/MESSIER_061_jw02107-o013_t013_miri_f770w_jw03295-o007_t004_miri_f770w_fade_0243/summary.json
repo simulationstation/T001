@@ -1,0 +1,40 @@
+{
+  "candidate_id": "MESSIER_061_jw02107-o013_t013_miri_f770w_jw03295-o007_t004_miri_f770w_fade_0243",
+  "dec_deg": 4.468666371765032,
+  "diff_sigma": 7.309078034050362,
+  "diff_sigma_min": 5.3973768869070335,
+  "event_sign": "fade",
+  "figure_path": "/home/primary/SUPERNOVA/outputs/live_difference_strict_20260311_0421/packets/MESSIER_061_jw02107-o013_t013_miri_f770w_jw03295-o007_t004_miri_f770w/MESSIER_061_jw02107-o013_t013_miri_f770w_jw03295-o007_t004_miri_f770w_fade_0243/MESSIER_061_jw02107-o013_t013_miri_f770w_jw03295-o007_t004_miri_f770w_fade_0243_cutout.png",
+  "galaxy_name": "MESSIER 061",
+  "pair_id": "MESSIER 061::jw02107-o013_t013_miri_f770w::jw03295-o007_t004_miri_f770w",
+  "post_flux": 3.8257986871866763,
+  "post_to_pre_ratio": 0.36380066417042733,
+  "pre_flux": 10.51619489456025,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "jw02107-o013_t013_miri_f770w",
+    "obs_id_2": "jw03295-o007_t004_miri_f770w",
+    "obsid_1": 112973637,
+    "obsid_2": 214658694,
+    "product_filename_1": "jw02107-o013_t013_miri_f770w_i2d.fits",
+    "product_filename_2": "jw03295-o007_t004_miri_f770w_i2d.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/JWST/jw02107-o013_t013_miri_f770w/jw02107-o013_t013_miri_f770w_i2d.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/JWST/jw03295-o007_t004_miri_f770w/jw03295-o007_t004_miri_f770w_i2d.fits",
+    "product_priority_1": 156.0,
+    "product_priority_2": 156.0,
+    "product_uri_1": "cached://JWST/jw02107-o013_t013_miri_f770w/jw02107-o013_t013_miri_f770w_i2d.fits",
+    "product_uri_2": "cached://JWST/jw03295-o007_t004_miri_f770w/jw03295-o007_t004_miri_f770w_i2d.fits"
+  },
+  "ra_deg": 185.46390645910802,
+  "reason_codes": [
+    "ROBUST_DIFF_SIG",
+    "REGISTRATION_OK"
+  ],
+  "registration_dx_px": -1.2082219849797866,
+  "registration_dy_px": -3.177448063199108,
+  "registration_n_matches": 160,
+  "registration_residual_px": 0.19823642794011292,
+  "status": "REVIEW",
+  "warning_flags": []
+}

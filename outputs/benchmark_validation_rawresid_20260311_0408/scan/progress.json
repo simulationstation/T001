@@ -1,0 +1,16 @@
+{
+  "active_baseline_days": 4895.247665162031,
+  "active_filter_1": "F555W",
+  "active_filter_2": "F555W",
+  "active_galaxy_name": "MESSIER 066",
+  "active_pair_id": "MESSIER 066::jb4u01010::jey347020",
+  "active_pair_index": 2,
+  "n_detection_measurements": 1095,
+  "n_detections": 0,
+  "n_pairs_completed": 1,
+  "n_pairs_remaining": 11,
+  "n_pairs_selected": 12,
+  "stage": "stage02_scan_pairs",
+  "status": "running",
+  "timestamp_utc": "2026-03-11T03:57:06.869899Z"
+}

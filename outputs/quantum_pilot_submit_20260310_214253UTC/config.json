@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-03-10T21:42:53.867731Z",
+  "credential_source": {
+    "search_paths": [
+      "/home/primary/SUPERNOVA/.env",
+      "/home/primary/Hubble-Systematics-Review-Chain/.env"
+    ],
+    "source": "/home/primary/Hubble-Systematics-Review-Chain/.env"
+  },
+  "mode": "submit"
+}

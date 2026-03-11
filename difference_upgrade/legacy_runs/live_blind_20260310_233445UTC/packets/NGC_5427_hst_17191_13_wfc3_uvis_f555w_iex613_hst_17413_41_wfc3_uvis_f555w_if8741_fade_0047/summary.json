@@ -1,0 +1,40 @@
+{
+  "candidate_id": "NGC_5427_hst_17191_13_wfc3_uvis_f555w_iex613_hst_17413_41_wfc3_uvis_f555w_if8741_fade_0047",
+  "dec_deg": -6.031653475453764,
+  "diff_sigma": 12.188172827452503,
+  "diff_sigma_min": 7.390050167367105,
+  "event_sign": "fade",
+  "figure_path": "difference_upgrade/live/packets/NGC_5427_hst_17191_13_wfc3_uvis_f555w_iex613_hst_17413_41_wfc3_uvis_f555w_if8741_fade_0047/NGC_5427_hst_17191_13_wfc3_uvis_f555w_iex613_hst_17413_41_wfc3_uvis_f555w_if8741_fade_0047_cutout.png",
+  "galaxy_name": "NGC 5427",
+  "pair_id": "NGC 5427::hst_17191_13_wfc3_uvis_f555w_iex613::hst_17413_41_wfc3_uvis_f555w_if8741",
+  "post_flux": 0.2942636832775558,
+  "post_to_pre_ratio": 0.24129583221260636,
+  "pre_flux": 1.0773807164818363,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "hst_17191_13_wfc3_uvis_f555w_iex613",
+    "obs_id_2": "hst_17413_41_wfc3_uvis_f555w_if8741",
+    "obsid_1": 151451720,
+    "obsid_2": 250801709,
+    "product_filename_1": "hst_17191_13_wfc3_uvis_f555w_iex613_drc.fits",
+    "product_filename_2": "hst_17413_41_wfc3_uvis_f555w_if8741_drc.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_17191_13_wfc3_uvis_f555w_iex613/hst_17191_13_wfc3_uvis_f555w_iex613_drc.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_17413_41_wfc3_uvis_f555w_if8741/hst_17413_41_wfc3_uvis_f555w_if8741_drc.fits",
+    "product_priority_1": 181.0,
+    "product_priority_2": 181.0,
+    "product_uri_1": "mast:HST/product/hst_17191_13_wfc3_uvis_f555w_iex613_drc.fits",
+    "product_uri_2": "mast:HST/product/hst_17413_41_wfc3_uvis_f555w_if8741_drc.fits"
+  },
+  "ra_deg": 210.8482395943446,
+  "reason_codes": [
+    "ROBUST_DIFF_SIG",
+    "REGISTRATION_OK"
+  ],
+  "registration_dx_px": 0.06656864643719018,
+  "registration_dy_px": -0.005849655219208216,
+  "registration_n_matches": 189,
+  "registration_residual_px": 0.08970094165255216,
+  "status": "REVIEW",
+  "warning_flags": []
+}

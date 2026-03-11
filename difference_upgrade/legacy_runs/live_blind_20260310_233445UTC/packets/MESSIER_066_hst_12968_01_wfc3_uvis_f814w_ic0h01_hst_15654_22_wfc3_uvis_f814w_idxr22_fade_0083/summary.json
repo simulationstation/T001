@@ -1,0 +1,40 @@
+{
+  "candidate_id": "MESSIER_066_hst_12968_01_wfc3_uvis_f814w_ic0h01_hst_15654_22_wfc3_uvis_f814w_idxr22_fade_0083",
+  "dec_deg": 12.979968656515668,
+  "diff_sigma": 6.929617083294811,
+  "diff_sigma_min": 3.5884675145369487,
+  "event_sign": "fade",
+  "figure_path": "difference_upgrade/live/packets/MESSIER_066_hst_12968_01_wfc3_uvis_f814w_ic0h01_hst_15654_22_wfc3_uvis_f814w_idxr22_fade_0083/MESSIER_066_hst_12968_01_wfc3_uvis_f814w_ic0h01_hst_15654_22_wfc3_uvis_f814w_idxr22_fade_0083_cutout.png",
+  "galaxy_name": "MESSIER 066",
+  "pair_id": "MESSIER 066::hst_12968_01_wfc3_uvis_f814w_ic0h01::hst_15654_22_wfc3_uvis_f814w_idxr22",
+  "post_flux": -0.07798451562050523,
+  "post_to_pre_ratio": -0.12108553016906742,
+  "pre_flux": 0.6440448789514175,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "hst_12968_01_wfc3_uvis_f814w_ic0h01",
+    "obs_id_2": "hst_15654_22_wfc3_uvis_f814w_idxr22",
+    "obsid_1": 26583220,
+    "obsid_2": 26689624,
+    "product_filename_1": "hst_12968_01_wfc3_uvis_f814w_ic0h01_drc.fits",
+    "product_filename_2": "hst_15654_22_wfc3_uvis_f814w_idxr22_drc.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_12968_01_wfc3_uvis_f814w_ic0h01/hst_12968_01_wfc3_uvis_f814w_ic0h01_drc.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_15654_22_wfc3_uvis_f814w_idxr22/hst_15654_22_wfc3_uvis_f814w_idxr22_drc.fits",
+    "product_priority_1": 181.0,
+    "product_priority_2": 181.0,
+    "product_uri_1": "mast:HST/product/hst_12968_01_wfc3_uvis_f814w_ic0h01_drc.fits",
+    "product_uri_2": "mast:HST/product/hst_15654_22_wfc3_uvis_f814w_idxr22_drc.fits"
+  },
+  "ra_deg": 170.07587586603645,
+  "reason_codes": [
+    "POST_LT_5PCT",
+    "REGISTRATION_OK"
+  ],
+  "registration_dx_px": -0.019355388510120974,
+  "registration_dy_px": -0.01267603339829293,
+  "registration_n_matches": 109,
+  "registration_residual_px": 0.19978646974874112,
+  "status": "REVIEW",
+  "warning_flags": []
+}

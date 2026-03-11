@@ -1,0 +1,41 @@
+{
+  "candidate_id": "MESSIER_061_hst_skycell-p1458x13y04_acs_wfc_f814w_all_hst_12574_01_acs_wfc_f814w_jbs801_fade_0051",
+  "dec_deg": 4.455031433730216,
+  "diff_sigma": 9.103828345825416,
+  "diff_sigma_min": 6.65543108315444,
+  "event_sign": "fade",
+  "figure_path": "difference_upgrade/live/packets/MESSIER_061_hst_skycell-p1458x13y04_acs_wfc_f814w_all_hst_12574_01_acs_wfc_f814w_jbs801_fade_0051/MESSIER_061_hst_skycell-p1458x13y04_acs_wfc_f814w_all_hst_12574_01_acs_wfc_f814w_jbs801_fade_0051_cutout.png",
+  "galaxy_name": "MESSIER 061",
+  "pair_id": "MESSIER 061::hst_skycell-p1458x13y04_acs_wfc_f814w_all::hst_12574_01_acs_wfc_f814w_jbs801",
+  "post_flux": -0.26821202469855454,
+  "post_to_pre_ratio": -6.033727768151141,
+  "pre_flux": 0.04445212561864392,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "hst_skycell-p1458x13y04_acs_wfc_f814w_all",
+    "obs_id_2": "hst_12574_01_acs_wfc_f814w_jbs801",
+    "obsid_1": 87488056,
+    "obsid_2": 26448734,
+    "product_filename_1": "hst_skycell-p1458x13y04_acs_wfc_f814w_all_drc.fits",
+    "product_filename_2": "hst_12574_01_acs_wfc_f814w_jbs801_drc.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_skycell-p1458x13y04_acs_wfc_f814w_all/hst_skycell-p1458x13y04_acs_wfc_f814w_all_drc.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_12574_01_acs_wfc_f814w_jbs801/hst_12574_01_acs_wfc_f814w_jbs801_drc.fits",
+    "product_priority_1": 181.0,
+    "product_priority_2": 181.0,
+    "product_uri_1": "mast:HST/product/hst_skycell-p1458x13y04_acs_wfc_f814w_all_drc.fits",
+    "product_uri_2": "mast:HST/product/hst_12574_01_acs_wfc_f814w_jbs801_drc.fits"
+  },
+  "ra_deg": 185.46501581030503,
+  "reason_codes": [
+    "POST_LT_5PCT",
+    "ROBUST_DIFF_SIG",
+    "REGISTRATION_OK"
+  ],
+  "registration_dx_px": 0.5673329102714888,
+  "registration_dy_px": 0.40528817547556173,
+  "registration_n_matches": 40,
+  "registration_residual_px": 0.1075599772259535,
+  "status": "REVIEW",
+  "warning_flags": []
+}

@@ -1,0 +1,2 @@
+pair_id,galaxy_name,obs_id_1,obs_id_2,filter_1,filter_2,compatibility,baseline_days,pair_score,status,error,n_residual_detections,n_survivors
+NGC 1097::w1000601t::hst_skycell-p0644x09y10_wfc3_uvis_f555w_all,NGC 1097,w1000601t,hst_skycell-p0644x09y10_wfc3_uvis_f555w_all,F555W,F555W,exact,11588.965108823424,1.4000000000000001,FAILED,Target center outside usable footprint before reprojection.,0,0

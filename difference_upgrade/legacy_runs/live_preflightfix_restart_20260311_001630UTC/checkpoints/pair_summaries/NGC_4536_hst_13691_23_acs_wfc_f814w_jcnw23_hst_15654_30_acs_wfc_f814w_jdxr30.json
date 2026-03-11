@@ -1,0 +1,15 @@
+{
+  "baseline_days": 1453.9718394600059,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "F814W",
+  "filter_2": "F814W",
+  "galaxy_name": "NGC 4536",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_13691_23_acs_wfc_f814w_jcnw23",
+  "obs_id_2": "hst_15654_30_acs_wfc_f814w_jdxr30",
+  "pair_id": "NGC 4536::hst_13691_23_acs_wfc_f814w_jcnw23::hst_15654_30_acs_wfc_f814w_jdxr30",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

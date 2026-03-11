@@ -1,0 +1,13 @@
+{
+  "created_utc": "20260311_000518UTC",
+  "median_recovered_sep_arcsec": NaN,
+  "n_benchmark_pairs": 63,
+  "n_detected_signals": 0,
+  "n_recovered_truth_groups": 0,
+  "n_truth_groups": 81,
+  "n_truth_groups_with_pairs": 63,
+  "recovery_fraction": 0.0,
+  "stage": "stage03_evaluate_recovery",
+  "status": "completed",
+  "timestamp_utc": "2026-03-11T00:05:18.796200Z"
+}

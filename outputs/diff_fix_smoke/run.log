@@ -1,0 +1,12 @@
+[2026-03-11T00:01:55.310653Z] run start mode=difference_upgrade resume=False sign_mode=fade
+[2026-03-11T00:01:55.387366Z] pair start pair_id=MESSIER 083::hst_9299_08_acs_wfc_f475w-pol0v_j8e808::hst_17747_25_acs_wfc_f475w_jfgf25 index=1/5 galaxy=MESSIER 083 filter=F475W->F475W baseline_days=8564.85
+[2026-03-11T00:01:56.266153Z] pair failed pair_id=MESSIER 083::hst_9299_08_acs_wfc_f475w-pol0v_j8e808::hst_17747_25_acs_wfc_f475w_jfgf25 error=No suitable calibrated FITS product for hst_17747_25_acs_wfc_f475w_jfgf25
+[2026-03-11T00:01:56.274403Z] pair start pair_id=MESSIER 083::hst_9774_0h_acs_wfc_f814w_j8ph0h::hst_17747_26_acs_wfc_f814w_jfgf26 index=2/5 galaxy=MESSIER 083 filter=F814W->F814W baseline_days=7850.82
+[2026-03-11T00:01:57.257811Z] pair failed pair_id=MESSIER 083::hst_9774_0h_acs_wfc_f814w_j8ph0h::hst_17747_26_acs_wfc_f814w_jfgf26 error=No suitable calibrated FITS product for hst_17747_26_acs_wfc_f814w_jfgf26
+[2026-03-11T00:01:57.266089Z] pair start pair_id=NGC 1309::hst_10497_03_acs_wfc_f555w_j9cb03::hst_17907_03_acs_wfc_f555w_jfjg03 index=3/5 galaxy=NGC 1309 filter=F555W->F555W baseline_days=7370.96
+[2026-03-11T00:01:58.120064Z] pair failed pair_id=NGC 1309::hst_10497_03_acs_wfc_f555w_j9cb03::hst_17907_03_acs_wfc_f555w_jfjg03 error=No suitable calibrated FITS product for hst_17907_03_acs_wfc_f555w_jfjg03
+[2026-03-11T00:01:58.128381Z] pair start pair_id=NGC 1309::hst_10497_03_acs_wfc_f555w_j9cb03::hst_17907_04_acs_wfc_f555w_jfjg04 index=4/5 galaxy=NGC 1309 filter=F555W->F555W baseline_days=7369.19
+[2026-03-11T00:01:58.481456Z] pair failed pair_id=NGC 1309::hst_10497_03_acs_wfc_f555w_j9cb03::hst_17907_04_acs_wfc_f555w_jfjg04 error=No suitable calibrated FITS product for hst_17907_04_acs_wfc_f555w_jfjg04
+[2026-03-11T00:01:58.489736Z] pair start pair_id=NGC 1097::hst_9788_03_acs_wfc_f814w_j8mx03::hst_15654_58_acs_wfc_f814w_jdxr58 index=5/5 galaxy=NGC 1097 filter=F814W->F814W baseline_days=5914.97
+[2026-03-11T00:02:00.282954Z] pair failed pair_id=NGC 1097::hst_9788_03_acs_wfc_f814w_j8mx03::hst_15654_58_acs_wfc_f814w_jdxr58 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:02:00.317008Z] run completed scanned=0 failed=5 detections=0

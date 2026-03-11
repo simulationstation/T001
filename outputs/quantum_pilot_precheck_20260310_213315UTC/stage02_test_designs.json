@@ -1,0 +1,41 @@
+{
+  "collapse_rate_atlas_microgrid": {
+    "device_key": "rigetti_ankaa",
+    "goal": "Ensure a tiny hardware grid already separates more than one branch class.",
+    "planned_shots": 800,
+    "planned_tasks": 9
+  },
+  "core_shell_collapse_ladder": {
+    "device_key": "iqm_garnet",
+    "goal": "Recover shield > open > wrong ordering with low shell sensitivity for the shield branch.",
+    "planned_shots": 1500,
+    "planned_tasks": 14
+  },
+  "cross_platform_universality_test": {
+    "device_keys": [
+      "iqm_garnet",
+      "rigetti_ankaa"
+    ],
+    "goal": "Package the same reduced branch-ordering circuit family on two hardware classes.",
+    "planned_shots_per_device": 1000,
+    "planned_tasks_per_device": 6
+  },
+  "quantum_neutrinosphere_analog": {
+    "device_key": "rigetti_ankaa",
+    "goal": "Hold gross outer leakage roughly fixed while degrading inner Bell structure in the mismatched branch.",
+    "planned_shots": 1200,
+    "planned_tasks": 10
+  },
+  "shell_only_visibility_test": {
+    "device_key": "iqm_garnet",
+    "goal": "Change shell visibility strongly while keeping the interior Bell proxy stable.",
+    "planned_shots": 1200,
+    "planned_tasks": 8
+  },
+  "shock_revival_threshold_simulator": {
+    "device_key": "quera_aquila",
+    "goal": "Find a small AHS pulse family with a nontrivial edge-loss span across a narrow parameter sweep.",
+    "planned_shots": 100,
+    "planned_tasks": 8
+  }
+}

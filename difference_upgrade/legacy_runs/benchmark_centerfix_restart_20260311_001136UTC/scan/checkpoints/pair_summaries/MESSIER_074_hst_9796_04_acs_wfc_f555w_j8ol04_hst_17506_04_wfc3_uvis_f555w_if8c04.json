@@ -1,0 +1,15 @@
+{
+  "baseline_days": 7350.339933470001,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "F555W",
+  "filter_2": "F555W",
+  "galaxy_name": "MESSIER 074",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_9796_04_acs_wfc_f555w_j8ol04",
+  "obs_id_2": "hst_17506_04_wfc3_uvis_f555w_if8c04",
+  "pair_id": "MESSIER 074::hst_9796_04_acs_wfc_f555w_j8ol04::hst_17506_04_wfc3_uvis_f555w_if8c04",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

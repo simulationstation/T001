@@ -1,0 +1,21 @@
+{
+  "candidate_id": "MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0003",
+  "closure_class": "EXPORT_FAILURE_LIKE",
+  "closure_confidence": "HIGH",
+  "closure_reason_codes": [
+    "NEAR_TOTAL_DISAPPEARANCE",
+    "SUB_5PCT_POST",
+    "HIGH_SIGNIFICANCE_FADE",
+    "LONG_BASELINE",
+    "ALL_EPOCH_FOLLOWUP",
+    "MULTIFILTER_PERSISTENCE"
+  ],
+  "dust_survivor_score": 0.0,
+  "export_failure_score": 0.6036926233456557,
+  "followup_lightcurve_path": "/home/primary/SUPERNOVA/sed/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0003/lightcurve.png",
+  "followup_sed_plot_path": "/home/primary/SUPERNOVA/sed/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0003/sed_fit.png",
+  "followup_summary_path": "/home/primary/SUPERNOVA/sed/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0003/followup_summary.json",
+  "galaxy_name": "MESSIER 101",
+  "systematic_like_score": 0.18562730329207747,
+  "unresolved_score": 0.35926785645902864
+}

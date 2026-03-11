@@ -1,0 +1,4 @@
+[2026-03-11T00:06:32.615302Z] run start mode=difference_upgrade resume=False sign_mode=both
+[2026-03-11T00:06:32.692847Z] pair start pair_id=NGC 1097::w1000601t::hst_skycell-p0644x09y10_wfc3_uvis_f555w_all index=1/1 galaxy=NGC 1097 filter=F555W->F555W baseline_days=11588.97
+[2026-03-11T00:06:35.290658Z] pair failed pair_id=NGC 1097::w1000601t::hst_skycell-p0644x09y10_wfc3_uvis_f555w_all error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:06:35.312622Z] run completed scanned=0 failed=1 detections=0

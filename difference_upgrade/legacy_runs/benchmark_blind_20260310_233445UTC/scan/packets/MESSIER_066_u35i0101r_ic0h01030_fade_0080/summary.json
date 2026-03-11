@@ -1,0 +1,40 @@
+{
+  "candidate_id": "MESSIER_066_u35i0101r_ic0h01030_fade_0080",
+  "dec_deg": 12.978267698030008,
+  "diff_sigma": 66.75971922398253,
+  "diff_sigma_min": 33.22404111420389,
+  "event_sign": "fade",
+  "figure_path": "difference_upgrade/benchmark/scan/packets/MESSIER_066_u35i0101r_ic0h01030_fade_0080/MESSIER_066_u35i0101r_ic0h01030_fade_0080_cutout.png",
+  "galaxy_name": "MESSIER 066",
+  "pair_id": "MESSIER 066::u35i0101r::ic0h01030",
+  "post_flux": 0.12405257293415592,
+  "post_to_pre_ratio": 0.2554096468489843,
+  "pre_flux": 0.4857004207343206,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "u35i0101r",
+    "obs_id_2": "ic0h01030",
+    "obsid_1": 24572419,
+    "obsid_2": 24808516,
+    "product_filename_1": "hst_6549_01_wfpc2_pc_total_u35i01_drz.fits",
+    "product_filename_2": "ic0h01030_drc.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/u35i0101r/hst_6549_01_wfpc2_pc_total_u35i01_drz.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/ic0h01030/ic0h01030_drc.fits",
+    "product_priority_1": 156.0,
+    "product_priority_2": 179.0,
+    "product_uri_1": "mast:HST/product/hst_6549_01_wfpc2_pc_total_u35i01_drz.fits",
+    "product_uri_2": "mast:HST/product/ic0h01030_drc.fits"
+  },
+  "ra_deg": 170.0671853707084,
+  "reason_codes": [
+    "ROBUST_DIFF_SIG",
+    "REGISTRATION_OK"
+  ],
+  "registration_dx_px": 1.7833514175952132,
+  "registration_dy_px": 0.17970009436680812,
+  "registration_n_matches": 44,
+  "registration_residual_px": 0.2327384313991993,
+  "status": "REVIEW",
+  "warning_flags": []
+}

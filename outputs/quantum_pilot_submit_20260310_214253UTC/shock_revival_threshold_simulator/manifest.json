@@ -1,0 +1,46 @@
+{
+  "device": "arn:aws:braket:us-east-1::device/qpu/quera/Aquila",
+  "entries": [
+    {
+      "atom_count": 4,
+      "detuning_peak": 1000000.0,
+      "scale": 0.85
+    },
+    {
+      "atom_count": 4,
+      "detuning_peak": 2000000.0,
+      "scale": 0.85
+    },
+    {
+      "atom_count": 4,
+      "detuning_peak": 3000000.0,
+      "scale": 0.85
+    },
+    {
+      "atom_count": 4,
+      "detuning_peak": 4000000.0,
+      "scale": 0.85
+    },
+    {
+      "atom_count": 4,
+      "detuning_peak": 1000000.0,
+      "scale": 1.0
+    },
+    {
+      "atom_count": 4,
+      "detuning_peak": 2000000.0,
+      "scale": 1.0
+    },
+    {
+      "atom_count": 4,
+      "detuning_peak": 3000000.0,
+      "scale": 1.0
+    },
+    {
+      "atom_count": 4,
+      "detuning_peak": 4000000.0,
+      "scale": 1.0
+    }
+  ],
+  "shots": 100
+}

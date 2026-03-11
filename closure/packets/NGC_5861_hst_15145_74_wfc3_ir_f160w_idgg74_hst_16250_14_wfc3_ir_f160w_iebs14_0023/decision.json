@@ -1,0 +1,21 @@
+{
+  "candidate_id": "NGC_5861_hst_15145_74_wfc3_ir_f160w_idgg74_hst_16250_14_wfc3_ir_f160w_iebs14_0023",
+  "closure_class": "EXPORT_FAILURE_LIKE",
+  "closure_confidence": "LOW",
+  "closure_reason_codes": [
+    "NEAR_TOTAL_DISAPPEARANCE",
+    "SUB_5PCT_POST",
+    "HIGH_SIGNIFICANCE_FADE",
+    "LONG_BASELINE",
+    "ALL_EPOCH_FOLLOWUP",
+    "MULTIFILTER_PERSISTENCE"
+  ],
+  "dust_survivor_score": 0.0,
+  "export_failure_score": 0.595450501837577,
+  "followup_lightcurve_path": "/home/primary/SUPERNOVA/sed/NGC_5861_hst_15145_74_wfc3_ir_f160w_idgg74_hst_16250_14_wfc3_ir_f160w_iebs14_0023/lightcurve.png",
+  "followup_sed_plot_path": "/home/primary/SUPERNOVA/sed/NGC_5861_hst_15145_74_wfc3_ir_f160w_idgg74_hst_16250_14_wfc3_ir_f160w_iebs14_0023/sed_fit.png",
+  "followup_summary_path": "/home/primary/SUPERNOVA/sed/NGC_5861_hst_15145_74_wfc3_ir_f160w_idgg74_hst_16250_14_wfc3_ir_f160w_iebs14_0023/followup_summary.json",
+  "galaxy_name": "NGC 5861",
+  "systematic_like_score": 0.1302100682739457,
+  "unresolved_score": 0.5519136510011209
+}

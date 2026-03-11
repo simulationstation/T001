@@ -1,0 +1,15 @@
+{
+  "baseline_days": 186.8931176699989,
+  "compatibility": "exact",
+  "error": "TARGET_CENTER_OUTSIDE_FOOTPRINT",
+  "filter_1": "F435W",
+  "filter_2": "F435W",
+  "galaxy_name": "MESSIER 063",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_10402_18_acs_wfc_f435w_j96r18",
+  "obs_id_2": "hst_10579_09_acs_wfc_f435w_j9h809",
+  "pair_id": "MESSIER 063::hst_10402_18_acs_wfc_f435w_j96r18::hst_10579_09_acs_wfc_f435w_j9h809",
+  "pair_score": 1.4000000000000001,
+  "status": "SKIPPED"
+}

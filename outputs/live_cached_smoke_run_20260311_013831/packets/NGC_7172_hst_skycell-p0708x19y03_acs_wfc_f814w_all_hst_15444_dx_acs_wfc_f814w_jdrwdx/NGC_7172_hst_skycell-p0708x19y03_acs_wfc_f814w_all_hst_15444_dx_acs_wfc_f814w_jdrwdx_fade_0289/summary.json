@@ -1,0 +1,41 @@
+{
+  "candidate_id": "NGC_7172_hst_skycell-p0708x19y03_acs_wfc_f814w_all_hst_15444_dx_acs_wfc_f814w_jdrwdx_fade_0289",
+  "dec_deg": -31.90654881460158,
+  "diff_sigma": 217.02811671464954,
+  "diff_sigma_min": 168.16095504151826,
+  "event_sign": "fade",
+  "figure_path": "outputs/live_cached_smoke_run_20260311_013831/packets/NGC_7172_hst_skycell-p0708x19y03_acs_wfc_f814w_all_hst_15444_dx_acs_wfc_f814w_jdrwdx/NGC_7172_hst_skycell-p0708x19y03_acs_wfc_f814w_all_hst_15444_dx_acs_wfc_f814w_jdrwdx_fade_0289/NGC_7172_hst_skycell-p0708x19y03_acs_wfc_f814w_all_hst_15444_dx_acs_wfc_f814w_jdrwdx_fade_0289_cutout.png",
+  "galaxy_name": "NGC 7172",
+  "pair_id": "NGC 7172::hst_skycell-p0708x19y03_acs_wfc_f814w_all::hst_15444_dx_acs_wfc_f814w_jdrwdx",
+  "post_flux": 0.06134309683865899,
+  "post_to_pre_ratio": 0.015681255500564702,
+  "pre_flux": 6.191101464435702,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "hst_skycell-p0708x19y03_acs_wfc_f814w_all",
+    "obs_id_2": "hst_15444_dx_acs_wfc_f814w_jdrwdx",
+    "obsid_1": 83205039,
+    "obsid_2": 26490605,
+    "product_filename_1": "hst_skycell-p0708x19y03_acs_wfc_f814w_all_drc.fits",
+    "product_filename_2": "hst_15444_dx_acs_wfc_f814w_jdrwdx_drc.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_skycell-p0708x19y03_acs_wfc_f814w_all/hst_skycell-p0708x19y03_acs_wfc_f814w_all_drc.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_15444_dx_acs_wfc_f814w_jdrwdx/hst_15444_dx_acs_wfc_f814w_jdrwdx_drc.fits",
+    "product_priority_1": 156.0,
+    "product_priority_2": 156.0,
+    "product_uri_1": "cached://HST/hst_skycell-p0708x19y03_acs_wfc_f814w_all/hst_skycell-p0708x19y03_acs_wfc_f814w_all_drc.fits",
+    "product_uri_2": "cached://HST/hst_15444_dx_acs_wfc_f814w_jdrwdx/hst_15444_dx_acs_wfc_f814w_jdrwdx_drc.fits"
+  },
+  "ra_deg": 330.4930191219787,
+  "reason_codes": [
+    "POST_LT_5PCT",
+    "ROBUST_DIFF_SIG",
+    "REGISTRATION_OK"
+  ],
+  "registration_dx_px": -0.009399207806382037,
+  "registration_dy_px": -0.00037559930478892056,
+  "registration_n_matches": 166,
+  "registration_residual_px": 0.15960621818759196,
+  "status": "PASS",
+  "warning_flags": []
+}

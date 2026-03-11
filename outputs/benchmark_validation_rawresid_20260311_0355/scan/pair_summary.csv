@@ -1,0 +1,3 @@
+pair_id,galaxy_name,obs_id_1,obs_id_2,filter_1,filter_2,compatibility,baseline_days,pair_score,status,error,n_residual_detections,n_survivors
+6dF J0245599-073443::hst_11575_02_acs_wfc_f814w_jb4u02::jdxk02010,6dF J0245599-073443,hst_11575_02_acs_wfc_f814w_jb4u02,jdxk02010,F814W,F814W,exact,3233.2164065697216,1.4000000000000001,FAILED,"not enough values to unpack (expected 3, got 2)",0,0
+MESSIER 066::jb4u01010::jey347020,MESSIER 066,jb4u01010,jey347020,F555W,F555W,exact,4895.247665162031,1.4000000000000001,FAILED,"not enough values to unpack (expected 3, got 2)",0,0

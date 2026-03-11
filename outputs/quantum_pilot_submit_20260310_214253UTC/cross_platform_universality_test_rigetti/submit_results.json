@@ -1,0 +1,79 @@
+{
+  "bucket": {
+    "account_id": "056449379113",
+    "bucket": "amazon-braket-056449379113-us-west-1",
+    "created": false,
+    "probe_key": "supernova/bootstrap/20260310_214330.txt",
+    "region": "us-west-1"
+  },
+  "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+  "device_key": "rigetti_ankaa",
+  "name": "cross_platform_universality_test_rigetti",
+  "shots": 1000,
+  "submitted_utc": "2026-03-10T21:43:33.819111Z",
+  "task_count": 3,
+  "task_ids": [
+    "arn:aws:braket:us-west-1:056449379113:quantum-task/22f49b21-402a-488a-a259-f966c4ad1eff",
+    "arn:aws:braket:us-west-1:056449379113:quantum-task/e5b22ca2-ea21-4c42-82ab-dbba3b59d582",
+    "arn:aws:braket:us-west-1:056449379113:quantum-task/ae33e5fb-2af8-417f-b1f4-17e780d26087"
+  ],
+  "tasks": [
+    {
+      "family": "shield",
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:32.333000+00:00",
+        "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/22f49b21-402a-488a-a259-f966c4ad1eff"
+      },
+      "measured_qubits": [
+        0,
+        1,
+        2
+      ],
+      "shell_label": "plus",
+      "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/22f49b21-402a-488a-a259-f966c4ad1eff",
+      "task_index": 1
+    },
+    {
+      "family": "open",
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:32.616000+00:00",
+        "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/e5b22ca2-ea21-4c42-82ab-dbba3b59d582"
+      },
+      "measured_qubits": [
+        0,
+        1,
+        2
+      ],
+      "shell_label": "plus",
+      "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/e5b22ca2-ea21-4c42-82ab-dbba3b59d582",
+      "task_index": 2
+    },
+    {
+      "family": "wrong",
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:32.917000+00:00",
+        "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/ae33e5fb-2af8-417f-b1f4-17e780d26087"
+      },
+      "measured_qubits": [
+        0,
+        1,
+        2
+      ],
+      "shell_label": "plus",
+      "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/ae33e5fb-2af8-417f-b1f4-17e780d26087",
+      "task_index": 3
+    }
+  ]
+}

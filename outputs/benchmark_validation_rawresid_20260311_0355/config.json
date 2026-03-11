@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-03-11T03:41:47.741940Z",
+  "epoch_pairs_path": "/home/primary/SUPERNOVA/archive/epoch_pairs.parquet",
+  "mode": "supernova_benchmark",
+  "observation_matrix_path": "/home/primary/SUPERNOVA/archive/observation_matrix.parquet",
+  "resume": false
+}

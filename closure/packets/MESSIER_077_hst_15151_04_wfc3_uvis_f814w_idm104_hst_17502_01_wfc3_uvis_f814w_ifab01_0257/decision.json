@@ -1,0 +1,18 @@
+{
+  "candidate_id": "MESSIER_077_hst_15151_04_wfc3_uvis_f814w_idm104_hst_17502_01_wfc3_uvis_f814w_ifab01_0257",
+  "closure_class": "VARIABLE_OR_UNRESOLVED",
+  "closure_confidence": "LOW",
+  "closure_reason_codes": [
+    "HIGH_SIGNIFICANCE_FADE",
+    "LONG_BASELINE",
+    "NO_ALL_EPOCH_FOLLOWUP"
+  ],
+  "dust_survivor_score": 0.15,
+  "export_failure_score": 0.4111285355111509,
+  "followup_lightcurve_path": "nan",
+  "followup_sed_plot_path": "nan",
+  "followup_summary_path": "nan",
+  "galaxy_name": "MESSIER 077",
+  "systematic_like_score": 0.16418805036494527,
+  "unresolved_score": 0.7933386446379702
+}

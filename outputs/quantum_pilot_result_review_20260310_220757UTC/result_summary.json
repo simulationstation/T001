@@ -1,0 +1,102 @@
+{
+  "created_utc": "2026-03-10T22:08:23.776413+00:00",
+  "submit_packet": "/home/primary/SUPERNOVA/outputs/quantum_pilot_submit_20260310_214253UTC",
+  "status_counts": [
+    {
+      "family_name": "collapse_rate_atlas_microgrid",
+      "live_status": "COMPLETED",
+      "n": 9
+    },
+    {
+      "family_name": "core_shell_collapse_ladder",
+      "live_status": "COMPLETED",
+      "n": 7
+    },
+    {
+      "family_name": "cross_platform_universality_test_iqm",
+      "live_status": "COMPLETED",
+      "n": 3
+    },
+    {
+      "family_name": "cross_platform_universality_test_rigetti",
+      "live_status": "COMPLETED",
+      "n": 3
+    },
+    {
+      "family_name": "quantum_neutrinosphere_analog",
+      "live_status": "COMPLETED",
+      "n": 10
+    },
+    {
+      "family_name": "shell_only_visibility_test",
+      "live_status": "COMPLETED",
+      "n": 8
+    },
+    {
+      "family_name": "shock_revival_threshold_simulator",
+      "live_status": "QUEUED",
+      "n": 8
+    }
+  ],
+  "headlines": {
+    "core_shell": {
+      "shield_plus_zz": 0.9266666666666666,
+      "open_plus_zz": 0.9266666666666667,
+      "wrong_mean_zz": -0.9046666666666667
+    },
+    "neutrinosphere": {
+      "matched_mean_zz": 0.8816666666666666,
+      "mismatched_mean_zz": 0.8058333333333334,
+      "matched_mean_outer_excitation": 0.13208333333333333,
+      "mismatched_mean_outer_excitation": 0.3285416666666667,
+      "blocked_mean_outer_excitation": 0.013750000000000002
+    },
+    "shell_visibility": {
+      "bright_mean_q2_excitation": 0.20416666666666666,
+      "quiet_mean_q2_excitation": 0.035208333333333335,
+      "bright_mean_zz": 0.9308333333333333,
+      "quiet_mean_zz": 0.9112499999999999
+    },
+    "cross_platform": {
+      "iqm_garnet": [
+        {
+          "family": "shield",
+          "zz_corr_q01": 0.918
+        },
+        {
+          "family": "open",
+          "zz_corr_q01": 0.908
+        },
+        {
+          "family": "wrong",
+          "zz_corr_q01": -0.922
+        }
+      ],
+      "rigetti_ankaa": [
+        {
+          "family": "shield",
+          "zz_corr_q01": 0.858
+        },
+        {
+          "family": "open",
+          "zz_corr_q01": 0.822
+        },
+        {
+          "family": "wrong",
+          "zz_corr_q01": -0.798
+        }
+      ]
+    },
+    "collapse_atlas": {
+      "zz_min": 0.74,
+      "zz_max": 0.7925,
+      "outer_min": 0.25625000000000003,
+      "outer_max": 0.51
+    },
+    "shock_revival": {
+      "status_counts": {
+        "QUEUED": 8
+      }
+    }
+  }
+}

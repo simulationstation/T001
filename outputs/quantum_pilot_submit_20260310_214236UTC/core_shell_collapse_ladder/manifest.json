@@ -1,0 +1,69 @@
+{
+  "device": "arn:aws:braket:eu-north-1::device/qpu/iqm/Garnet",
+  "entries": [
+    {
+      "family": "shield",
+      "measured_qubits": [
+        0,
+        1,
+        2
+      ],
+      "shell_label": "zero"
+    },
+    {
+      "family": "shield",
+      "measured_qubits": [
+        0,
+        1,
+        2
+      ],
+      "shell_label": "plus"
+    },
+    {
+      "family": "open",
+      "measured_qubits": [
+        0,
+        1,
+        2
+      ],
+      "shell_label": "zero"
+    },
+    {
+      "family": "open",
+      "measured_qubits": [
+        0,
+        1,
+        2
+      ],
+      "shell_label": "plus"
+    },
+    {
+      "family": "wrong",
+      "measured_qubits": [
+        0,
+        1,
+        2
+      ],
+      "shell_label": "zero"
+    },
+    {
+      "family": "wrong",
+      "measured_qubits": [
+        0,
+        1,
+        2
+      ],
+      "shell_label": "plus"
+    },
+    {
+      "family": "uncoupled",
+      "measured_qubits": [
+        0,
+        1,
+        2
+      ],
+      "shell_label": "plus"
+    }
+  ],
+  "shots": 1500
+}

@@ -1,0 +1,106 @@
+{
+  "device": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+  "entries": [
+    {
+      "family": "matched",
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "theta": 0.4
+    },
+    {
+      "family": "matched",
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "theta": 0.6
+    },
+    {
+      "family": "matched",
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "theta": 0.8
+    },
+    {
+      "family": "matched",
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "theta": 1.0
+    },
+    {
+      "family": "mismatched",
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "theta": 0.4
+    },
+    {
+      "family": "mismatched",
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "theta": 0.6
+    },
+    {
+      "family": "mismatched",
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "theta": 0.8
+    },
+    {
+      "family": "mismatched",
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "theta": 1.0
+    },
+    {
+      "family": "blocked",
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "theta": 0.6
+    },
+    {
+      "family": "blocked",
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "theta": 1.0
+    }
+  ],
+  "shots": 1200
+}

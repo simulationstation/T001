@@ -1,0 +1,7 @@
+[2026-03-11T03:42:01.149587Z] run start mode=difference_upgrade resume=False sign_mode=both
+[2026-03-11T03:42:01.819173Z] queue prepared candidate_pairs=12 selected_pairs=12 preflight_rejected=0
+[2026-03-11T03:42:01.871304Z] pair start pair_id=6dF J0245599-073443::hst_11575_02_acs_wfc_f814w_jb4u02::jdxk02010 index=1/12 galaxy=6dF J0245599-073443 filter=F814W->F814W baseline_days=3233.22
+[2026-03-11T03:42:19.895561Z] pair failed pair_id=6dF J0245599-073443::hst_11575_02_acs_wfc_f814w_jb4u02::jdxk02010 error=not enough values to unpack (expected 3, got 2)
+[2026-03-11T03:42:19.957604Z] pair start pair_id=MESSIER 066::jb4u01010::jey347020 index=2/12 galaxy=MESSIER 066 filter=F555W->F555W baseline_days=4895.25
+[2026-03-11T03:42:38.550165Z] pair failed pair_id=MESSIER 066::jb4u01010::jey347020 error=not enough values to unpack (expected 3, got 2)
+[2026-03-11T03:42:38.603134Z] pair start pair_id=MESSIER 066::hlsp_legus_hst_uvis_ngc3627_f555w_v1_drc::jey347020 index=3/12 galaxy=MESSIER 066 filter=F555W->F555W baseline_days=3377.60

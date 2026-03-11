@@ -1,0 +1,15 @@
+{
+  "baseline_days": 10385.980105671297,
+  "compatibility": "exact",
+  "error": "No celestial 2D science image found in /home/primary/SUPERNOVA/data/cache/mast_products/HST/w1mj0101t/w1mj0101t_c0f.fits",
+  "filter_1": "F555W",
+  "filter_2": "F555W",
+  "galaxy_name": "MESSIER 100",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "w1mj0101t",
+  "obs_id_2": "iejn61020",
+  "pair_id": "MESSIER 100::w1mj0101t::iejn61020",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

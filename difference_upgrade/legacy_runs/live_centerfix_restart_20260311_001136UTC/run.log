@@ -1,0 +1,116 @@
+[2026-03-11T00:03:39.148837Z] run start mode=difference_upgrade resume=True sign_mode=fade
+[2026-03-11T00:03:39.231317Z] pair skipped pair_id=MESSIER 083::hst_9299_08_acs_wfc_f475w-pol0v_j8e808::hst_17747_25_acs_wfc_f475w_jfgf25 reason=RESTRICTED_DATA_RIGHTS:hst_17747_25_acs_wfc_f475w_jfgf25:EXCLUSIVE_ACCESS
+[2026-03-11T00:03:39.244904Z] pair skipped pair_id=MESSIER 083::hst_9774_0h_acs_wfc_f814w_j8ph0h::hst_17747_26_acs_wfc_f814w_jfgf26 reason=RESTRICTED_DATA_RIGHTS:hst_17747_26_acs_wfc_f814w_jfgf26:EXCLUSIVE_ACCESS
+[2026-03-11T00:03:39.258756Z] pair skipped pair_id=NGC 1309::hst_10497_03_acs_wfc_f555w_j9cb03::hst_17907_03_acs_wfc_f555w_jfjg03 reason=RESTRICTED_DATA_RIGHTS:hst_17907_03_acs_wfc_f555w_jfjg03:EXCLUSIVE_ACCESS
+[2026-03-11T00:03:39.272276Z] pair skipped pair_id=NGC 1309::hst_10497_03_acs_wfc_f555w_j9cb03::hst_17907_04_acs_wfc_f555w_jfjg04 reason=RESTRICTED_DATA_RIGHTS:hst_17907_04_acs_wfc_f555w_jfjg04:EXCLUSIVE_ACCESS
+[2026-03-11T00:03:39.280865Z] pair start pair_id=NGC 1097::hst_9788_03_acs_wfc_f814w_j8mx03::hst_15654_58_acs_wfc_f814w_jdxr58 index=5/60 galaxy=NGC 1097 filter=F814W->F814W baseline_days=5914.97
+[2026-03-11T00:03:40.459410Z] pair failed pair_id=NGC 1097::hst_9788_03_acs_wfc_f814w_j8mx03::hst_15654_58_acs_wfc_f814w_jdxr58 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:03:40.483146Z] pair skipped pair_id=NGC 4388::hst_12185_07_wfc3_uvis_f438w_ibig07::hst_17777_01_wfc3_uvis_f438w_ifd601 reason=RESTRICTED_DATA_RIGHTS:hst_17777_01_wfc3_uvis_f438w_ifd601:EXCLUSIVE_ACCESS
+[2026-03-11T00:03:40.496239Z] pair start pair_id=MESSIER 101::hst_9490_02_acs_wfc_f555w_j8d602::hst_14678_01_acs_wfc_f555w_jd6v01 index=7/60 galaxy=MESSIER 101 filter=F555W->F555W baseline_days=5327.96
+[2026-03-11T00:03:42.117838Z] pair failed pair_id=MESSIER 101::hst_9490_02_acs_wfc_f555w_j8d602::hst_14678_01_acs_wfc_f555w_jd6v01 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:03:42.341865Z] pair start pair_id=MESSIER 101::hst_9490_a1_acs_wfc_f555w_j8d6a1::hst_14678_01_acs_wfc_f555w_jd6v01 index=8/60 galaxy=MESSIER 101 filter=F555W->F555W baseline_days=5325.68
+[2026-03-11T00:03:43.084580Z] pair failed pair_id=MESSIER 101::hst_9490_a1_acs_wfc_f555w_j8d6a1::hst_14678_01_acs_wfc_f555w_jd6v01 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:03:43.093161Z] pair start pair_id=NGC 7172::hst_skycell-p0708x19y03_acs_wfc_f814w_all::hst_15444_dx_acs_wfc_f814w_jdrwdx index=9/60 galaxy=NGC 7172 filter=F814W->F814W baseline_days=5241.14
+[2026-03-11T00:03:46.222304Z] pair failed pair_id=NGC 7172::hst_skycell-p0708x19y03_acs_wfc_f814w_all::hst_15444_dx_acs_wfc_f814w_jdrwdx error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:03:46.231047Z] pair start pair_id=MESSIER 074::hst_9733_01_acs_wfc_f606w_j8nv01::hst_13804_01_acs_wfc_f606w_jcmx01 index=10/60 galaxy=MESSIER 074 filter=F606W->F606W baseline_days=4531.16
+[2026-03-11T00:03:47.555134Z] pair failed pair_id=MESSIER 074::hst_9733_01_acs_wfc_f606w_j8nv01::hst_13804_01_acs_wfc_f606w_jcmx01 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:03:47.564539Z] pair start pair_id=MESSIER 074::hst_13364_20_wfc3_uvis_f336w_icdm20::hst_17932_09_wfc3_uvis_f336w_ifkj09 index=11/60 galaxy=MESSIER 074 filter=F336W->F336W baseline_days=4330.60
+[2026-03-11T00:03:48.984975Z] pair failed pair_id=MESSIER 074::hst_13364_20_wfc3_uvis_f336w_icdm20::hst_17932_09_wfc3_uvis_f336w_ifkj09 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:03:48.993480Z] pair start pair_id=MESSIER 100::hst_11646_01_wfc3_uvis_f555w_ib2q01::hst_16500_01_wfc3_uvis_f555w_iejn01 index=12/60 galaxy=MESSIER 100 filter=F555W->F555W baseline_days=4212.61
+[2026-03-11T00:03:50.355827Z] pair failed pair_id=MESSIER 100::hst_11646_01_wfc3_uvis_f555w_ib2q01::hst_16500_01_wfc3_uvis_f555w_iejn01 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:03:50.364949Z] pair start pair_id=NGC 1097::hst_13413_01_wfc3_uvis_f657n_icc501::hst_17457_04_wfc3_uvis_f657n_if8k04 index=13/60 galaxy=NGC 1097 filter=F657N->F657N baseline_days=4199.11
+[2026-03-11T00:03:52.028903Z] pair failed pair_id=NGC 1097::hst_13413_01_wfc3_uvis_f657n_icc501::hst_17457_04_wfc3_uvis_f657n_if8k04 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:03:52.037821Z] pair start pair_id=NGC 4414::hst_12888_01_wfc3_uvis_f555w_ibzv01::hst_17413_31_wfc3_uvis_f555w_if8731 index=14/60 galaxy=NGC 4414 filter=F555W->F555W baseline_days=3963.15
+[2026-03-11T00:03:53.119918Z] pair failed pair_id=NGC 4414::hst_12888_01_wfc3_uvis_f555w_ibzv01::hst_17413_31_wfc3_uvis_f555w_if8731 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:03:53.128238Z] pair start pair_id=MESSIER 100::hst_11646_01_wfc3_uvis_f555w_ib2q01::hst_16075_01_wfc3_uvis_f555w_ie9801 index=15/60 galaxy=MESSIER 100 filter=F555W->F555W baseline_days=3843.63
+[2026-03-11T00:03:54.125257Z] pair failed pair_id=MESSIER 100::hst_11646_01_wfc3_uvis_f555w_ib2q01::hst_16075_01_wfc3_uvis_f555w_ie9801 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:03:54.134720Z] pair start pair_id=NGC 4414::hst_12888_01_wfc3_uvis_f555w_ibzv01::hst_17413_30_wfc3_uvis_f555w_if8730 index=16/60 galaxy=NGC 4414 filter=F555W->F555W baseline_days=3828.32
+[2026-03-11T00:03:54.675751Z] pair failed pair_id=NGC 4414::hst_12888_01_wfc3_uvis_f555w_ibzv01::hst_17413_30_wfc3_uvis_f555w_if8730 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:03:54.686862Z] pair start pair_id=MESSIER 099::hst_12118_04_wfc3_uvis_f814w_ibfx04::hst_15654_24_wfc3_uvis_f814w_idxr24 index=17/60 galaxy=MESSIER 099 filter=F814W->F814W baseline_days=3558.09
+[2026-03-11T00:03:56.174664Z] pair failed pair_id=MESSIER 099::hst_12118_04_wfc3_uvis_f814w_ibfx04::hst_15654_24_wfc3_uvis_f814w_idxr24 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:03:56.183077Z] pair start pair_id=NGC 4536::hst_11570_24_wfc3_uvis_f555w_ib1f24::hst_15654_29_wfc3_uvis_f555w_idxr29 index=18/60 galaxy=NGC 4536 filter=F555W->F555W baseline_days=3534.41
+[2026-03-11T00:03:57.638453Z] pair failed pair_id=NGC 4536::hst_11570_24_wfc3_uvis_f555w_ib1f24::hst_15654_29_wfc3_uvis_f555w_idxr29 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:03:57.646848Z] pair start pair_id=NGC 1448::hst_12880_16_wfc3_ir_f160w_ic1316::hst_17000_06_wfc3_ir_f160w_iev206 index=19/60 galaxy=NGC 1448 filter=F160W->F160W baseline_days=3428.93
+[2026-03-11T00:03:58.396459Z] pair failed pair_id=NGC 1448::hst_12880_16_wfc3_ir_f160w_ic1316::hst_17000_06_wfc3_ir_f160w_iev206 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:03:58.404957Z] pair start pair_id=NGC 1448::hst_12880_20_wfc3_ir_f160w_ic1320::hst_17000_06_wfc3_ir_f160w_iev206 index=20/60 galaxy=NGC 1448 filter=F160W->F160W baseline_days=3402.41
+[2026-03-11T00:03:58.784655Z] pair failed pair_id=NGC 1448::hst_12880_20_wfc3_ir_f160w_ic1320::hst_17000_06_wfc3_ir_f160w_iev206 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:03:58.793114Z] pair start pair_id=NGC 4039::hst_11577_91_acs_wfc_f814w_jb5u91::hst_15645_19_acs_wfc_f814w_jdxk19 index=21/60 galaxy=NGC 4039 filter=F814W->F814W baseline_days=3385.51
+[2026-03-11T00:04:00.096180Z] pair failed pair_id=NGC 4039::hst_11577_91_acs_wfc_f814w_jb5u91::hst_15645_19_acs_wfc_f814w_jdxk19 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:00.105116Z] pair start pair_id=NGC 4039::hst_11577_20_acs_wfc_f814w_jb5u20::hst_15645_19_acs_wfc_f814w_jdxk19 index=22/60 galaxy=NGC 4039 filter=F814W->F814W baseline_days=3382.83
+[2026-03-11T00:04:00.833666Z] pair failed pair_id=NGC 4039::hst_11577_20_acs_wfc_f814w_jb5u20::hst_15645_19_acs_wfc_f814w_jdxk19 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:00.842127Z] pair start pair_id=MESSIER 061::hst_skycell-p1458x13y04_acs_wfc_f814w_all::hst_12574_01_acs_wfc_f814w_jbs801 index=23/60 galaxy=MESSIER 061 filter=F814W->F814W baseline_days=3368.41
+[2026-03-11T00:04:03.718186Z] pair failed pair_id=MESSIER 061::hst_skycell-p1458x13y04_acs_wfc_f814w_all::hst_12574_01_acs_wfc_f814w_jbs801 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:03.730353Z] pair start pair_id=IC 2163::hst_13029_10_wfc3_uvis_f814w_ibyb10::hst_16239_28_wfc3_uvis_f814w_ieec28 index=24/60 galaxy=IC 2163 filter=F814W->F814W baseline_days=3224.53
+[2026-03-11T00:04:04.912597Z] pair failed pair_id=IC 2163::hst_13029_10_wfc3_uvis_f814w_ibyb10::hst_16239_28_wfc3_uvis_f814w_ieec28 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:04.921197Z] pair start pair_id=NGC 2207::hst_13029_10_wfc3_uvis_f814w_ibyb10::hst_16239_28_wfc3_uvis_f814w_ieec28 index=25/60 galaxy=NGC 2207 filter=F814W->F814W baseline_days=3224.53
+[2026-03-11T00:04:04.926951Z] pair failed pair_id=NGC 2207::hst_13029_10_wfc3_uvis_f814w_ibyb10::hst_16239_28_wfc3_uvis_f814w_ieec28 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:04.935015Z] pair start pair_id=NGC 7479::hst_11575_53_acs_wfc_f814w_jb4u53::hst_15645_09_acs_wfc_f814w_jdxk09 index=26/60 galaxy=NGC 7479 filter=F814W->F814W baseline_days=3115.38
+[2026-03-11T00:04:06.163453Z] pair failed pair_id=NGC 7479::hst_11575_53_acs_wfc_f814w_jb4u53::hst_15645_09_acs_wfc_f814w_jdxk09 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:06.171986Z] pair start pair_id=NGC 3147::hst_15145_32_wfc3_uvis_f555w_idgg32::hst_17846_03_wfc3_uvis_f555w_ifgg03 index=27/60 galaxy=NGC 3147 filter=F555W->F555W baseline_days=2744.86
+[2026-03-11T00:04:07.794105Z] pair failed pair_id=NGC 3147::hst_15145_32_wfc3_uvis_f555w_idgg32::hst_17846_03_wfc3_uvis_f555w_ifgg03 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:07.802634Z] pair start pair_id=NGC 7331::hst_14668_04_wfc3_uvis_f555w_id9604::hst_17506_25_wfc3_uvis_f555w_if8c25 index=28/60 galaxy=NGC 7331 filter=F555W->F555W baseline_days=2643.35
+[2026-03-11T00:04:09.105156Z] pair failed pair_id=NGC 7331::hst_14668_04_wfc3_uvis_f555w_id9604::hst_17506_25_wfc3_uvis_f555w_if8c25 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:09.115126Z] pair start pair_id=NGC 3147::hst_15145_3a_wfc3_uvis_f555w_idgg3a::hst_17846_03_wfc3_uvis_f555w_ifgg03 index=29/60 galaxy=NGC 3147 filter=F555W->F555W baseline_days=2607.67
+[2026-03-11T00:04:09.871698Z] pair failed pair_id=NGC 3147::hst_15145_3a_wfc3_uvis_f555w_idgg3a::hst_17846_03_wfc3_uvis_f555w_ifgg03 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:09.882346Z] pair start pair_id=IC 2163::hst_13787_05_wfc3_uvis_f555w_ickj05::hst_skycell-p0818x12y14_wfc3_uvis_f555w_all index=30/60 galaxy=IC 2163 filter=F555W->F555W baseline_days=2333.80
+[2026-03-11T00:04:11.106109Z] pair failed pair_id=IC 2163::hst_13787_05_wfc3_uvis_f555w_ickj05::hst_skycell-p0818x12y14_wfc3_uvis_f555w_all error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:11.114762Z] pair start pair_id=NGC 2207::hst_13787_05_wfc3_uvis_f555w_ickj05::hst_16239_28_wfc3_uvis_f555w_ieec28 index=31/60 galaxy=NGC 2207 filter=F555W->F555W baseline_days=2333.80
+[2026-03-11T00:04:11.738369Z] pair failed pair_id=NGC 2207::hst_13787_05_wfc3_uvis_f555w_ickj05::hst_16239_28_wfc3_uvis_f555w_ieec28 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:11.747551Z] pair start pair_id=MESSIER 066::hst_12968_01_wfc3_uvis_f438w_ic0h01::hst_15654_22_wfc3_uvis_f438w_idxr22 index=32/60 galaxy=MESSIER 066 filter=F438W->F438W baseline_days=2203.68
+[2026-03-11T00:04:13.132835Z] pair failed pair_id=MESSIER 066::hst_12968_01_wfc3_uvis_f438w_ic0h01::hst_15654_22_wfc3_uvis_f438w_idxr22 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:13.141528Z] pair start pair_id=MESSIER 066::hst_12968_01_wfc3_uvis_f814w_ic0h01::hst_15654_22_wfc3_uvis_f814w_idxr22 index=33/60 galaxy=MESSIER 066 filter=F814W->F814W baseline_days=2203.60
+[2026-03-11T00:04:14.320224Z] pair failed pair_id=MESSIER 066::hst_12968_01_wfc3_uvis_f814w_ic0h01::hst_15654_22_wfc3_uvis_f814w_idxr22 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:14.329504Z] pair start pair_id=NGC 1365::hst_12880_90_wfc3_uvis_f555w_ic1390::hst_15654_09_wfc3_uvis_f555w_idxr09 index=34/60 galaxy=NGC 1365 filter=F555W->F555W baseline_days=2174.87
+[2026-03-11T00:04:15.805574Z] pair failed pair_id=NGC 1365::hst_12880_90_wfc3_uvis_f555w_ic1390::hst_15654_09_wfc3_uvis_f555w_idxr09 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:15.814828Z] pair start pair_id=6dF J0245599-073443::hst_11575_02_acs_wfc_f814w_jb4u02::hst_14226_01_acs_wfc_f814w_jcuc01 index=35/60 galaxy=6dF J0245599-073443 filter=F814W->F814W baseline_days=2139.90
+[2026-03-11T00:04:16.940825Z] pair failed pair_id=6dF J0245599-073443::hst_11575_02_acs_wfc_f814w_jb4u02::hst_14226_01_acs_wfc_f814w_jcuc01 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:16.953430Z] pair start pair_id=MESSIER 077::hst_15151_04_wfc3_uvis_f555w_idm104::hst_17502_01_wfc3_uvis_f555w_ifab01 index=36/60 galaxy=MESSIER 077 filter=F555W->F555W baseline_days=1904.61
+[2026-03-11T00:04:18.173816Z] pair failed pair_id=MESSIER 077::hst_15151_04_wfc3_uvis_f555w_idm104::hst_17502_01_wfc3_uvis_f555w_ifab01 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:18.182369Z] pair start pair_id=MESSIER 077::hst_15151_04_wfc3_uvis_f814w_idm104::hst_17502_01_wfc3_uvis_f814w_ifab01 index=37/60 galaxy=MESSIER 077 filter=F814W->F814W baseline_days=1904.57
+[2026-03-11T00:04:19.402006Z] pair failed pair_id=MESSIER 077::hst_15151_04_wfc3_uvis_f814w_idm104::hst_17502_01_wfc3_uvis_f814w_ifab01 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:19.410657Z] pair start pair_id=NGC 6744::hst_13364_0e_wfc3_uvis_f336w_icdm0e::hst_15654_41_wfc3_uvis_f336w_idxr41 index=38/60 galaxy=NGC 6744 filter=F336W->F336W baseline_days=1735.80
+[2026-03-11T00:04:21.186026Z] pair failed pair_id=NGC 6744::hst_13364_0e_wfc3_uvis_f336w_icdm0e::hst_15654_41_wfc3_uvis_f336w_idxr41 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:21.195434Z] pair start pair_id=NGC 6744::hst_13364_0e_wfc3_uvis_f438w_icdm0e::hst_15654_41_wfc3_uvis_f438w_idxr41 index=39/60 galaxy=NGC 6744 filter=F438W->F438W baseline_days=1735.78
+[2026-03-11T00:04:23.015732Z] pair failed pair_id=NGC 6744::hst_13364_0e_wfc3_uvis_f438w_icdm0e::hst_15654_41_wfc3_uvis_f438w_idxr41 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:23.024634Z] pair start pair_id=NGC 1365::hst_skycell-p0570x07y02_acs_wfc_f814w_all::hst_15645_41_acs_wfc_f814w_jdxk41 index=40/60 galaxy=NGC 1365 filter=F814W->F814W baseline_days=1658.66
+[2026-03-11T00:04:25.761730Z] pair failed pair_id=NGC 1365::hst_skycell-p0570x07y02_acs_wfc_f814w_all::hst_15645_41_acs_wfc_f814w_jdxk41 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:25.770933Z] pair start pair_id=NGC 5861::hst_15145_74_wfc3_ir_f160w_idgg74::hst_16250_14_wfc3_ir_f160w_iebs14 index=41/60 galaxy=NGC 5861 filter=F160W->F160W baseline_days=1494.50
+[2026-03-11T00:04:26.733953Z] pair failed pair_id=NGC 5861::hst_15145_74_wfc3_ir_f160w_idgg74::hst_16250_14_wfc3_ir_f160w_iebs14 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:26.742733Z] pair start pair_id=NGC 5861::hst_15145_78_wfc3_ir_f160w_idgg78::hst_16250_14_wfc3_ir_f160w_iebs14 index=42/60 galaxy=NGC 5861 filter=F160W->F160W baseline_days=1456.62
+[2026-03-11T00:04:27.166912Z] pair failed pair_id=NGC 5861::hst_15145_78_wfc3_ir_f160w_idgg78::hst_16250_14_wfc3_ir_f160w_iebs14 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:27.175707Z] pair start pair_id=NGC 4536::hst_13691_23_acs_wfc_f814w_jcnw23::hst_15654_30_acs_wfc_f814w_jdxr30 index=43/60 galaxy=NGC 4536 filter=F814W->F814W baseline_days=1453.97
+[2026-03-11T00:04:29.630538Z] pair failed pair_id=NGC 4536::hst_13691_23_acs_wfc_f814w_jcnw23::hst_15654_30_acs_wfc_f814w_jdxr30 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:29.640023Z] pair start pair_id=NGC 7331::hst_15166_03_wfc3_uvis_f336w_idi103::hst_16179_32_wfc3_uvis_f336w_ieb332 index=44/60 galaxy=NGC 7331 filter=F336W->F336W baseline_days=1314.17
+[2026-03-11T00:04:31.788133Z] pair failed pair_id=NGC 7331::hst_15166_03_wfc3_uvis_f336w_idi103::hst_16179_32_wfc3_uvis_f336w_ieb332 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:31.796754Z] pair start pair_id=MESSIER 061::hst_14779_70_wfc3_uvis_f275w_id7670::hst_15654_26_wfc3_uvis_f275w_idxr26 index=45/60 galaxy=MESSIER 061 filter=F275W->F275W baseline_days=1125.55
+[2026-03-11T00:04:33.735238Z] pair failed pair_id=MESSIER 061::hst_14779_70_wfc3_uvis_f275w_id7670::hst_15654_26_wfc3_uvis_f275w_idxr26 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:33.744721Z] pair start pair_id=NGC 4388::hst_skycell-p1636x18y05_acs_wfc_f814w_all::hst_10438_04_acs_wfc_f814w_j96l04 index=46/60 galaxy=NGC 4388 filter=F814W->F814W baseline_days=1063.03
+[2026-03-11T00:04:36.810808Z] pair failed pair_id=NGC 4388::hst_skycell-p1636x18y05_acs_wfc_f814w_all::hst_10438_04_acs_wfc_f814w_j96l04 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:36.819537Z] pair start pair_id=NGC 1964::hst_16234_75_wfc3_ir_g141_ieel75ch::hst_17000_05_wfc3_ir_g141_iev205fl index=47/60 galaxy=NGC 1964 filter=G141->G141 baseline_days=643.33
+[2026-03-11T00:04:37.191344Z] pair failed pair_id=NGC 1964::hst_16234_75_wfc3_ir_g141_ieel75ch::hst_17000_05_wfc3_ir_g141_iev205fl error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:37.200013Z] pair start pair_id=NGC 1964::hst_16234_76_wfc3_ir_g141_ieel76gt::hst_17000_05_wfc3_ir_g141_iev205fl index=48/60 galaxy=NGC 1964 filter=G141->G141 baseline_days=638.30
+[2026-03-11T00:04:37.404178Z] pair failed pair_id=NGC 1964::hst_16234_76_wfc3_ir_g141_ieel76gt::hst_17000_05_wfc3_ir_g141_iev205fl error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:37.412802Z] pair start pair_id=NGC 5427::hst_17191_13_wfc3_uvis_f555w_iex613::hst_17413_41_wfc3_uvis_f555w_if8741 index=49/60 galaxy=NGC 5427 filter=F555W->F555W baseline_days=536.75
+[2026-03-11T00:04:38.867110Z] pair failed pair_id=NGC 5427::hst_17191_13_wfc3_uvis_f555w_iex613::hst_17413_41_wfc3_uvis_f555w_if8741 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:38.875955Z] pair start pair_id=NGC 5012::hst_16239_06_wfc3_uvis_f814w_ieec06::hst_16683_53_wfc3_uvis_f814w_ien653 index=50/60 galaxy=NGC 5012 filter=F814W->F814W baseline_days=491.85
+[2026-03-11T00:04:40.021245Z] pair failed pair_id=NGC 5012::hst_16239_06_wfc3_uvis_f814w_ieec06::hst_16683_53_wfc3_uvis_f814w_ien653 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:40.030008Z] pair start pair_id=NGC 5012::hst_16239_06_wfc3_uvis_f814w_ieec06::hst_16683_03_wfc3_uvis_f814w_ien603 index=51/60 galaxy=NGC 5012 filter=F814W->F814W baseline_days=444.79
+[2026-03-11T00:04:40.901672Z] pair failed pair_id=NGC 5012::hst_16239_06_wfc3_uvis_f814w_ieec06::hst_16683_03_wfc3_uvis_f814w_ien603 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:40.911013Z] pair start pair_id=NGC 3256::hst_9300_01_acs_hrc_f330w_j8ec01::hst_9735_20_acs_hrc_f330w_j8st20 index=52/60 galaxy=NGC 3256 filter=F330W->F330W baseline_days=432.54
+[2026-03-11T00:04:41.796500Z] pair failed pair_id=NGC 3256::hst_9300_01_acs_hrc_f330w_j8ec01::hst_9735_20_acs_hrc_f330w_j8st20 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:41.809841Z] pair skipped pair_id=NGC 4102::hst_17580_01_wfc3_uvis_f502n_if7601::hst_17580_05_wfc3_uvis_f502n_if7605 reason=RESTRICTED_DATA_RIGHTS:hst_17580_05_wfc3_uvis_f502n_if7605:EXCLUSIVE_ACCESS
+[2026-03-11T00:04:41.818015Z] pair start pair_id=NGC 3521::hst_17502_18_wfc3_uvis_f336w_ifab18::hst_skycell-p1363x01y02_wfc3_uvis_f336w_all index=54/60 galaxy=NGC 3521 filter=F336W->F336W baseline_days=379.98
+[2026-03-11T00:04:43.818898Z] pair failed pair_id=NGC 3521::hst_17502_18_wfc3_uvis_f336w_ifab18::hst_skycell-p1363x01y02_wfc3_uvis_f336w_all error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:43.827931Z] pair start pair_id=NGC 3521::hst_17502_18_wfc3_uvis_f275w_ifab18::hst_skycell-p1363x01y02_wfc3_uvis_f275w_all index=55/60 galaxy=NGC 3521 filter=F275W->F275W baseline_days=379.98
+[2026-03-11T00:04:45.848172Z] pair failed pair_id=NGC 3521::hst_17502_18_wfc3_uvis_f275w_ifab18::hst_skycell-p1363x01y02_wfc3_uvis_f275w_all error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:45.857812Z] pair start pair_id=NGC 5427::hst_17413_39_wfc3_uvis_f555w_if8739::hst_17413_41_wfc3_uvis_f555w_if8741 index=56/60 galaxy=NGC 5427 filter=F555W->F555W baseline_days=378.53
+[2026-03-11T00:04:46.235061Z] pair failed pair_id=NGC 5427::hst_17413_39_wfc3_uvis_f555w_if8739::hst_17413_41_wfc3_uvis_f555w_if8741 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:46.243831Z] pair start pair_id=NGC 4535::hst_17126_20_wfc3_uvis_f657n_if0420::hst_17457_20_wfc3_uvis_f657n_if8k20 index=57/60 galaxy=NGC 4535 filter=F657N->F657N baseline_days=356.02
+[2026-03-11T00:04:47.823445Z] pair failed pair_id=NGC 4535::hst_17126_20_wfc3_uvis_f657n_if0420::hst_17457_20_wfc3_uvis_f657n_if8k20 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:47.832180Z] pair start pair_id=MESSIER 063::hst_10402_18_acs_wfc_f435w_j96r18::hst_10579_09_acs_wfc_f435w_j9h809 index=58/60 galaxy=MESSIER 063 filter=F435W->F435W baseline_days=186.89
+[2026-03-11T00:04:49.103750Z] pair failed pair_id=MESSIER 063::hst_10402_18_acs_wfc_f435w_j96r18::hst_10579_09_acs_wfc_f435w_j9h809 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:49.112493Z] pair start pair_id=NGC 6907::hst_16287_cs_wfc3_uvis_f275w_iebjcs::hst_16287_35_wfc3_uvis_f275w_iebj35 index=59/60 galaxy=NGC 6907 filter=F275W->F275W baseline_days=184.81
+[2026-03-11T00:04:50.643567Z] pair failed pair_id=NGC 6907::hst_16287_cs_wfc3_uvis_f275w_iebjcs::hst_16287_35_wfc3_uvis_f275w_iebj35 error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:50.652316Z] pair start pair_id=NGC 5728::hst_15640_21_wfc3_ir_f160w_idxb21::hst_15640_2b_wfc3_ir_f160w_idxb2b index=60/60 galaxy=NGC 5728 filter=F160W->F160W baseline_days=104.54
+[2026-03-11T00:04:51.649911Z] pair failed pair_id=NGC 5728::hst_15640_21_wfc3_ir_f160w_idxb21::hst_15640_2b_wfc3_ir_f160w_idxb2b error=Target center outside usable footprint before reprojection.
+[2026-03-11T00:04:51.766622Z] run completed scanned=0 failed=54 detections=0

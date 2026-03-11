@@ -1,0 +1,41 @@
+{
+  "candidate_id": "MESSIER_066_jw02107-o029_t011_nircam_clear-f335m_jw04793-o011_t011_nircam_clear-f335m_fade_0125",
+  "dec_deg": 13.005693633604327,
+  "diff_sigma": 17.813498548841928,
+  "diff_sigma_min": 15.233782082918296,
+  "event_sign": "fade",
+  "figure_path": "/home/primary/SUPERNOVA/outputs/live_difference_strict_20260311_0421/packets/MESSIER_066_jw02107-o029_t011_nircam_clear-f335m_jw04793-o011_t011_nircam_clear-f335m/MESSIER_066_jw02107-o029_t011_nircam_clear-f335m_jw04793-o011_t011_nircam_clear-f335m_fade_0125/MESSIER_066_jw02107-o029_t011_nircam_clear-f335m_jw04793-o011_t011_nircam_clear-f335m_fade_0125_cutout.png",
+  "galaxy_name": "MESSIER 066",
+  "pair_id": "MESSIER 066::jw02107-o029_t011_nircam_clear-f335m::jw04793-o011_t011_nircam_clear-f335m",
+  "post_flux": -7.622540887777262,
+  "post_to_pre_ratio": -0.48579298023621664,
+  "pre_flux": 15.690924319389723,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "jw02107-o029_t011_nircam_clear-f335m",
+    "obs_id_2": "jw04793-o011_t011_nircam_clear-f335m",
+    "obsid_1": 109508000,
+    "obsid_2": 234389745,
+    "product_filename_1": "jw02107-o029_t011_nircam_clear-f335m_i2d.fits",
+    "product_filename_2": "jw04793-o011_t011_nircam_clear-f335m_i2d.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/JWST/jw02107-o029_t011_nircam_clear-f335m/jw02107-o029_t011_nircam_clear-f335m_i2d.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/JWST/jw04793-o011_t011_nircam_clear-f335m/jw04793-o011_t011_nircam_clear-f335m_i2d.fits",
+    "product_priority_1": 156.0,
+    "product_priority_2": 156.0,
+    "product_uri_1": "cached://JWST/jw02107-o029_t011_nircam_clear-f335m/jw02107-o029_t011_nircam_clear-f335m_i2d.fits",
+    "product_uri_2": "cached://JWST/jw04793-o011_t011_nircam_clear-f335m/jw04793-o011_t011_nircam_clear-f335m_i2d.fits"
+  },
+  "ra_deg": 170.05430463652038,
+  "reason_codes": [
+    "POST_LT_5PCT",
+    "ROBUST_DIFF_SIG",
+    "REGISTRATION_OK"
+  ],
+  "registration_dx_px": -0.4490531416149679,
+  "registration_dy_px": 0.022895437621514247,
+  "registration_n_matches": 206,
+  "registration_residual_px": 0.12267200350079889,
+  "status": "REVIEW",
+  "warning_flags": []
+}

@@ -1,0 +1,208 @@
+{
+  "bucket": {
+    "account_id": "056449379113",
+    "bucket": "amazon-braket-056449379113-us-west-1",
+    "created": false,
+    "probe_key": "supernova/bootstrap/20260310_214334.txt",
+    "region": "us-west-1"
+  },
+  "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+  "device_key": "rigetti_ankaa",
+  "name": "collapse_rate_atlas_microgrid",
+  "shots": 800,
+  "submitted_utc": "2026-03-10T21:43:40.625625Z",
+  "task_count": 9,
+  "task_ids": [
+    "arn:aws:braket:us-west-1:056449379113:quantum-task/75ea4b14-46c5-4ab3-b6af-fe4333b5fbd6",
+    "arn:aws:braket:us-west-1:056449379113:quantum-task/c091cbd6-555a-4320-9403-e9377a8eb46d",
+    "arn:aws:braket:us-west-1:056449379113:quantum-task/84f0eb56-04af-4937-b85c-36191b5c44d3",
+    "arn:aws:braket:us-west-1:056449379113:quantum-task/9525496c-af33-4c98-83dc-725cac192a3c",
+    "arn:aws:braket:us-west-1:056449379113:quantum-task/9bfe388a-1410-4537-b5a1-a143d5882252",
+    "arn:aws:braket:us-west-1:056449379113:quantum-task/4140ae4c-343e-4ccd-92a1-a51399adb4e8",
+    "arn:aws:braket:us-west-1:056449379113:quantum-task/8c5ab5ea-70c8-4723-851a-af512bd2d436",
+    "arn:aws:braket:us-west-1:056449379113:quantum-task/809f4193-7e74-4ebf-8e5e-9bdf0ae180b8",
+    "arn:aws:braket:us-west-1:056449379113:quantum-task/e44ca441-b0c0-4d73-9397-72baa65a0a6f"
+  ],
+  "tasks": [
+    {
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:35.758000+00:00",
+        "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/75ea4b14-46c5-4ab3-b6af-fe4333b5fbd6"
+      },
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 0.0,
+      "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/75ea4b14-46c5-4ab3-b6af-fe4333b5fbd6",
+      "task_index": 1,
+      "theta": 0.4
+    },
+    {
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:36.051000+00:00",
+        "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/c091cbd6-555a-4320-9403-e9377a8eb46d"
+      },
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 0.8,
+      "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/c091cbd6-555a-4320-9403-e9377a8eb46d",
+      "task_index": 2,
+      "theta": 0.4
+    },
+    {
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:36.452000+00:00",
+        "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/84f0eb56-04af-4937-b85c-36191b5c44d3"
+      },
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 1.6,
+      "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/84f0eb56-04af-4937-b85c-36191b5c44d3",
+      "task_index": 3,
+      "theta": 0.4
+    },
+    {
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:36.734000+00:00",
+        "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/9525496c-af33-4c98-83dc-725cac192a3c"
+      },
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 0.0,
+      "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/9525496c-af33-4c98-83dc-725cac192a3c",
+      "task_index": 4,
+      "theta": 0.7
+    },
+    {
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:37.194000+00:00",
+        "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/9bfe388a-1410-4537-b5a1-a143d5882252"
+      },
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 0.8,
+      "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/9bfe388a-1410-4537-b5a1-a143d5882252",
+      "task_index": 5,
+      "theta": 0.7
+    },
+    {
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:37.504000+00:00",
+        "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/4140ae4c-343e-4ccd-92a1-a51399adb4e8"
+      },
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 1.6,
+      "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/4140ae4c-343e-4ccd-92a1-a51399adb4e8",
+      "task_index": 6,
+      "theta": 0.7
+    },
+    {
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:37.799000+00:00",
+        "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/8c5ab5ea-70c8-4723-851a-af512bd2d436"
+      },
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 0.0,
+      "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/8c5ab5ea-70c8-4723-851a-af512bd2d436",
+      "task_index": 7,
+      "theta": 1.0
+    },
+    {
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:38.093000+00:00",
+        "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/809f4193-7e74-4ebf-8e5e-9bdf0ae180b8"
+      },
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 0.8,
+      "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/809f4193-7e74-4ebf-8e5e-9bdf0ae180b8",
+      "task_index": 8,
+      "theta": 1.0
+    },
+    {
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:38.382000+00:00",
+        "device_arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/e44ca441-b0c0-4d73-9397-72baa65a0a6f"
+      },
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 1.6,
+      "task_id": "arn:aws:braket:us-west-1:056449379113:quantum-task/e44ca441-b0c0-4d73-9397-72baa65a0a6f",
+      "task_index": 9,
+      "theta": 1.0
+    }
+  ]
+}

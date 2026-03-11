@@ -1,0 +1,19 @@
+{
+  "candidate_id": "MESSIER_066_hst_12968_01_wfc3_uvis_f814w_ic0h01_hst_15654_22_wfc3_uvis_f814w_idxr22_0091",
+  "closure_class": "VARIABLE_OR_UNRESOLVED",
+  "closure_confidence": "MEDIUM",
+  "closure_reason_codes": [
+    "HIGH_SIGNIFICANCE_FADE",
+    "LONG_BASELINE",
+    "LOCALLY_UNIQUE",
+    "NO_ALL_EPOCH_FOLLOWUP"
+  ],
+  "dust_survivor_score": 0.15,
+  "export_failure_score": 0.45134741775682063,
+  "followup_lightcurve_path": "nan",
+  "followup_sed_plot_path": "nan",
+  "followup_summary_path": "nan",
+  "galaxy_name": "MESSIER 066",
+  "systematic_like_score": 0.23428415279528905,
+  "unresolved_score": 0.6606042687141946
+}

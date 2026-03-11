@@ -1,0 +1,96 @@
+{
+  "device": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+  "entries": [
+    {
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 0.0,
+      "theta": 0.4
+    },
+    {
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 0.8,
+      "theta": 0.4
+    },
+    {
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 1.6,
+      "theta": 0.4
+    },
+    {
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 0.0,
+      "theta": 0.7
+    },
+    {
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 0.8,
+      "theta": 0.7
+    },
+    {
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 1.6,
+      "theta": 0.7
+    },
+    {
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 0.0,
+      "theta": 1.0
+    },
+    {
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 0.8,
+      "theta": 1.0
+    },
+    {
+      "measured_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phase": 1.6,
+      "theta": 1.0
+    }
+  ],
+  "shots": 800
+}

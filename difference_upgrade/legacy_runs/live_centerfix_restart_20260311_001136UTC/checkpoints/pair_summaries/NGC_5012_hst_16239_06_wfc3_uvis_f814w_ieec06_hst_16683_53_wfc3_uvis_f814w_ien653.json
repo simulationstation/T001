@@ -1,0 +1,15 @@
+{
+  "baseline_days": 491.8455652400007,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "F814W",
+  "filter_2": "F814W",
+  "galaxy_name": "NGC 5012",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_16239_06_wfc3_uvis_f814w_ieec06",
+  "obs_id_2": "hst_16683_53_wfc3_uvis_f814w_ien653",
+  "pair_id": "NGC 5012::hst_16239_06_wfc3_uvis_f814w_ieec06::hst_16683_53_wfc3_uvis_f814w_ien653",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

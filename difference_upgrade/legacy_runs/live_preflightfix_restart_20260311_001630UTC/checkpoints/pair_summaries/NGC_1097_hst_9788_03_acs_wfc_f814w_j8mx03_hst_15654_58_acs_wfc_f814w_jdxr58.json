@@ -1,0 +1,15 @@
+{
+  "baseline_days": 5914.974981600004,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "F814W",
+  "filter_2": "F814W",
+  "galaxy_name": "NGC 1097",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_9788_03_acs_wfc_f814w_j8mx03",
+  "obs_id_2": "hst_15654_58_acs_wfc_f814w_jdxr58",
+  "pair_id": "NGC 1097::hst_9788_03_acs_wfc_f814w_j8mx03::hst_15654_58_acs_wfc_f814w_jdxr58",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

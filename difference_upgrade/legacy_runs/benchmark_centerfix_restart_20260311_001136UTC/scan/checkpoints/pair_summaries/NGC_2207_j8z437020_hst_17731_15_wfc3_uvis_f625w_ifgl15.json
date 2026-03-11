@@ -1,0 +1,15 @@
+{
+  "baseline_days": 7344.493275726476,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "F625W",
+  "filter_2": "F625W",
+  "galaxy_name": "NGC 2207",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "j8z437020",
+  "obs_id_2": "hst_17731_15_wfc3_uvis_f625w_ifgl15",
+  "pair_id": "NGC 2207::j8z437020::hst_17731_15_wfc3_uvis_f625w_ifgl15",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

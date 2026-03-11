@@ -1,0 +1,15 @@
+{
+  "baseline_days": 4199.112101659994,
+  "compatibility": "exact",
+  "error": "TARGET_CENTER_OUTSIDE_FOOTPRINT",
+  "filter_1": "F657N",
+  "filter_2": "F657N",
+  "galaxy_name": "NGC 1097",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_13413_01_wfc3_uvis_f657n_icc501",
+  "obs_id_2": "hst_17457_04_wfc3_uvis_f657n_if8k04",
+  "pair_id": "NGC 1097::hst_13413_01_wfc3_uvis_f657n_icc501::hst_17457_04_wfc3_uvis_f657n_if8k04",
+  "pair_score": 1.4000000000000001,
+  "status": "SKIPPED"
+}

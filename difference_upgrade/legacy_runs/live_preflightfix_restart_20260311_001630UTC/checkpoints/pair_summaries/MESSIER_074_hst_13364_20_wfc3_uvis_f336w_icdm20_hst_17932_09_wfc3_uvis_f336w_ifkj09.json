@@ -1,0 +1,15 @@
+{
+  "baseline_days": 4330.60247844,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "F336W",
+  "filter_2": "F336W",
+  "galaxy_name": "MESSIER 074",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_13364_20_wfc3_uvis_f336w_icdm20",
+  "obs_id_2": "hst_17932_09_wfc3_uvis_f336w_ifkj09",
+  "pair_id": "MESSIER 074::hst_13364_20_wfc3_uvis_f336w_icdm20::hst_17932_09_wfc3_uvis_f336w_ifkj09",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

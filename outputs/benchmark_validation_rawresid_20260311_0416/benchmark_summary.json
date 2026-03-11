@@ -1,0 +1,10 @@
+{
+  "created_utc": "20260311_040718UTC",
+  "median_recovered_sep_arcsec": 0.6826919198678586,
+  "n_benchmark_pairs": 12,
+  "n_detected_signals": 8041,
+  "n_recovered_truth_groups": 9,
+  "n_truth_groups": 12,
+  "n_truth_groups_with_pairs": 12,
+  "recovery_fraction": 0.75
+}

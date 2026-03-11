@@ -1,0 +1,15 @@
+{
+  "baseline_days": 1456.6248059200007,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "F160W",
+  "filter_2": "F160W",
+  "galaxy_name": "NGC 5861",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_15145_78_wfc3_ir_f160w_idgg78",
+  "obs_id_2": "hst_16250_14_wfc3_ir_f160w_iebs14",
+  "pair_id": "NGC 5861::hst_15145_78_wfc3_ir_f160w_idgg78::hst_16250_14_wfc3_ir_f160w_iebs14",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

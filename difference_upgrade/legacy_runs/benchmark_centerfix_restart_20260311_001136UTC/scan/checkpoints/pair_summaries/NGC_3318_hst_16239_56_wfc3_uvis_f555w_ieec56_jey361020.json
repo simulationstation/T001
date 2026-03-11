@@ -1,0 +1,15 @@
+{
+  "baseline_days": 947.3506382387059,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "F555W",
+  "filter_2": "F555W",
+  "galaxy_name": "NGC 3318",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_16239_56_wfc3_uvis_f555w_ieec56",
+  "obs_id_2": "jey361020",
+  "pair_id": "NGC 3318::hst_16239_56_wfc3_uvis_f555w_ieec56::jey361020",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

@@ -1,0 +1,15 @@
+{
+  "baseline_days": 3402.4069358900015,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "F160W",
+  "filter_2": "F160W",
+  "galaxy_name": "NGC 1448",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_12880_20_wfc3_ir_f160w_ic1320",
+  "obs_id_2": "hst_17000_06_wfc3_ir_f160w_iev206",
+  "pair_id": "NGC 1448::hst_12880_20_wfc3_ir_f160w_ic1320::hst_17000_06_wfc3_ir_f160w_iev206",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

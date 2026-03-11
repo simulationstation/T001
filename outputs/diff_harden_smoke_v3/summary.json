@@ -1,0 +1,14 @@
+{
+  "created_utc": "20260310_233420UTC",
+  "n_benchmark_signals": 0,
+  "n_detection_measurements": 0,
+  "n_detections": 0,
+  "n_fade_candidates": 0,
+  "n_pairs_completed": 2,
+  "n_pairs_failed": 2,
+  "n_pairs_scanned": 0,
+  "n_pairs_selected": 2,
+  "n_pass": 0,
+  "n_review": 0,
+  "sign_mode": "fade"
+}

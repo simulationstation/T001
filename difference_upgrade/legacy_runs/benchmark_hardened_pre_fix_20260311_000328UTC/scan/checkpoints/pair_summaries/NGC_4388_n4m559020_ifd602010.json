@@ -1,0 +1,15 @@
+{
+  "baseline_days": 10072.9404973712,
+  "compatibility": "exact",
+  "error": "No suitable calibrated FITS product for ifd602010",
+  "filter_1": "F160W",
+  "filter_2": "F160W",
+  "galaxy_name": "NGC 4388",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "n4m559020",
+  "obs_id_2": "ifd602010",
+  "pair_id": "NGC 4388::n4m559020::ifd602010",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

@@ -1,0 +1,40 @@
+{
+  "candidate_id": "NGC_1365_hst_skycell-p0570x07y02_acs_wfc_f814w_all_hst_15645_41_acs_wfc_f814w_jdxk41_fade_0490",
+  "dec_deg": -36.14330867629535,
+  "diff_sigma": 8.42582018779112,
+  "diff_sigma_min": 8.42582018779112,
+  "event_sign": "fade",
+  "figure_path": "difference_upgrade/live/packets/NGC_1365_hst_skycell-p0570x07y02_acs_wfc_f814w_all_hst_15645_41_acs_wfc_f814w_jdxk41_fade_0490/NGC_1365_hst_skycell-p0570x07y02_acs_wfc_f814w_all_hst_15645_41_acs_wfc_f814w_jdxk41_fade_0490_cutout.png",
+  "galaxy_name": "NGC 1365",
+  "pair_id": "NGC 1365::hst_skycell-p0570x07y02_acs_wfc_f814w_all::hst_15645_41_acs_wfc_f814w_jdxk41",
+  "post_flux": 0.6573158603283566,
+  "post_to_pre_ratio": 0.4753451984054531,
+  "pre_flux": 1.38281792376009,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "hst_skycell-p0570x07y02_acs_wfc_f814w_all",
+    "obs_id_2": "hst_15645_41_acs_wfc_f814w_jdxk41",
+    "obsid_1": 87526794,
+    "obsid_2": 26493146,
+    "product_filename_1": "hst_skycell-p0570x07y02_acs_wfc_f814w_all_drc.fits",
+    "product_filename_2": "hst_15645_41_acs_wfc_f814w_jdxk41_drc.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_skycell-p0570x07y02_acs_wfc_f814w_all/hst_skycell-p0570x07y02_acs_wfc_f814w_all_drc.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_15645_41_acs_wfc_f814w_jdxk41/hst_15645_41_acs_wfc_f814w_jdxk41_drc.fits",
+    "product_priority_1": 181.0,
+    "product_priority_2": 181.0,
+    "product_uri_1": "mast:HST/product/hst_skycell-p0570x07y02_acs_wfc_f814w_all_drc.fits",
+    "product_uri_2": "mast:HST/product/hst_15645_41_acs_wfc_f814w_jdxk41_drc.fits"
+  },
+  "ra_deg": 53.40505674513293,
+  "reason_codes": [
+    "ROBUST_DIFF_SIG",
+    "REGISTRATION_OK"
+  ],
+  "registration_dx_px": 0.0033699905297908117,
+  "registration_dy_px": -0.1873893075162414,
+  "registration_n_matches": 203,
+  "registration_residual_px": 0.09841689655701633,
+  "status": "REVIEW",
+  "warning_flags": []
+}

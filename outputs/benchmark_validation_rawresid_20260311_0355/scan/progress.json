@@ -1,0 +1,16 @@
+{
+  "active_baseline_days": 3377.5990545138848,
+  "active_filter_1": "F555W",
+  "active_filter_2": "F555W",
+  "active_galaxy_name": "MESSIER 066",
+  "active_pair_id": "MESSIER 066::hlsp_legus_hst_uvis_ngc3627_f555w_v1_drc::jey347020",
+  "active_pair_index": 3,
+  "n_detection_measurements": 0,
+  "n_detections": 0,
+  "n_pairs_completed": 2,
+  "n_pairs_remaining": 10,
+  "n_pairs_selected": 12,
+  "stage": "stage02_scan_pairs",
+  "status": "running",
+  "timestamp_utc": "2026-03-11T03:42:38.603289Z"
+}

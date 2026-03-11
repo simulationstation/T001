@@ -1,0 +1,21 @@
+{
+  "candidate_id": "NGC_5728_hst_15640_21_wfc3_ir_f160w_idxb21_hst_15640_2b_wfc3_ir_f160w_idxb2b_0137",
+  "closure_class": "SYSTEMATIC_LIKE",
+  "closure_confidence": "MEDIUM",
+  "closure_reason_codes": [
+    "SUB_5PCT_POST",
+    "LOCALLY_UNIQUE",
+    "BLEND_RISK",
+    "CROWDED_FIELD",
+    "CROSS_REDUCTION_TENSION",
+    "NO_ALL_EPOCH_FOLLOWUP"
+  ],
+  "dust_survivor_score": 0.0,
+  "export_failure_score": 0.0,
+  "followup_lightcurve_path": "nan",
+  "followup_sed_plot_path": "nan",
+  "followup_summary_path": "nan",
+  "galaxy_name": "NGC 5728",
+  "systematic_like_score": 0.6588788205527031,
+  "unresolved_score": 0.7886542979478198
+}

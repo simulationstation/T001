@@ -1,0 +1,45 @@
+{
+  "class_counts": {
+    "DUST_SURVIVOR_LIKE": 1,
+    "EXPORT_FAILURE_LIKE": 3,
+    "SYSTEMATIC_LIKE": 1,
+    "VARIABLE_OR_UNRESOLVED": 13
+  },
+  "created_utc": "20260310_220003UTC",
+  "n_candidates": 18,
+  "n_dust_survivor_like": 1,
+  "n_export_failure_like": 3,
+  "n_systematic_like": 1,
+  "n_variable_or_unresolved": 13,
+  "top_dust_candidates": [
+    {
+      "candidate_id": "MESSIER_077_hst_15151_04_wfc3_uvis_f555w_idm104_hst_17502_01_wfc3_uvis_f555w_ifab01_0138",
+      "dust_survivor_score": 0.85,
+      "galaxy_name": "MESSIER 077"
+    }
+  ],
+  "top_export_candidates": [
+    {
+      "candidate_id": "NGC_5861_hst_15145_78_wfc3_ir_f160w_idgg78_hst_16250_14_wfc3_ir_f160w_iebs14_0025",
+      "export_failure_score": 0.6293402411482684,
+      "galaxy_name": "NGC 5861"
+    },
+    {
+      "candidate_id": "MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0003",
+      "export_failure_score": 0.6036926233456557,
+      "galaxy_name": "MESSIER 101"
+    },
+    {
+      "candidate_id": "NGC_5861_hst_15145_74_wfc3_ir_f160w_idgg74_hst_16250_14_wfc3_ir_f160w_iebs14_0023",
+      "export_failure_score": 0.595450501837577,
+      "galaxy_name": "NGC 5861"
+    }
+  ],
+  "top_systematic_candidates": [
+    {
+      "candidate_id": "NGC_5728_hst_15640_21_wfc3_ir_f160w_idxb21_hst_15640_2b_wfc3_ir_f160w_idxb2b_0137",
+      "galaxy_name": "NGC 5728",
+      "systematic_like_score": 0.6588788205527031
+    }
+  ]
+}

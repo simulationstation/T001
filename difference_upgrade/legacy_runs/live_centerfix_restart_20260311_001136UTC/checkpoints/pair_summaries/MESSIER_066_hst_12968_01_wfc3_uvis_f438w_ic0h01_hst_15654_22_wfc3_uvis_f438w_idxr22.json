@@ -1,0 +1,15 @@
+{
+  "baseline_days": 2203.6784212899947,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "F438W",
+  "filter_2": "F438W",
+  "galaxy_name": "MESSIER 066",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_12968_01_wfc3_uvis_f438w_ic0h01",
+  "obs_id_2": "hst_15654_22_wfc3_uvis_f438w_idxr22",
+  "pair_id": "MESSIER 066::hst_12968_01_wfc3_uvis_f438w_ic0h01::hst_15654_22_wfc3_uvis_f438w_idxr22",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

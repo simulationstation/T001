@@ -1,0 +1,15 @@
+{
+  "baseline_days": 7621.497552827685,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "F606W",
+  "filter_2": "F606W",
+  "galaxy_name": "NGC 1961",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_8597_16_wfpc2_pc_f606w_u67n16",
+  "obs_id_2": "ierg53020",
+  "pair_id": "NGC 1961::hst_8597_16_wfpc2_pc_f606w_u67n16::ierg53020",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

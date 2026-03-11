@@ -1,0 +1,15 @@
+{
+  "baseline_days": 1658.6571098599961,
+  "compatibility": "exact",
+  "error": "TARGET_CENTER_OUTSIDE_FOOTPRINT",
+  "filter_1": "F814W",
+  "filter_2": "F814W",
+  "galaxy_name": "NGC 1365",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_skycell-p0570x07y02_acs_wfc_f814w_all",
+  "obs_id_2": "hst_15645_41_acs_wfc_f814w_jdxk41",
+  "pair_id": "NGC 1365::hst_skycell-p0570x07y02_acs_wfc_f814w_all::hst_15645_41_acs_wfc_f814w_jdxk41",
+  "pair_score": 1.4000000000000001,
+  "status": "SKIPPED"
+}

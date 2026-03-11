@@ -1,0 +1,39 @@
+{
+  "candidate_id": "MESSIER_077_hst_15151_04_wfc3_uvis_f555w_idm104_hst_17502_01_wfc3_uvis_f555w_ifab01_fade_0172",
+  "dec_deg": -0.012718205702464087,
+  "diff_sigma": 5.301616140527464,
+  "diff_sigma_min": 3.0639546210250375,
+  "event_sign": "fade",
+  "figure_path": "difference_upgrade/live/packets/MESSIER_077_hst_15151_04_wfc3_uvis_f555w_idm104_hst_17502_01_wfc3_uvis_f555w_ifab01_fade_0172/MESSIER_077_hst_15151_04_wfc3_uvis_f555w_idm104_hst_17502_01_wfc3_uvis_f555w_ifab01_fade_0172_cutout.png",
+  "galaxy_name": "MESSIER 077",
+  "pair_id": "MESSIER 077::hst_15151_04_wfc3_uvis_f555w_idm104::hst_17502_01_wfc3_uvis_f555w_ifab01",
+  "post_flux": -4.645924105658025,
+  "post_to_pre_ratio": 0.1725827409750034,
+  "pre_flux": 2.2356045127535253,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "hst_15151_04_wfc3_uvis_f555w_idm104",
+    "obs_id_2": "hst_17502_01_wfc3_uvis_f555w_ifab01",
+    "obsid_1": 26676050,
+    "obsid_2": 229880268,
+    "product_filename_1": "hst_15151_04_wfc3_uvis_f555w_idm104_drc.fits",
+    "product_filename_2": "hst_17502_01_wfc3_uvis_f555w_ifab01_drc.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_15151_04_wfc3_uvis_f555w_idm104/hst_15151_04_wfc3_uvis_f555w_idm104_drc.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_17502_01_wfc3_uvis_f555w_ifab01/hst_17502_01_wfc3_uvis_f555w_ifab01_drc.fits",
+    "product_priority_1": 181.0,
+    "product_priority_2": 181.0,
+    "product_uri_1": "mast:HST/product/hst_15151_04_wfc3_uvis_f555w_idm104_drc.fits",
+    "product_uri_2": "mast:HST/product/hst_17502_01_wfc3_uvis_f555w_ifab01_drc.fits"
+  },
+  "ra_deg": 40.669354479184975,
+  "reason_codes": [
+    "REGISTRATION_OK"
+  ],
+  "registration_dx_px": -0.04419532106976476,
+  "registration_dy_px": -0.018545961753716256,
+  "registration_n_matches": 246,
+  "registration_residual_px": 0.1791356794615369,
+  "status": "REVIEW",
+  "warning_flags": []
+}

@@ -1,0 +1,91 @@
+{
+  "iqm_garnet": {
+    "action_keys": [
+      "braket.ir.openqasm.program",
+      "braket.ir.openqasm.program_set"
+    ],
+    "arn": "arn:aws:braket:eu-north-1::device/qpu/iqm/Garnet",
+    "chain3": [
+      1,
+      2,
+      5
+    ],
+    "chain4": [
+      1,
+      2,
+      5,
+      4
+    ],
+    "connectivity_nodes": 20,
+    "device_check_ok": true,
+    "name": "Garnet",
+    "pricing": {
+      "label": "IQM Garnet",
+      "pricing_checked_utc": "2026-03-10T00:00:00Z",
+      "shot_fee_usd": 0.00145,
+      "source_url": "https://aws.amazon.com/braket/pricing/",
+      "task_fee_usd": 0.3
+    },
+    "program_type": "openqasm",
+    "provider": "IQM",
+    "qubit_count": 20,
+    "region": "eu-north-1",
+    "status": "ONLINE"
+  },
+  "quera_aquila": {
+    "action_keys": [
+      "braket.ir.ahs.program"
+    ],
+    "arn": "arn:aws:braket:us-east-1::device/qpu/quera/Aquila",
+    "chain3": null,
+    "chain4": null,
+    "connectivity_nodes": 0,
+    "device_check_ok": true,
+    "name": "Aquila",
+    "pricing": {
+      "label": "QuEra Aquila",
+      "pricing_checked_utc": "2026-03-10T00:00:00Z",
+      "shot_fee_usd": 0.01,
+      "source_url": "https://aws.amazon.com/braket/pricing/",
+      "task_fee_usd": 0.3
+    },
+    "program_type": "ahs",
+    "provider": "QuEra",
+    "qubit_count": 256,
+    "region": "us-east-1",
+    "status": "ONLINE"
+  },
+  "rigetti_ankaa": {
+    "action_keys": [
+      "braket.ir.openqasm.program",
+      "braket.ir.openqasm.program_set"
+    ],
+    "arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+    "chain3": [
+      0,
+      1,
+      2
+    ],
+    "chain4": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "connectivity_nodes": 82,
+    "device_check_ok": true,
+    "name": "Ankaa-3",
+    "pricing": {
+      "label": "Rigetti Ankaa-3",
+      "pricing_checked_utc": "2026-03-10T00:00:00Z",
+      "shot_fee_usd": 0.0009,
+      "source_url": "https://aws.amazon.com/braket/pricing/",
+      "task_fee_usd": 0.3
+    },
+    "program_type": "openqasm",
+    "provider": "Rigetti",
+    "qubit_count": 82,
+    "region": "us-west-1",
+    "status": "ONLINE"
+  }
+}

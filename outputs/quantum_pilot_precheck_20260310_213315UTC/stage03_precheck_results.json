@@ -1,0 +1,941 @@
+{
+  "collapse_rate_atlas_microgrid": {
+    "cost_estimate_usd": {
+      "per_task_estimate_usd": 1.02,
+      "pricing_checked_utc": "2026-03-10T00:00:00Z",
+      "pricing_label": "Rigetti Ankaa-3",
+      "shot_fee_usd": 0.0009,
+      "shots_per_task": 800,
+      "source_url": "https://aws.amazon.com/braket/pricing/",
+      "task_count": 9,
+      "task_fee_usd": 0.3,
+      "total_estimate_usd": 9.18
+    },
+    "device": {
+      "action_keys": [
+        "braket.ir.openqasm.program",
+        "braket.ir.openqasm.program_set"
+      ],
+      "arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+      "chain3": [
+        0,
+        1,
+        2
+      ],
+      "chain4": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "connectivity_nodes": 82,
+      "device_check_ok": true,
+      "name": "Ankaa-3",
+      "pricing": {
+        "label": "Rigetti Ankaa-3",
+        "pricing_checked_utc": "2026-03-10T00:00:00Z",
+        "shot_fee_usd": 0.0009,
+        "source_url": "https://aws.amazon.com/braket/pricing/",
+        "task_fee_usd": 0.3
+      },
+      "program_type": "openqasm",
+      "provider": "Rigetti",
+      "qubit_count": 82,
+      "region": "us-west-1",
+      "status": "ONLINE"
+    },
+    "label": "collapse_rate_atlas_microgrid",
+    "local_precheck": {
+      "classification_counts": {
+        "luminous_export_like": 2,
+        "partial_fallback_like": 5,
+        "silent_collapse_like": 2
+      },
+      "submit_ready": true,
+      "submit_reason": "preflight_pass",
+      "summary": [
+        {
+          "classification": "luminous_export_like",
+          "gross_outer_excitation": 0.04943621407793664,
+          "inner_bell_proxy": 0.9513505481877297,
+          "phase": 0.0,
+          "theta": 0.4
+        },
+        {
+          "classification": "partial_fallback_like",
+          "gross_outer_excitation": 0.04943621407793664,
+          "inner_bell_proxy": 0.8144589551899124,
+          "phase": 0.8,
+          "theta": 0.4
+        },
+        {
+          "classification": "partial_fallback_like",
+          "gross_outer_excitation": 0.04943621407793664,
+          "inner_bell_proxy": 0.48682077960249337,
+          "phase": 1.6,
+          "theta": 0.4
+        },
+        {
+          "classification": "luminous_export_like",
+          "gross_outer_excitation": 0.14789254993406628,
+          "inner_bell_proxy": 0.859235940184776,
+          "phase": 0.0,
+          "theta": 0.7
+        },
+        {
+          "classification": "partial_fallback_like",
+          "gross_outer_excitation": 0.14789254993406628,
+          "inner_bell_proxy": 0.7502820897653704,
+          "phase": 0.8,
+          "theta": 0.7
+        },
+        {
+          "classification": "silent_collapse_like",
+          "gross_outer_excitation": 0.14789254993406628,
+          "inner_bell_proxy": 0.4895104821531502,
+          "phase": 1.6,
+          "theta": 0.7
+        },
+        {
+          "classification": "partial_fallback_like",
+          "gross_outer_excitation": 0.2910575661207437,
+          "inner_bell_proxy": 0.7370799408895186,
+          "phase": 0.0,
+          "theta": 1.0
+        },
+        {
+          "classification": "partial_fallback_like",
+          "gross_outer_excitation": 0.29105756612074357,
+          "inner_bell_proxy": 0.6651751854693568,
+          "phase": 0.8,
+          "theta": 1.0
+        },
+        {
+          "classification": "silent_collapse_like",
+          "gross_outer_excitation": 0.2910575661207437,
+          "inner_bell_proxy": 0.4930773789788082,
+          "phase": 1.6,
+          "theta": 1.0
+        }
+      ]
+    },
+    "manifest_preview": [
+      {
+        "phase": 0.0,
+        "theta": 0.4
+      },
+      {
+        "phase": 0.8,
+        "theta": 0.4
+      },
+      {
+        "phase": 1.6,
+        "theta": 0.4
+      },
+      {
+        "phase": 0.0,
+        "theta": 0.7
+      },
+      {
+        "phase": 0.8,
+        "theta": 0.7
+      },
+      {
+        "phase": 1.6,
+        "theta": 0.7
+      }
+    ],
+    "pilot_plan": {
+      "chosen_chain": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "device_key": "rigetti_ankaa",
+      "hard_task_cap": 10,
+      "shots": 800,
+      "submit_mode": "off_by_default",
+      "task_count": 9
+    },
+    "platform": "Gate-model microgrid on Rigetti",
+    "question": "Can a tiny pilot grid already separate more than one branch class?",
+    "sample_circuit_instructions": [
+      "H",
+      "CNot",
+      "Ry",
+      "Ry",
+      "Rz",
+      "CZ",
+      "CZ"
+    ]
+  },
+  "core_shell_collapse_ladder": {
+    "cost_estimate_usd": {
+      "per_task_estimate_usd": 2.4749999999999996,
+      "pricing_checked_utc": "2026-03-10T00:00:00Z",
+      "pricing_label": "IQM Garnet",
+      "shot_fee_usd": 0.00145,
+      "shots_per_task": 1500,
+      "source_url": "https://aws.amazon.com/braket/pricing/",
+      "task_count": 14,
+      "task_fee_usd": 0.3,
+      "total_estimate_usd": 34.64999999999999
+    },
+    "device": {
+      "action_keys": [
+        "braket.ir.openqasm.program",
+        "braket.ir.openqasm.program_set"
+      ],
+      "arn": "arn:aws:braket:eu-north-1::device/qpu/iqm/Garnet",
+      "chain3": [
+        1,
+        2,
+        5
+      ],
+      "chain4": [
+        1,
+        2,
+        5,
+        4
+      ],
+      "connectivity_nodes": 20,
+      "device_check_ok": true,
+      "name": "Garnet",
+      "pricing": {
+        "label": "IQM Garnet",
+        "pricing_checked_utc": "2026-03-10T00:00:00Z",
+        "shot_fee_usd": 0.00145,
+        "source_url": "https://aws.amazon.com/braket/pricing/",
+        "task_fee_usd": 0.3
+      },
+      "program_type": "openqasm",
+      "provider": "IQM",
+      "qubit_count": 20,
+      "region": "eu-north-1",
+      "status": "ONLINE"
+    },
+    "label": "core_shell_collapse_ladder",
+    "local_precheck": {
+      "ordering_ok": true,
+      "submit_ready": true,
+      "submit_reason": "preflight_pass",
+      "summary": {
+        "families": {
+          "open": {
+            "bell_plus": 0.4999999999999998,
+            "bell_zero": 0.9999999999999997,
+            "shell_sensitivity": 0.4999999999999999,
+            "xx_plus": 0.0,
+            "zz_plus": 0.9999999999999996
+          },
+          "shield": {
+            "bell_plus": 0.9999999999999994,
+            "bell_zero": 0.9999999999999997,
+            "shell_sensitivity": 2.220446049250313e-16,
+            "xx_plus": 0.9999999999999993,
+            "zz_plus": 0.9999999999999996
+          },
+          "uncoupled": {
+            "bell_plus": 0.9999999999999994,
+            "bell_zero": 0.9999999999999997,
+            "shell_sensitivity": 2.220446049250313e-16,
+            "xx_plus": 0.9999999999999993,
+            "zz_plus": 0.9999999999999996
+          },
+          "wrong": {
+            "bell_plus": -0.4999999999999998,
+            "bell_zero": -1.1102230246251565e-16,
+            "shell_sensitivity": 0.49999999999999967,
+            "xx_plus": 0.0,
+            "zz_plus": -0.9999999999999996
+          }
+        },
+        "shots": 1500,
+        "task_count": 14
+      }
+    },
+    "manifest_preview": [
+      {
+        "basis": "ZZ",
+        "family": "shield",
+        "shell_label": "zero"
+      },
+      {
+        "basis": "XX",
+        "family": "shield",
+        "shell_label": "zero"
+      },
+      {
+        "basis": "ZZ",
+        "family": "shield",
+        "shell_label": "plus"
+      },
+      {
+        "basis": "XX",
+        "family": "shield",
+        "shell_label": "plus"
+      },
+      {
+        "basis": "ZZ",
+        "family": "open",
+        "shell_label": "zero"
+      },
+      {
+        "basis": "XX",
+        "family": "open",
+        "shell_label": "zero"
+      }
+    ],
+    "pilot_plan": {
+      "chosen_chain": [
+        1,
+        2,
+        5
+      ],
+      "device_key": "iqm_garnet",
+      "hard_task_cap": 16,
+      "shots": 1500,
+      "submit_mode": "off_by_default",
+      "task_count": 14
+    },
+    "platform": "Superconducting qubits",
+    "question": "Can the core stay organized while shell-mediated export fails sharply?",
+    "sample_circuit_instructions": [
+      "H",
+      "CNot",
+      "H",
+      "CZ"
+    ]
+  },
+  "cross_platform_universality_test": {
+    "cost_estimate_usd": {
+      "source_url": "https://aws.amazon.com/braket/pricing/",
+      "total_estimate_usd": 17.7
+    },
+    "devices": [
+      {
+        "chosen_chain": [
+          1,
+          2,
+          5
+        ],
+        "cost_estimate_usd": {
+          "per_task_estimate_usd": 1.75,
+          "pricing_checked_utc": "2026-03-10T00:00:00Z",
+          "pricing_label": "IQM Garnet",
+          "shot_fee_usd": 0.00145,
+          "shots_per_task": 1000,
+          "source_url": "https://aws.amazon.com/braket/pricing/",
+          "task_count": 6,
+          "task_fee_usd": 0.3,
+          "total_estimate_usd": 10.5
+        },
+        "device": {
+          "action_keys": [
+            "braket.ir.openqasm.program",
+            "braket.ir.openqasm.program_set"
+          ],
+          "arn": "arn:aws:braket:eu-north-1::device/qpu/iqm/Garnet",
+          "chain3": [
+            1,
+            2,
+            5
+          ],
+          "chain4": [
+            1,
+            2,
+            5,
+            4
+          ],
+          "connectivity_nodes": 20,
+          "device_check_ok": true,
+          "name": "Garnet",
+          "pricing": {
+            "label": "IQM Garnet",
+            "pricing_checked_utc": "2026-03-10T00:00:00Z",
+            "shot_fee_usd": 0.00145,
+            "source_url": "https://aws.amazon.com/braket/pricing/",
+            "task_fee_usd": 0.3
+          },
+          "program_type": "openqasm",
+          "provider": "IQM",
+          "qubit_count": 20,
+          "region": "eu-north-1",
+          "status": "ONLINE"
+        },
+        "device_key": "iqm_garnet",
+        "shots": 1000,
+        "task_count": 6
+      },
+      {
+        "chosen_chain": [
+          0,
+          1,
+          2
+        ],
+        "cost_estimate_usd": {
+          "per_task_estimate_usd": 1.2,
+          "pricing_checked_utc": "2026-03-10T00:00:00Z",
+          "pricing_label": "Rigetti Ankaa-3",
+          "shot_fee_usd": 0.0009,
+          "shots_per_task": 1000,
+          "source_url": "https://aws.amazon.com/braket/pricing/",
+          "task_count": 6,
+          "task_fee_usd": 0.3,
+          "total_estimate_usd": 7.199999999999999
+        },
+        "device": {
+          "action_keys": [
+            "braket.ir.openqasm.program",
+            "braket.ir.openqasm.program_set"
+          ],
+          "arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+          "chain3": [
+            0,
+            1,
+            2
+          ],
+          "chain4": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "connectivity_nodes": 82,
+          "device_check_ok": true,
+          "name": "Ankaa-3",
+          "pricing": {
+            "label": "Rigetti Ankaa-3",
+            "pricing_checked_utc": "2026-03-10T00:00:00Z",
+            "shot_fee_usd": 0.0009,
+            "source_url": "https://aws.amazon.com/braket/pricing/",
+            "task_fee_usd": 0.3
+          },
+          "program_type": "openqasm",
+          "provider": "Rigetti",
+          "qubit_count": 82,
+          "region": "us-west-1",
+          "status": "ONLINE"
+        },
+        "device_key": "rigetti_ankaa",
+        "shots": 1000,
+        "task_count": 6
+      }
+    ],
+    "label": "cross_platform_universality_test",
+    "local_precheck": {
+      "local_metrics": {
+        "open": 0.4999999999999998,
+        "shield": 0.9999999999999994,
+        "wrong": -0.4999999999999998
+      },
+      "ordering_ok": true,
+      "submit_ready": true,
+      "submit_reason": "preflight_pass"
+    },
+    "manifest_preview": [
+      {
+        "basis": "ZZ",
+        "family": "shield",
+        "shell_label": "plus"
+      },
+      {
+        "basis": "XX",
+        "family": "shield",
+        "shell_label": "plus"
+      },
+      {
+        "basis": "ZZ",
+        "family": "open",
+        "shell_label": "plus"
+      },
+      {
+        "basis": "XX",
+        "family": "open",
+        "shell_label": "plus"
+      },
+      {
+        "basis": "ZZ",
+        "family": "wrong",
+        "shell_label": "plus"
+      },
+      {
+        "basis": "XX",
+        "family": "wrong",
+        "shell_label": "plus"
+      }
+    ],
+    "pilot_plan": {
+      "hard_task_cap_per_device": 8,
+      "submit_mode": "off_by_default",
+      "total_task_count": 12
+    },
+    "platform": "IQM Garnet + Rigetti Ankaa-3",
+    "question": "Does the same reduced branch ordering package cleanly for two hardware families?"
+  },
+  "quantum_neutrinosphere_analog": {
+    "cost_estimate_usd": {
+      "per_task_estimate_usd": 1.3800000000000001,
+      "pricing_checked_utc": "2026-03-10T00:00:00Z",
+      "pricing_label": "Rigetti Ankaa-3",
+      "shot_fee_usd": 0.0009,
+      "shots_per_task": 1200,
+      "source_url": "https://aws.amazon.com/braket/pricing/",
+      "task_count": 10,
+      "task_fee_usd": 0.3,
+      "total_estimate_usd": 13.8
+    },
+    "device": {
+      "action_keys": [
+        "braket.ir.openqasm.program",
+        "braket.ir.openqasm.program_set"
+      ],
+      "arn": "arn:aws:braket:us-west-1::device/qpu/rigetti/Ankaa-3",
+      "chain3": [
+        0,
+        1,
+        2
+      ],
+      "chain4": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "connectivity_nodes": 82,
+      "device_check_ok": true,
+      "name": "Ankaa-3",
+      "pricing": {
+        "label": "Rigetti Ankaa-3",
+        "pricing_checked_utc": "2026-03-10T00:00:00Z",
+        "shot_fee_usd": 0.0009,
+        "source_url": "https://aws.amazon.com/braket/pricing/",
+        "task_fee_usd": 0.3
+      },
+      "program_type": "openqasm",
+      "provider": "Rigetti",
+      "qubit_count": 82,
+      "region": "us-west-1",
+      "status": "ONLINE"
+    },
+    "label": "quantum_neutrinosphere_analog",
+    "local_precheck": {
+      "max_bell_gap": 0.2629200591104808,
+      "max_gross_gap": 0.0,
+      "submit_ready": true,
+      "submit_reason": "preflight_pass",
+      "summary": {
+        "families": {
+          "blocked": [
+            {
+              "gross_outer_excitation": 0.0,
+              "inner_bell_proxy": 0.9999999999999993,
+              "theta": 0.6
+            },
+            {
+              "gross_outer_excitation": 1.5407439555097887e-33,
+              "inner_bell_proxy": 0.9999999999999993,
+              "theta": 1.0
+            }
+          ],
+          "matched": [
+            {
+              "gross_outer_excitation": 0.04943621407793664,
+              "inner_bell_proxy": 0.9999999999999998,
+              "theta": 0.4
+            },
+            {
+              "gross_outer_excitation": 0.1096639479823578,
+              "inner_bell_proxy": 0.9999999999999996,
+              "theta": 0.6
+            },
+            {
+              "gross_outer_excitation": 0.19111614832497473,
+              "inner_bell_proxy": 0.9999999999999996,
+              "theta": 0.8
+            },
+            {
+              "gross_outer_excitation": 0.2910575661207437,
+              "inner_bell_proxy": 0.9999999999999993,
+              "theta": 1.0
+            }
+          ],
+          "mismatched": [
+            {
+              "gross_outer_excitation": 0.04943621407793664,
+              "inner_bell_proxy": 0.9513505481877297,
+              "theta": 0.4
+            },
+            {
+              "gross_outer_excitation": 0.1096639479823578,
+              "inner_bell_proxy": 0.8942366143490672,
+              "theta": 0.6
+            },
+            {
+              "gross_outer_excitation": 0.19111614832497473,
+              "inner_bell_proxy": 0.8208546871198894,
+              "theta": 0.8
+            },
+            {
+              "gross_outer_excitation": 0.2910575661207437,
+              "inner_bell_proxy": 0.7370799408895186,
+              "theta": 1.0
+            }
+          ]
+        }
+      }
+    },
+    "manifest_preview": [
+      {
+        "family": "matched",
+        "theta": 0.4
+      },
+      {
+        "family": "matched",
+        "theta": 0.6
+      },
+      {
+        "family": "matched",
+        "theta": 0.8
+      },
+      {
+        "family": "matched",
+        "theta": 1.0
+      },
+      {
+        "family": "mismatched",
+        "theta": 0.4
+      },
+      {
+        "family": "mismatched",
+        "theta": 0.6
+      }
+    ],
+    "pilot_plan": {
+      "chosen_chain": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "device_key": "rigetti_ankaa",
+      "hard_task_cap": 12,
+      "shots": 1200,
+      "submit_mode": "off_by_default",
+      "task_count": 10
+    },
+    "platform": "Gate-model pilot on Rigetti as a low-cost proxy for the broader trapped-ion/cold-atom concept",
+    "question": "Can gross leakage survive while structured transport fails?",
+    "sample_circuit_instructions": [
+      "H",
+      "CNot",
+      "Ry",
+      "Ry",
+      "CZ",
+      "CZ"
+    ]
+  },
+  "shell_only_visibility_test": {
+    "cost_estimate_usd": {
+      "per_task_estimate_usd": 2.0399999999999996,
+      "pricing_checked_utc": "2026-03-10T00:00:00Z",
+      "pricing_label": "IQM Garnet",
+      "shot_fee_usd": 0.00145,
+      "shots_per_task": 1200,
+      "source_url": "https://aws.amazon.com/braket/pricing/",
+      "task_count": 8,
+      "task_fee_usd": 0.3,
+      "total_estimate_usd": 16.319999999999997
+    },
+    "device": {
+      "action_keys": [
+        "braket.ir.openqasm.program",
+        "braket.ir.openqasm.program_set"
+      ],
+      "arn": "arn:aws:braket:eu-north-1::device/qpu/iqm/Garnet",
+      "chain3": [
+        1,
+        2,
+        5
+      ],
+      "chain4": [
+        1,
+        2,
+        5,
+        4
+      ],
+      "connectivity_nodes": 20,
+      "device_check_ok": true,
+      "name": "Garnet",
+      "pricing": {
+        "label": "IQM Garnet",
+        "pricing_checked_utc": "2026-03-10T00:00:00Z",
+        "shot_fee_usd": 0.00145,
+        "source_url": "https://aws.amazon.com/braket/pricing/",
+        "task_fee_usd": 0.3
+      },
+      "program_type": "openqasm",
+      "provider": "IQM",
+      "qubit_count": 20,
+      "region": "eu-north-1",
+      "status": "ONLINE"
+    },
+    "label": "shell_only_visibility_test",
+    "local_precheck": {
+      "inner_bell_drift": 1.1102230246251565e-16,
+      "mean_bright_visibility": 0.20703225740801084,
+      "mean_quiet_visibility": 0.025686783860825572,
+      "submit_ready": true,
+      "submit_reason": "preflight_pass",
+      "summary": {
+        "bright": [
+          {
+            "angle": 0.3,
+            "inner_bell_proxy": 0.9999999999999996,
+            "shell_excitation": 0.022331755437196985
+          },
+          {
+            "angle": 0.7,
+            "inner_bell_proxy": 0.9999999999999996,
+            "shell_excitation": 0.11757890635775577
+          },
+          {
+            "angle": 1.1,
+            "inner_bell_proxy": 0.9999999999999996,
+            "shell_excitation": 0.27320193928721126
+          },
+          {
+            "angle": 1.4,
+            "inner_bell_proxy": 0.9999999999999996,
+            "shell_excitation": 0.41501642854987936
+          }
+        ],
+        "quiet": [
+          {
+            "angle": 0.3,
+            "inner_bell_proxy": 0.9999999999999997,
+            "shell_excitation": 0.0024979173609871157
+          },
+          {
+            "angle": 0.7,
+            "inner_bell_proxy": 0.9999999999999998,
+            "shell_excitation": 0.013549468959274679
+          },
+          {
+            "angle": 1.1,
+            "inner_bell_proxy": 0.9999999999999996,
+            "shell_excitation": 0.03323622572225518
+          },
+          {
+            "angle": 1.4,
+            "inner_bell_proxy": 0.9999999999999996,
+            "shell_excitation": 0.053463523400785314
+          }
+        ]
+      }
+    },
+    "manifest_preview": [
+      {
+        "angle": 0.3,
+        "mode": "bright"
+      },
+      {
+        "angle": 0.7,
+        "mode": "bright"
+      },
+      {
+        "angle": 1.1,
+        "mode": "bright"
+      },
+      {
+        "angle": 1.4,
+        "mode": "bright"
+      },
+      {
+        "angle": 0.3,
+        "mode": "quiet"
+      },
+      {
+        "angle": 0.7,
+        "mode": "quiet"
+      }
+    ],
+    "pilot_plan": {
+      "chosen_chain": [
+        1,
+        2,
+        5
+      ],
+      "device_key": "iqm_garnet",
+      "hard_task_cap": 10,
+      "shots": 1200,
+      "submit_mode": "off_by_default",
+      "task_count": 8
+    },
+    "platform": "Superconducting qubits",
+    "question": "Can shell readout geometry change visibility while the interior stays fixed?",
+    "sample_circuit_instructions": [
+      "H",
+      "CNot",
+      "Ry"
+    ]
+  },
+  "shock_revival_threshold_simulator": {
+    "cost_estimate_usd": {
+      "per_task_estimate_usd": 1.3,
+      "pricing_checked_utc": "2026-03-10T00:00:00Z",
+      "pricing_label": "QuEra Aquila",
+      "shot_fee_usd": 0.01,
+      "shots_per_task": 100,
+      "source_url": "https://aws.amazon.com/braket/pricing/",
+      "task_count": 8,
+      "task_fee_usd": 0.3,
+      "total_estimate_usd": 10.4
+    },
+    "device": {
+      "action_keys": [
+        "braket.ir.ahs.program"
+      ],
+      "arn": "arn:aws:braket:us-east-1::device/qpu/quera/Aquila",
+      "chain3": null,
+      "chain4": null,
+      "connectivity_nodes": 0,
+      "device_check_ok": true,
+      "name": "Aquila",
+      "pricing": {
+        "label": "QuEra Aquila",
+        "pricing_checked_utc": "2026-03-10T00:00:00Z",
+        "shot_fee_usd": 0.01,
+        "source_url": "https://aws.amazon.com/braket/pricing/",
+        "task_fee_usd": 0.3
+      },
+      "program_type": "ahs",
+      "provider": "QuEra",
+      "qubit_count": 256,
+      "region": "us-east-1",
+      "status": "ONLINE"
+    },
+    "label": "shock_revival_threshold_simulator",
+    "local_precheck": {
+      "edge_loss_span": 0.1875,
+      "submit_ready": true,
+      "submit_reason": "preflight_pass",
+      "summary": [
+        {
+          "atom_count": 4,
+          "detuning_peak": 1000000.0,
+          "edge_loss_fraction": 0.421875,
+          "mean_post_sequence": 0.578125,
+          "scale": 0.85
+        },
+        {
+          "atom_count": 4,
+          "detuning_peak": 2000000.0,
+          "edge_loss_fraction": 0.421875,
+          "mean_post_sequence": 0.578125,
+          "scale": 0.85
+        },
+        {
+          "atom_count": 4,
+          "detuning_peak": 3000000.0,
+          "edge_loss_fraction": 0.515625,
+          "mean_post_sequence": 0.484375,
+          "scale": 0.85
+        },
+        {
+          "atom_count": 4,
+          "detuning_peak": 4000000.0,
+          "edge_loss_fraction": 0.421875,
+          "mean_post_sequence": 0.578125,
+          "scale": 0.85
+        },
+        {
+          "atom_count": 4,
+          "detuning_peak": 1000000.0,
+          "edge_loss_fraction": 0.453125,
+          "mean_post_sequence": 0.546875,
+          "scale": 1.0
+        },
+        {
+          "atom_count": 4,
+          "detuning_peak": 2000000.0,
+          "edge_loss_fraction": 0.609375,
+          "mean_post_sequence": 0.390625,
+          "scale": 1.0
+        },
+        {
+          "atom_count": 4,
+          "detuning_peak": 3000000.0,
+          "edge_loss_fraction": 0.578125,
+          "mean_post_sequence": 0.421875,
+          "scale": 1.0
+        },
+        {
+          "atom_count": 4,
+          "detuning_peak": 4000000.0,
+          "edge_loss_fraction": 0.546875,
+          "mean_post_sequence": 0.453125,
+          "scale": 1.0
+        }
+      ]
+    },
+    "manifest_preview": [
+      {
+        "detuning_peak": 1000000.0,
+        "scale": 0.85
+      },
+      {
+        "detuning_peak": 2000000.0,
+        "scale": 0.85
+      },
+      {
+        "detuning_peak": 3000000.0,
+        "scale": 0.85
+      },
+      {
+        "detuning_peak": 4000000.0,
+        "scale": 0.85
+      },
+      {
+        "detuning_peak": 1000000.0,
+        "scale": 1.0
+      },
+      {
+        "detuning_peak": 2000000.0,
+        "scale": 1.0
+      }
+    ],
+    "pilot_plan": {
+      "atom_count": 4,
+      "device_key": "quera_aquila",
+      "discretized_against_device": true,
+      "hard_task_cap": 10,
+      "shots": 100,
+      "submit_mode": "off_by_default",
+      "task_count": 8
+    },
+    "platform": "QuEra Aquila analog Hamiltonian simulation",
+    "question": "Does a small neutral-atom analog show a threshold-like revival split?",
+    "sample_program_preview": {
+      "amplitudes_rad_per_s": [
+        0.0,
+        1500000.0,
+        1500000.0,
+        0.0
+      ],
+      "detunings_rad_per_s": [
+        -3000000.0,
+        -1000000.0,
+        1000000.0,
+        -2000000.0
+      ],
+      "times_s": [
+        0.0,
+        1e-06,
+        2e-06,
+        3e-06
+      ]
+    }
+  }
+}

@@ -1,0 +1,2 @@
+pair_id,galaxy_name,galaxy_rank,obsid_1,obsid_2,obs_id_1,obs_id_2,obs_collection_1,obs_collection_2,filter_1,filter_2,instrument_1,instrument_2,baseline_days,compatibility,compatibility_score,pair_score,public_both,pixel_priority
+MESSIER 074::jw02107-c1019_t018_miri_f2100w::jw07978-o001_t002_miri_f2100w,MESSIER 074,126,87632933,370840328,jw02107-c1019_t018_miri_f2100w,jw07978-o001_t002_miri_f2100w,JWST,JWST,F2100W,F2100W,MIRI/IMAGE,MIRI/IMAGE,1263.8205785550963,exact,1.0,1.4000000000000001,True,2.655101446146343

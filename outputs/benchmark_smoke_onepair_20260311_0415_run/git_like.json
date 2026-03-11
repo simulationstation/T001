@@ -1,0 +1,5 @@
+{
+  "branch": "main",
+  "head": "99bfe81d91b83e9194d241dd58750f5dd81dc2af",
+  "status_porcelain": "M pyproject.toml\n M src/supernova_pipeline/cli.py\n M src/supernova_pipeline/pixel_search.py\n M src/supernova_pipeline/utils.py\n?? AGENT.md\n?? closure/\n?? difference_upgrade/\n?? outputs/\n?? src/supernova_pipeline/difference_upgrade.py\n?? src/supernova_pipeline/observational_closure.py\n?? src/supernova_pipeline/quantum_precheck.py\n?? src/supernova_pipeline/quantum_submit.py\n?? strict_action_plan.md"
+}

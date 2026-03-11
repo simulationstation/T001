@@ -1,0 +1,56 @@
+[2026-03-10T23:35:20.493780Z] run start mode=difference_upgrade resume=True sign_mode=both
+[2026-03-10T23:35:20.550031Z] pair start pair_id=NGC 1097::w1000601t::hst_skycell-p0644x09y10_wfc3_uvis_f555w_all index=1/63 galaxy=NGC 1097 filter=F555W->F555W baseline_days=11588.97
+[2026-03-10T23:35:20.735288Z] pair failed pair_id=NGC 1097::w1000601t::hst_skycell-p0644x09y10_wfc3_uvis_f555w_all error=No celestial 2D science image found in /home/primary/SUPERNOVA/data/cache/mast_products/HST/w1000601t/w1000601t_c0f.fits
+[2026-03-10T23:35:20.743657Z] pair start pair_id=MESSIER 101::w1000501t::if1001030 index=2/63 galaxy=MESSIER 101 filter=F555W->F555W baseline_days=11188.20
+[2026-03-10T23:35:21.601142Z] pair failed pair_id=MESSIER 101::w1000501t::if1001030 error=No celestial 2D science image found in /home/primary/SUPERNOVA/data/cache/mast_products/HST/w1000501t/w1000501t_c0f.fits
+[2026-03-10T23:35:21.609356Z] pair start pair_id=NGC 4414::u2782701t::ifgg01010 index=3/63 galaxy=NGC 4414 filter=F555W->F555W baseline_days=10911.07
+[2026-03-10T23:36:39.365546Z] pair complete pair_id=NGC 4414::u2782701t::ifgg01010 status=SCANNED residuals=151 survivors=0 reg_resid_px=nan
+[2026-03-10T23:36:39.375931Z] pair start pair_id=NGC 7331::u2781q01t::hst_17506_25_wfc3_uvis_f555w_if8c25 index=4/63 galaxy=NGC 7331 filter=F555W->F555W baseline_days=10794.65
+[2026-03-10T23:37:29.002553Z] pair failed pair_id=NGC 7331::u2781q01t::hst_17506_25_wfc3_uvis_f555w_if8c25 error=Insufficient overlap after WCS reprojection.
+[2026-03-10T23:37:29.238939Z] pair start pair_id=MESSIER 100::w1mj0101t::iejn61020 index=5/63 galaxy=MESSIER 100 filter=F555W->F555W baseline_days=10385.98
+[2026-03-10T23:37:29.449523Z] pair failed pair_id=MESSIER 100::w1mj0101t::iejn61020 error=No celestial 2D science image found in /home/primary/SUPERNOVA/data/cache/mast_products/HST/w1mj0101t/w1mj0101t_c0f.fits
+[2026-03-10T23:37:29.460207Z] pair start pair_id=NGC 7331::u2781q01t::ierg01020 index=6/63 galaxy=NGC 7331 filter=F555W->F555W baseline_days=10270.19
+[2026-03-10T23:38:24.267733Z] pair failed pair_id=NGC 7331::u2781q01t::ierg01020 error=Insufficient overlap after WCS reprojection.
+[2026-03-10T23:38:24.289631Z] pair start pair_id=NGC 5427::u2e64o01t::hst_16691_56_wfc3_uvis_f606w_ierg56 index=7/63 galaxy=NGC 5427 filter=F606W->F606W baseline_days=10106.81
+[2026-03-10T23:40:03.270168Z] pair complete pair_id=NGC 5427::u2e64o01t::hst_16691_56_wfc3_uvis_f606w_ierg56 status=SCANNED residuals=989 survivors=0 reg_resid_px=0.09229653201041146
+[2026-03-10T23:40:03.280798Z] pair start pair_id=NGC 4388::n4m559020::ifd602010 index=8/63 galaxy=NGC 4388 filter=F160W->F160W baseline_days=10072.94
+[2026-03-10T23:40:04.433726Z] pair failed pair_id=NGC 4388::n4m559020::ifd602010 error=No suitable calibrated FITS product for ifd602010
+[2026-03-10T23:40:04.444122Z] pair start pair_id=MESSIER 077::w1dg2t01t::hst_16179_29_wfc3_uvis_f555w_ieb329 index=9/63 galaxy=MESSIER 077 filter=F555W->F555W baseline_days=9931.35
+[2026-03-10T23:40:05.154506Z] pair failed pair_id=MESSIER 077::w1dg2t01t::hst_16179_29_wfc3_uvis_f555w_ieb329 error=No celestial 2D science image found in /home/primary/SUPERNOVA/data/cache/mast_products/HST/w1dg2t01t/w1dg2t01t_c0f.fits
+[2026-03-10T23:40:05.165472Z] pair start pair_id=NGC 4568::hst_5446_4h_wfpc2_pc_f606w_u29r4h::hst_16691_19_wfc3_uvis_f606w_ierg19 index=10/63 galaxy=NGC 4568 filter=F606W->F606W baseline_days=9892.05
+[2026-03-10T23:41:26.773076Z] pair complete pair_id=NGC 4568::hst_5446_4h_wfpc2_pc_f606w_u29r4h::hst_16691_19_wfc3_uvis_f606w_ierg19 status=SCANNED residuals=984 survivors=0 reg_resid_px=0.3548008073247141
+[2026-03-10T23:41:26.783602Z] pair start pair_id=NGC 4567::hst_5446_4h_wfpc2_pc_f606w_u29r4h::hst_16691_19_wfc3_uvis_f606w_ierg19 index=11/63 galaxy=NGC 4567 filter=F606W->F606W baseline_days=9892.05
+[2026-03-10T23:42:45.990394Z] pair complete pair_id=NGC 4567::hst_5446_4h_wfpc2_pc_f606w_u29r4h::hst_16691_19_wfc3_uvis_f606w_ierg19 status=SCANNED residuals=984 survivors=0 reg_resid_px=0.3548008073247141
+[2026-03-10T23:42:46.000964Z] pair start pair_id=NGC 3256::hst_7466_07_wfpc2_pc_f555w_u54q07::ifck02010 index=12/63 galaxy=NGC 3256 filter=F555W->F555W baseline_days=9724.14
+[2026-03-10T23:42:50.030628Z] pair failed pair_id=NGC 3256::hst_7466_07_wfpc2_pc_f555w_u54q07::ifck02010 error=No suitable calibrated FITS product for ifck02010
+[2026-03-10T23:42:50.040920Z] pair start pair_id=NGC 4414::u2782701t::ieb312020 index=13/63 galaxy=NGC 4414 filter=F555W->F555W baseline_days=9447.19
+[2026-03-10T23:44:14.477590Z] pair complete pair_id=NGC 4414::u2782701t::ieb312020 status=SCANNED residuals=963 survivors=0 reg_resid_px=0.6535636298921335
+[2026-03-10T23:44:14.488177Z] pair start pair_id=MESSIER 100::u3dl0205t::hst_16500_61_wfc3_uvis_f814w_iejn61 index=14/63 galaxy=MESSIER 100 filter=F814W->F814W baseline_days=9411.35
+[2026-03-10T23:45:32.017137Z] pair complete pair_id=MESSIER 100::u3dl0205t::hst_16500_61_wfc3_uvis_f814w_iejn61 status=SCANNED residuals=34 survivors=0 reg_resid_px=0.4270161969877594
+[2026-03-10T23:45:32.028237Z] pair start pair_id=MESSIER 066::u35i0101r::jey347020 index=15/63 galaxy=MESSIER 066 filter=F555W->F555W baseline_days=9309.80
+[2026-03-10T23:46:55.726666Z] pair complete pair_id=MESSIER 066::u35i0101r::jey347020 status=SCANNED residuals=989 survivors=0 reg_resid_px=0.417607321733534
+[2026-03-10T23:46:55.738858Z] pair start pair_id=IC 2163::hst_6483_03_wfpc2_pc_f814w_u39e03::hst_16239_28_wfc3_uvis_f814w_ieec28 index=16/63 galaxy=IC 2163 filter=F814W->F814W baseline_days=9261.35
+[2026-03-10T23:48:22.309511Z] pair complete pair_id=IC 2163::hst_6483_03_wfpc2_pc_f814w_u39e03::hst_16239_28_wfc3_uvis_f814w_ieec28 status=SCANNED residuals=980 survivors=0 reg_resid_px=0.8405293889987743
+[2026-03-10T23:48:22.320900Z] pair start pair_id=NGC 2207::hst_6483_03_wfpc2_pc_f814w_u39e03::hst_16239_28_wfc3_uvis_f814w_ieec28 index=17/63 galaxy=NGC 2207 filter=F814W->F814W baseline_days=9261.35
+[2026-03-10T23:49:45.256819Z] pair complete pair_id=NGC 2207::hst_6483_03_wfpc2_pc_f814w_u39e03::hst_16239_28_wfc3_uvis_f814w_ieec28 status=SCANNED residuals=980 survivors=0 reg_resid_px=0.8405293889987743
+[2026-03-10T23:49:45.267741Z] pair start pair_id=NGC 1365::n3zd0k010::ie5412010 index=18/63 galaxy=NGC 1365 filter=F160W->F160W baseline_days=8278.79
+[2026-03-10T23:50:31.653758Z] pair failed pair_id=NGC 1365::n3zd0k010::ie5412010 error=Insufficient overlap after WCS reprojection.
+[2026-03-10T23:50:31.671951Z] pair start pair_id=MESSIER 074::hst_5446_04_wfpc2_pc_f606w_u29r04::id9g07030 index=19/63 galaxy=MESSIER 074 filter=F606W->F606W baseline_days=8201.67
+[2026-03-10T23:51:18.750511Z] pair failed pair_id=MESSIER 074::hst_5446_04_wfpc2_pc_f606w_u29r04::id9g07030 error=Insufficient overlap after WCS reprojection.
+[2026-03-10T23:51:18.772401Z] pair start pair_id=MESSIER 066::u6a02901r::jey347010 index=20/63 galaxy=MESSIER 066 filter=F814W->F814W baseline_days=8110.16
+[2026-03-10T23:52:43.457502Z] pair complete pair_id=MESSIER 066::u6a02901r::jey347010 status=SCANNED residuals=996 survivors=0 reg_resid_px=0.38526201792926273
+[2026-03-10T23:52:43.468164Z] pair start pair_id=IC 2560::hst_7278_04_wfpc2_pc_f814w_u54v04::ieec13010 index=21/63 galaxy=IC 2560 filter=F814W->F814W baseline_days=8097.96
+[2026-03-10T23:54:11.320975Z] pair complete pair_id=IC 2560::hst_7278_04_wfpc2_pc_f814w_u54v04::ieec13010 status=SCANNED residuals=973 survivors=0 reg_resid_px=0.7048185469776422
+[2026-03-10T23:54:11.332502Z] pair start pair_id=NGC 5012::hst_8602_48_wfpc2_pc_f814w_u6a048::hst_16683_53_wfc3_uvis_f814w_ien653 index=22/63 galaxy=NGC 5012 filter=F814W->F814W baseline_days=7735.58
+[2026-03-10T23:55:38.869532Z] pair complete pair_id=NGC 5012::hst_8602_48_wfpc2_pc_f814w_u6a048::hst_16683_53_wfc3_uvis_f814w_ien653 status=SCANNED residuals=963 survivors=0 reg_resid_px=1.9932049704621977
+[2026-03-10T23:55:38.880564Z] pair start pair_id=NGC 1961::hst_8597_16_wfpc2_pc_f606w_u67n16::ierg53020 index=23/63 galaxy=NGC 1961 filter=F606W->F606W baseline_days=7621.50
+[2026-03-10T23:57:03.151006Z] pair complete pair_id=NGC 1961::hst_8597_16_wfpc2_pc_f606w_u67n16::ierg53020 status=SCANNED residuals=984 survivors=0 reg_resid_px=0.5133685044352229
+[2026-03-10T23:57:03.162207Z] pair start pair_id=NGC 6753::u65r3301r::hst_16239_71_wfc3_uvis_f814w_ieec71 index=24/63 galaxy=NGC 6753 filter=F814W->F814W baseline_days=7591.99
+[2026-03-10T23:58:31.374271Z] pair complete pair_id=NGC 6753::u65r3301r::hst_16239_71_wfc3_uvis_f814w_ieec71 status=SCANNED residuals=993 survivors=0 reg_resid_px=1.5633815317036441
+[2026-03-10T23:58:31.385438Z] pair start pair_id=NGC 3256::j8z418010::ifck02010 index=25/63 galaxy=NGC 3256 filter=F555W->F555W baseline_days=7520.77
+[2026-03-10T23:58:33.235165Z] pair failed pair_id=NGC 3256::j8z418010::ifck02010 error=No suitable calibrated FITS product for ifck02010
+[2026-03-10T23:58:33.246024Z] pair start pair_id=NGC 1309::j9cb01010::jfjg05010 index=26/63 galaxy=NGC 1309 filter=F555W->F555W baseline_days=7389.92
+[2026-03-10T23:58:36.286313Z] pair failed pair_id=NGC 1309::j9cb01010::jfjg05010 error=No suitable calibrated FITS product for jfjg05010
+[2026-03-10T23:58:36.297172Z] pair start pair_id=MESSIER 074::hst_9796_04_acs_wfc_f555w_j8ol04::hst_17506_04_wfc3_uvis_f555w_if8c04 index=27/63 galaxy=MESSIER 074 filter=F555W->F555W baseline_days=7350.34
+[2026-03-10T23:59:52.172815Z] pair complete pair_id=MESSIER 074::hst_9796_04_acs_wfc_f555w_j8ol04::hst_17506_04_wfc3_uvis_f555w_if8c04 status=SCANNED residuals=999 survivors=0 reg_resid_px=0.4843204119309315
+[2026-03-10T23:59:52.184454Z] pair start pair_id=IC 2163::j8z437020::hst_skycell-p0818x12y14_wfc3_uvis_f625w_all index=28/63 galaxy=IC 2163 filter=F625W->F625W baseline_days=7344.49

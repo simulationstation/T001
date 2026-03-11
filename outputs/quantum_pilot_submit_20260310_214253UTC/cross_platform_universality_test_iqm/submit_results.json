@@ -1,0 +1,79 @@
+{
+  "bucket": {
+    "account_id": "056449379113",
+    "bucket": "amazon-braket-056449379113-eu-north-1",
+    "created": false,
+    "probe_key": "supernova/bootstrap/20260310_214326.txt",
+    "region": "eu-north-1"
+  },
+  "device_arn": "arn:aws:braket:eu-north-1::device/qpu/iqm/Garnet",
+  "device_key": "iqm_garnet",
+  "name": "cross_platform_universality_test_iqm",
+  "shots": 1000,
+  "submitted_utc": "2026-03-10T21:43:30.287226Z",
+  "task_count": 3,
+  "task_ids": [
+    "arn:aws:braket:eu-north-1:056449379113:quantum-task/2031bef5-d002-4d3b-8474-1e6eeaf7a06f",
+    "arn:aws:braket:eu-north-1:056449379113:quantum-task/3a369330-9615-4830-86c8-2c33c07b36a3",
+    "arn:aws:braket:eu-north-1:056449379113:quantum-task/593382b6-919c-4f8d-9114-2c4c9d65bc48"
+  ],
+  "tasks": [
+    {
+      "family": "shield",
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:28.426000+00:00",
+        "device_arn": "arn:aws:braket:eu-north-1::device/qpu/iqm/Garnet",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:eu-north-1:056449379113:quantum-task/2031bef5-d002-4d3b-8474-1e6eeaf7a06f"
+      },
+      "measured_qubits": [
+        0,
+        1,
+        2
+      ],
+      "shell_label": "plus",
+      "task_id": "arn:aws:braket:eu-north-1:056449379113:quantum-task/2031bef5-d002-4d3b-8474-1e6eeaf7a06f",
+      "task_index": 1
+    },
+    {
+      "family": "open",
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:28.695000+00:00",
+        "device_arn": "arn:aws:braket:eu-north-1::device/qpu/iqm/Garnet",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:eu-north-1:056449379113:quantum-task/3a369330-9615-4830-86c8-2c33c07b36a3"
+      },
+      "measured_qubits": [
+        0,
+        1,
+        2
+      ],
+      "shell_label": "plus",
+      "task_id": "arn:aws:braket:eu-north-1:056449379113:quantum-task/3a369330-9615-4830-86c8-2c33c07b36a3",
+      "task_index": 2
+    },
+    {
+      "family": "wrong",
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:28.987000+00:00",
+        "device_arn": "arn:aws:braket:eu-north-1::device/qpu/iqm/Garnet",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:eu-north-1:056449379113:quantum-task/593382b6-919c-4f8d-9114-2c4c9d65bc48"
+      },
+      "measured_qubits": [
+        0,
+        1,
+        2
+      ],
+      "shell_label": "plus",
+      "task_id": "arn:aws:braket:eu-north-1:056449379113:quantum-task/593382b6-919c-4f8d-9114-2c4c9d65bc48",
+      "task_index": 3
+    }
+  ]
+}

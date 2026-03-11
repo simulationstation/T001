@@ -1,0 +1,147 @@
+{
+  "bucket": {
+    "account_id": "056449379113",
+    "bucket": "amazon-braket-056449379113-us-east-1",
+    "created": false,
+    "probe_key": "supernova/bootstrap/20260310_214311.txt",
+    "region": "us-east-1"
+  },
+  "device_arn": "arn:aws:braket:us-east-1::device/qpu/quera/Aquila",
+  "device_key": "quera_aquila",
+  "name": "shock_revival_threshold_simulator",
+  "shots": 100,
+  "submitted_utc": "2026-03-10T21:43:17.643310Z",
+  "task_count": 8,
+  "task_ids": [
+    "arn:aws:braket:us-east-1:056449379113:quantum-task/3cd2cd45-3a5d-44a0-827b-a7aff64fb58d",
+    "arn:aws:braket:us-east-1:056449379113:quantum-task/3a23edd5-ade0-4001-94cf-da382625249e",
+    "arn:aws:braket:us-east-1:056449379113:quantum-task/5090c723-f479-4f6a-b7f2-c73ef0381cfd",
+    "arn:aws:braket:us-east-1:056449379113:quantum-task/99cec75b-669f-4d46-a3d7-49048c232115",
+    "arn:aws:braket:us-east-1:056449379113:quantum-task/d726746e-5ecf-445c-a9fd-d2b50e4570fe",
+    "arn:aws:braket:us-east-1:056449379113:quantum-task/25d92cda-307e-4cd6-b8f0-6cd5a21044ea",
+    "arn:aws:braket:us-east-1:056449379113:quantum-task/b2a694e6-1432-4eef-91be-9835cbca80b6",
+    "arn:aws:braket:us-east-1:056449379113:quantum-task/cdb85ece-4493-45bd-97b2-71320771795a"
+  ],
+  "tasks": [
+    {
+      "atom_count": 4,
+      "detuning_peak": 1000000.0,
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:13.935000+00:00",
+        "device_arn": "arn:aws:braket:us-east-1::device/qpu/quera/Aquila",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/3cd2cd45-3a5d-44a0-827b-a7aff64fb58d"
+      },
+      "scale": 0.85,
+      "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/3cd2cd45-3a5d-44a0-827b-a7aff64fb58d",
+      "task_index": 1
+    },
+    {
+      "atom_count": 4,
+      "detuning_peak": 2000000.0,
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:14.153000+00:00",
+        "device_arn": "arn:aws:braket:us-east-1::device/qpu/quera/Aquila",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/3a23edd5-ade0-4001-94cf-da382625249e"
+      },
+      "scale": 0.85,
+      "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/3a23edd5-ade0-4001-94cf-da382625249e",
+      "task_index": 2
+    },
+    {
+      "atom_count": 4,
+      "detuning_peak": 3000000.0,
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:14.354000+00:00",
+        "device_arn": "arn:aws:braket:us-east-1::device/qpu/quera/Aquila",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/5090c723-f479-4f6a-b7f2-c73ef0381cfd"
+      },
+      "scale": 0.85,
+      "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/5090c723-f479-4f6a-b7f2-c73ef0381cfd",
+      "task_index": 3
+    },
+    {
+      "atom_count": 4,
+      "detuning_peak": 4000000.0,
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:14.567000+00:00",
+        "device_arn": "arn:aws:braket:us-east-1::device/qpu/quera/Aquila",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/99cec75b-669f-4d46-a3d7-49048c232115"
+      },
+      "scale": 0.85,
+      "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/99cec75b-669f-4d46-a3d7-49048c232115",
+      "task_index": 4
+    },
+    {
+      "atom_count": 4,
+      "detuning_peak": 1000000.0,
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:14.801000+00:00",
+        "device_arn": "arn:aws:braket:us-east-1::device/qpu/quera/Aquila",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/d726746e-5ecf-445c-a9fd-d2b50e4570fe"
+      },
+      "scale": 1.0,
+      "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/d726746e-5ecf-445c-a9fd-d2b50e4570fe",
+      "task_index": 5
+    },
+    {
+      "atom_count": 4,
+      "detuning_peak": 2000000.0,
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:15.010000+00:00",
+        "device_arn": "arn:aws:braket:us-east-1::device/qpu/quera/Aquila",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/25d92cda-307e-4cd6-b8f0-6cd5a21044ea"
+      },
+      "scale": 1.0,
+      "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/25d92cda-307e-4cd6-b8f0-6cd5a21044ea",
+      "task_index": 6
+    },
+    {
+      "atom_count": 4,
+      "detuning_peak": 3000000.0,
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:15.255000+00:00",
+        "device_arn": "arn:aws:braket:us-east-1::device/qpu/quera/Aquila",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/b2a694e6-1432-4eef-91be-9835cbca80b6"
+      },
+      "scale": 1.0,
+      "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/b2a694e6-1432-4eef-91be-9835cbca80b6",
+      "task_index": 7
+    },
+    {
+      "atom_count": 4,
+      "detuning_peak": 4000000.0,
+      "initial_status": {
+        "createdAt": "2026-03-10T21:43:16.406000+00:00",
+        "device_arn": "arn:aws:braket:us-east-1::device/qpu/quera/Aquila",
+        "failureReason": null,
+        "queueInfo": null,
+        "status": "QUEUED",
+        "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/cdb85ece-4493-45bd-97b2-71320771795a"
+      },
+      "scale": 1.0,
+      "task_id": "arn:aws:braket:us-east-1:056449379113:quantum-task/cdb85ece-4493-45bd-97b2-71320771795a",
+      "task_index": 8
+    }
+  ]
+}

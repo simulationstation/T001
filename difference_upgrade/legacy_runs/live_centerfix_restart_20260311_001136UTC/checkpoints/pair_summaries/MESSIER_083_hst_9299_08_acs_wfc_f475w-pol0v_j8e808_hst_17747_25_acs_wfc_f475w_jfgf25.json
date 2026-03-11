@@ -1,0 +1,15 @@
+{
+  "baseline_days": 8564.847515770001,
+  "compatibility": "exact",
+  "error": "RESTRICTED_DATA_RIGHTS:hst_17747_25_acs_wfc_f475w_jfgf25:EXCLUSIVE_ACCESS",
+  "filter_1": "F475W",
+  "filter_2": "F475W",
+  "galaxy_name": "MESSIER 083",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_9299_08_acs_wfc_f475w-pol0v_j8e808",
+  "obs_id_2": "hst_17747_25_acs_wfc_f475w_jfgf25",
+  "pair_id": "MESSIER 083::hst_9299_08_acs_wfc_f475w-pol0v_j8e808::hst_17747_25_acs_wfc_f475w_jfgf25",
+  "pair_score": 1.4000000000000001,
+  "status": "SKIPPED"
+}

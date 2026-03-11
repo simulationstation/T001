@@ -1,0 +1,18 @@
+{
+  "candidate_id": "6dF_J0245599-073443_hst_11575_02_acs_wfc_f814w_jb4u02_hst_14226_01_acs_wfc_f814w_jcuc01_0061",
+  "closure_class": "VARIABLE_OR_UNRESOLVED",
+  "closure_confidence": "LOW",
+  "closure_reason_codes": [
+    "HIGH_SIGNIFICANCE_FADE",
+    "LONG_BASELINE",
+    "NO_ALL_EPOCH_FOLLOWUP"
+  ],
+  "dust_survivor_score": 0.15,
+  "export_failure_score": 0.3424295391209474,
+  "followup_lightcurve_path": "nan",
+  "followup_sed_plot_path": "nan",
+  "followup_summary_path": "nan",
+  "galaxy_name": "6dF J0245599-073443",
+  "systematic_like_score": 0.17632349716556733,
+  "unresolved_score": 0.8230355634684178
+}

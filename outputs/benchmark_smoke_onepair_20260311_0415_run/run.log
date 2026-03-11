@@ -1,0 +1,5 @@
+[2026-03-11T03:58:24.433782Z] run start mode=difference_upgrade resume=False sign_mode=both
+[2026-03-11T03:58:24.569227Z] queue prepared candidate_pairs=1 selected_pairs=1 preflight_rejected=0
+[2026-03-11T03:58:24.621041Z] pair start pair_id=6dF J0245599-073443::hst_11575_02_acs_wfc_f814w_jb4u02::jdxk02010 index=1/1 galaxy=6dF J0245599-073443 filter=F814W->F814W baseline_days=3233.22
+[2026-03-11T03:58:56.428450Z] pair complete pair_id=6dF J0245599-073443::hst_11575_02_acs_wfc_f814w_jb4u02::jdxk02010 status=SCANNED residuals=1091 survivors=0 reg_resid_px=0.1550936459622742
+[2026-03-11T03:58:56.489703Z] run completed scanned=1 failed=0 detections=0

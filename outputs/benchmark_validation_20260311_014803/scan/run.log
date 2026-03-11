@@ -1,0 +1,13 @@
+[2026-03-11T01:48:20.472258Z] run start mode=difference_upgrade resume=False sign_mode=both
+[2026-03-11T01:48:21.145242Z] queue prepared candidate_pairs=12 selected_pairs=12 preflight_rejected=0
+[2026-03-11T01:48:21.197495Z] pair start pair_id=6dF J0245599-073443::hst_11575_02_acs_wfc_f814w_jb4u02::jdxk02010 index=1/12 galaxy=6dF J0245599-073443 filter=F814W->F814W baseline_days=3233.22
+[2026-03-11T01:48:43.090243Z] pair complete pair_id=6dF J0245599-073443::hst_11575_02_acs_wfc_f814w_jb4u02::jdxk02010 status=SCANNED residuals=991 survivors=0 reg_resid_px=0.1550936459622742
+[2026-03-11T01:48:43.151522Z] pair start pair_id=MESSIER 066::jb4u01010::jey347020 index=2/12 galaxy=MESSIER 066 filter=F555W->F555W baseline_days=4895.25
+[2026-03-11T01:49:05.458529Z] pair complete pair_id=MESSIER 066::jb4u01010::jey347020 status=SCANNED residuals=995 survivors=0 reg_resid_px=0.08830251964210103
+[2026-03-11T01:49:05.510500Z] pair start pair_id=MESSIER 066::hlsp_legus_hst_uvis_ngc3627_f555w_v1_drc::jey347020 index=3/12 galaxy=MESSIER 066 filter=F555W->F555W baseline_days=3377.60
+[2026-03-11T01:49:48.496306Z] pair complete pair_id=MESSIER 066::hlsp_legus_hst_uvis_ngc3627_f555w_v1_drc::jey347020 status=SCANNED residuals=999 survivors=108 reg_resid_px=0.2839159604090149
+[2026-03-11T01:49:48.571578Z] pair start pair_id=MESSIER 074::hst_9796_04_acs_wfc_f555w_j8ol04::hst_17506_04_wfc3_uvis_f555w_if8c04 index=4/12 galaxy=MESSIER 074 filter=F555W->F555W baseline_days=7350.34
+[2026-03-11T01:50:11.904769Z] pair complete pair_id=MESSIER 074::hst_9796_04_acs_wfc_f555w_j8ol04::hst_17506_04_wfc3_uvis_f555w_if8c04 status=SCANNED residuals=999 survivors=0 reg_resid_px=0.48137862748976673
+[2026-03-11T01:50:11.980657Z] pair start pair_id=MESSIER 077::hst_9788_02_acs_wfc_f814w_j8mx02::hst_16179_29_wfc3_uvis_f814w_ieb329 index=5/12 galaxy=MESSIER 077 filter=F814W->F814W baseline_days=6246.06
+[2026-03-11T01:50:32.717851Z] pair complete pair_id=MESSIER 077::hst_9788_02_acs_wfc_f814w_j8mx02::hst_16179_29_wfc3_uvis_f814w_ieb329 status=SCANNED residuals=984 survivors=0 reg_resid_px=0.32102267922326494
+[2026-03-11T01:50:32.796567Z] pair start pair_id=MESSIER 101::hst_skycell-p2381x08y12_wfc3_uvis_f555w_all::hst_13737_02_wfc3_uvis_f555w_icoy02 index=6/12 galaxy=MESSIER 101 filter=F555W->F555W baseline_days=1300.57

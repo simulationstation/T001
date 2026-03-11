@@ -1,0 +1,19 @@
+{
+  "candidate_id": "MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_1314",
+  "closure_class": "VARIABLE_OR_UNRESOLVED",
+  "closure_confidence": "MEDIUM",
+  "closure_reason_codes": [
+    "STRONG_FADE",
+    "HIGH_SIGNIFICANCE_FADE",
+    "LONG_BASELINE",
+    "NO_ALL_EPOCH_FOLLOWUP"
+  ],
+  "dust_survivor_score": 0.15,
+  "export_failure_score": 0.44414700604062607,
+  "followup_lightcurve_path": "nan",
+  "followup_sed_plot_path": "nan",
+  "followup_summary_path": "nan",
+  "galaxy_name": "MESSIER 101",
+  "systematic_like_score": 0.2361254955787556,
+  "unresolved_score": 0.7653570166681943
+}

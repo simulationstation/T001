@@ -1,0 +1,27 @@
+{
+  "classification_csv": "/home/primary/SUPERNOVA/closure/closure_classification.csv",
+  "created_utc": "20260310_220003UTC",
+  "method_path": "/home/primary/SUPERNOVA/closure/closure_method.md",
+  "packets": {
+    "6dF_J0245599-073443_hst_11575_02_acs_wfc_f814w_jb4u02_hst_14226_01_acs_wfc_f814w_jcuc01_0002": "/home/primary/SUPERNOVA/closure/packets/6dF_J0245599-073443_hst_11575_02_acs_wfc_f814w_jb4u02_hst_14226_01_acs_wfc_f814w_jcuc01_0002/decision.json",
+    "6dF_J0245599-073443_hst_11575_02_acs_wfc_f814w_jb4u02_hst_14226_01_acs_wfc_f814w_jcuc01_0061": "/home/primary/SUPERNOVA/closure/packets/6dF_J0245599-073443_hst_11575_02_acs_wfc_f814w_jb4u02_hst_14226_01_acs_wfc_f814w_jcuc01_0061/decision.json",
+    "MESSIER_061_hst_skycell-p1458x13y04_acs_wfc_f814w_all_hst_12574_01_acs_wfc_f814w_jbs801_0033": "/home/primary/SUPERNOVA/closure/packets/MESSIER_061_hst_skycell-p1458x13y04_acs_wfc_f814w_all_hst_12574_01_acs_wfc_f814w_jbs801_0033/decision.json",
+    "MESSIER_066_hst_12968_01_wfc3_uvis_f438w_ic0h01_hst_15654_22_wfc3_uvis_f438w_idxr22_0217": "/home/primary/SUPERNOVA/closure/packets/MESSIER_066_hst_12968_01_wfc3_uvis_f438w_ic0h01_hst_15654_22_wfc3_uvis_f438w_idxr22_0217/decision.json",
+    "MESSIER_066_hst_12968_01_wfc3_uvis_f814w_ic0h01_hst_15654_22_wfc3_uvis_f814w_idxr22_0091": "/home/primary/SUPERNOVA/closure/packets/MESSIER_066_hst_12968_01_wfc3_uvis_f814w_ic0h01_hst_15654_22_wfc3_uvis_f814w_idxr22_0091/decision.json",
+    "MESSIER_077_hst_15151_04_wfc3_uvis_f555w_idm104_hst_17502_01_wfc3_uvis_f555w_ifab01_0138": "/home/primary/SUPERNOVA/closure/packets/MESSIER_077_hst_15151_04_wfc3_uvis_f555w_idm104_hst_17502_01_wfc3_uvis_f555w_ifab01_0138/decision.json",
+    "MESSIER_077_hst_15151_04_wfc3_uvis_f814w_idm104_hst_17502_01_wfc3_uvis_f814w_ifab01_0257": "/home/primary/SUPERNOVA/closure/packets/MESSIER_077_hst_15151_04_wfc3_uvis_f814w_idm104_hst_17502_01_wfc3_uvis_f814w_ifab01_0257/decision.json",
+    "MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0003": "/home/primary/SUPERNOVA/closure/packets/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0003/decision.json",
+    "MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0008": "/home/primary/SUPERNOVA/closure/packets/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0008/decision.json",
+    "MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0225": "/home/primary/SUPERNOVA/closure/packets/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0225/decision.json",
+    "MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0449": "/home/primary/SUPERNOVA/closure/packets/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_0449/decision.json",
+    "MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_1266": "/home/primary/SUPERNOVA/closure/packets/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_1266/decision.json",
+    "MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_1314": "/home/primary/SUPERNOVA/closure/packets/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_1314/decision.json",
+    "MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_1397": "/home/primary/SUPERNOVA/closure/packets/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_1397/decision.json",
+    "MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_1482": "/home/primary/SUPERNOVA/closure/packets/MESSIER_101_hst_9490_02_acs_wfc_f555w_j8d602_hst_14678_01_acs_wfc_f555w_jd6v01_1482/decision.json",
+    "NGC_5728_hst_15640_21_wfc3_ir_f160w_idxb21_hst_15640_2b_wfc3_ir_f160w_idxb2b_0137": "/home/primary/SUPERNOVA/closure/packets/NGC_5728_hst_15640_21_wfc3_ir_f160w_idxb21_hst_15640_2b_wfc3_ir_f160w_idxb2b_0137/decision.json",
+    "NGC_5861_hst_15145_74_wfc3_ir_f160w_idgg74_hst_16250_14_wfc3_ir_f160w_iebs14_0023": "/home/primary/SUPERNOVA/closure/packets/NGC_5861_hst_15145_74_wfc3_ir_f160w_idgg74_hst_16250_14_wfc3_ir_f160w_iebs14_0023/decision.json",
+    "NGC_5861_hst_15145_78_wfc3_ir_f160w_idgg78_hst_16250_14_wfc3_ir_f160w_iebs14_0025": "/home/primary/SUPERNOVA/closure/packets/NGC_5861_hst_15145_78_wfc3_ir_f160w_idgg78_hst_16250_14_wfc3_ir_f160w_iebs14_0025/decision.json"
+  },
+  "report_path": "/home/primary/SUPERNOVA/closure/closure_report.md",
+  "summary_path": "/home/primary/SUPERNOVA/closure/closure_summary.json"
+}

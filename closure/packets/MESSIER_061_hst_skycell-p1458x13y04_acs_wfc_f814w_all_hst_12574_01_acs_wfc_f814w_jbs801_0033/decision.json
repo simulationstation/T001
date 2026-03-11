@@ -1,0 +1,18 @@
+{
+  "candidate_id": "MESSIER_061_hst_skycell-p1458x13y04_acs_wfc_f814w_all_hst_12574_01_acs_wfc_f814w_jbs801_0033",
+  "closure_class": "VARIABLE_OR_UNRESOLVED",
+  "closure_confidence": "MEDIUM",
+  "closure_reason_codes": [
+    "LONG_BASELINE",
+    "LOCALLY_UNIQUE",
+    "NO_ALL_EPOCH_FOLLOWUP"
+  ],
+  "dust_survivor_score": 0.15,
+  "export_failure_score": 0.35134124057495775,
+  "followup_lightcurve_path": "nan",
+  "followup_sed_plot_path": "nan",
+  "followup_summary_path": "nan",
+  "galaxy_name": "MESSIER 061",
+  "systematic_like_score": 0.20057073766303288,
+  "unresolved_score": 0.7660516001624581
+}

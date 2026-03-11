@@ -1,0 +1,42 @@
+{
+  "candidate_id": "NGC_4388_jw02064-o009_t005_miri_f1800w-sub256_jw05627-o021_t027_miri_f1800w_fade_0050",
+  "dec_deg": 12.660796431366514,
+  "diff_sigma": 8.849645985425925,
+  "diff_sigma_min": 8.849645985425925,
+  "event_sign": "fade",
+  "figure_path": "/home/primary/SUPERNOVA/outputs/live_difference_strict_20260311_0421/packets/NGC_4388_jw02064-o009_t005_miri_f1800w-sub256_jw05627-o021_t027_miri_f1800w/NGC_4388_jw02064-o009_t005_miri_f1800w-sub256_jw05627-o021_t027_miri_f1800w_fade_0050/NGC_4388_jw02064-o009_t005_miri_f1800w-sub256_jw05627-o021_t027_miri_f1800w_fade_0050_cutout.png",
+  "galaxy_name": "NGC 4388",
+  "pair_id": "NGC 4388::jw02064-o009_t005_miri_f1800w-sub256::jw05627-o021_t027_miri_f1800w",
+  "post_flux": -144.25925032549628,
+  "post_to_pre_ratio": -0.2571064635412682,
+  "pre_flux": 561.0876068167815,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "jw02064-o009_t005_miri_f1800w-sub256",
+    "obs_id_2": "jw05627-o021_t027_miri_f1800w",
+    "obsid_1": 150193274,
+    "obsid_2": 279680250,
+    "product_filename_1": "jw02064-o009_t005_miri_f1800w-sub256_i2d.fits",
+    "product_filename_2": "jw05627-o021_t027_miri_f1800w_i2d.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/JWST/jw02064-o009_t005_miri_f1800w-sub256/jw02064-o009_t005_miri_f1800w-sub256_i2d.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/JWST/jw05627-o021_t027_miri_f1800w/jw05627-o021_t027_miri_f1800w_i2d.fits",
+    "product_priority_1": 156.0,
+    "product_priority_2": 156.0,
+    "product_uri_1": "cached://JWST/jw02064-o009_t005_miri_f1800w-sub256/jw02064-o009_t005_miri_f1800w-sub256_i2d.fits",
+    "product_uri_2": "cached://JWST/jw05627-o021_t027_miri_f1800w/jw05627-o021_t027_miri_f1800w_i2d.fits"
+  },
+  "ra_deg": 186.44407749845837,
+  "reason_codes": [
+    "POST_LT_5PCT",
+    "ROBUST_DIFF_SIG"
+  ],
+  "registration_dx_px": -0.9716139900571932,
+  "registration_dy_px": 0.5155473296737583,
+  "registration_n_matches": 20,
+  "registration_residual_px": 0.8610729637613355,
+  "status": "REVIEW",
+  "warning_flags": [
+    "ASTROMETRY_RESIDUAL"
+  ]
+}

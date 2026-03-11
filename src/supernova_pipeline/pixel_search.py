@@ -120,6 +120,59 @@ def _product_priority(row: pd.Series, *, obs_collection: str) -> float:
     return score
 
 
+def _cached_subgroup(filename: str, *, obs_collection: str) -> str:
+    lower = str(filename).lower()
+    if obs_collection == "HST":
+        if lower.endswith(("_drc.fits", "_drc.fits.gz")):
+            return "DRC"
+        if lower.endswith(("_drz.fits", "_drz.fits.gz")):
+            return "DRZ"
+        if lower.endswith(("_flc.fits", "_flc.fits.gz")):
+            return "FLC"
+        if lower.endswith(("_flt.fits", "_flt.fits.gz")):
+            return "FLT"
+        if lower.endswith(("_ima.fits", "_ima.fits.gz")):
+            return "IMA"
+        if lower.endswith(("_c0f.fits", "_c0f.fits.gz")):
+            return "C0F"
+    elif obs_collection == "JWST":
+        if lower.endswith(("_i2d.fits", "_i2d.fits.gz")):
+            return "I2D"
+        if lower.endswith(("_cal.fits", "_cal.fits.gz")):
+            return "CAL"
+        if lower.endswith(("_rate.fits", "_rate.fits.gz")):
+            return "RATE"
+    return ""
+
+
+def _cached_products(root_dir: Path, *, obs_collection: str, obs_id: str) -> pd.DataFrame:
+    cache_dir = root_dir / "data" / "cache" / "mast_products" / obs_collection / _slugify(obs_id)
+    if not cache_dir.exists():
+        return pd.DataFrame()
+    rows: list[dict[str, Any]] = []
+    for path in sorted(cache_dir.iterdir()):
+        if not path.is_file() or path.name.startswith("."):
+            continue
+        lower = path.name.lower()
+        if not (lower.endswith(".fits") or lower.endswith(".fits.gz")):
+            continue
+        rows.append(
+            {
+                "productFilename": path.name,
+                "productSubGroupDescription": _cached_subgroup(path.name, obs_collection=obs_collection),
+                "dataproduct_type": "image",
+                "description": "cached fits",
+                "dataRights": "PUBLIC",
+                "calib_level": 3,
+                "productGroupDescription": "cached local file",
+                "size": int(path.stat().st_size),
+                "dataURI": f"cached://{obs_collection}/{_slugify(obs_id)}/{path.name}",
+                "localPath": str(path),
+            }
+        )
+    return pd.DataFrame(rows)
+
+
 def _select_best_product(products: pd.DataFrame, *, obs_collection: str) -> pd.Series | None:
     if products.empty:
         return None
@@ -132,6 +185,11 @@ def _select_best_product(products: pd.DataFrame, *, obs_collection: str) -> pd.S
 
 
 def _download_product(product: pd.Series, *, root_dir: Path, obs_collection: str, obs_id: str) -> Path:
+    local_path = product.get("localPath")
+    if isinstance(local_path, str) and local_path:
+        path = Path(local_path)
+        if path.exists() and path.stat().st_size > 0:
+            return path
     cache_dir = ensure_dir(root_dir / "data" / "cache" / "mast_products" / obs_collection / _slugify(obs_id))
     filename = str(product["productFilename"])
     destination = cache_dir / filename
@@ -161,9 +219,7 @@ def _load_science_image(path: Path, *, obs_collection: str, obs_id: str, filter_
         best_extname = "PRIMARY"
         for hdu in hdul:
             data = getattr(hdu, "data", None)
-            if not isinstance(data, np.ndarray) or data.ndim != 2:
-                continue
-            if not np.isfinite(data).any():
+            if not isinstance(data, np.ndarray):
                 continue
             try:
                 wcs = WCS(hdu.header).celestial
@@ -171,17 +227,30 @@ def _load_science_image(path: Path, *, obs_collection: str, obs_id: str, filter_
                 continue
             if not wcs.has_celestial:
                 continue
+            planes: list[tuple[np.ndarray, str, int]] = []
+            if data.ndim == 2:
+                planes.append((np.asarray(data, dtype=float), "", 0))
+            elif data.ndim == 3 and 1 <= data.shape[0] <= 8:
+                for idx in range(data.shape[0]):
+                    planes.append((np.asarray(data[idx], dtype=float), f"[{idx}]", idx))
+            else:
+                continue
             extname = (getattr(hdu, "name", "") or "PRIMARY").upper()
-            score = float(np.isfinite(data).sum())
-            if extname == "SCI":
-                score += 1e9
-            elif extname == "PRIMARY":
-                score += 5e8
-            if score > best_score:
-                best_score = score
-                best_data = np.asarray(data, dtype=float)
-                best_wcs = wcs
-                best_extname = extname
+            for plane, plane_suffix, plane_index in planes:
+                if not np.isfinite(plane).any():
+                    continue
+                score = float(np.isfinite(plane).sum())
+                if extname == "SCI":
+                    score += 1e9
+                elif extname == "PRIMARY":
+                    score += 5e8
+                if data.ndim == 3:
+                    score += 1e7 - plane_index
+                if score > best_score:
+                    best_score = score
+                    best_data = plane
+                    best_wcs = wcs
+                    best_extname = f"{extname}{plane_suffix}"
 
     if best_data is None or best_wcs is None:
         raise RuntimeError(f"No celestial 2D science image found in {path}")

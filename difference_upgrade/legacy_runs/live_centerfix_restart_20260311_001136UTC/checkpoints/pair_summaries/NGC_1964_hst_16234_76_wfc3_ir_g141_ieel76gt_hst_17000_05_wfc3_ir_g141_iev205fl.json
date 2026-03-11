@@ -1,0 +1,15 @@
+{
+  "baseline_days": 638.3004320100008,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "G141",
+  "filter_2": "G141",
+  "galaxy_name": "NGC 1964",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_16234_76_wfc3_ir_g141_ieel76gt",
+  "obs_id_2": "hst_17000_05_wfc3_ir_g141_iev205fl",
+  "pair_id": "NGC 1964::hst_16234_76_wfc3_ir_g141_ieel76gt::hst_17000_05_wfc3_ir_g141_iev205fl",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}

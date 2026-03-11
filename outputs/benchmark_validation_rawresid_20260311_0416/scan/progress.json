@@ -1,0 +1,18 @@
+{
+  "created_utc": "20260311_040718UTC",
+  "n_benchmark_signals": 0,
+  "n_detection_measurements": 12923,
+  "n_detections": 195,
+  "n_fade_candidates": 195,
+  "n_pairs_completed": 12,
+  "n_pairs_failed": 0,
+  "n_pairs_scanned": 12,
+  "n_pairs_selected": 12,
+  "n_pairs_skipped": 0,
+  "n_pass": 106,
+  "n_review": 89,
+  "sign_mode": "both",
+  "stage": "stage03_aggregate_outputs",
+  "status": "completed",
+  "timestamp_utc": "2026-03-11T04:07:18.065994Z"
+}

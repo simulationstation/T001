@@ -1,0 +1,15 @@
+{
+  "baseline_days": 3843.6295484599977,
+  "compatibility": "exact",
+  "error": "TARGET_CENTER_OUTSIDE_FOOTPRINT",
+  "filter_1": "F555W",
+  "filter_2": "F555W",
+  "galaxy_name": "MESSIER 100",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "hst_11646_01_wfc3_uvis_f555w_ib2q01",
+  "obs_id_2": "hst_16075_01_wfc3_uvis_f555w_ie9801",
+  "pair_id": "MESSIER 100::hst_11646_01_wfc3_uvis_f555w_ib2q01::hst_16075_01_wfc3_uvis_f555w_ie9801",
+  "pair_score": 1.4000000000000001,
+  "status": "SKIPPED"
+}

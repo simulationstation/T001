@@ -1,0 +1,42 @@
+{
+  "candidate_id": "MESSIER_101_jw03921-o040_t042_miri_f770w_jw07881-o001_t002_miri_f770w_fade_0000",
+  "dec_deg": 54.31170940548384,
+  "diff_sigma": 628.8456683101963,
+  "diff_sigma_min": 374.3381804882621,
+  "event_sign": "fade",
+  "figure_path": "/home/primary/SUPERNOVA/outputs/live_difference_strict_20260311_0421/packets/MESSIER_101_jw03921-o040_t042_miri_f770w_jw07881-o001_t002_miri_f770w/MESSIER_101_jw03921-o040_t042_miri_f770w_jw07881-o001_t002_miri_f770w_fade_0000/MESSIER_101_jw03921-o040_t042_miri_f770w_jw07881-o001_t002_miri_f770w_fade_0000_cutout.png",
+  "galaxy_name": "MESSIER 101",
+  "pair_id": "MESSIER 101::jw03921-o040_t042_miri_f770w::jw07881-o001_t002_miri_f770w",
+  "post_flux": 3221.863263093577,
+  "post_to_pre_ratio": 0.27253232734139926,
+  "pre_flux": 11739.234282468235,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "jw03921-o040_t042_miri_f770w",
+    "obs_id_2": "jw07881-o001_t002_miri_f770w",
+    "obsid_1": 212737553,
+    "obsid_2": 378062981,
+    "product_filename_1": "jw03921-o040_t042_miri_f770w_i2d.fits",
+    "product_filename_2": "jw07881-o001_t002_miri_f770w_i2d.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/JWST/jw03921-o040_t042_miri_f770w/jw03921-o040_t042_miri_f770w_i2d.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/JWST/jw07881-o001_t002_miri_f770w/jw07881-o001_t002_miri_f770w_i2d.fits",
+    "product_priority_1": 156.0,
+    "product_priority_2": 156.0,
+    "product_uri_1": "cached://JWST/jw03921-o040_t042_miri_f770w/jw03921-o040_t042_miri_f770w_i2d.fits",
+    "product_uri_2": "cached://JWST/jw07881-o001_t002_miri_f770w/jw07881-o001_t002_miri_f770w_i2d.fits"
+  },
+  "ra_deg": 210.91069160975493,
+  "reason_codes": [
+    "ROBUST_DIFF_SIG",
+    "REGISTRATION_OK"
+  ],
+  "registration_dx_px": -1.0909696892845204,
+  "registration_dy_px": 0.20345697533616658,
+  "registration_n_matches": 223,
+  "registration_residual_px": 0.14825122888067455,
+  "status": "REVIEW",
+  "warning_flags": [
+    "BLEND_RISK"
+  ]
+}

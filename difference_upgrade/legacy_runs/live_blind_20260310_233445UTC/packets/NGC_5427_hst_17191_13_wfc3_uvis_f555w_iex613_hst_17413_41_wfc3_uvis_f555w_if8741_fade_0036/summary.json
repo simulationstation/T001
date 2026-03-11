@@ -1,0 +1,40 @@
+{
+  "candidate_id": "NGC_5427_hst_17191_13_wfc3_uvis_f555w_iex613_hst_17413_41_wfc3_uvis_f555w_if8741_fade_0036",
+  "dec_deg": -6.032767258697043,
+  "diff_sigma": 6.181207289161116,
+  "diff_sigma_min": 3.667347636399025,
+  "event_sign": "fade",
+  "figure_path": "difference_upgrade/live/packets/NGC_5427_hst_17191_13_wfc3_uvis_f555w_iex613_hst_17413_41_wfc3_uvis_f555w_if8741_fade_0036/NGC_5427_hst_17191_13_wfc3_uvis_f555w_iex613_hst_17413_41_wfc3_uvis_f555w_if8741_fade_0036_cutout.png",
+  "galaxy_name": "NGC 5427",
+  "pair_id": "NGC 5427::hst_17191_13_wfc3_uvis_f555w_iex613::hst_17413_41_wfc3_uvis_f555w_if8741",
+  "post_flux": -0.32389937418696313,
+  "post_to_pre_ratio": -4.35063473142791,
+  "pre_flux": 0.01768355041756653,
+  "product_info": {
+    "image_ext_1": "SCI",
+    "image_ext_2": "SCI",
+    "obs_id_1": "hst_17191_13_wfc3_uvis_f555w_iex613",
+    "obs_id_2": "hst_17413_41_wfc3_uvis_f555w_if8741",
+    "obsid_1": 151451720,
+    "obsid_2": 250801709,
+    "product_filename_1": "hst_17191_13_wfc3_uvis_f555w_iex613_drc.fits",
+    "product_filename_2": "hst_17413_41_wfc3_uvis_f555w_if8741_drc.fits",
+    "product_path_1": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_17191_13_wfc3_uvis_f555w_iex613/hst_17191_13_wfc3_uvis_f555w_iex613_drc.fits",
+    "product_path_2": "/home/primary/SUPERNOVA/data/cache/mast_products/HST/hst_17413_41_wfc3_uvis_f555w_if8741/hst_17413_41_wfc3_uvis_f555w_if8741_drc.fits",
+    "product_priority_1": 181.0,
+    "product_priority_2": 181.0,
+    "product_uri_1": "mast:HST/product/hst_17191_13_wfc3_uvis_f555w_iex613_drc.fits",
+    "product_uri_2": "mast:HST/product/hst_17413_41_wfc3_uvis_f555w_if8741_drc.fits"
+  },
+  "ra_deg": 210.84962490537114,
+  "reason_codes": [
+    "POST_LT_5PCT",
+    "REGISTRATION_OK"
+  ],
+  "registration_dx_px": 0.06656864643719018,
+  "registration_dy_px": -0.005849655219208216,
+  "registration_n_matches": 189,
+  "registration_residual_px": 0.08970094165255216,
+  "status": "REVIEW",
+  "warning_flags": []
+}

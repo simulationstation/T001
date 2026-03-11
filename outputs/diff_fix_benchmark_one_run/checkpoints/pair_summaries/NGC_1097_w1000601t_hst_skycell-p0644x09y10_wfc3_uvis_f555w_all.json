@@ -1,0 +1,15 @@
+{
+  "baseline_days": 11588.965108823424,
+  "compatibility": "exact",
+  "error": "Target center outside usable footprint before reprojection.",
+  "filter_1": "F555W",
+  "filter_2": "F555W",
+  "galaxy_name": "NGC 1097",
+  "n_residual_detections": 0,
+  "n_survivors": 0,
+  "obs_id_1": "w1000601t",
+  "obs_id_2": "hst_skycell-p0644x09y10_wfc3_uvis_f555w_all",
+  "pair_id": "NGC 1097::w1000601t::hst_skycell-p0644x09y10_wfc3_uvis_f555w_all",
+  "pair_score": 1.4000000000000001,
+  "status": "FAILED"
+}
