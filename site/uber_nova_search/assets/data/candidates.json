@@ -1,10 +1,874 @@
 {
   "candidates": [
     {
+      "badge": "Recovered blind benchmark supernova",
+      "badge_color": "#2f7f62",
+      "blind_match_name": "SN2021PFS",
+      "blind_match_sep_arcsec": "0.243",
+      "branch_class": "BENCHMARK_RECOVERED",
+      "branch_confidence": "KNOWN",
+      "branch_rank": 1,
+      "branch_rank_score": 1.0,
+      "cluster_id": "BENCHMARK_NGC_5427_SN2021PFS",
+      "date_window": "2022-02-24 to 2025-04-05",
+      "dec_deg": "-6.03161",
+      "diff_rel": "assets/panels/BENCHMARK_NGC_5427_SN2021PFS_diff.png",
+      "filters": "F606W -> F606W",
+      "galaxy_name": "NGC 5427",
+      "gif_rel": "assets/gifs/BENCHMARK_NGC_5427_SN2021PFS_blink.gif",
+      "highest_value": false,
+      "instruments": "WFPC2/PC | WFC3/UVIS",
+      "interpretation": "Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "matched_to_blind": true,
+      "math_rows": [
+        [
+          "Benchmark rank",
+          "1 / 9"
+        ],
+        [
+          "Truth group",
+          "SN2021PFS"
+        ],
+        [
+          "Blind recovery",
+          "Recovered"
+        ],
+        [
+          "Recovery separation",
+          "0.243\""
+        ],
+        [
+          "Matched event sign",
+          "brighten"
+        ],
+        [
+          "Matched diff significance",
+          "921.975"
+        ],
+        [
+          "Registration residual",
+          "0.101 px"
+        ],
+        [
+          "Registration matches",
+          "26"
+        ],
+        [
+          "Residual detections",
+          "1005"
+        ],
+        [
+          "Surviving detections",
+          "0"
+        ],
+        [
+          "Fade survivors",
+          "0"
+        ],
+        [
+          "Brighten survivors",
+          "0"
+        ],
+        [
+          "Filters",
+          "F606W -> F606W"
+        ],
+        [
+          "Instruments",
+          "WFPC2/PC | WFC3/UVIS"
+        ],
+        [
+          "Baseline",
+          "10106.8 d"
+        ],
+        [
+          "Observation span",
+          "2022-02-24 to 2025-04-05"
+        ]
+      ],
+      "panel_rel": "assets/panels/BENCHMARK_NGC_5427_SN2021PFS_panel.png",
+      "ra_deg": "210.84829",
+      "reason_codes": [
+        "BLIND_BENCHMARK_RECOVERY",
+        "KNOWN_TARGET"
+      ],
+      "representative_pair": "NGC 5427::u2e64o01t::hst_16691_56_wfc3_uvis_f606w_ierg56",
+      "search_text": "BENCHMARK_NGC_5427_SN2021PFS NGC 5427 SN2021PFS recovered benchmark supernova F606W F606W brighten Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "warning_flags": []
+    },
+    {
+      "badge": "Recovered blind benchmark supernova",
+      "badge_color": "#2f7f62",
+      "blind_match_name": "SN2013EJ",
+      "blind_match_sep_arcsec": "0.487",
+      "branch_class": "BENCHMARK_RECOVERED",
+      "branch_confidence": "KNOWN",
+      "branch_rank": 2,
+      "branch_rank_score": 1.0,
+      "cluster_id": "BENCHMARK_MESSIER_074_SN2013EJ",
+      "date_window": "2015-12-29 to 2024-01-04",
+      "dec_deg": "15.75861",
+      "diff_rel": "assets/panels/BENCHMARK_MESSIER_074_SN2013EJ_diff.png",
+      "filters": "F555W -> F555W",
+      "galaxy_name": "MESSIER 074",
+      "gif_rel": "assets/gifs/BENCHMARK_MESSIER_074_SN2013EJ_blink.gif",
+      "highest_value": false,
+      "instruments": "ACS/WFC | WFC3/UVIS",
+      "interpretation": "Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "matched_to_blind": true,
+      "math_rows": [
+        [
+          "Benchmark rank",
+          "2 / 9"
+        ],
+        [
+          "Truth group",
+          "SN2013EJ"
+        ],
+        [
+          "Blind recovery",
+          "Recovered"
+        ],
+        [
+          "Recovery separation",
+          "0.487\""
+        ],
+        [
+          "Matched event sign",
+          "brighten"
+        ],
+        [
+          "Matched diff significance",
+          "32.822"
+        ],
+        [
+          "Registration residual",
+          "0.481 px"
+        ],
+        [
+          "Registration matches",
+          "251"
+        ],
+        [
+          "Residual detections",
+          "1057"
+        ],
+        [
+          "Surviving detections",
+          "0"
+        ],
+        [
+          "Fade survivors",
+          "0"
+        ],
+        [
+          "Brighten survivors",
+          "0"
+        ],
+        [
+          "Filters",
+          "F555W -> F555W"
+        ],
+        [
+          "Instruments",
+          "ACS/WFC | WFC3/UVIS"
+        ],
+        [
+          "Baseline",
+          "7350.3 d"
+        ],
+        [
+          "Observation span",
+          "2015-12-29 to 2024-01-04"
+        ]
+      ],
+      "panel_rel": "assets/panels/BENCHMARK_MESSIER_074_SN2013EJ_panel.png",
+      "ra_deg": "24.20067",
+      "reason_codes": [
+        "BLIND_BENCHMARK_RECOVERY",
+        "KNOWN_TARGET"
+      ],
+      "representative_pair": "MESSIER 074::hst_9796_04_acs_wfc_f555w_j8ol04::hst_17506_04_wfc3_uvis_f555w_if8c04",
+      "search_text": "BENCHMARK_MESSIER_074_SN2013EJ MESSIER 074 SN2013EJ recovered benchmark supernova F555W F555W brighten Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "warning_flags": []
+    },
+    {
+      "badge": "Recovered blind benchmark supernova",
+      "badge_color": "#2f7f62",
+      "blind_match_name": "SN2014C",
+      "blind_match_sep_arcsec": "0.490",
+      "branch_class": "BENCHMARK_RECOVERED",
+      "branch_confidence": "KNOWN",
+      "branch_rank": 3,
+      "branch_rank_score": 1.0,
+      "cluster_id": "BENCHMARK_NGC_7331_SN2014C",
+      "date_window": "2015-08-22 to 2023-07-25",
+      "dec_deg": "34.40886",
+      "diff_rel": "assets/panels/BENCHMARK_NGC_7331_SN2014C_diff.png",
+      "filters": "F814W -> F814W",
+      "galaxy_name": "NGC 7331",
+      "gif_rel": "assets/gifs/BENCHMARK_NGC_7331_SN2014C_blink.gif",
+      "highest_value": false,
+      "instruments": "ACS/WFC | WFC3/UVIS",
+      "interpretation": "Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "matched_to_blind": true,
+      "math_rows": [
+        [
+          "Benchmark rank",
+          "3 / 9"
+        ],
+        [
+          "Truth group",
+          "SN2014C"
+        ],
+        [
+          "Blind recovery",
+          "Recovered"
+        ],
+        [
+          "Recovery separation",
+          "0.490\""
+        ],
+        [
+          "Matched event sign",
+          "fade"
+        ],
+        [
+          "Matched diff significance",
+          "24.232"
+        ],
+        [
+          "Registration residual",
+          "0.158 px"
+        ],
+        [
+          "Registration matches",
+          "119"
+        ],
+        [
+          "Residual detections",
+          "1094"
+        ],
+        [
+          "Surviving detections",
+          "0"
+        ],
+        [
+          "Fade survivors",
+          "0"
+        ],
+        [
+          "Brighten survivors",
+          "0"
+        ],
+        [
+          "Filters",
+          "F814W -> F814W"
+        ],
+        [
+          "Instruments",
+          "ACS/WFC | WFC3/UVIS"
+        ],
+        [
+          "Baseline",
+          "1186.2 d"
+        ],
+        [
+          "Observation span",
+          "2015-08-22 to 2023-07-25"
+        ]
+      ],
+      "panel_rel": "assets/panels/BENCHMARK_NGC_7331_SN2014C_panel.png",
+      "ra_deg": "339.27333",
+      "reason_codes": [
+        "BLIND_BENCHMARK_RECOVERY",
+        "KNOWN_TARGET"
+      ],
+      "representative_pair": "NGC 7331::hst_15645_10_acs_wfc_f814w_jdxk10::hst_16691_01_wfc3_uvis_f814w_ierg01",
+      "search_text": "BENCHMARK_NGC_7331_SN2014C NGC 7331 SN2014C recovered benchmark supernova F814W F814W fade Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "warning_flags": []
+    },
+    {
+      "badge": "Recovered blind benchmark supernova",
+      "badge_color": "#2f7f62",
+      "blind_match_name": "SN2009HD",
+      "blind_match_sep_arcsec": "0.525",
+      "branch_class": "BENCHMARK_RECOVERED",
+      "branch_confidence": "KNOWN",
+      "branch_rank": 4,
+      "branch_rank_score": 1.0,
+      "cluster_id": "BENCHMARK_MESSIER_066_SN2009HD",
+      "date_window": "2023-05-10 to 2023-05-10",
+      "dec_deg": "12.98256",
+      "diff_rel": "assets/panels/BENCHMARK_MESSIER_066_SN2009HD_diff.png",
+      "filters": "F555W -> F555W",
+      "galaxy_name": "MESSIER 066",
+      "gif_rel": "assets/gifs/BENCHMARK_MESSIER_066_SN2009HD_blink.gif",
+      "highest_value": false,
+      "instruments": "WFC3/UVIS | ACS/WFC",
+      "interpretation": "Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "matched_to_blind": true,
+      "math_rows": [
+        [
+          "Benchmark rank",
+          "4 / 9"
+        ],
+        [
+          "Truth group",
+          "SN2009HD"
+        ],
+        [
+          "Blind recovery",
+          "Recovered"
+        ],
+        [
+          "Recovery separation",
+          "0.525\""
+        ],
+        [
+          "Matched event sign",
+          "fade"
+        ],
+        [
+          "Matched diff significance",
+          "9.055"
+        ],
+        [
+          "Registration residual",
+          "0.284 px"
+        ],
+        [
+          "Registration matches",
+          "116"
+        ],
+        [
+          "Residual detections",
+          "1138"
+        ],
+        [
+          "Surviving detections",
+          "182"
+        ],
+        [
+          "Fade survivors",
+          "182"
+        ],
+        [
+          "Brighten survivors",
+          "0"
+        ],
+        [
+          "Filters",
+          "F555W -> F555W"
+        ],
+        [
+          "Instruments",
+          "WFC3/UVIS | ACS/WFC"
+        ],
+        [
+          "Baseline",
+          "3377.6 d"
+        ],
+        [
+          "Observation span",
+          "2023-05-10 to 2023-05-10"
+        ]
+      ],
+      "panel_rel": "assets/panels/BENCHMARK_MESSIER_066_SN2009HD_panel.png",
+      "ra_deg": "170.07954",
+      "reason_codes": [
+        "BLIND_BENCHMARK_RECOVERY",
+        "KNOWN_TARGET"
+      ],
+      "representative_pair": "MESSIER 066::hlsp_legus_hst_uvis_ngc3627_f555w_v1_drc::jey347020",
+      "search_text": "BENCHMARK_MESSIER_066_SN2009HD MESSIER 066 SN2009HD recovered benchmark supernova F555W F555W fade Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "warning_flags": []
+    },
+    {
+      "badge": "Recovered blind benchmark supernova",
+      "badge_color": "#2f7f62",
+      "blind_match_name": "SN2021DO",
+      "blind_match_sep_arcsec": "0.683",
+      "branch_class": "BENCHMARK_RECOVERED",
+      "branch_confidence": "KNOWN",
+      "branch_rank": 5,
+      "branch_rank_score": 1.0,
+      "cluster_id": "BENCHMARK_NGC_3147_SN2021DO",
+      "date_window": "2021-12-29 to 2021-12-29",
+      "dec_deg": "73.39837",
+      "diff_rel": "assets/panels/BENCHMARK_NGC_3147_SN2021DO_diff.png",
+      "filters": "F555W -> F555W",
+      "galaxy_name": "NGC 3147",
+      "gif_rel": "assets/gifs/BENCHMARK_NGC_3147_SN2021DO_blink.gif",
+      "highest_value": false,
+      "instruments": "WFC3/UVIS | WFC3/UVIS",
+      "interpretation": "Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "matched_to_blind": true,
+      "math_rows": [
+        [
+          "Benchmark rank",
+          "5 / 9"
+        ],
+        [
+          "Truth group",
+          "SN2021DO"
+        ],
+        [
+          "Blind recovery",
+          "Recovered"
+        ],
+        [
+          "Recovery separation",
+          "0.683\""
+        ],
+        [
+          "Matched event sign",
+          "fade"
+        ],
+        [
+          "Matched diff significance",
+          "11.191"
+        ],
+        [
+          "Registration residual",
+          "0.877 px"
+        ],
+        [
+          "Registration matches",
+          "30"
+        ],
+        [
+          "Residual detections",
+          "1140"
+        ],
+        [
+          "Surviving detections",
+          "0"
+        ],
+        [
+          "Fade survivors",
+          "0"
+        ],
+        [
+          "Brighten survivors",
+          "0"
+        ],
+        [
+          "Filters",
+          "F555W -> F555W"
+        ],
+        [
+          "Instruments",
+          "WFC3/UVIS | WFC3/UVIS"
+        ],
+        [
+          "Baseline",
+          "1516.7 d"
+        ],
+        [
+          "Observation span",
+          "2021-12-29 to 2021-12-29"
+        ]
+      ],
+      "panel_rel": "assets/panels/BENCHMARK_NGC_3147_SN2021DO_panel.png",
+      "ra_deg": "154.20381",
+      "reason_codes": [
+        "BLIND_BENCHMARK_RECOVERY",
+        "KNOWN_TARGET"
+      ],
+      "representative_pair": "NGC 3147::hst_15145_32_wfc3_uvis_f555w_idgg32::hst_16691_22_wfc3_uvis_f555w_ierg22",
+      "search_text": "BENCHMARK_NGC_3147_SN2021DO NGC 3147 SN2021DO recovered benchmark supernova F555W F555W fade Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "warning_flags": []
+    },
+    {
+      "badge": "Recovered blind benchmark supernova",
+      "badge_color": "#2f7f62",
+      "blind_match_name": "SN2011FE",
+      "blind_match_sep_arcsec": "0.751",
+      "branch_class": "BENCHMARK_RECOVERED",
+      "branch_confidence": "KNOWN",
+      "branch_rank": 6,
+      "branch_rank_score": 1.0,
+      "cluster_id": "BENCHMARK_MESSIER_101_SN2011FE",
+      "date_window": "2011-09-13 to 2024-02-23",
+      "dec_deg": "54.27796",
+      "diff_rel": "assets/panels/BENCHMARK_MESSIER_101_SN2011FE_diff.png",
+      "filters": "F555W -> F555W",
+      "galaxy_name": "MESSIER 101",
+      "gif_rel": "assets/gifs/BENCHMARK_MESSIER_101_SN2011FE_blink.gif",
+      "highest_value": false,
+      "instruments": "WFC3/UVIS | WFC3/UVIS",
+      "interpretation": "Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "matched_to_blind": true,
+      "math_rows": [
+        [
+          "Benchmark rank",
+          "6 / 9"
+        ],
+        [
+          "Truth group",
+          "SN2011FE"
+        ],
+        [
+          "Blind recovery",
+          "Recovered"
+        ],
+        [
+          "Recovery separation",
+          "0.751\""
+        ],
+        [
+          "Matched event sign",
+          "fade"
+        ],
+        [
+          "Matched diff significance",
+          "6.787"
+        ],
+        [
+          "Registration residual",
+          "0.262 px"
+        ],
+        [
+          "Registration matches",
+          "263"
+        ],
+        [
+          "Residual detections",
+          "1107"
+        ],
+        [
+          "Surviving detections",
+          "13"
+        ],
+        [
+          "Fade survivors",
+          "13"
+        ],
+        [
+          "Brighten survivors",
+          "0"
+        ],
+        [
+          "Filters",
+          "F555W -> F555W"
+        ],
+        [
+          "Instruments",
+          "WFC3/UVIS | WFC3/UVIS"
+        ],
+        [
+          "Baseline",
+          "1300.6 d"
+        ],
+        [
+          "Observation span",
+          "2011-09-13 to 2024-02-23"
+        ]
+      ],
+      "panel_rel": "assets/panels/BENCHMARK_MESSIER_101_SN2011FE_panel.png",
+      "ra_deg": "210.77380",
+      "reason_codes": [
+        "BLIND_BENCHMARK_RECOVERY",
+        "KNOWN_TARGET"
+      ],
+      "representative_pair": "MESSIER 101::hst_skycell-p2381x08y12_wfc3_uvis_f555w_all::hst_13737_02_wfc3_uvis_f555w_icoy02",
+      "search_text": "BENCHMARK_MESSIER_101_SN2011FE MESSIER 101 SN2011FE recovered benchmark supernova F555W F555W fade Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "warning_flags": []
+    },
+    {
+      "badge": "Recovered blind benchmark supernova",
+      "badge_color": "#2f7f62",
+      "blind_match_name": "SN2016COK",
+      "blind_match_sep_arcsec": "0.870",
+      "branch_class": "BENCHMARK_RECOVERED",
+      "branch_confidence": "KNOWN",
+      "branch_rank": 7,
+      "branch_rank_score": 1.0,
+      "cluster_id": "BENCHMARK_MESSIER_066_SN2016COK",
+      "date_window": "2023-05-10 to 2023-05-10",
+      "dec_deg": "12.98256",
+      "diff_rel": "assets/panels/BENCHMARK_MESSIER_066_SN2016COK_diff.png",
+      "filters": "F555W -> F555W",
+      "galaxy_name": "MESSIER 066",
+      "gif_rel": "assets/gifs/BENCHMARK_MESSIER_066_SN2016COK_blink.gif",
+      "highest_value": false,
+      "instruments": "WFC3/UVIS | ACS/WFC",
+      "interpretation": "Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "matched_to_blind": true,
+      "math_rows": [
+        [
+          "Benchmark rank",
+          "7 / 9"
+        ],
+        [
+          "Truth group",
+          "SN2016COK"
+        ],
+        [
+          "Blind recovery",
+          "Recovered"
+        ],
+        [
+          "Recovery separation",
+          "0.870\""
+        ],
+        [
+          "Matched event sign",
+          "brighten"
+        ],
+        [
+          "Matched diff significance",
+          "117.656"
+        ],
+        [
+          "Registration residual",
+          "0.284 px"
+        ],
+        [
+          "Registration matches",
+          "116"
+        ],
+        [
+          "Residual detections",
+          "1138"
+        ],
+        [
+          "Surviving detections",
+          "182"
+        ],
+        [
+          "Fade survivors",
+          "182"
+        ],
+        [
+          "Brighten survivors",
+          "0"
+        ],
+        [
+          "Filters",
+          "F555W -> F555W"
+        ],
+        [
+          "Instruments",
+          "WFC3/UVIS | ACS/WFC"
+        ],
+        [
+          "Baseline",
+          "3377.6 d"
+        ],
+        [
+          "Observation span",
+          "2023-05-10 to 2023-05-10"
+        ]
+      ],
+      "panel_rel": "assets/panels/BENCHMARK_MESSIER_066_SN2016COK_panel.png",
+      "ra_deg": "170.07954",
+      "reason_codes": [
+        "BLIND_BENCHMARK_RECOVERY",
+        "KNOWN_TARGET"
+      ],
+      "representative_pair": "MESSIER 066::hlsp_legus_hst_uvis_ngc3627_f555w_v1_drc::jey347020",
+      "search_text": "BENCHMARK_MESSIER_066_SN2016COK MESSIER 066 SN2016COK recovered benchmark supernova F555W F555W brighten Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "warning_flags": []
+    },
+    {
+      "badge": "Recovered blind benchmark supernova",
+      "badge_color": "#2f7f62",
+      "blind_match_name": "SN2020AZE",
+      "blind_match_sep_arcsec": "0.875",
+      "branch_class": "BENCHMARK_RECOVERED",
+      "branch_confidence": "KNOWN",
+      "branch_rank": 8,
+      "branch_rank_score": 1.0,
+      "cluster_id": "BENCHMARK_NGC_3318_SN2020AZE",
+      "date_window": "2021-03-29 to 2023-11-01",
+      "dec_deg": "-41.62489",
+      "diff_rel": "assets/panels/BENCHMARK_NGC_3318_SN2020AZE_diff.png",
+      "filters": "F555W -> F555W",
+      "galaxy_name": "NGC 3318",
+      "gif_rel": "assets/gifs/BENCHMARK_NGC_3318_SN2020AZE_blink.gif",
+      "highest_value": false,
+      "instruments": "WFC3/UVIS | ACS/WFC",
+      "interpretation": "Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "matched_to_blind": true,
+      "math_rows": [
+        [
+          "Benchmark rank",
+          "8 / 9"
+        ],
+        [
+          "Truth group",
+          "SN2020AZE"
+        ],
+        [
+          "Blind recovery",
+          "Recovered"
+        ],
+        [
+          "Recovery separation",
+          "0.875\""
+        ],
+        [
+          "Matched event sign",
+          "fade"
+        ],
+        [
+          "Matched diff significance",
+          "33.932"
+        ],
+        [
+          "Registration residual",
+          "0.282 px"
+        ],
+        [
+          "Registration matches",
+          "144"
+        ],
+        [
+          "Residual detections",
+          "1112"
+        ],
+        [
+          "Surviving detections",
+          "0"
+        ],
+        [
+          "Fade survivors",
+          "0"
+        ],
+        [
+          "Brighten survivors",
+          "0"
+        ],
+        [
+          "Filters",
+          "F555W -> F555W"
+        ],
+        [
+          "Instruments",
+          "WFC3/UVIS | ACS/WFC"
+        ],
+        [
+          "Baseline",
+          "947.4 d"
+        ],
+        [
+          "Observation span",
+          "2021-03-29 to 2023-11-01"
+        ]
+      ],
+      "panel_rel": "assets/panels/BENCHMARK_NGC_3318_SN2020AZE_panel.png",
+      "ra_deg": "159.31392",
+      "reason_codes": [
+        "BLIND_BENCHMARK_RECOVERY",
+        "KNOWN_TARGET"
+      ],
+      "representative_pair": "NGC 3318::hst_16239_56_wfc3_uvis_f555w_ieec56::jey361020",
+      "search_text": "BENCHMARK_NGC_3318_SN2020AZE NGC 3318 SN2020AZE recovered benchmark supernova F555W F555W fade Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "warning_flags": []
+    },
+    {
+      "badge": "Recovered blind benchmark supernova",
+      "badge_color": "#2f7f62",
+      "blind_match_name": "SN2008FQ",
+      "blind_match_sep_arcsec": "0.969",
+      "branch_class": "BENCHMARK_RECOVERED",
+      "branch_confidence": "KNOWN",
+      "branch_rank": 9,
+      "branch_rank_score": 1.0,
+      "cluster_id": "BENCHMARK_NGC_6907_SN2008FQ",
+      "date_window": "2021-05-24 to 2021-05-24",
+      "dec_deg": "-24.81018",
+      "diff_rel": "assets/panels/BENCHMARK_NGC_6907_SN2008FQ_diff.png",
+      "filters": "F275W -> F275W",
+      "galaxy_name": "NGC 6907",
+      "gif_rel": "assets/gifs/BENCHMARK_NGC_6907_SN2008FQ_blink.gif",
+      "highest_value": false,
+      "instruments": "WFC3/UVIS | WFC3/UVIS",
+      "interpretation": "Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "matched_to_blind": true,
+      "math_rows": [
+        [
+          "Benchmark rank",
+          "9 / 9"
+        ],
+        [
+          "Truth group",
+          "SN2008FQ"
+        ],
+        [
+          "Blind recovery",
+          "Recovered"
+        ],
+        [
+          "Recovery separation",
+          "0.969\""
+        ],
+        [
+          "Matched event sign",
+          "brighten"
+        ],
+        [
+          "Matched diff significance",
+          "9.477"
+        ],
+        [
+          "Registration residual",
+          "n/a px"
+        ],
+        [
+          "Registration matches",
+          "0"
+        ],
+        [
+          "Residual detections",
+          "1101"
+        ],
+        [
+          "Surviving detections",
+          "0"
+        ],
+        [
+          "Fade survivors",
+          "0"
+        ],
+        [
+          "Brighten survivors",
+          "0"
+        ],
+        [
+          "Filters",
+          "F275W -> F275W"
+        ],
+        [
+          "Instruments",
+          "WFC3/UVIS | WFC3/UVIS"
+        ],
+        [
+          "Baseline",
+          "184.8 d"
+        ],
+        [
+          "Observation span",
+          "2021-05-24 to 2021-05-24"
+        ]
+      ],
+      "panel_rel": "assets/panels/BENCHMARK_NGC_6907_SN2008FQ_panel.png",
+      "ra_deg": "306.27294",
+      "reason_codes": [
+        "BLIND_BENCHMARK_RECOVERY",
+        "KNOWN_TARGET"
+      ],
+      "representative_pair": "NGC 6907::hst_16287_cs_wfc3_uvis_f275w_iebjcs::hst_16287_35_wfc3_uvis_f275w_iebj35",
+      "search_text": "BENCHMARK_NGC_6907_SN2008FQ NGC 6907 SN2008FQ recovered benchmark supernova F275W F275W brighten Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.",
+      "warning_flags": []
+    },
+    {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "1.573",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 1,
@@ -19,7 +883,7 @@
       "highest_value": true,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.",
-      "matched_to_blind": true,
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -158,7 +1022,7 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0002 MESSIER 066 F814W, F555W, F438W WFC3/UVIS Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD",
+      "search_text": "MESSIER_066_branch_0002 MESSIER 066 F814W, F555W, F438W WFC3/UVIS Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
@@ -4155,8 +5019,8 @@
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "106.999",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 27,
@@ -4309,7 +5173,7 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
-      "search_text": "MESSIER_066_branch_0004 MESSIER 066 F555W, F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD",
+      "search_text": "MESSIER_066_branch_0004 MESSIER 066 F555W, F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
@@ -7031,8 +7895,8 @@
     {
       "badge": "Strong export-failure-like",
       "badge_color": "#d96f32",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "13.139",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "STRONG_EXPORT_FAILURE_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 45,
@@ -7186,7 +8050,7 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
-      "search_text": "MESSIER_066_branch_0001 MESSIER 066 F438W, F814W, F555W WFC3/UVIS Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT BLEND_RISK SN2009HD",
+      "search_text": "MESSIER_066_branch_0001 MESSIER 066 F438W, F814W, F555W WFC3/UVIS Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT BLEND_RISK",
       "warning_flags": [
         "BLEND_RISK"
       ]
@@ -13410,8 +14274,8 @@
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "2.558",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 266,
@@ -13426,7 +14290,7 @@
       "highest_value": false,
       "instruments": "WFC3/UVIS",
       "interpretation": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.",
-      "matched_to_blind": true,
+      "matched_to_blind": false,
       "math_rows": [
         [
           "Branch rank",
@@ -13562,14 +14426,14 @@
         "PARTIAL_SUPPRESSION_PATTERN"
       ],
       "representative_pair": "MESSIER 066::hst_12968_01_wfc3_uvis_f814w_ic0h01::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0013 MESSIER 066 F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN SN2009HD",
+      "search_text": "MESSIER_066_branch_0013 MESSIER 066 F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "64.153",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 267,
@@ -13721,14 +14585,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
-      "search_text": "MESSIER_066_branch_0035 MESSIER 066 F555W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD",
+      "search_text": "MESSIER_066_branch_0035 MESSIER 066 F555W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "81.702",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 268,
@@ -13882,14 +14746,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
-      "search_text": "MESSIER_066_branch_0008 MESSIER 066 F555W, F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD",
+      "search_text": "MESSIER_066_branch_0008 MESSIER 066 F555W, F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Intermediate branch-like",
       "badge_color": "#c79c2e",
-      "blind_match_name": "SN2016COK",
-      "blind_match_sep_arcsec": "28.631",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "INTERMEDIATE_BRANCH_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 324,
@@ -14041,7 +14905,7 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0016 MESSIER 066 F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2016COK",
+      "search_text": "MESSIER_066_branch_0016 MESSIER 066 F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
@@ -14206,8 +15070,8 @@
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "90.511",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 608,
@@ -14360,14 +15224,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0182 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD",
+      "search_text": "MESSIER_066_branch_0182 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2016COK",
-      "blind_match_sep_arcsec": "45.019",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 617,
@@ -14520,14 +15384,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
-      "search_text": "MESSIER_066_branch_0278 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2016COK",
+      "search_text": "MESSIER_066_branch_0278 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "65.480",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 652,
@@ -14679,14 +15543,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
-      "search_text": "MESSIER_066_branch_0265 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD",
+      "search_text": "MESSIER_066_branch_0265 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "100.698",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 660,
@@ -14839,14 +15703,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
-      "search_text": "MESSIER_066_branch_0231 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD",
+      "search_text": "MESSIER_066_branch_0231 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "82.540",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 710,
@@ -14997,14 +15861,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0189 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD",
+      "search_text": "MESSIER_066_branch_0189 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "48.132",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 771,
@@ -15155,14 +16019,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0283 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD",
+      "search_text": "MESSIER_066_branch_0283 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "40.564",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 780,
@@ -15313,14 +16177,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
-      "search_text": "MESSIER_066_branch_0171 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
+      "search_text": "MESSIER_066_branch_0171 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "24.150",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 808,
@@ -15471,14 +16335,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
-      "search_text": "MESSIER_066_branch_0191 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
+      "search_text": "MESSIER_066_branch_0191 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "63.006",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 809,
@@ -15629,14 +16493,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
-      "search_text": "MESSIER_066_branch_0242 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD",
+      "search_text": "MESSIER_066_branch_0242 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "60.299",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 837,
@@ -15787,14 +16651,14 @@
         "PERSISTENT_FADE_SUPPORT"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f555w_ic8503::hst_15654_22_wfc3_uvis_f555w_idxr22",
-      "search_text": "MESSIER_066_branch_0193 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD",
+      "search_text": "MESSIER_066_branch_0193 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "117.600",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 842,
@@ -15945,14 +16809,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0064 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
+      "search_text": "MESSIER_066_branch_0064 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2016COK",
-      "blind_match_sep_arcsec": "83.355",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 846,
@@ -16103,14 +16967,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0228 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2016COK",
+      "search_text": "MESSIER_066_branch_0228 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2016COK",
-      "blind_match_sep_arcsec": "87.423",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 850,
@@ -16261,14 +17125,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0178 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2016COK",
+      "search_text": "MESSIER_066_branch_0178 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "81.728",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 871,
@@ -16419,14 +17283,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0117 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
+      "search_text": "MESSIER_066_branch_0117 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "65.990",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 875,
@@ -16577,14 +17441,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0098 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
+      "search_text": "MESSIER_066_branch_0098 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "113.382",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 878,
@@ -16735,14 +17599,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0170 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
+      "search_text": "MESSIER_066_branch_0170 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "103.613",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 882,
@@ -16893,14 +17757,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0033 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
+      "search_text": "MESSIER_066_branch_0033 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2016COK",
-      "blind_match_sep_arcsec": "23.029",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "MEDIUM",
       "branch_rank": 886,
@@ -17051,14 +17915,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0190 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2016COK",
+      "search_text": "MESSIER_066_branch_0190 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2009HD",
-      "blind_match_sep_arcsec": "78.428",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 898,
@@ -17209,14 +18073,14 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0284 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD",
+      "search_text": "MESSIER_066_branch_0284 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN",
       "warning_flags": []
     },
     {
       "badge": "Dust-survivor-like",
       "badge_color": "#5f7ea3",
-      "blind_match_name": "SN2016COK",
-      "blind_match_sep_arcsec": "28.432",
+      "blind_match_name": null,
+      "blind_match_sep_arcsec": "n/a",
       "branch_class": "DUST_SURVIVOR_LIKE",
       "branch_confidence": "LOW",
       "branch_rank": 900,
@@ -17367,7 +18231,7 @@
         "REBRIGHTENING_OR_RETURN"
       ],
       "representative_pair": "MESSIER 066::hst_13477_03_wfc3_uvis_f814w_ic8503::hst_15654_22_wfc3_uvis_f814w_idxr22",
-      "search_text": "MESSIER_066_branch_0223 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN EDGE_NEAR_MASK SN2016COK",
+      "search_text": "MESSIER_066_branch_0223 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN EDGE_NEAR_MASK",
       "warning_flags": [
         "EDGE_NEAR_MASK"
       ]
@@ -17376,18 +18240,20 @@
   "summary": {
     "benchmark_median_sep_arcsec": 0.6826919198678586,
     "benchmark_recovery_fraction": 0.75,
-    "blind_match_radius_arcsec": 3.0,
     "class_counts": {
+      "BENCHMARK_RECOVERED": 9,
       "DUST_SURVIVOR_LIKE": 21,
       "INTERMEDIATE_BRANCH_LIKE": 58,
       "STRONG_EXPORT_FAILURE_LIKE": 30,
       "SYSTEMATIC_LIKE": 0
     },
-    "created_utc": "20260311_060227UTC",
+    "created_utc": "20260311_064605UTC",
     "highest_value_count": 24,
-    "matched_to_blind_count": 2,
-    "n_candidates": 109,
+    "matched_to_blind_count": 9,
+    "n_benchmark_recovered_cards": 9,
+    "n_candidates": 118,
     "n_clusters": 109,
+    "n_truth_groups": 12,
     "source_branch_dir": "/home/primary/SUPERNOVA/outputs/live_difference_strict_20260311_0421/branch_aware_v4"
   }
 }

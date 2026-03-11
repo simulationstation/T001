@@ -1,17 +1,19 @@
 {
   "benchmark_median_sep_arcsec": 0.6826919198678586,
   "benchmark_recovery_fraction": 0.75,
-  "blind_match_radius_arcsec": 3.0,
   "class_counts": {
+    "BENCHMARK_RECOVERED": 9,
     "DUST_SURVIVOR_LIKE": 21,
     "INTERMEDIATE_BRANCH_LIKE": 58,
     "STRONG_EXPORT_FAILURE_LIKE": 30,
     "SYSTEMATIC_LIKE": 0
   },
-  "created_utc": "20260311_060227UTC",
+  "created_utc": "20260311_064605UTC",
   "highest_value_count": 24,
-  "matched_to_blind_count": 2,
-  "n_candidates": 109,
+  "matched_to_blind_count": 9,
+  "n_benchmark_recovered_cards": 9,
+  "n_candidates": 118,
   "n_clusters": 109,
+  "n_truth_groups": 12,
   "source_branch_dir": "/home/primary/SUPERNOVA/outputs/live_difference_strict_20260311_0421/branch_aware_v4"
 }

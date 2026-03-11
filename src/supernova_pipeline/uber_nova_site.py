@@ -12,10 +12,13 @@ from astropy.coordinates import SkyCoord
 import astropy.units as u
 from PIL import Image
 
+from .difference_upgrade import _prepare_registered_pair, _resolve_cached_observation_image
+from .pixel_search import _save_candidate_figure
 from .utils import ensure_dir, env_like, git_like, json_list, utc_stamp, write_json, write_progress, write_text
 
 
 CLASS_ORDER = [
+    "BENCHMARK_RECOVERED",
     "STRONG_EXPORT_FAILURE_LIKE",
     "INTERMEDIATE_BRANCH_LIKE",
     "DUST_SURVIVOR_LIKE",
@@ -23,6 +26,7 @@ CLASS_ORDER = [
 ]
 
 CLASS_DESCRIPTIONS = {
+    "BENCHMARK_RECOVERED": "Known targeted supernova truth groups recovered by the blinded benchmark. These validate the detector rather than serving as discovery claims.",
     "STRONG_EXPORT_FAILURE_LIKE": "Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls.",
     "INTERMEDIATE_BRANCH_LIKE": "Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.",
     "DUST_SURVIVOR_LIKE": "Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure.",
@@ -30,6 +34,7 @@ CLASS_DESCRIPTIONS = {
 }
 
 CLASS_BADGES = {
+    "BENCHMARK_RECOVERED": "Recovered blind benchmark supernova",
     "STRONG_EXPORT_FAILURE_LIKE": "Strong export-failure-like",
     "INTERMEDIATE_BRANCH_LIKE": "Intermediate branch-like",
     "DUST_SURVIVOR_LIKE": "Dust-survivor-like",
@@ -37,13 +42,12 @@ CLASS_BADGES = {
 }
 
 CLASS_COLORS = {
+    "BENCHMARK_RECOVERED": "#2f7f62",
     "STRONG_EXPORT_FAILURE_LIKE": "#d96f32",
     "INTERMEDIATE_BRANCH_LIKE": "#c79c2e",
     "DUST_SURVIVOR_LIKE": "#5f7ea3",
     "SYSTEMATIC_LIKE": "#7c536f",
 }
-
-BLIND_MATCH_RADIUS_ARCSEC = 3.0
 
 
 def _as_list(value: Any) -> list[str]:
@@ -204,6 +208,8 @@ def _build_gif_and_panel(
 def _candidate_interpretation(cluster: pd.Series) -> str:
     branch_class = str(cluster["branch_class"])
     base = CLASS_DESCRIPTIONS.get(branch_class, "No interpretation available.")
+    if branch_class == "BENCHMARK_RECOVERED":
+        return base + " Use these cards to judge whether the detector is recovering the kinds of events Ryan expects before trusting new disappearing-star claims."
     support = int(cluster.get("n_support_pairs", 0) or 0)
     late_return = float(cluster.get("forced_late_return_fraction", 0.0) or 0.0)
     dust = float(cluster.get("dust_survivor_score", 0.0) or 0.0)
@@ -219,6 +225,8 @@ def _candidate_interpretation(cluster: pd.Series) -> str:
 
 def _highest_value(cluster: pd.Series) -> bool:
     branch_class = str(cluster.get("branch_class", ""))
+    if branch_class == "BENCHMARK_RECOVERED":
+        return False
     rank_score = float(cluster.get("branch_rank_score", 0.0) or 0.0)
     export = float(cluster.get("export_failure_score", 0.0) or 0.0)
     support_pairs = int(cluster.get("n_support_pairs", 0) or 0)
@@ -232,40 +240,101 @@ def _highest_value(cluster: pd.Series) -> bool:
     return False
 
 
-def _load_blind_truth(benchmark_dir: Path) -> pd.DataFrame:
-    candidates = [
-        benchmark_dir / "hidden_truth" / "truth.csv",
-        benchmark_dir / "benchmark_pairs.csv",
+def _fmt_arcsec(value: Any) -> str:
+    try:
+        num = float(value)
+    except Exception:
+        return "n/a"
+    if not math.isfinite(num):
+        return "n/a"
+    return f"{num:.3f}\""
+
+
+def _build_benchmark_math_rows(row: pd.Series, *, rank: int, total: int) -> list[tuple[str, str]]:
+    event_sign = str(row.get("matched_event_sign", "") or "n/a")
+    diff_sigma = row.get("matched_diff_sigma")
+    return [
+        ("Benchmark rank", f"{rank} / {total}"),
+        ("Truth group", str(row.get("sn_name", "n/a"))),
+        ("Blind recovery", "Recovered"),
+        ("Recovery separation", _fmt_arcsec(row.get("best_sep_arcsec"))),
+        ("Matched event sign", event_sign),
+        ("Matched diff significance", _fmt_float(abs(float(diff_sigma))) if pd.notna(diff_sigma) else "n/a"),
+        ("Registration residual", _fmt_float(row.get("registration_residual_px")) + " px"),
+        ("Registration matches", str(int(row.get("registration_n_matches", 0) or 0))),
+        ("Residual detections", str(int(row.get("n_residual_detections", 0) or 0))),
+        ("Surviving detections", str(int(row.get("n_survivors", 0) or 0))),
+        ("Fade survivors", str(int(row.get("n_fade_survivors", 0) or 0))),
+        ("Brighten survivors", str(int(row.get("n_brighten_survivors", 0) or 0))),
+        ("Filters", f"{row.get('filter_1', 'n/a')} -> {row.get('filter_2', 'n/a')}"),
+        ("Instruments", f"{row.get('instrument_1', 'n/a')} | {row.get('instrument_2', 'n/a')}"),
+        ("Baseline", _fmt_days(row.get("baseline_days"))),
+        ("Observation span", f"{_fmt_date_from_mjd(row.get('first_mjd'))} to {_fmt_date_from_mjd(row.get('last_mjd'))}"),
     ]
-    for path in candidates:
-        if not path.exists():
-            continue
-        frame = pd.read_csv(path)
-        required = {"galaxy_name", "truth_ra_deg", "truth_dec_deg"}
-        if required.issubset(frame.columns):
-            cols = [col for col in ["galaxy_name", "sn_name", "truth_ra_deg", "truth_dec_deg"] if col in frame.columns]
-            truth = frame[cols].drop_duplicates().reset_index(drop=True)
-            return truth
-    return pd.DataFrame(columns=["galaxy_name", "sn_name", "truth_ra_deg", "truth_dec_deg"])
 
 
-def _blind_match(cluster: pd.Series, truth_df: pd.DataFrame) -> dict[str, Any]:
-    if truth_df.empty:
-        return {"matched_to_blind": False, "blind_match_sep_arcsec": None, "blind_match_name": None}
-    subset = truth_df[truth_df["galaxy_name"].astype(str).eq(str(cluster["galaxy_name"]))].copy()
-    if subset.empty:
-        return {"matched_to_blind": False, "blind_match_sep_arcsec": None, "blind_match_name": None}
-    cluster_coord = SkyCoord(float(cluster["ra_deg"]) * u.deg, float(cluster["dec_deg"]) * u.deg)
-    truth_coords = SkyCoord(subset["truth_ra_deg"].to_numpy(dtype=float) * u.deg, subset["truth_dec_deg"].to_numpy(dtype=float) * u.deg)
-    seps = cluster_coord.separation(truth_coords).arcsec
-    idx = int(seps.argmin())
-    sep = float(seps[idx])
-    row = subset.iloc[idx]
-    return {
-        "matched_to_blind": bool(sep <= BLIND_MATCH_RADIUS_ARCSEC),
-        "blind_match_sep_arcsec": sep,
-        "blind_match_name": str(row.get("sn_name", "")) or None,
-    }
+def _merge_benchmark_recovered(
+    evaluation_df: pd.DataFrame,
+    pair_df: pd.DataFrame,
+    truth_df: pd.DataFrame,
+    pair_summary_df: pd.DataFrame,
+) -> pd.DataFrame:
+    if evaluation_df.empty:
+        return pd.DataFrame()
+    recovered = evaluation_df[evaluation_df["recovered"].fillna(False)].copy()
+    if recovered.empty:
+        return recovered
+
+    recovered = recovered.rename(columns={"matched_pair_id": "pair_id"})
+    if not pair_df.empty:
+        recovered = recovered.merge(
+            pair_df,
+            on=["pair_id", "galaxy_name"],
+            how="left",
+            suffixes=("", "_pair"),
+        )
+    if not truth_df.empty:
+        recovered = recovered.merge(
+            truth_df,
+            on=["galaxy_name", "sn_name"],
+            how="left",
+            suffixes=("", "_truth"),
+        )
+        for col in ["truth_ra_deg", "truth_dec_deg", "first_mjd", "last_mjd", "n_observations"]:
+            truth_col = f"{col}_truth"
+            if truth_col in recovered.columns:
+                recovered[col] = recovered[col].fillna(recovered[truth_col])
+    if not pair_summary_df.empty:
+        keep = [
+            col
+            for col in [
+                "pair_id",
+                "registration_residual_px",
+                "registration_n_matches",
+                "n_residual_detections",
+                "n_survivors",
+                "n_fade_survivors",
+                "n_brighten_survivors",
+                "status",
+            ]
+            if col in pair_summary_df.columns
+        ]
+        recovered = recovered.merge(pair_summary_df[keep], on="pair_id", how="left", suffixes=("", "_scan"))
+    return recovered.sort_values(["best_sep_arcsec", "galaxy_name", "sn_name"], ascending=[True, True, True]).reset_index(drop=True)
+
+
+def _load_benchmark_recovered(benchmark_dir: Path) -> pd.DataFrame:
+    eval_path = benchmark_dir / "benchmark_evaluation.parquet"
+    pair_path = benchmark_dir / "benchmark_pairs.csv"
+    truth_path = benchmark_dir / "hidden_truth" / "truth.csv"
+    pair_summary_path = benchmark_dir / "scan" / "pair_summary.parquet"
+    if not eval_path.exists():
+        return pd.DataFrame()
+    evaluation_df = pd.read_parquet(eval_path)
+    pair_df = pd.read_csv(pair_path) if pair_path.exists() else pd.DataFrame()
+    truth_df = pd.read_csv(truth_path) if truth_path.exists() else pd.DataFrame()
+    pair_summary_df = pd.read_parquet(pair_summary_path) if pair_summary_path.exists() else pd.DataFrame()
+    return _merge_benchmark_recovered(evaluation_df, pair_df, truth_df, pair_summary_df)
 
 
 def _top_math_rows(cluster: pd.Series) -> list[tuple[str, str]]:
@@ -313,6 +382,162 @@ def _metrics_table(rows: list[tuple[str, str]]) -> str:
     return "\n".join(items)
 
 
+def _build_benchmark_card(
+    row: pd.Series,
+    *,
+    rank: int,
+    total: int,
+    out_dir: Path,
+    root_dir: Path,
+    image_cache: dict[str, tuple[dict[str, Any], Any]],
+) -> dict[str, Any] | None:
+    required = [
+        "pair_id",
+        "galaxy_name",
+        "sn_name",
+        "truth_ra_deg",
+        "truth_dec_deg",
+        "obs_id_1",
+        "obs_id_2",
+        "obsid_1",
+        "obsid_2",
+        "obs_collection_1",
+        "obs_collection_2",
+        "filter_1",
+        "filter_2",
+        "instrument_1",
+        "instrument_2",
+    ]
+    if any(col not in row.index for col in required):
+        return None
+
+    obs_meta = {
+        str(row["obs_id_1"]): {
+            "obsid": int(row["obsid_1"]),
+            "obs_collection": str(row["obs_collection_1"]),
+            "obs_id": str(row["obs_id_1"]),
+            "filters": str(row["filter_1"]),
+            "instrument_name": str(row["instrument_1"]),
+        },
+        str(row["obs_id_2"]): {
+            "obsid": int(row["obsid_2"]),
+            "obs_collection": str(row["obs_collection_2"]),
+            "obs_id": str(row["obs_id_2"]),
+            "filters": str(row["filter_2"]),
+            "instrument_name": str(row["instrument_2"]),
+        },
+    }
+    _, ref_image = _resolve_cached_observation_image(
+        str(row["obs_id_1"]),
+        obs_meta=obs_meta,
+        root_dir=root_dir,
+        image_cache=image_cache,
+    )
+    _, cmp_image = _resolve_cached_observation_image(
+        str(row["obs_id_2"]),
+        obs_meta=obs_meta,
+        root_dir=root_dir,
+        image_cache=image_cache,
+    )
+    center_world = SkyCoord(float(row["truth_ra_deg"]) * u.deg, float(row["truth_dec_deg"]) * u.deg, frame="icrs")
+    prepared = None
+    last_error: Exception | None = None
+    for cutout_arcsec in (128.0, 96.0, 72.0, 56.0):
+        try:
+            prepared = _prepare_registered_pair(
+                ref_image,
+                cmp_image,
+                center_world=center_world,
+                cutout_arcsec=cutout_arcsec,
+            )
+            break
+        except Exception as exc:
+            last_error = exc
+    if prepared is None:
+        if last_error is not None:
+            raise last_error
+        return None
+    x_pix, y_pix = prepared["ref_image"].wcs.world_to_pixel(center_world)
+    if not (math.isfinite(float(x_pix)) and math.isfinite(float(y_pix))):
+        return None
+    width = prepared["ref_sub"].shape[1]
+    height = prepared["ref_sub"].shape[0]
+    edge_margin = min(float(x_pix), float(y_pix), float(width - 1 - x_pix), float(height - 1 - y_pix))
+    requested_half_size = max(24, int(round(1.8 / max(prepared["ref_image"].pixel_scale_arcsec, 1e-3))))
+    half_size = min(requested_half_size, max(12, int(edge_margin) - 2))
+    x0 = max(int(round(float(x_pix))) - half_size, 0)
+    x1 = min(int(round(float(x_pix))) + half_size + 1, prepared["ref_sub"].shape[1])
+    y0 = max(int(round(float(y_pix))) - half_size, 0)
+    y1 = min(int(round(float(y_pix))) + half_size + 1, prepared["ref_sub"].shape[0])
+    if (x1 - x0) < 16 or (y1 - y0) < 16:
+        return None
+
+    card_id = f"BENCHMARK_{str(row['galaxy_name']).replace(' ', '_')}_{str(row['sn_name'])}"
+    triptych_root = ensure_dir(out_dir / "assets" / "triptychs")
+    triptych_path = _save_candidate_figure(
+        triptych_root,
+        card_id,
+        prepared["ref_sub"][y0:y1, x0:x1],
+        prepared["cmp_scaled"][y0:y1, x0:x1],
+        prepared["diff_image"][y0:y1, x0:x1],
+        title=f"{row['galaxy_name']} {row['sn_name']} {row['filter_1']}->{row['filter_2']}",
+    )
+
+    gif_rel = Path("assets") / "gifs" / f"{card_id}_blink.gif"
+    panel_rel = Path("assets") / "panels" / f"{card_id}_panel.png"
+    diff_rel = Path("assets") / "panels" / f"{card_id}_diff.png"
+    _build_gif_and_panel(
+        cutout_path=triptych_path,
+        gif_path=out_dir / gif_rel,
+        panel_path=out_dir / panel_rel,
+        diff_path=out_dir / diff_rel,
+    )
+    triptych_path.unlink(missing_ok=True)
+
+    interpretation = (
+        "Recovered known targeted supernova in the blinded benchmark. "
+        "This is a detector-validation card showing that the strict search can find events Ryan already expects to be there."
+    )
+    search_bits = [
+        card_id,
+        str(row["galaxy_name"]),
+        str(row["sn_name"]),
+        "recovered benchmark supernova",
+        str(row.get("filter_1", "")),
+        str(row.get("filter_2", "")),
+        str(row.get("matched_event_sign", "")),
+        interpretation,
+    ]
+    return {
+        "cluster_id": card_id,
+        "branch_class": "BENCHMARK_RECOVERED",
+        "badge": CLASS_BADGES["BENCHMARK_RECOVERED"],
+        "badge_color": CLASS_COLORS["BENCHMARK_RECOVERED"],
+        "branch_confidence": "KNOWN",
+        "branch_rank": int(rank),
+        "branch_rank_score": 1.0,
+        "galaxy_name": str(row["galaxy_name"]),
+        "ra_deg": _fmt_float(row["truth_ra_deg"], 5),
+        "dec_deg": _fmt_float(row["truth_dec_deg"], 5),
+        "representative_pair": str(row["pair_id"]),
+        "filters": f"{row.get('filter_1', 'n/a')} -> {row.get('filter_2', 'n/a')}",
+        "instruments": f"{row.get('instrument_1', 'n/a')} | {row.get('instrument_2', 'n/a')}",
+        "date_window": f"{_fmt_date_from_mjd(row.get('first_mjd'))} to {_fmt_date_from_mjd(row.get('last_mjd'))}",
+        "gif_rel": str(gif_rel),
+        "panel_rel": str(panel_rel),
+        "diff_rel": str(diff_rel),
+        "reason_codes": ["BLIND_BENCHMARK_RECOVERY", "KNOWN_TARGET"],
+        "warning_flags": [],
+        "interpretation": interpretation,
+        "matched_to_blind": True,
+        "blind_match_sep_arcsec": _fmt_float(row.get("best_sep_arcsec"), 3),
+        "blind_match_name": str(row.get("sn_name", "")) or None,
+        "highest_value": False,
+        "math_rows": _build_benchmark_math_rows(row, rank=rank, total=total),
+        "search_text": " ".join(bit for bit in search_bits if bit),
+    }
+
+
 def _card_html(candidate: dict[str, Any]) -> str:
     metrics = _metrics_table(candidate["math_rows"])
     reasons = "".join(f"<li><code>{html.escape(reason)}</code></li>" for reason in candidate["reason_codes"])
@@ -320,13 +545,13 @@ def _card_html(candidate: dict[str, Any]) -> str:
     warnings_block = warnings or "<li>None</li>"
     blind_badge = ""
     if candidate["matched_to_blind"]:
-        blind_badge = '<div class="mini-badge mini-badge-blind">Matched to blind</div>'
+        blind_badge = '<div class="mini-badge mini-badge-blind">Recovered in blind benchmark</div>'
     highest_badge = ""
     if candidate["highest_value"]:
         highest_badge = '<div class="mini-badge mini-badge-high">Highest Value</div>'
     blind_context = ""
     if candidate["matched_to_blind"]:
-        blind_context = f"<li>Blind match: <code>{html.escape(candidate['blind_match_name'] or 'known target')}</code> at <code>{html.escape(candidate['blind_match_sep_arcsec'])}</code> arcsec</li>"
+        blind_context = f"<li>Blind recovery: <code>{html.escape(candidate['blind_match_name'] or 'known target')}</code> at <code>{html.escape(candidate['blind_match_sep_arcsec'])}</code> arcsec</li>"
     return f"""
 <article class="candidate-card" data-class="{html.escape(candidate['branch_class'])}" data-search="{html.escape(candidate['search_text'])}" data-matched-blind="{str(candidate['matched_to_blind']).lower()}" data-highest-value="{str(candidate['highest_value']).lower()}">
   <div class="card-top">
@@ -690,15 +915,16 @@ def _build_html(*, candidates: list[dict[str, Any]], summary: dict[str, Any]) ->
       <div class="eyebrow">SUPERNOVA / hidden operator page</div>
       <h1>Uber Nova Search</h1>
       <p class="lede">
-        This page is the strict branch-aware candidate board generated from the empirically registered difference-image rerun and the
-        branch-aware export-failure scorer. It is intentionally not linked from the site homepage. The practical question is not
-        simply whether a source faded, but whether the residual stays coherent enough, long enough, and cleanly enough to look like
-        a branch-selected export-failure collapse rather than dust, ordinary variability, or subtraction damage.
+        This page combines two things Ryan actually cares about: the strict branch-aware live candidate board generated from the
+        empirically registered difference-image rerun, and the recovered truth-group cards from the blinded known-supernova benchmark.
+        It is intentionally not linked from the site homepage. The practical question is not simply whether a source faded, but
+        whether the residual stays coherent enough, long enough, and cleanly enough to look like a branch-selected export-failure
+        collapse rather than dust, ordinary variability, or subtraction damage.
       </p>
       <div class="top-grid">
         <div class="stat"><strong>{summary['n_clusters']}</strong> scored clusters</div>
         <div class="stat"><strong>{summary['n_candidates']}</strong> displayed candidates</div>
-        <div class="stat"><strong>{summary['benchmark_recovery_fraction']:.2f}</strong> blind benchmark recovery fraction</div>
+        <div class="stat"><strong>{summary['matched_to_blind_count']} / {summary['n_truth_groups']}</strong> blind truth groups recovered</div>
         <div class="stat"><strong>{summary['benchmark_median_sep_arcsec']:.2f}\"</strong> benchmark median localization error</div>
       </div>
       <div class="math-grid">
@@ -717,7 +943,7 @@ def _build_html(*, candidates: list[dict[str, Any]], summary: dict[str, Any]) ->
           <h3>Interpretive posture</h3>
           <p>These are not publication claims. They are strict detector survivors ranked by export-failure coherence under the current assumption-conditioned framework.</p>
           <p>The standing guardrail is still the blind known-supernova benchmark, which passed at <code>{summary['benchmark_recovery_fraction']:.2f}</code>.</p>
-          <p class="small">The page-level “Matched to blind” filter uses a looser <code>{summary['blind_match_radius_arcsec']:.1f}"</code> same-galaxy association radius for operator triage. The benchmark pass/fail itself remains the stricter <code>1.5"</code> recovery test.</p>
+          <p class="small">The page-level “Matched to blind” filter now shows the actual recovered truth groups from the benchmark evaluator, not a loose proximity crossmatch to live search cards.</p>
         </div>
       </div>
       <div class="toolbar">
@@ -728,7 +954,7 @@ def _build_html(*, candidates: list[dict[str, Any]], summary: dict[str, Any]) ->
           <button data-filter="highest-value" type="button">Highest Value ({summary['highest_value_count']})</button>
         </div>
       </div>
-      <div class="filter-summary" id="filter-summary">Showing all {summary['n_candidates']} displayed candidates.</div>
+      <div class="filter-summary" id="filter-summary">Showing all {summary['n_candidates']} displayed items.</div>
       <div class="toc">{toc}</div>
     </section>
     {''.join(sections)}
@@ -821,19 +1047,39 @@ def run_uber_nova_site(
     cluster_df = pd.read_parquet(branch_output_dir / "branch_cluster_scores.parquet")
     detection_df = pd.read_parquet(branch_output_dir / "branch_detection_scores.parquet")
     branch_summary = json.loads((branch_output_dir / "branch_summary.json").read_text(encoding="utf-8"))
-    truth_df = _load_blind_truth(benchmark_dir)
+    benchmark_summary_path = benchmark_dir / "benchmark_summary.json"
+    benchmark_summary = json.loads(benchmark_summary_path.read_text(encoding="utf-8")) if benchmark_summary_path.exists() else {}
+    benchmark_recovered_df = _load_benchmark_recovered(benchmark_dir)
 
-    cluster_df = cluster_df[cluster_df["branch_class"].astype(str).isin(include_classes)].copy()
+    live_include_classes = tuple(branch_class for branch_class in include_classes if branch_class != "BENCHMARK_RECOVERED")
+    cluster_df = cluster_df[cluster_df["branch_class"].astype(str).isin(live_include_classes)].copy()
     cluster_df = cluster_df.sort_values(["branch_rank", "branch_rank_score"], ascending=[True, False]).reset_index(drop=True)
     cluster_df["n_clusters_total"] = int(len(cluster_df))
 
     candidates: list[dict[str, Any]] = []
+    image_cache: dict[str, tuple[dict[str, Any], Any]] = {}
+
+    if "BENCHMARK_RECOVERED" in include_classes and not benchmark_recovered_df.empty:
+        for rank, (_, recovered) in enumerate(benchmark_recovered_df.iterrows(), start=1):
+            try:
+                candidate = _build_benchmark_card(
+                    recovered,
+                    rank=rank,
+                    total=int(len(benchmark_recovered_df)),
+                    out_dir=out_dir,
+                    root_dir=root_dir,
+                    image_cache=image_cache,
+                )
+            except Exception:
+                continue
+            if candidate is not None:
+                candidates.append(candidate)
+
     for _, cluster in cluster_df.iterrows():
         cluster_id = str(cluster["cluster_id"])
         members = detection_df[detection_df["cluster_id"].astype(str).eq(cluster_id)].copy()
         if members.empty:
             continue
-        blind_match = _blind_match(cluster, truth_df)
         rep = _representative_detection(members)
         cutout_path = Path(str(rep["cutout_path"]))
         if not cutout_path.exists():
@@ -871,9 +1117,9 @@ def run_uber_nova_site(
             "reason_codes": reason_codes,
             "warning_flags": warning_codes,
             "interpretation": _candidate_interpretation(cluster),
-            "matched_to_blind": bool(blind_match["matched_to_blind"]),
-            "blind_match_sep_arcsec": _fmt_float(blind_match["blind_match_sep_arcsec"], 3) if blind_match["blind_match_sep_arcsec"] is not None else "n/a",
-            "blind_match_name": blind_match["blind_match_name"],
+            "matched_to_blind": False,
+            "blind_match_sep_arcsec": "n/a",
+            "blind_match_name": None,
             "highest_value": _highest_value(cluster),
         }
         cluster_with_total = cluster.copy()
@@ -889,21 +1135,20 @@ def run_uber_nova_site(
         ]
         search_bits.extend(reason_codes)
         search_bits.extend(warning_codes)
-        if candidate["blind_match_name"]:
-            search_bits.append(candidate["blind_match_name"])
         candidate["search_text"] = " ".join(str(part) for part in search_bits if part)
         candidates.append(candidate)
 
-    class_counts = {label: int((cluster_df["branch_class"] == label).sum()) for label in include_classes}
+    class_counts = {label: int(sum(1 for item in candidates if item["branch_class"] == label)) for label in CLASS_ORDER}
     summary = {
         "created_utc": utc_stamp(),
         "source_branch_dir": str(branch_output_dir),
         "n_clusters": int(len(cluster_df)),
         "n_candidates": int(len(candidates)),
+        "n_truth_groups": int(benchmark_summary.get("n_truth_groups", branch_summary.get("benchmark_n_truth_groups", len(benchmark_recovered_df))) or len(benchmark_recovered_df)),
+        "n_benchmark_recovered_cards": int(sum(1 for item in candidates if item["branch_class"] == "BENCHMARK_RECOVERED")),
         "class_counts": class_counts,
-        "benchmark_recovery_fraction": float(branch_summary.get("benchmark_recovery_fraction", 0.0) or 0.0),
-        "benchmark_median_sep_arcsec": float(branch_summary.get("benchmark_median_recovered_sep_arcsec", float("nan")) or float("nan")),
-        "blind_match_radius_arcsec": BLIND_MATCH_RADIUS_ARCSEC,
+        "benchmark_recovery_fraction": float(benchmark_summary.get("recovery_fraction", branch_summary.get("benchmark_recovery_fraction", 0.0)) or 0.0),
+        "benchmark_median_sep_arcsec": float(benchmark_summary.get("median_recovered_sep_arcsec", branch_summary.get("benchmark_median_recovered_sep_arcsec", float("nan"))) or float("nan")),
         "matched_to_blind_count": int(sum(1 for item in candidates if item["matched_to_blind"])),
         "highest_value_count": int(sum(1 for item in candidates if item["highest_value"])),
     }

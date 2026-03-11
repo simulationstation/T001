@@ -7,7 +7,7 @@ from pathlib import Path
 import pandas as pd
 from PIL import Image
 
-from supernova_pipeline.uber_nova_site import _blind_match, _build_gif_and_panel, _highest_value
+from supernova_pipeline.uber_nova_site import _build_gif_and_panel, _highest_value, _merge_benchmark_recovered
 
 
 class UberNovaSiteTests(unittest.TestCase):
@@ -37,16 +37,36 @@ class UberNovaSiteTests(unittest.TestCase):
             self.assertTrue(panel_path.exists())
             self.assertTrue(diff_path.exists())
 
-    def test_blind_match_uses_radius_threshold(self) -> None:
-        truth = pd.DataFrame(
+    def test_merge_benchmark_recovered_keeps_only_recovered_truth_groups(self) -> None:
+        evaluation = pd.DataFrame(
             [
-                {"galaxy_name": "MESSIER 061", "sn_name": "SN-A", "truth_ra_deg": 10.0, "truth_dec_deg": 20.0},
+                {"galaxy_name": "MESSIER 066", "sn_name": "SN-A", "recovered": True, "best_sep_arcsec": 0.42, "matched_pair_id": "pair-a", "matched_event_sign": "fade", "matched_diff_sigma": 11.0},
+                {"galaxy_name": "MESSIER 077", "sn_name": "SN-B", "recovered": False, "best_sep_arcsec": 2.1, "matched_pair_id": "pair-b", "matched_event_sign": "brighten", "matched_diff_sigma": -8.0},
             ]
         )
-        cluster = pd.Series({"galaxy_name": "MESSIER 061", "ra_deg": 10.0, "dec_deg": 20.0})
-        payload = _blind_match(cluster, truth)
-        self.assertTrue(payload["matched_to_blind"])
-        self.assertEqual(payload["blind_match_name"], "SN-A")
+        pairs = pd.DataFrame(
+            [
+                {"pair_id": "pair-a", "galaxy_name": "MESSIER 066", "sn_name": "SN-A", "truth_ra_deg": 10.0, "truth_dec_deg": 20.0, "filter_1": "F555W", "filter_2": "F555W"},
+                {"pair_id": "pair-b", "galaxy_name": "MESSIER 077", "sn_name": "SN-B", "truth_ra_deg": 30.0, "truth_dec_deg": 40.0, "filter_1": "F814W", "filter_2": "F814W"},
+            ]
+        )
+        truth = pd.DataFrame(
+            [
+                {"galaxy_name": "MESSIER 066", "sn_name": "SN-A", "truth_ra_deg": 10.0, "truth_dec_deg": 20.0},
+                {"galaxy_name": "MESSIER 077", "sn_name": "SN-B", "truth_ra_deg": 30.0, "truth_dec_deg": 40.0},
+            ]
+        )
+        pair_summary = pd.DataFrame(
+            [
+                {"pair_id": "pair-a", "registration_residual_px": 0.12, "n_residual_detections": 50, "n_survivors": 2},
+                {"pair_id": "pair-b", "registration_residual_px": 0.34, "n_residual_detections": 12, "n_survivors": 0},
+            ]
+        )
+        merged = _merge_benchmark_recovered(evaluation, pairs, truth, pair_summary)
+        self.assertEqual(len(merged), 1)
+        self.assertEqual(merged.iloc[0]["pair_id"], "pair-a")
+        self.assertEqual(merged.iloc[0]["sn_name"], "SN-A")
+        self.assertAlmostEqual(float(merged.iloc[0]["registration_residual_px"]), 0.12, places=6)
 
     def test_highest_value_requires_real_support(self) -> None:
         cluster = pd.Series(

@@ -82,13 +82,13 @@ These are the outputs to use if you want the repository's current best attempt a
 The repo now also contains a deployable hidden review page for the current strict branch-aware candidates:
 
 - Source payload: `site/uber_nova_search/`
-- Build command: `supernova-mission build-uber-nova-page --branch-output-dir outputs/live_difference_strict_20260311_0421/branch_aware_v4 --output-dir site/uber_nova_search`
+- Build command: `supernova-mission build-uber-nova-page --branch-output-dir outputs/live_difference_strict_20260311_0421/branch_aware_v4 --benchmark-dir outputs/benchmark_validation_rawresid_20260311_0416 --output-dir site/uber_nova_search`
 - Intended deploy target: `/uber_nova_search` under `/var/www/quasardipolephenomenon/`
 
-This board is not meant to be linked from the homepage. It is a Ryan-facing review surface that shows the current non-unresolved branch-aware candidates with slow registered blink GIFs, triptych panels, filter context, and score decomposition.
+This board is not meant to be linked from the homepage. It is a Ryan-facing review surface that shows both the current non-unresolved branch-aware candidates and the actual recovered truth-group objects from the blinded benchmark, with slow registered blink GIFs, triptych panels, filter context, and score decomposition.
 It now includes client-side filters for:
 
-- `Matched to blind`: same-galaxy association to a benchmark truth position within the page's operator radius
+- `Matched to blind`: the actual recovered known-supernova truth groups from the benchmark evaluator (`9 / 12` in the current strict run)
 - `Highest Value`: the top-quality branch-aware survivors under stricter support-depth and systematic-risk cuts
 
 ## Prime `PASS` objects

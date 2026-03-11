@@ -275,15 +275,16 @@ footer {
       <div class="eyebrow">SUPERNOVA / hidden operator page</div>
       <h1>Uber Nova Search</h1>
       <p class="lede">
-        This page is the strict branch-aware candidate board generated from the empirically registered difference-image rerun and the
-        branch-aware export-failure scorer. It is intentionally not linked from the site homepage. The practical question is not
-        simply whether a source faded, but whether the residual stays coherent enough, long enough, and cleanly enough to look like
-        a branch-selected export-failure collapse rather than dust, ordinary variability, or subtraction damage.
+        This page combines two things Ryan actually cares about: the strict branch-aware live candidate board generated from the
+        empirically registered difference-image rerun, and the recovered truth-group cards from the blinded known-supernova benchmark.
+        It is intentionally not linked from the site homepage. The practical question is not simply whether a source faded, but
+        whether the residual stays coherent enough, long enough, and cleanly enough to look like a branch-selected export-failure
+        collapse rather than dust, ordinary variability, or subtraction damage.
       </p>
       <div class="top-grid">
         <div class="stat"><strong>109</strong> scored clusters</div>
-        <div class="stat"><strong>109</strong> displayed candidates</div>
-        <div class="stat"><strong>0.75</strong> blind benchmark recovery fraction</div>
+        <div class="stat"><strong>118</strong> displayed candidates</div>
+        <div class="stat"><strong>9 / 12</strong> blind truth groups recovered</div>
         <div class="stat"><strong>0.68"</strong> benchmark median localization error</div>
       </div>
       <div class="math-grid">
@@ -302,31 +303,660 @@ footer {
           <h3>Interpretive posture</h3>
           <p>These are not publication claims. They are strict detector survivors ranked by export-failure coherence under the current assumption-conditioned framework.</p>
           <p>The standing guardrail is still the blind known-supernova benchmark, which passed at <code>0.75</code>.</p>
-          <p class="small">The page-level “Matched to blind” filter uses a looser <code>3.0"</code> same-galaxy association radius for operator triage. The benchmark pass/fail itself remains the stricter <code>1.5"</code> recovery test.</p>
+          <p class="small">The page-level “Matched to blind” filter now shows the actual recovered truth groups from the benchmark evaluator, not a loose proximity crossmatch to live search cards.</p>
         </div>
       </div>
       <div class="toolbar">
         <input id="candidate-search" type="search" placeholder="Search cluster id, galaxy, filter, interpretation, reason code">
         <div class="filter-buttons">
           <button class="active" data-filter="all" type="button">All</button>
-          <button data-filter="matched-blind" type="button">Matched to blind (2)</button>
+          <button data-filter="matched-blind" type="button">Matched to blind (9)</button>
           <button data-filter="highest-value" type="button">Highest Value (24)</button>
         </div>
       </div>
-      <div class="filter-summary" id="filter-summary">Showing all 109 displayed candidates.</div>
-      <div class="toc"><a href="#strong_export_failure_like">Strong export-failure-like (30)</a><a href="#intermediate_branch_like">Intermediate branch-like (58)</a><a href="#dust_survivor_like">Dust-survivor-like (21)</a></div>
+      <div class="filter-summary" id="filter-summary">Showing all 118 displayed items.</div>
+      <div class="toc"><a href="#benchmark_recovered">Recovered blind benchmark supernova (9)</a><a href="#strong_export_failure_like">Strong export-failure-like (30)</a><a href="#intermediate_branch_like">Intermediate branch-like (58)</a><a href="#dust_survivor_like">Dust-survivor-like (21)</a></div>
     </section>
     
+<section class="section" id="benchmark_recovered">
+  <h2>Recovered blind benchmark supernova</h2>
+  <p class="section-note">Known targeted supernova truth groups recovered by the blinded benchmark. These validate the detector rather than serving as discovery claims. Current count: 9.</p>
+  <div class="section-grid">
+    
+<article class="candidate-card" data-class="BENCHMARK_RECOVERED" data-search="BENCHMARK_NGC_5427_SN2021PFS NGC 5427 SN2021PFS recovered benchmark supernova F606W F606W brighten Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there." data-matched-blind="true" data-highest-value="false">
+  <div class="card-top">
+    <div class="card-heading">
+      <div class="badge" style="--badge-color:#2f7f62">Recovered blind benchmark supernova</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-blind">Recovered in blind benchmark</div></div>
+      <h3 id="BENCHMARK_NGC_5427_SN2021PFS">BENCHMARK_NGC_5427_SN2021PFS</h3>
+      <p class="subhead">NGC 5427 | rank 1 | confidence KNOWN</p>
+      <p class="interpretation">Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+    </div>
+    <div class="hero">
+      <img loading="lazy" src="assets/gifs/BENCHMARK_NGC_5427_SN2021PFS_blink.gif" alt="BENCHMARK_NGC_5427_SN2021PFS registered blink">
+    </div>
+  </div>
+  <div class="panel-row">
+    <img loading="lazy" class="triptych" src="assets/panels/BENCHMARK_NGC_5427_SN2021PFS_panel.png" alt="BENCHMARK_NGC_5427_SN2021PFS pre/post/diff triptych">
+    <img loading="lazy" class="diff-panel" src="assets/panels/BENCHMARK_NGC_5427_SN2021PFS_diff.png" alt="BENCHMARK_NGC_5427_SN2021PFS difference panel">
+  </div>
+  <div class="mini-grid">
+    <div>
+      <h4>Observation context</h4>
+      <ul>
+        <li>Representative pair: <code>NGC 5427::u2e64o01t::hst_16691_56_wfc3_uvis_f606w_ierg56</code></li>
+        <li>Filters: <code>F606W -&gt; F606W</code></li>
+        <li>Instruments: <code>WFPC2/PC | WFC3/UVIS</code></li>
+        <li>Date window: <code>2022-02-24 to 2025-04-05</code></li>
+        <li>Sky position: <code>RA 210.84829</code>, <code>Dec -6.03161</code></li>
+        <li>Blind recovery: <code>SN2021PFS</code> at <code>0.243</code> arcsec</li>
+      </ul>
+    </div>
+    <div>
+      <h4>What this most likely is</h4>
+      <p>Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+      <p class="small">This page is ranking branch-aware export-failure coherence under strict detector controls. It is not a claim of confirmed failed-supernova status.</p>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th>Benchmark rank</th><td>1 / 9</td></tr>
+<tr><th>Truth group</th><td>SN2021PFS</td></tr>
+<tr><th>Blind recovery</th><td>Recovered</td></tr>
+<tr><th>Recovery separation</th><td>0.243&quot;</td></tr>
+<tr><th>Matched event sign</th><td>brighten</td></tr>
+<tr><th>Matched diff significance</th><td>921.975</td></tr>
+<tr><th>Registration residual</th><td>0.101 px</td></tr>
+<tr><th>Registration matches</th><td>26</td></tr>
+<tr><th>Residual detections</th><td>1005</td></tr>
+<tr><th>Surviving detections</th><td>0</td></tr>
+<tr><th>Fade survivors</th><td>0</td></tr>
+<tr><th>Brighten survivors</th><td>0</td></tr>
+<tr><th>Filters</th><td>F606W -&gt; F606W</td></tr>
+<tr><th>Instruments</th><td>WFPC2/PC | WFC3/UVIS</td></tr>
+<tr><th>Baseline</th><td>10106.8 d</td></tr>
+<tr><th>Observation span</th><td>2022-02-24 to 2025-04-05</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="details-grid">
+    <div>
+      <h4>Reason codes</h4>
+      <ul><li><code>BLIND_BENCHMARK_RECOVERY</code></li><li><code>KNOWN_TARGET</code></li></ul>
+    </div>
+    <div>
+      <h4>Warning flags</h4>
+      <ul><li>None</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="candidate-card" data-class="BENCHMARK_RECOVERED" data-search="BENCHMARK_MESSIER_074_SN2013EJ MESSIER 074 SN2013EJ recovered benchmark supernova F555W F555W brighten Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there." data-matched-blind="true" data-highest-value="false">
+  <div class="card-top">
+    <div class="card-heading">
+      <div class="badge" style="--badge-color:#2f7f62">Recovered blind benchmark supernova</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-blind">Recovered in blind benchmark</div></div>
+      <h3 id="BENCHMARK_MESSIER_074_SN2013EJ">BENCHMARK_MESSIER_074_SN2013EJ</h3>
+      <p class="subhead">MESSIER 074 | rank 2 | confidence KNOWN</p>
+      <p class="interpretation">Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+    </div>
+    <div class="hero">
+      <img loading="lazy" src="assets/gifs/BENCHMARK_MESSIER_074_SN2013EJ_blink.gif" alt="BENCHMARK_MESSIER_074_SN2013EJ registered blink">
+    </div>
+  </div>
+  <div class="panel-row">
+    <img loading="lazy" class="triptych" src="assets/panels/BENCHMARK_MESSIER_074_SN2013EJ_panel.png" alt="BENCHMARK_MESSIER_074_SN2013EJ pre/post/diff triptych">
+    <img loading="lazy" class="diff-panel" src="assets/panels/BENCHMARK_MESSIER_074_SN2013EJ_diff.png" alt="BENCHMARK_MESSIER_074_SN2013EJ difference panel">
+  </div>
+  <div class="mini-grid">
+    <div>
+      <h4>Observation context</h4>
+      <ul>
+        <li>Representative pair: <code>MESSIER 074::hst_9796_04_acs_wfc_f555w_j8ol04::hst_17506_04_wfc3_uvis_f555w_if8c04</code></li>
+        <li>Filters: <code>F555W -&gt; F555W</code></li>
+        <li>Instruments: <code>ACS/WFC | WFC3/UVIS</code></li>
+        <li>Date window: <code>2015-12-29 to 2024-01-04</code></li>
+        <li>Sky position: <code>RA 24.20067</code>, <code>Dec 15.75861</code></li>
+        <li>Blind recovery: <code>SN2013EJ</code> at <code>0.487</code> arcsec</li>
+      </ul>
+    </div>
+    <div>
+      <h4>What this most likely is</h4>
+      <p>Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+      <p class="small">This page is ranking branch-aware export-failure coherence under strict detector controls. It is not a claim of confirmed failed-supernova status.</p>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th>Benchmark rank</th><td>2 / 9</td></tr>
+<tr><th>Truth group</th><td>SN2013EJ</td></tr>
+<tr><th>Blind recovery</th><td>Recovered</td></tr>
+<tr><th>Recovery separation</th><td>0.487&quot;</td></tr>
+<tr><th>Matched event sign</th><td>brighten</td></tr>
+<tr><th>Matched diff significance</th><td>32.822</td></tr>
+<tr><th>Registration residual</th><td>0.481 px</td></tr>
+<tr><th>Registration matches</th><td>251</td></tr>
+<tr><th>Residual detections</th><td>1057</td></tr>
+<tr><th>Surviving detections</th><td>0</td></tr>
+<tr><th>Fade survivors</th><td>0</td></tr>
+<tr><th>Brighten survivors</th><td>0</td></tr>
+<tr><th>Filters</th><td>F555W -&gt; F555W</td></tr>
+<tr><th>Instruments</th><td>ACS/WFC | WFC3/UVIS</td></tr>
+<tr><th>Baseline</th><td>7350.3 d</td></tr>
+<tr><th>Observation span</th><td>2015-12-29 to 2024-01-04</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="details-grid">
+    <div>
+      <h4>Reason codes</h4>
+      <ul><li><code>BLIND_BENCHMARK_RECOVERY</code></li><li><code>KNOWN_TARGET</code></li></ul>
+    </div>
+    <div>
+      <h4>Warning flags</h4>
+      <ul><li>None</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="candidate-card" data-class="BENCHMARK_RECOVERED" data-search="BENCHMARK_NGC_7331_SN2014C NGC 7331 SN2014C recovered benchmark supernova F814W F814W fade Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there." data-matched-blind="true" data-highest-value="false">
+  <div class="card-top">
+    <div class="card-heading">
+      <div class="badge" style="--badge-color:#2f7f62">Recovered blind benchmark supernova</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-blind">Recovered in blind benchmark</div></div>
+      <h3 id="BENCHMARK_NGC_7331_SN2014C">BENCHMARK_NGC_7331_SN2014C</h3>
+      <p class="subhead">NGC 7331 | rank 3 | confidence KNOWN</p>
+      <p class="interpretation">Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+    </div>
+    <div class="hero">
+      <img loading="lazy" src="assets/gifs/BENCHMARK_NGC_7331_SN2014C_blink.gif" alt="BENCHMARK_NGC_7331_SN2014C registered blink">
+    </div>
+  </div>
+  <div class="panel-row">
+    <img loading="lazy" class="triptych" src="assets/panels/BENCHMARK_NGC_7331_SN2014C_panel.png" alt="BENCHMARK_NGC_7331_SN2014C pre/post/diff triptych">
+    <img loading="lazy" class="diff-panel" src="assets/panels/BENCHMARK_NGC_7331_SN2014C_diff.png" alt="BENCHMARK_NGC_7331_SN2014C difference panel">
+  </div>
+  <div class="mini-grid">
+    <div>
+      <h4>Observation context</h4>
+      <ul>
+        <li>Representative pair: <code>NGC 7331::hst_15645_10_acs_wfc_f814w_jdxk10::hst_16691_01_wfc3_uvis_f814w_ierg01</code></li>
+        <li>Filters: <code>F814W -&gt; F814W</code></li>
+        <li>Instruments: <code>ACS/WFC | WFC3/UVIS</code></li>
+        <li>Date window: <code>2015-08-22 to 2023-07-25</code></li>
+        <li>Sky position: <code>RA 339.27333</code>, <code>Dec 34.40886</code></li>
+        <li>Blind recovery: <code>SN2014C</code> at <code>0.490</code> arcsec</li>
+      </ul>
+    </div>
+    <div>
+      <h4>What this most likely is</h4>
+      <p>Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+      <p class="small">This page is ranking branch-aware export-failure coherence under strict detector controls. It is not a claim of confirmed failed-supernova status.</p>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th>Benchmark rank</th><td>3 / 9</td></tr>
+<tr><th>Truth group</th><td>SN2014C</td></tr>
+<tr><th>Blind recovery</th><td>Recovered</td></tr>
+<tr><th>Recovery separation</th><td>0.490&quot;</td></tr>
+<tr><th>Matched event sign</th><td>fade</td></tr>
+<tr><th>Matched diff significance</th><td>24.232</td></tr>
+<tr><th>Registration residual</th><td>0.158 px</td></tr>
+<tr><th>Registration matches</th><td>119</td></tr>
+<tr><th>Residual detections</th><td>1094</td></tr>
+<tr><th>Surviving detections</th><td>0</td></tr>
+<tr><th>Fade survivors</th><td>0</td></tr>
+<tr><th>Brighten survivors</th><td>0</td></tr>
+<tr><th>Filters</th><td>F814W -&gt; F814W</td></tr>
+<tr><th>Instruments</th><td>ACS/WFC | WFC3/UVIS</td></tr>
+<tr><th>Baseline</th><td>1186.2 d</td></tr>
+<tr><th>Observation span</th><td>2015-08-22 to 2023-07-25</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="details-grid">
+    <div>
+      <h4>Reason codes</h4>
+      <ul><li><code>BLIND_BENCHMARK_RECOVERY</code></li><li><code>KNOWN_TARGET</code></li></ul>
+    </div>
+    <div>
+      <h4>Warning flags</h4>
+      <ul><li>None</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="candidate-card" data-class="BENCHMARK_RECOVERED" data-search="BENCHMARK_MESSIER_066_SN2009HD MESSIER 066 SN2009HD recovered benchmark supernova F555W F555W fade Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there." data-matched-blind="true" data-highest-value="false">
+  <div class="card-top">
+    <div class="card-heading">
+      <div class="badge" style="--badge-color:#2f7f62">Recovered blind benchmark supernova</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-blind">Recovered in blind benchmark</div></div>
+      <h3 id="BENCHMARK_MESSIER_066_SN2009HD">BENCHMARK_MESSIER_066_SN2009HD</h3>
+      <p class="subhead">MESSIER 066 | rank 4 | confidence KNOWN</p>
+      <p class="interpretation">Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+    </div>
+    <div class="hero">
+      <img loading="lazy" src="assets/gifs/BENCHMARK_MESSIER_066_SN2009HD_blink.gif" alt="BENCHMARK_MESSIER_066_SN2009HD registered blink">
+    </div>
+  </div>
+  <div class="panel-row">
+    <img loading="lazy" class="triptych" src="assets/panels/BENCHMARK_MESSIER_066_SN2009HD_panel.png" alt="BENCHMARK_MESSIER_066_SN2009HD pre/post/diff triptych">
+    <img loading="lazy" class="diff-panel" src="assets/panels/BENCHMARK_MESSIER_066_SN2009HD_diff.png" alt="BENCHMARK_MESSIER_066_SN2009HD difference panel">
+  </div>
+  <div class="mini-grid">
+    <div>
+      <h4>Observation context</h4>
+      <ul>
+        <li>Representative pair: <code>MESSIER 066::hlsp_legus_hst_uvis_ngc3627_f555w_v1_drc::jey347020</code></li>
+        <li>Filters: <code>F555W -&gt; F555W</code></li>
+        <li>Instruments: <code>WFC3/UVIS | ACS/WFC</code></li>
+        <li>Date window: <code>2023-05-10 to 2023-05-10</code></li>
+        <li>Sky position: <code>RA 170.07954</code>, <code>Dec 12.98256</code></li>
+        <li>Blind recovery: <code>SN2009HD</code> at <code>0.525</code> arcsec</li>
+      </ul>
+    </div>
+    <div>
+      <h4>What this most likely is</h4>
+      <p>Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+      <p class="small">This page is ranking branch-aware export-failure coherence under strict detector controls. It is not a claim of confirmed failed-supernova status.</p>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th>Benchmark rank</th><td>4 / 9</td></tr>
+<tr><th>Truth group</th><td>SN2009HD</td></tr>
+<tr><th>Blind recovery</th><td>Recovered</td></tr>
+<tr><th>Recovery separation</th><td>0.525&quot;</td></tr>
+<tr><th>Matched event sign</th><td>fade</td></tr>
+<tr><th>Matched diff significance</th><td>9.055</td></tr>
+<tr><th>Registration residual</th><td>0.284 px</td></tr>
+<tr><th>Registration matches</th><td>116</td></tr>
+<tr><th>Residual detections</th><td>1138</td></tr>
+<tr><th>Surviving detections</th><td>182</td></tr>
+<tr><th>Fade survivors</th><td>182</td></tr>
+<tr><th>Brighten survivors</th><td>0</td></tr>
+<tr><th>Filters</th><td>F555W -&gt; F555W</td></tr>
+<tr><th>Instruments</th><td>WFC3/UVIS | ACS/WFC</td></tr>
+<tr><th>Baseline</th><td>3377.6 d</td></tr>
+<tr><th>Observation span</th><td>2023-05-10 to 2023-05-10</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="details-grid">
+    <div>
+      <h4>Reason codes</h4>
+      <ul><li><code>BLIND_BENCHMARK_RECOVERY</code></li><li><code>KNOWN_TARGET</code></li></ul>
+    </div>
+    <div>
+      <h4>Warning flags</h4>
+      <ul><li>None</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="candidate-card" data-class="BENCHMARK_RECOVERED" data-search="BENCHMARK_NGC_3147_SN2021DO NGC 3147 SN2021DO recovered benchmark supernova F555W F555W fade Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there." data-matched-blind="true" data-highest-value="false">
+  <div class="card-top">
+    <div class="card-heading">
+      <div class="badge" style="--badge-color:#2f7f62">Recovered blind benchmark supernova</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-blind">Recovered in blind benchmark</div></div>
+      <h3 id="BENCHMARK_NGC_3147_SN2021DO">BENCHMARK_NGC_3147_SN2021DO</h3>
+      <p class="subhead">NGC 3147 | rank 5 | confidence KNOWN</p>
+      <p class="interpretation">Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+    </div>
+    <div class="hero">
+      <img loading="lazy" src="assets/gifs/BENCHMARK_NGC_3147_SN2021DO_blink.gif" alt="BENCHMARK_NGC_3147_SN2021DO registered blink">
+    </div>
+  </div>
+  <div class="panel-row">
+    <img loading="lazy" class="triptych" src="assets/panels/BENCHMARK_NGC_3147_SN2021DO_panel.png" alt="BENCHMARK_NGC_3147_SN2021DO pre/post/diff triptych">
+    <img loading="lazy" class="diff-panel" src="assets/panels/BENCHMARK_NGC_3147_SN2021DO_diff.png" alt="BENCHMARK_NGC_3147_SN2021DO difference panel">
+  </div>
+  <div class="mini-grid">
+    <div>
+      <h4>Observation context</h4>
+      <ul>
+        <li>Representative pair: <code>NGC 3147::hst_15145_32_wfc3_uvis_f555w_idgg32::hst_16691_22_wfc3_uvis_f555w_ierg22</code></li>
+        <li>Filters: <code>F555W -&gt; F555W</code></li>
+        <li>Instruments: <code>WFC3/UVIS | WFC3/UVIS</code></li>
+        <li>Date window: <code>2021-12-29 to 2021-12-29</code></li>
+        <li>Sky position: <code>RA 154.20381</code>, <code>Dec 73.39837</code></li>
+        <li>Blind recovery: <code>SN2021DO</code> at <code>0.683</code> arcsec</li>
+      </ul>
+    </div>
+    <div>
+      <h4>What this most likely is</h4>
+      <p>Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+      <p class="small">This page is ranking branch-aware export-failure coherence under strict detector controls. It is not a claim of confirmed failed-supernova status.</p>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th>Benchmark rank</th><td>5 / 9</td></tr>
+<tr><th>Truth group</th><td>SN2021DO</td></tr>
+<tr><th>Blind recovery</th><td>Recovered</td></tr>
+<tr><th>Recovery separation</th><td>0.683&quot;</td></tr>
+<tr><th>Matched event sign</th><td>fade</td></tr>
+<tr><th>Matched diff significance</th><td>11.191</td></tr>
+<tr><th>Registration residual</th><td>0.877 px</td></tr>
+<tr><th>Registration matches</th><td>30</td></tr>
+<tr><th>Residual detections</th><td>1140</td></tr>
+<tr><th>Surviving detections</th><td>0</td></tr>
+<tr><th>Fade survivors</th><td>0</td></tr>
+<tr><th>Brighten survivors</th><td>0</td></tr>
+<tr><th>Filters</th><td>F555W -&gt; F555W</td></tr>
+<tr><th>Instruments</th><td>WFC3/UVIS | WFC3/UVIS</td></tr>
+<tr><th>Baseline</th><td>1516.7 d</td></tr>
+<tr><th>Observation span</th><td>2021-12-29 to 2021-12-29</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="details-grid">
+    <div>
+      <h4>Reason codes</h4>
+      <ul><li><code>BLIND_BENCHMARK_RECOVERY</code></li><li><code>KNOWN_TARGET</code></li></ul>
+    </div>
+    <div>
+      <h4>Warning flags</h4>
+      <ul><li>None</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="candidate-card" data-class="BENCHMARK_RECOVERED" data-search="BENCHMARK_MESSIER_101_SN2011FE MESSIER 101 SN2011FE recovered benchmark supernova F555W F555W fade Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there." data-matched-blind="true" data-highest-value="false">
+  <div class="card-top">
+    <div class="card-heading">
+      <div class="badge" style="--badge-color:#2f7f62">Recovered blind benchmark supernova</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-blind">Recovered in blind benchmark</div></div>
+      <h3 id="BENCHMARK_MESSIER_101_SN2011FE">BENCHMARK_MESSIER_101_SN2011FE</h3>
+      <p class="subhead">MESSIER 101 | rank 6 | confidence KNOWN</p>
+      <p class="interpretation">Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+    </div>
+    <div class="hero">
+      <img loading="lazy" src="assets/gifs/BENCHMARK_MESSIER_101_SN2011FE_blink.gif" alt="BENCHMARK_MESSIER_101_SN2011FE registered blink">
+    </div>
+  </div>
+  <div class="panel-row">
+    <img loading="lazy" class="triptych" src="assets/panels/BENCHMARK_MESSIER_101_SN2011FE_panel.png" alt="BENCHMARK_MESSIER_101_SN2011FE pre/post/diff triptych">
+    <img loading="lazy" class="diff-panel" src="assets/panels/BENCHMARK_MESSIER_101_SN2011FE_diff.png" alt="BENCHMARK_MESSIER_101_SN2011FE difference panel">
+  </div>
+  <div class="mini-grid">
+    <div>
+      <h4>Observation context</h4>
+      <ul>
+        <li>Representative pair: <code>MESSIER 101::hst_skycell-p2381x08y12_wfc3_uvis_f555w_all::hst_13737_02_wfc3_uvis_f555w_icoy02</code></li>
+        <li>Filters: <code>F555W -&gt; F555W</code></li>
+        <li>Instruments: <code>WFC3/UVIS | WFC3/UVIS</code></li>
+        <li>Date window: <code>2011-09-13 to 2024-02-23</code></li>
+        <li>Sky position: <code>RA 210.77380</code>, <code>Dec 54.27796</code></li>
+        <li>Blind recovery: <code>SN2011FE</code> at <code>0.751</code> arcsec</li>
+      </ul>
+    </div>
+    <div>
+      <h4>What this most likely is</h4>
+      <p>Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+      <p class="small">This page is ranking branch-aware export-failure coherence under strict detector controls. It is not a claim of confirmed failed-supernova status.</p>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th>Benchmark rank</th><td>6 / 9</td></tr>
+<tr><th>Truth group</th><td>SN2011FE</td></tr>
+<tr><th>Blind recovery</th><td>Recovered</td></tr>
+<tr><th>Recovery separation</th><td>0.751&quot;</td></tr>
+<tr><th>Matched event sign</th><td>fade</td></tr>
+<tr><th>Matched diff significance</th><td>6.787</td></tr>
+<tr><th>Registration residual</th><td>0.262 px</td></tr>
+<tr><th>Registration matches</th><td>263</td></tr>
+<tr><th>Residual detections</th><td>1107</td></tr>
+<tr><th>Surviving detections</th><td>13</td></tr>
+<tr><th>Fade survivors</th><td>13</td></tr>
+<tr><th>Brighten survivors</th><td>0</td></tr>
+<tr><th>Filters</th><td>F555W -&gt; F555W</td></tr>
+<tr><th>Instruments</th><td>WFC3/UVIS | WFC3/UVIS</td></tr>
+<tr><th>Baseline</th><td>1300.6 d</td></tr>
+<tr><th>Observation span</th><td>2011-09-13 to 2024-02-23</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="details-grid">
+    <div>
+      <h4>Reason codes</h4>
+      <ul><li><code>BLIND_BENCHMARK_RECOVERY</code></li><li><code>KNOWN_TARGET</code></li></ul>
+    </div>
+    <div>
+      <h4>Warning flags</h4>
+      <ul><li>None</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="candidate-card" data-class="BENCHMARK_RECOVERED" data-search="BENCHMARK_MESSIER_066_SN2016COK MESSIER 066 SN2016COK recovered benchmark supernova F555W F555W brighten Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there." data-matched-blind="true" data-highest-value="false">
+  <div class="card-top">
+    <div class="card-heading">
+      <div class="badge" style="--badge-color:#2f7f62">Recovered blind benchmark supernova</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-blind">Recovered in blind benchmark</div></div>
+      <h3 id="BENCHMARK_MESSIER_066_SN2016COK">BENCHMARK_MESSIER_066_SN2016COK</h3>
+      <p class="subhead">MESSIER 066 | rank 7 | confidence KNOWN</p>
+      <p class="interpretation">Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+    </div>
+    <div class="hero">
+      <img loading="lazy" src="assets/gifs/BENCHMARK_MESSIER_066_SN2016COK_blink.gif" alt="BENCHMARK_MESSIER_066_SN2016COK registered blink">
+    </div>
+  </div>
+  <div class="panel-row">
+    <img loading="lazy" class="triptych" src="assets/panels/BENCHMARK_MESSIER_066_SN2016COK_panel.png" alt="BENCHMARK_MESSIER_066_SN2016COK pre/post/diff triptych">
+    <img loading="lazy" class="diff-panel" src="assets/panels/BENCHMARK_MESSIER_066_SN2016COK_diff.png" alt="BENCHMARK_MESSIER_066_SN2016COK difference panel">
+  </div>
+  <div class="mini-grid">
+    <div>
+      <h4>Observation context</h4>
+      <ul>
+        <li>Representative pair: <code>MESSIER 066::hlsp_legus_hst_uvis_ngc3627_f555w_v1_drc::jey347020</code></li>
+        <li>Filters: <code>F555W -&gt; F555W</code></li>
+        <li>Instruments: <code>WFC3/UVIS | ACS/WFC</code></li>
+        <li>Date window: <code>2023-05-10 to 2023-05-10</code></li>
+        <li>Sky position: <code>RA 170.07954</code>, <code>Dec 12.98256</code></li>
+        <li>Blind recovery: <code>SN2016COK</code> at <code>0.870</code> arcsec</li>
+      </ul>
+    </div>
+    <div>
+      <h4>What this most likely is</h4>
+      <p>Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+      <p class="small">This page is ranking branch-aware export-failure coherence under strict detector controls. It is not a claim of confirmed failed-supernova status.</p>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th>Benchmark rank</th><td>7 / 9</td></tr>
+<tr><th>Truth group</th><td>SN2016COK</td></tr>
+<tr><th>Blind recovery</th><td>Recovered</td></tr>
+<tr><th>Recovery separation</th><td>0.870&quot;</td></tr>
+<tr><th>Matched event sign</th><td>brighten</td></tr>
+<tr><th>Matched diff significance</th><td>117.656</td></tr>
+<tr><th>Registration residual</th><td>0.284 px</td></tr>
+<tr><th>Registration matches</th><td>116</td></tr>
+<tr><th>Residual detections</th><td>1138</td></tr>
+<tr><th>Surviving detections</th><td>182</td></tr>
+<tr><th>Fade survivors</th><td>182</td></tr>
+<tr><th>Brighten survivors</th><td>0</td></tr>
+<tr><th>Filters</th><td>F555W -&gt; F555W</td></tr>
+<tr><th>Instruments</th><td>WFC3/UVIS | ACS/WFC</td></tr>
+<tr><th>Baseline</th><td>3377.6 d</td></tr>
+<tr><th>Observation span</th><td>2023-05-10 to 2023-05-10</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="details-grid">
+    <div>
+      <h4>Reason codes</h4>
+      <ul><li><code>BLIND_BENCHMARK_RECOVERY</code></li><li><code>KNOWN_TARGET</code></li></ul>
+    </div>
+    <div>
+      <h4>Warning flags</h4>
+      <ul><li>None</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="candidate-card" data-class="BENCHMARK_RECOVERED" data-search="BENCHMARK_NGC_3318_SN2020AZE NGC 3318 SN2020AZE recovered benchmark supernova F555W F555W fade Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there." data-matched-blind="true" data-highest-value="false">
+  <div class="card-top">
+    <div class="card-heading">
+      <div class="badge" style="--badge-color:#2f7f62">Recovered blind benchmark supernova</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-blind">Recovered in blind benchmark</div></div>
+      <h3 id="BENCHMARK_NGC_3318_SN2020AZE">BENCHMARK_NGC_3318_SN2020AZE</h3>
+      <p class="subhead">NGC 3318 | rank 8 | confidence KNOWN</p>
+      <p class="interpretation">Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+    </div>
+    <div class="hero">
+      <img loading="lazy" src="assets/gifs/BENCHMARK_NGC_3318_SN2020AZE_blink.gif" alt="BENCHMARK_NGC_3318_SN2020AZE registered blink">
+    </div>
+  </div>
+  <div class="panel-row">
+    <img loading="lazy" class="triptych" src="assets/panels/BENCHMARK_NGC_3318_SN2020AZE_panel.png" alt="BENCHMARK_NGC_3318_SN2020AZE pre/post/diff triptych">
+    <img loading="lazy" class="diff-panel" src="assets/panels/BENCHMARK_NGC_3318_SN2020AZE_diff.png" alt="BENCHMARK_NGC_3318_SN2020AZE difference panel">
+  </div>
+  <div class="mini-grid">
+    <div>
+      <h4>Observation context</h4>
+      <ul>
+        <li>Representative pair: <code>NGC 3318::hst_16239_56_wfc3_uvis_f555w_ieec56::jey361020</code></li>
+        <li>Filters: <code>F555W -&gt; F555W</code></li>
+        <li>Instruments: <code>WFC3/UVIS | ACS/WFC</code></li>
+        <li>Date window: <code>2021-03-29 to 2023-11-01</code></li>
+        <li>Sky position: <code>RA 159.31392</code>, <code>Dec -41.62489</code></li>
+        <li>Blind recovery: <code>SN2020AZE</code> at <code>0.875</code> arcsec</li>
+      </ul>
+    </div>
+    <div>
+      <h4>What this most likely is</h4>
+      <p>Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+      <p class="small">This page is ranking branch-aware export-failure coherence under strict detector controls. It is not a claim of confirmed failed-supernova status.</p>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th>Benchmark rank</th><td>8 / 9</td></tr>
+<tr><th>Truth group</th><td>SN2020AZE</td></tr>
+<tr><th>Blind recovery</th><td>Recovered</td></tr>
+<tr><th>Recovery separation</th><td>0.875&quot;</td></tr>
+<tr><th>Matched event sign</th><td>fade</td></tr>
+<tr><th>Matched diff significance</th><td>33.932</td></tr>
+<tr><th>Registration residual</th><td>0.282 px</td></tr>
+<tr><th>Registration matches</th><td>144</td></tr>
+<tr><th>Residual detections</th><td>1112</td></tr>
+<tr><th>Surviving detections</th><td>0</td></tr>
+<tr><th>Fade survivors</th><td>0</td></tr>
+<tr><th>Brighten survivors</th><td>0</td></tr>
+<tr><th>Filters</th><td>F555W -&gt; F555W</td></tr>
+<tr><th>Instruments</th><td>WFC3/UVIS | ACS/WFC</td></tr>
+<tr><th>Baseline</th><td>947.4 d</td></tr>
+<tr><th>Observation span</th><td>2021-03-29 to 2023-11-01</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="details-grid">
+    <div>
+      <h4>Reason codes</h4>
+      <ul><li><code>BLIND_BENCHMARK_RECOVERY</code></li><li><code>KNOWN_TARGET</code></li></ul>
+    </div>
+    <div>
+      <h4>Warning flags</h4>
+      <ul><li>None</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="candidate-card" data-class="BENCHMARK_RECOVERED" data-search="BENCHMARK_NGC_6907_SN2008FQ NGC 6907 SN2008FQ recovered benchmark supernova F275W F275W brighten Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there." data-matched-blind="true" data-highest-value="false">
+  <div class="card-top">
+    <div class="card-heading">
+      <div class="badge" style="--badge-color:#2f7f62">Recovered blind benchmark supernova</div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-blind">Recovered in blind benchmark</div></div>
+      <h3 id="BENCHMARK_NGC_6907_SN2008FQ">BENCHMARK_NGC_6907_SN2008FQ</h3>
+      <p class="subhead">NGC 6907 | rank 9 | confidence KNOWN</p>
+      <p class="interpretation">Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+    </div>
+    <div class="hero">
+      <img loading="lazy" src="assets/gifs/BENCHMARK_NGC_6907_SN2008FQ_blink.gif" alt="BENCHMARK_NGC_6907_SN2008FQ registered blink">
+    </div>
+  </div>
+  <div class="panel-row">
+    <img loading="lazy" class="triptych" src="assets/panels/BENCHMARK_NGC_6907_SN2008FQ_panel.png" alt="BENCHMARK_NGC_6907_SN2008FQ pre/post/diff triptych">
+    <img loading="lazy" class="diff-panel" src="assets/panels/BENCHMARK_NGC_6907_SN2008FQ_diff.png" alt="BENCHMARK_NGC_6907_SN2008FQ difference panel">
+  </div>
+  <div class="mini-grid">
+    <div>
+      <h4>Observation context</h4>
+      <ul>
+        <li>Representative pair: <code>NGC 6907::hst_16287_cs_wfc3_uvis_f275w_iebjcs::hst_16287_35_wfc3_uvis_f275w_iebj35</code></li>
+        <li>Filters: <code>F275W -&gt; F275W</code></li>
+        <li>Instruments: <code>WFC3/UVIS | WFC3/UVIS</code></li>
+        <li>Date window: <code>2021-05-24 to 2021-05-24</code></li>
+        <li>Sky position: <code>RA 306.27294</code>, <code>Dec -24.81018</code></li>
+        <li>Blind recovery: <code>SN2008FQ</code> at <code>0.969</code> arcsec</li>
+      </ul>
+    </div>
+    <div>
+      <h4>What this most likely is</h4>
+      <p>Recovered known targeted supernova in the blinded benchmark. This is a detector-validation card showing that the strict search can find events Ryan already expects to be there.</p>
+      <p class="small">This page is ranking branch-aware export-failure coherence under strict detector controls. It is not a claim of confirmed failed-supernova status.</p>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        <tr><th>Benchmark rank</th><td>9 / 9</td></tr>
+<tr><th>Truth group</th><td>SN2008FQ</td></tr>
+<tr><th>Blind recovery</th><td>Recovered</td></tr>
+<tr><th>Recovery separation</th><td>0.969&quot;</td></tr>
+<tr><th>Matched event sign</th><td>brighten</td></tr>
+<tr><th>Matched diff significance</th><td>9.477</td></tr>
+<tr><th>Registration residual</th><td>n/a px</td></tr>
+<tr><th>Registration matches</th><td>0</td></tr>
+<tr><th>Residual detections</th><td>1101</td></tr>
+<tr><th>Surviving detections</th><td>0</td></tr>
+<tr><th>Fade survivors</th><td>0</td></tr>
+<tr><th>Brighten survivors</th><td>0</td></tr>
+<tr><th>Filters</th><td>F275W -&gt; F275W</td></tr>
+<tr><th>Instruments</th><td>WFC3/UVIS | WFC3/UVIS</td></tr>
+<tr><th>Baseline</th><td>184.8 d</td></tr>
+<tr><th>Observation span</th><td>2021-05-24 to 2021-05-24</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="details-grid">
+    <div>
+      <h4>Reason codes</h4>
+      <ul><li><code>BLIND_BENCHMARK_RECOVERY</code></li><li><code>KNOWN_TARGET</code></li></ul>
+    </div>
+    <div>
+      <h4>Warning flags</h4>
+      <ul><li>None</li></ul>
+    </div>
+  </div>
+</article>
+
+  </div>
+</section>
+
 <section class="section" id="strong_export_failure_like">
   <h2>Strong export-failure-like</h2>
   <p class="section-note">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Current count: 30.</p>
   <div class="section-grid">
     
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_066_branch_0002 MESSIER 066 F814W, F555W, F438W WFC3/UVIS Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="true" data-highest-value="true">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_066_branch_0002 MESSIER 066 F814W, F555W, F438W WFC3/UVIS Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="true">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
-      <div class="mini-badges"><div class="mini-badge mini-badge-blind">Matched to blind</div><div class="mini-badge mini-badge-high">Highest Value</div></div>
+      <div class="mini-badges"><div class="mini-badge mini-badge-high">Highest Value</div></div>
       <h3 id="MESSIER_066_branch_0002">MESSIER_066_branch_0002</h3>
       <p class="subhead">MESSIER 066 | rank 1 | confidence LOW</p>
       <p class="interpretation">Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak.</p>
@@ -348,7 +978,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-10-29 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.07041</code>, <code>Dec 12.97975</code></li>
-        <li>Blind match: <code>SN2009HD</code> at <code>1.573</code> arcsec</li>
+        
       </ul>
     </div>
     <div>
@@ -2422,7 +3052,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_066_branch_0001 MESSIER 066 F438W, F814W, F555W WFC3/UVIS Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT BLEND_RISK SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="STRONG_EXPORT_FAILURE_LIKE" data-search="MESSIER_066_branch_0001 MESSIER 066 F438W, F814W, F555W WFC3/UVIS Best current read: a branch-selected export-failure / underluminous-collapse lead that survives the strict detector controls. Multi-pair same-location support is already present, and late-time return is weak. STRONG_EXPORT_FAILURE_LIKE BENCHMARK_GUARDRAIL_OK DETECTOR_SIGNAL_STRONG FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT BLEND_RISK" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#d96f32">Strong export-failure-like</div>
@@ -3102,7 +3732,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_066_branch_0004 MESSIER 066 F555W, F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_066_branch_0004 MESSIER 066 F555W, F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
@@ -7386,11 +8016,11 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_066_branch_0013 MESSIER 066 F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN SN2009HD" data-matched-blind="true" data-highest-value="false">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_066_branch_0013 MESSIER 066 F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
-      <div class="mini-badges"><div class="mini-badge mini-badge-blind">Matched to blind</div></div>
+      <div class="mini-badges"></div>
       <h3 id="MESSIER_066_branch_0013">MESSIER_066_branch_0013</h3>
       <p class="subhead">MESSIER 066 | rank 266 | confidence LOW</p>
       <p class="interpretation">Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong.</p>
@@ -7412,7 +8042,7 @@ footer {
         <li>Instruments: <code>WFC3/UVIS</code></li>
         <li>Date window: <code>2013-10-30 to 2019-11-11</code></li>
         <li>Sky position: <code>RA 170.07114</code>, <code>Dec 12.97890</code></li>
-        <li>Blind match: <code>SN2009HD</code> at <code>2.558</code> arcsec</li>
+        
       </ul>
     </div>
     <div>
@@ -7470,7 +8100,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_066_branch_0035 MESSIER 066 F555W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_066_branch_0035 MESSIER 066 F555W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. The signal is coherent enough to treat as a real weak-branch lead rather than just an interesting fade. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
@@ -7554,7 +8184,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_066_branch_0016 MESSIER 066 F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2016COK" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="INTERMEDIATE_BRANCH_LIKE" data-search="MESSIER_066_branch_0016 MESSIER 066 F814W WFC3/UVIS Best current read: a partial-suppression or fallback-heavy lead that looks more collapse-like than ordinary variability, but is not clean enough to call strong. INTERMEDIATE_BRANCH_LIKE BENCHMARK_GUARDRAIL_OK FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#c79c2e">Intermediate branch-like</div>
@@ -7730,7 +8360,7 @@ footer {
   <p class="section-note">Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. Current count: 21.</p>
   <div class="section-grid">
     
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0008 MESSIER 066 F555W, F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0008 MESSIER 066 F555W, F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT MULTI_PAIR_LOCALIZATION PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -7814,7 +8444,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0182 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0182 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -7898,7 +8528,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0278 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2016COK" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0278 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -7982,7 +8612,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0265 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0265 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -8066,7 +8696,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0231 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0231 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT FORCED_COHERENCE_STRONG LONG_BASELINE_SUPPORT PARTIAL_SUPPRESSION_PATTERN PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -8150,7 +8780,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0189 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0189 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -8234,7 +8864,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0283 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0283 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -8318,7 +8948,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0171 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0171 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -8402,7 +9032,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0191 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0191 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -8486,7 +9116,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0242 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0242 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -8570,7 +9200,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0193 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0193 MESSIER 066 F555W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT PERSISTENT_FADE_SUPPORT" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -8654,7 +9284,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0064 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0064 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -8738,7 +9368,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0228 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2016COK" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0228 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -8822,7 +9452,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0178 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2016COK" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0178 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -8906,7 +9536,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0117 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0117 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -8990,7 +9620,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0098 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0098 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -9074,7 +9704,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0170 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0170 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -9158,7 +9788,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0033 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0033 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -9242,7 +9872,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0190 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2016COK" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0190 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -9326,7 +9956,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0284 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN SN2009HD" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0284 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -9410,7 +10040,7 @@ footer {
   </div>
 </article>
 
-<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0223 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN EDGE_NEAR_MASK SN2016COK" data-matched-blind="false" data-highest-value="false">
+<article class="candidate-card" data-class="DUST_SURVIVOR_LIKE" data-search="MESSIER_066_branch_0223 MESSIER 066 F814W WFC3/UVIS Best current read: a real fade competitor whose behavior is better explained by obscuration or survival than by true export failure. The fade is still interesting, but the current scoring says collapse-like export failure is not the clean leading explanation. DUST_SURVIVOR_LIKE BENCHMARK_GUARDRAIL_OK DUST_COMPETITOR_PRESENT LONG_BASELINE_SUPPORT REBRIGHTENING_OR_RETURN EDGE_NEAR_MASK" data-matched-blind="false" data-highest-value="false">
   <div class="card-top">
     <div class="card-heading">
       <div class="badge" style="--badge-color:#5f7ea3">Dust-survivor-like</div>
@@ -9498,7 +10128,7 @@ footer {
 </section>
 
     <footer>
-      Built 20260311_060227UTC from <code>/home/primary/SUPERNOVA/outputs/live_difference_strict_20260311_0421/branch_aware_v4</code>.
+      Built 20260311_064605UTC from <code>/home/primary/SUPERNOVA/outputs/live_difference_strict_20260311_0421/branch_aware_v4</code>.
       Page source is tracked in the SUPERNOVA repo and deployed separately under <code>/uber_nova_search</code>.
     </footer>
   </div>
